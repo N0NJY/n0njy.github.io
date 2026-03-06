@@ -1,0 +1,2029 @@
+Section One
+Version 2.00
+Updated April 1997
+Supersedes Ver 1.01
+
+
+              PRUDENT FOOD STORAGE: Questions and Answers.
+
+                            Section One
+
+                 How do I store the foods I've chosen?
+
+                    From the House at Cat's Green
+                            Alan T. Hagan
+
+       "In this work, when it shall be found that much is omitted,
+        let it not be forgotten that much likewise is performed."
+
+                                     Samuel Johnson, 1775, upon
+                                    completion of his dictionary.
+                                    Courtesy of James T. Stevens
+
+
+
+
+
+
+                            FOREWORD
+
+This work is a compilation of answers to frequently asked questions
+(FAQ) concerning long term food storage. Its purpose is to promote an
+understanding of the concepts, methods and techniques of long term food
+storage. This is a work of several sections; the part you are now
+reading is SECTION ONE.
+
+There is commonality between food storage and food preservation even
+though they are not precisely the same thing. Some of the information
+here may be found in greater or lesser detail in one of the nine
+sections of the rec.food.preserving (r.f.p.) FAQ compiled by Leslie
+Basel. If you want the how to's of drying fruit, making jerky, canning
+beans, fermenting pickles or corning beef then I refer you to her work
+and the good stuff to be found there.
+
+I will delve a bit more deeply than Leslie into the ins and outs of
+how to put away your storage foods and have a reasonable expectation of
+getting something edible back out of the container when you finally do
+use it. Also covered will be food spoilage -- how to recognize it and
+how to combat it. A resource list of where to find supplies and in-depth
+information will be included at the end.
+
+From time to time this file will be updated as sufficient relevant
+information becomes available. Be of assistance -- point out mistakes,
+write sections and reviews, provide us with new sources. All
+contributors, if you wish, will be cited in this file.
+
+ACKNOWLEDGEMENTS: Diana J. Hagan, for a *lot* of valuable
+assistance, Susan Collingwood for sage advice, Al Durtschi for resources
+and encouragement, Sandon A. Flowers, Mark West, Pyotr Filipivich, Denis
+DeFigueiredo, Jenny S. Johanssen, Woody Harper, Higgins10, Kahless, Amy
+Thompson(Saco Foods), Geri Guidetti, and last, but certainly not least,
+Leslie Basel, without whom I'd never have attempted this in the first
+place.
+
+Updated: 9/18/96; 4/16/97
+
+Copyright 1997 Alan T. Hagan. All rights reserved.
+
+Excluding contributions attributed to specific individuals all
+material in this work is copyrighted to Alan T. Hagan and all rights are
+reserved. This work may be copied and distributed freely as long as the
+entire text, my and the contributor's names and this copyright notice
+remain intact, unless my prior permission has been obtained. This FAQ
+may not be distributed for financial gain, included in commercial
+collections or compilations, or included as a part of the content of
+any website without prior, express permission from the author.
+
+
+PLEASE DIRECT CONTRIBUTIONS, COMMENTS, QUESTIONS AND/OR CRITICISMS TO:
+athagan@sprintmail.com
+
+Written material may be sent to the address below:
+
+A.T. Hagan
+P.O.Box 140008
+Gainesville, FL 32614-0008
+
+
+
+TABLE OF CONTENTS
+
+SECTION ONE: How Do I Store The Foods I've Chosen?
+
+O.     Charter and Foreword
+
+I.     Shelf Lives: Time, Temperature, Moisture and Light.
+
+II.    The Techniques of Food Storage
+
+        A.  Grains and Legumes
+          1.  Grain Varieties
+          2.  Legume Varieties
+          3.  Types and Availability of Grains and Legumes
+             - Moisture Content
+             - Cleaning It Yourself
+          4.  Storing Grains and Legumes
+             - Moisture and Desiccants
+             - Dry Ice
+             - Compressed CO2 and Nitrogen
+             - Oxygen Absorption Packets
+
+        B.  Dry Milks
+          1.  Selecting and Buying Dry Milks
+             - Types of Dry Milks
+             - Buying Dry Milk Products
+          2.  Storing of Dry Milks
+             - Shelf Life of Dry Milks
+
+        C.  Canned Goods
+          1.  Liquid Milk
+             - Canned
+             - Evaporated 
+             - Sweetened Condensed
+          2.  Corrosion Prevention of Canned Goods
+             - Paraffin Method
+             - Paste Wax Method
+             - Spray Silicone
+
+        D.  Sugar, Honey and Other Sweeteners
+
+          1.  Buying and Storing Granulated, Powdered, Brown and Raw
+              Sugars
+          2.  Selecting and Buying Honey
+             - Storing Honey
+             - Raw Honey and Botulism
+             - Honey Outgassing
+          3.  Molasses, Cane, Sorghum and Table Syrups
+          4.  Corn Syrup
+          5.  Maple Syrup
+
+
+        E.  Fats and Oils
+
+        Y.  Cooking Staples
+
+         1.  Baking Powder
+         2.  Baking Soda
+         3.  Salt
+         4.  Vinegar
+         5.  Yeast
+
+        Z.  Infant Formula
+
+
+
+SECTION TWO:   How Do I Keep It From Going Bad?
+
+III.   Spoilage
+
+        A.  Insect Infestations
+          1.  Pests of Stored Dry Grains and Legumes
+          2.  Control of Insect Infestations
+          
+        B.  Molds In Foods
+          1.  Minimizing Molds
+          2.  Molds in Canned Goods
+          3.  Molds in Grains and Legumes
+
+        C.  Bacterial Spoilage
+          1.  Botulism
+          2.  Other Bacterial Spoilers In Food
+
+        D.  Enzymatic Action In Food Spoilage
+
+
+
+SECTION THREE:   What Equipment Do I Need?
+                Where Can I Find Information and Supplies?
+
+IV.    Specific Equipment Questions
+
+        A. Storage Containers
+          1.  Plastic Containers
+             - What Makes A Plastic Container "Food Grade"?
+             - How Do I Get the Odor Out of Pickle Buckets?
+             - Where Do I Find Food Grade Containers?
+          2.  Metal Cans
+          3.  Glass Jars
+
+        B. CO2 and Nitrogen
+
+        C. Oxygen Absorbers
+
+        D. Desiccants
+
+        E. Diatomaceous Earth
+
+
+V.     Other Sources (besides this FAQ)
+
+        A. Books
+        B. Pamphlets
+        C. Magazines
+        D. Phone, voice, non-modem
+        E. Electronic-online
+
+VI.    Appendices
+
+        A. Shelf Lives of Some Common Storage Foods
+        B. Dating Codes Used By Some Food Manufacturers
+        C. Food and Equipment Suppliers
+          - Mail Ordering Storage Foods What You Should Know
+          - Addresses of Suppliers.
+
+=========================================================================
+I -- SHELF LIVES: TIME, TEMPERATURE, MOISTURE AND LIGHT.
+=========================================================================
+
+Since the entire idea of a food storage program is that it should be
+available for you and yours in times of need, it is desirable to gain an
+understanding of those conditions that can affect the edibles stored in
+your pantry.
+
+Your storage program is only as good as the original quality of the
+food that goes into it. It cannot get any better than what originally
+goes in, but it can certainly get worse. In the fullness of time, all
+stored foods will degrade in nutrient content and palatability until
+they reach the inevitable end where even the dog won't eat them. It's
+because of this eventuality that every article, book, and teacher
+concerned with putting food by gives the same advice: Date all food
+containers and rotate, Rotate, ROTATE.
+
+It is important to remember when discussing the usefulness of
+various foodstuffs that there are really *two* shelf lives to be
+considered. The first shelf life is the nutrient content of the food.
+This actually begins to degrade from the moment the food is harvested.
+Three factors dictate nutritional shelf life: the food's initial
+nutritional content, the processing steps the food underwent before it
+was placed into storage, and its storage conditions. Eventually the
+nutrition will dwindle away to nothing. At some point it will have to
+be decided the remaining nutrition is not worth the space the food is
+taking up and it should be rotated out of storage. This is the reason
+for the "use by" dates on many foods and for shelf lives in general.
+
+The second shelf life to consider is a food's absolute useful life
+or the point at which you just can't gag it down. This will almost
+always be far in excess of its nutritive life. We've all heard of people
+eating many year old preserved foods such as jellies, MRE's and the
+like. If you don't have anything to replace it with, it's not necessary
+to throw food out just because it's reached the end of its nutritive
+shelf life. Do, however, keep in mind that increasing age will only
+further decrease the useful nutrition and increase the likelihood that
+something may cause the food to spoil.
+
+Within reason, the key to prolonging the storage life of your
+edibles lies in lowering the temperature of the area in which they are
+stored. The storage lives of most foods are cut in half by every
+increase of 18 F (10 degrees Celsius). For example, if you've stored
+your food in a garage that has a temperature of 90 F then you should
+expect a shelf life less than half of what could be obtained at room
+temperature (70 F) which in turn is less than half the storage life that
+you could get if you kept them in your refrigerator at 40 F. Your
+storage area should be located where the temperature can be kept above
+freezing (32 F) and, if possible, below 72 F.
+
+Ideally, your storage location should have a humidity level of 15%
+or less, but unless you live in the desert it's not terribly likely
+you'll be able to achieve this so you'll have to do the best that you
+can. Regardless, moisture is not good for your stored edibles so you
+want to minimize it as much as possible. This can be done by several
+methods. The first is to keep your storage location air-conditioned
+during the warm and humid times of the year. The second is to package
+the goods in storage containers impervious to moisture and then to deal
+with the moisture trapped inside. If you can, there's no reason not to
+use both. All storage containers should be kept off the floor and out
+of direct contact from exterior walls to reduce the chances of
+condensation.
+
+Once you've gotten temperature and humidity under control, it's
+necessary to look at light. Light is a form of energy and when it
+shines on your stored foods long enough it transfers some of that energy
+to the food. That energy has the effect of degrading its nutritional
+content and appearance. Fat soluble vitamins, such as A,D and E are
+particularly sensitive to light degradation. It's a pretty sight to
+look at rows and rows of jars full of delicious food, particularly if
+you were the one that put the food in those jars. However, if you want
+to keep them at their best, you'll admire them only when you turn the
+light on in the pantry to retrieve a jar. If you don't have a room that
+can be dedicated to this purpose then store the jars in the cardboard
+box they came in. This will protect them not only from light, but help
+to cushion them from shocks which might break a jar or cause it to lose
+its seal. For those of you in earthquake country, it's a particularly
+good idea. When "terra" is no longer "firma" your jars just might dance
+right off onto the floor.
+
+Assuming that it was properly processed in the first place, canned,
+dried and frozen (never thawed) foods do not become unsafe when stored
+longer than the recommended time, but their nutrient quality fades and
+their flavor goes downhill.
+
+=========================================================================
+II -- THE TECHNIQUES OF FOOD STORAGE
+=========================================================================
+
+A. GRAINS AND LEGUMES 
+
+A.1 GRAIN VARIETIES
+
+One of the most important decisions in planning your long term food
+storage are the kinds of grains you are going to store. Too many people
+do not give this adequate thought, and just buy however much wheat they
+think is necessary to meet their needs and leave it at that. Others rely
+upon pre-packaged plans made for them by the storage food retailer who
+put together the food package they've purchased. For many, either
+decision could be a major mistake.
+
+There are any number of food storage plans to be found by those who
+take the time to look. Many of them are based on the so-called "Mormon
+Four" of wheat, milk, honey and salt, with as many additional foods as
+the planner finds to be desirable. Back in the thirties, when I believe
+this plan first got its start, this may have been OK, but we've learned
+a great deal since then. An unfortunate number of people in our society
+have developed allergies to one kind of food or another. One of the more
+common food allergens is wheat. Even more unfortunate is the fact that
+of those with an allergy to this most common of grains, many of them are
+not even aware of it. They won't become aware of it until they try to
+live with wheat as a large part of their diet. This is the reason you
+should store what you eat and eat what you store: so that ugly surprises
+such as this don't come up when it's too late to easily avoid them.
+
+A second reason to think about providing a variety of grains in your
+food storage is appetite fatigue. There are many people who think
+providing variety in the diet is relatively unimportant and that if and
+when the time comes they'll eat what they've got and that will be that.
+For healthy, well-adjusted adults under ordinary circumstances this
+might be possible without too much difficulty. However, the entire
+reason for having a *long term* food storage program is for when
+circumstances *aren't* ordinary. Times of crisis produce stress --
+possibly physical, but always mental. If you are suddenly forced to eat
+a diet that is both alien and monotonous, it is going to add just that
+much more stress on top of what you are already dealing with. If your
+planning includes the elderly, young children and infants they might
+just quit eating or refuse to eat sufficient amounts and become unable
+to survive. This is not a trivial problem and should be given serious
+consideration. Consider the positive aspects of adding some "comfort
+foods".
+
+In his book, *Making the Best of Basics*, James Stevens mentions a
+post WWII study by Dr. Norman Wright, of the British Food Ministry,
+which found that people in England and Europe were more likely to reject
+unfamiliar or distasteful foods during times of stress than under normal
+conditions. When it's wheat, day in and day out, then wheat's going to
+start becoming distasteful pretty fast. Far better to have a variety of
+foods on hand to forestall appetite fatigue and, more importantly, to
+use those storable foods in your everyday diet so that you'll be
+accustomed to them.
+
+[If anyone knows where I may find an actual copy of the study by Dr.
+Wright, I'd appreciate it if you'd point me to it. Thanks-ed.]
+
+Below is a list of some common and uncommon grains presently
+available in the marketplace. Because wheat is by far the most common
+directly consumed grain in the United States I've put it at the head of
+the list.
+
+
+
+WHEAT: Wheat comes in a number of different varieties. Each variety is
+more or less suitable for a given purpose based on its
+characteristics. The most common classifications for wheat varieties are
+spring or winter, hard or soft, red or white.
+
+The hard wheats have kernels that tend to be small, and very hard
+and have a high gluten content. Gluten is the protein in grains that
+enables the dough made from them to trap the gasses produced by yeast
+fermentation and raise the bread. Low gluten wheat does not produce as
+good a loaf as high gluten wheat, though they can still be used for
+yeast breads if necessary. As a general rule, hard varieties have more
+protein than soft varieties.
+
+The soft varieties have kernels tending to be larger, plumper and
+softer in texture than hard wheats. Their gluten content is less and
+these are used in pastries, quick breads, pastas, and breakfast cereals.
+
+Winter wheats are planted in the fall, over winter in the field and
+are harvested the next summer. Spring wheats are planted in the early
+spring and are harvested in the fall. Red wheats comprise most of the
+hard varieties while white wheats comprise most of the soft. Recently,
+hard white wheats have been developed that are suitable for raised bread
+making. Some feel the hard white varieties make a better tasting whole
+wheat bread than the hard red.
+
+The most commonly stored are the hard red varieties, either spring
+or winter, because of their high protein. They should have a protein
+content of no less than 12%, with higher the better. The hard white
+spring wheats are still relatively new and are not yet widespread. They
+have the same excellent storage characteristics as the hard red wheats.
+
+
+AMARANTH: Amaranth is not a true cereal grain at all, but is a relative
+of the pigweeds and the ornamental flowers we know as
+cockscomb. It's grown not only for its seeds, but for its leaves that
+can be cooked and eaten as greens. The grain is high in protein,
+particularly the amino acid lysine which is limited in the true cereal
+grains. The grains can be milled as-is, or the seeds can be toasted to
+provide more flavor. The flour lacks gluten, so it's not suited for
+raised breads, but can be made into any of a number of flat breads. Some
+varieties can be popped much like popcorn, or can be boiled and eaten as
+a cereal, used in soups, granolas, and the like. Toasted or untoasted,
+it blends well with other grain flours.
+
+
+BARLEY: Barley is thought by some to be the first grain ever grown by
+man. It has short, stubby kernels with a hull that is
+difficult to remove. Excluding barley intended for malting or animal
+feed, most of this grain is consumed by humans in two forms. The most
+common is the white, highly processed "pearl" barley that has had most
+of its bran and germ milled off along with its hull. It is the least
+nutritious form of barley. The second form it's found in is called
+"pot" or "hulled" barley and it has been subjected to the same milling
+process as pearled, but with fewer trips through the polisher. Because
+of this, it retains more of the nutritious germ and bran. Unless you
+are prepared to try to get the hulls off I don't recommend buying barley
+still in the hull. Barley can be milled into flour, but its low gluten
+content will not make a good loaf of raised bread. It can be combined
+with other flours that have sufficient gluten to make good raised bread
+or used in flat breads. Barley flour and flakes have a light nutty
+flavor that is enhanced by toasting. Whole barley is commonly used to
+add thickness to soups and stews.
+
+Recently, a hull-less form of barley has become available on the
+market through a few suppliers. This is whole grain barley with all of
+its bran and germ intact and should have the most nutrients of any form
+of this grain available.
+
+
+BUCKWHEAT: Buckwheat is another of those foods commonly considered to
+be a "grain", but which is not a true cereal. It is a close
+relative to the docks and sorrels. The "grain" itself is a dark, three
+cornered seed resembling a tiny beechnut. It has a hard, fibrous hull
+that requires a special buckwheat huller to remove it. Here in the
+U.S., it is most often used in pancakes, biscuits and muffins. In
+eastern Europe and Russia it is known in its toasted form as kasha. In
+the Far East, it's often made into soba or noodles. It's also a good
+bee plant, producing a dark, strongly flavored honey. The flour is
+light or dark depending on how much of the hull has been removed before
+grinding. Dark flour is far superior nutritionally as you might expect,
+but it also much more strongly flavored. Buckwheat is one of those foods
+with no middle ground in peoples opinions -- they either love it or they
+hate it. Like amaranth, it's high in lysine, an amino acid commonly
+lacking in the true cereal grains.
+
+
+CORN: Corn is the most commonly grown grain in the U.S., but it is
+mostly consumed indirectly as animal feed or even industrial
+feedstock rather than directly as food. Nevertheless, it comes in an
+amazing variety of forms and, like wheat, some of them are better suited
+for a particular purpose than others. The varieties intended to be
+eaten as fresh, sweet corn are very high in sugar content and do not dry
+or store well. The other varieties are the flint, dent, and popcorns.
+All of them keep well when they have been properly dried. To a certain
+extent, they're all interchangeable for purposes of grinding into meal
+or flour, but some make better meal than flour and vice versa. As a
+general rule of thumb, the flint varieties make better meal as they have
+a grittier texture than the dent corns which make better flour. If
+meal, hominy and grits are what you are most interested in, use the
+flint type. If you intend to make corn masa for tortillas and tamales,
+then the dent type is what you want. Popcorn is what you need if you
+want to pop it for snacks and it can also be ground into meal or flour.
+It seems to me it makes a very good meal, but it's just a bit gritty for
+flour. Your mileage may vary.
+
+Popcorn is one form of a whole grain available to nearly everyone if
+they know where to look. Since it's so popular as a snack food,
+particularly in movie theaters and events like fairs and ball games,
+even the smallest of towns will generally have at least one business
+selling it in twenty five or fifty pound bags. Since it's meant to be
+eaten it's safe for food. To be at its most poppable, this corn needs
+to have a moisture content between 13.5%-15.5% which makes it just a
+little too moist for ideal storage. A small amount of drying will need
+to be done before it's packed away. If wanted for popping later, it can
+always be re-hydrated by sprinkling a small amount of water on the
+kernels, shaking vigorously and allowing it to be absorbed.
+
+Once you've decided between flint, dent or popcorn, you now have to
+decide upon it's color: there are yellow, white, blue, & red dried
+varieties. The yellow and white types are the most common by far with
+the blues and reds mostly being relegated to curiosities, though blue
+corn has been gaining in popularity these last few years. It should be
+kept in mind that white corn does not have the vitamin A content of
+yellow. Since vitamin A is one of the major limiting vitamins in long
+term food storage, any possible source of it should be utilized so for
+this reason I suggest storing yellow rather than white corn.
+Additionally, much of the niacin content of corn is chemically bound up
+in a form not available for human nutrition unless it has been treated
+with an alkali. If grits, hominy or corn masa are not a part of your
+diet and you're storing corn, it is a very good idea to begin to develop
+a taste for some or all of these alkali treated forms of corn foods.
+
+
+MILLET: Millet is an important staple grain in North China, and India,
+but is little known as a food in the U.S, mostly being used as
+bird feed. The grain kernels are very small, round, and usually ivory
+colored or yellow, though some varieties are darker. The lack of gluten
+and a rather bland flavor may account for the anonymity of this grain
+here, but it's alkaline content is higher than other grains and makes it
+very easy to digest. It also has a higher iron content than any other
+grain but amaranth. It swells a great deal when cooked and supplies
+more servings per pound than any other grains. When cooked like rice it
+makes an excellent breakfast cereal. Though it has little gluten of its
+own, it mixes well with other flours.
+
+
+OATS: Though the Scots and the Irish have made an entire cuisine from
+oats, they are still mostly thought of in this country as a bland
+breakfast food. It is seldom found as a whole grain, usually being sold
+processed in one form or another. Much like barley, oats are a
+difficult grain to separate from their hulls. Besides their longtime
+role as a breakfast food, where they can be made very flavorful with a
+little creative thought, oats make an excellent thickener of soups and
+stews and a filler in meat loafs and casseroles. Probably the second
+most common use for oats in this country is in cookies and granolas.
+
+Listed below in order of desirability for storage are the forms of
+oats most often found in this country. Rolled and cut oats retain both
+their bran and their germ.
+
+Oat groats: These are whole oats with the hulls removed. They are
+not often found in this form, but can sometimes be had from natural food
+stores and some storage food dealers. Oats are not the easiest thing to
+get a consistent grind from so producing your own oat flour takes a bit
+of experience.
+
+Steel cut oats: These are oat groats which have been cut into chunks
+with steel blades. They're not rolled and look like coarse bits of
+grain. This form can be found in both natural food stores and many
+supermarkets.
+
+Rolled oats: These are also commonly called "old fashioned" or
+"thick cut" oats. To produce them, oat groats are steamed and then
+rolled to flatten. They can generally be found wherever oats are sold.
+They take longer to cook to suit than do the quick cooking oats, but
+they retain more flavor and nutrition. This is what most people will
+call to mind when they think of oatmeal.
+
+Quick cooking rolled oats: These are just steamed oat groats rolled
+thinner than the regular or old fashioned kind so that they will cook
+faster. They can usually be found right next to the thicker rolled
+oats.
+
+Instant rolled oats: These are the "just add hot water" or
+microwave type of oat cereals and are not at all suited for a long term
+food storage program. They do, however, have uses in "bug out" and 72
+hour food kits for short term crises.
+
+Whole oats: This is with the hulls still on. They are sold in seed
+stores and sometimes straight from the farmer who grew them. Unless
+you have some means of getting the hulls off, I don't recommend buying
+oats in this form. If you do buy from a seed supplier, make certain
+that they have not been treated with any chemicals that are toxic to
+humans.
+
+
+RICES: Rice is the single most commonly consumed food grain in the
+world. The U.S. is the leading exporter of it, though we
+actually only produce about 1% of the global supply. It is my favorite
+grain and in the form of brown rice, we eat a great deal of it here at
+the House.
+
+Much like wheat and corn, rice comes in a number of varieties, each
+with different characteristics. They are typically divided into classes
+by the length of their kernel grains; short, medium and long.
+
+Short grain rice: Short grain rice is a little softer and bit
+moister when it cooks and tends to stick together more than the longer
+rices. It has a sweeter, somewhat stronger flavor than long grain rice.
+
+Medium grain rice: Medium grain rice is not very common in this
+country. It has flavor like short grain rice, but with a texture more
+like long grain rice.
+
+Long grain rice: Long grain rice cooks up into a dryer, flakier
+dish than the shorter grains and the flavor tends to be blander. It is
+the most commonly found size of rice on the grocery shelves.
+
+Each of these may be processed into brown, white, parboiled or
+converted and instant rices. Below is a short discussion of the
+differences between the various types of rices.
+
+Brown rice: This is whole grain rice with only the hull removed. It
+retains all of the nutrition to be found in rice and has a pleasant
+nutty flavor when boiled. From a nutrition standpoint it is by far the
+best of the rices to put into storage, but it has one flaw: The
+essential oil in the germ of the rice is very susceptible to oxidation
+and soon goes rancid. As a result, brown rice has a shelf life of only
+about six months from the date of purchase unless given special
+packaging or storage processing. Freezing or refrigeration will greatly
+extend its storage life. It's also possible to purchase brown rice from
+long term food suppliers specially packaged in air tight containers with
+an inert nitrogen atmosphere. In this kind of packaging, (if properly
+done), the storage life of brown rice can be extended for years.
+
+Converted rice: Converted rice starts as brown rice which undergoes
+a process of soaking and steaming until it is partially cooked. It is
+dried and then polished to remove the bran and germ. The steaming
+process drives some of the vitamins and minerals from the outer layers
+into the white inner layers. This makes it more nutritious than
+polished white rice, but also makes it more expensive.
+
+White rice: This is raw rice that has had its outer layers milled
+off, taking with it about 10% of its protein, 85% of its fat and 70% of
+its mineral content. Because so much of the nutrition of the rice is
+lost, white rice sold in this country has to be enriched with vitamins
+to *partially* replace what was removed.
+
+
+QUINOA: Quinoa is yet another of the "grains" that is not a true
+cereal. It's botanical name is Chenopodium quinoa (pronounced
+"keen-wah"), and is a relative of the common weed Lambsquarter. The
+individual kernels are about 1.5-2 mm in size and are shaped rather like
+small flattened spheres, yellow in color. When quinoa is cooked, the
+germ of the grain coils into a small "tail" that lends a pleasant
+crunch. This exotic grain should be thoroughly washed before cooking in
+order to prevent the cooked product from tasting bitter. There are
+several varieties of quinoa that have color ranging from near white to a
+dark brown. The larger white varieties are considered superior and are
+the most common found.
+
+
+RYE: Rye is a well known bread grain in this country, though not as
+popular as wheat. It has dark brown kernels longer and thinner
+than wheat, but less gluten. Bread made from this grain tends to be
+somewhat dense unless gluten is added (often in the form of a lot of
+wheat flour) with color that ranges from pale to dark brown. German
+pumpernickel, made with unrefined rye flour and molasses, is the
+blackest, densest form. Rye makes for excellent variety in the diet.
+
+What I am about to say in the following is for those who may be
+interested in buying field run rye straight from the producer or
+distributor before it has been cleaned. If you purchase your rye from a
+food store *after* it has been cleaned, it is not much of a concern.
+
+There is a fungal infection of grain called "ergot". It is
+attracted to rye more so than other grains, particularly if the growing
+conditions were damp where it was grown. This fungus causes a nervous
+disorder known as St. Anthony's fire. When eaten in large quantities
+the ergot alkaloids can cause constriction of the blood vessels,
+particularly in the extremities. The effects of ergot poisoning are
+cumulative and lead to numbness of the limbs and other, frequently
+serious symptoms.
+
+The fungal disease affects only the flowering parts of many members
+of the grass family. The fungus bodies are hard, spur like, purple
+black structures that replace the kernel in the grain head. The ergot
+bodies can vary in size from the length of the kernel to as much as
+several times as long. They don't crush as easily as smut bodies of
+other funguses. When they are cracked open, the inner broken faces are
+can be off-white, yellow, or tan. The infected grain looks very
+different from ordinary, healthy rye grains and can be spotted easily.
+Ergot only rarely affects other grains. If you purchase field run rye,
+you should closely examine it first for the presence of ergot bodies. If
+you find more than a very few, pass up that grain and look elsewhere.
+
+
+SORGHUM: Sorghum is probably more widely known in this country for the
+syrup made from the juice squeezed from the canes of one of
+its many varieties. Also widely called "milo", it is one of the
+principle cereal grains grown in Africa. Its seeds are somewhat round,
+a little smaller than peppercorns, with an overall brown color with a
+bit of red and yellow mixed in. The varieties called "yellow endosperm
+sorghum" have a better taste. Sorghum is a major feed grain in the
+southwestern part of the country and is where the vast majority of the
+national milo production goes to. Like most of the other grains,
+sorghum is low in gluten, but the seeds can be milled into flour and
+mixed with higher gluten flours or made into flat breads, pancakes or
+cookies. In the Far East, it is cooked and eaten like rice, while in
+Africa it is ground in meal for porridge. It's also commonly brewed
+into alcoholic beverages.
+
+
+TRITICALE: Triticale is not a creation sprung whole from the foreheads
+of Star Trek script writers, tribbles notwithstanding. It
+is, in fact, a cross or hybrid between wheat and rye. This youngest
+grain combines the productivity of wheat with the ruggedness of rye and
+has a high nutrition value. Triticale kernels are gray-brown, oval
+shaped larger-than-wheat kernels and plumper than rye. It will make a
+raised bread like wheat flour will, but the gluten is a bit weak so
+wheat flour is frequently added to strengthen it. Because of the
+delicate nature of its gluten, excessive kneading must be avoided. This
+grain can be used in much the same way wheat or rye is. Although it is
+the youngest of the grains, it's been around for some years now. For
+reasons I've never understood, triticale has never achieved much
+popularity. Whether this is for reasons of agricultural production or
+public acceptance I don't know.
+
+
+
+A.2 LEGUME VARIETIES
+
+Unless a person is willing to spend a great deal of money on
+preserved meats, a food storage program not including a quantity of
+legumes is simply incomplete. There are few non-animal foods that
+contain the amount of protein to be found in dried beans, peas, and
+lentils. The varieties commonly available in this country have protein
+contents ranging from 20%-35%. As with most non-animal proteins, they
+are not complete in themselves for purposes of human nutrition, but
+become so when they are combined with the incomplete proteins found in
+grains. It is for this reason that grains and legumes are so often
+mentioned together. In cultures all over the world, it is common to
+find the two served together at a meal, making a complete protein, even
+when those doing the serving have no understanding of nutrition at all.
+
+The legume family, of which all beans, peas, lentils,and peanuts are
+a part of, is one of the largest in the plant kingdom. Because of this
+and the many thousands of years of development and cultivation that man
+has given them, the variety of edible legumes available to us is huge.
+Both the appearance and the names of legume varieties are colorful and
+varied. The names range from "adzuki" beans, a type of soybean from the
+Orient, to "zipper" peas, a commonly found field pea here in the South.
+The color of the beans can range from a clean white, to deep red, dull
+green to flat black with thousands of mixtures and patterns of colors.
+
+In spite of this incredible variety of names and colors, legumes are
+largely interchangeable in cooking usage, although some dishes just
+wouldn't be the same if a different type was used. Below is a partial
+list of some of the more commonly eaten bean varieties here in the U.S.
+
+BLACK BEAN: Also known as turtle beans, these small, dark-brownish
+black, oval-shaped beans are probably best known to us in
+Cuban black bean soup. They are very commonly used in Central and South
+America and in China. They tend to bleed very darkly when cooked so
+they are not well suited to being combined with other beans, lest they
+give the entire pot a muddy appearance.
+
+BLACK-EYED PEA: Although there is tremendous variation among the many
+varieties of field peas eaten throughout the Southern
+United States, it is black-eyed peas that are the most commonly known
+nationwide. The coloring of field peas is as varied as the rest of the
+legume family, with black-eyed peas being small and oval-shaped with an
+overall creamy color and, of course, their distinctive black-eye. Dried
+field peas cook very quickly and combine very tastily with either rice
+or cornbread.
+
+CHICKPEA: Also known as the garbanzo bean, it tends to be a creamy or
+tan color, rather lumpily roundish and larger than dried
+garden peas. Many have eaten chickpeas, even if they've never seen a
+whole one. They are the prime ingredient in hummus and falafel and are
+one of the oldest cultivated legume species known, going back as far as
+5400 B.C. in the Near East.
+
+KIDNEY BEANS: Just like the rest of the family, kidney beans can be
+found in wide variety. They come in both light and dark
+red color in their distinctive kidney shape. Probably best known here
+in the U.S. for their use in chili, they figure prominently in Mexican,
+Brazilian and Chinese cuisine.
+
+LENTILS: Lentils are an odd lot. They don't fit in with either the
+beans or the peas and occupy a place by themselves. Their
+shape is different from the other legumes being roundish little discs
+with colors ranging from muddy brown, to green to a rather bright
+orangish-red. They cook very quickly compared to beans and have a
+distinctive flavor. They are much used in Far Eastern cuisine from
+Indian to Chinese.
+
+LIMA BEANS: In the South, they are also commonly called butter beans.
+They are one of the most common beans found in this country
+in all manner of preservation from the young small beans to the large
+fully mature type. Their flavor is pleasant, but a little bland. Their
+shape is rather flat and broad with colors ranging from pale green to
+speckled cream and purple.
+
+PEANUTS: The peanut is not actually a nut at all, but a legume.
+Peanuts are another odd species not much like the more
+familiar beans and peas. Whatever their their classification they are
+certainly not unfamiliar to U.S. eaters. Peanuts have a high protein
+percentage and even more fat. They are one of the two legume species
+commonly grown for oilseed in this country, they are also used for
+peanut butter, boiled and roasted peanuts. Many Central and South
+American, African and Chinese dishes incorporate peanuts so they are
+useful for much more than just a snack food or cooking oil.
+
+PINTO BEANS: Anyone who has eaten Tex-Mex food has probably had the
+pinto bean. It is one of the most commonly eaten beans in
+the U.S., particularly in the southwestern portion of the country. It
+is stereotypically bean shaped with a dappled pattern of tans and browns
+on its shell. Pintos have a flavor that blends well with many foods.
+When ground together with white or navy beans they make my favorite
+home-made version of falafel.
+
+SOYBEANS: An entire university could be founded on the culinary and
+industrial uses of the soybean. It is by far the legume with
+the highest protein content in commercial production as well as being
+the other legume oilseed producer alongside the peanut. The beans
+themselves are small, and round with a multitude of different shades.
+Although the U.S. grows a very large percentage of the global supply of
+these beans, we actually consume virtually none of them directly. Most
+of them go into cattle feed or are used by industry. What does get
+eaten directly has usually been processed in some form or fashion.
+Soybean products range from tofu, to tempeh, to textured vegetable
+protein and hundreds of other uses. Although they are very high in
+protein, they don't lend themselves well to just being boiled until done
+and eaten the way other beans and peas do. For this reason, if you plan
+on keeping some as a part of your storage program (and you should) you
+would be well served to begin to learn how to process and prepare them
+*now* when you're not under pressure to produce. That way you can throw
+out your mistakes and order pizza, rather than having to choke them
+down, regardless.
+
+
+A.3 TYPES OF AVAILABILITY OF GRAINS AND LEGUMES
+
+Grains and legumes of all types may be purchased in a number of
+different fashions depending largely on where you live and the time of
+year. If you should happen to live in the area where the type of grain
+or legume that you are interested in purchasing is grown you may be able
+to purchase direct from the producer or distributor.
+
+If you are interested in doing this, you may be able to find what
+you want at any processing step along the way. The most basic form is
+called "field run" which means that it's been harvested and sold shortly
+thereafter. It will not have been given any cleaning or processing and
+is likely to be rather dirty depending upon the conditions under which
+it was grown and harvested.
+
+A second basic form called "field run from storage" is grain that
+has been harvested and then put into storage for a time. It will have
+all of the dirt and detritus of field run grain and whatever it may have
+picked up from the silo as well.
+
+If you want cleaner grain you should look for "pre-cleaned" which
+means that it has been passed through fans, screens or sieves to remove
+chaff, smut balls, insect parts, mouse droppings and other debris.
+
+For those of us who don't live in an area that produces the grain
+and legumes that we're interested in, we have to resort to the last type
+which is "pre-cleaned and pre-packaged". This is grain that's been
+harvested, cleaned and put up in bags or other containers-possibly even
+going so far as to already be packaged for long term storage.
+
+Each of the above types of availability has its good and bad points.
+As you might expect, the more processing the product receives, the
+higher its price is likely to be. If you don't mind doing a little
+cleaning and you need to be frugal with your cash, then field run grain
+is the way to go.
+
+IMPORTANT NOTE: If you have purchased your grains and legumes from
+a food store or a foods dealer then you needn't
+worry about hidden mold infections, fungicides or insecticides that are
+unsafe for human consumption. The products will have been checked at
+least several times by the Federal and state agriculture dept's and
+probably by the major foods dealers as well, to insure its quality.
+
+This is not *necessarily* the case when you purchase your grains or
+legumes direct from the farmer or elevator operator as field run or
+field run from storage grain. Nor is it necessarily the case if you've
+made the decision to utilize grains marketed as animal feed.
+
+If you are buying your grains and legumes from some-place other than
+a food store then you need to know the history of what it is you are
+buying. Straight field run grain, other than being dirty, is not likely
+to have had anything added to it that would make it undesirable for
+human consumption. There is, however, the small possibility it may have
+been infected with molds that would make it unsafe for eating. Field run
+from storage and any grade of grain not specifically advertised for
+human consumption may have had fumigants, fungicides or insecticides not
+certified as safe for human foods added to it while it was in the bin.
+It is important to know what it has been treated with before you buy it.
+
+Sometimes grain in the form of animal feed or seed grain/legumes is
+available. Keep in mind animal feeds may have a higher contaminant
+level than what is permissible for human consumption. Under certain
+circumstances, the government allows the sale of grain or legumes for
+animal feed that could not be sold for direct human consumption. If
+that feed is to be fed to non-lactating (non-dairy animals), they will
+sometimes allow an aflatoxin content of five times what is permissible
+for use in human foodstuffs. It may even be mixed varieties of one
+grain and not all one type. Seed grains, in particular, must be
+investigated carefully to find out what they may have been treated with.
+It is quite common for seed to have had fungicides applied to them, and
+maybe other chemicals as well.
+
+If you do purchase field run grain of any sort, examine it closely
+for contamination and moldy grain. Ask the farmer or distributor
+whether it has been tested for mold or mycotoxin content. This is
+especially the case if you are buying field-run corn, rye, soybeans and
+rice. When you purchase direct from the field, you may be getting it
+before it has been checked. Be certain of what it is that you are
+getting and ask questions if you choose to go this route. Know who you
+are dealing with. Unless you just can't find any other source, I don't
+recommend using animal feed or seed grains for human food.
+
+
+A.3.1 MOISTURE CONTENT
+
+The moisture content of the grain or legume you want to purchase or
+grow has a major impact on how long you will be able to store it and
+have it remain nutritious and edible. Some of the information I have
+found says that grain with a moisture content as high as 12% can be
+safely put into long term storage, but there is a risk to storing grain
+at that moisture level that should be understood.
+
+The outside of each and every kernel of grain or bean you buy or
+grow may host thousands of fungi spores and bacteria. This is all
+perfectly natural and is not a reason to panic. The problem lies in
+that at moisture levels between 13.5% to 15% some fungal species are
+able to grow and reproduce. Other species require a moisture level in
+the 16-23% range. Aerobic bacteria (oxygen using) require a moisture
+level of about 20%.
+
+Thus, if you have grain you want to store with a moisture content as
+high as 12% you are perilously close to having enough moisture to enable
+mold growth which could lead to the ruin of your grain. For this
+reason, I suggest keeping all grains and legumes to a moisture content
+of no more than 10%.
+
+If you do not have a clue as to what the moisture level of your
+grain is here is a rough method to determine it.
+
+Take 20 ounces of the grain or legumes in question from the middle
+of its bag or container (this needs to be an actual weighed twenty
+ounces and not estimated.) Spread the grain in a large baking dish
+making sure it is not more than an inch deep. Heat at 180 F for about
+two hours, stirring occasionally. Allow the grain to cool where it
+won't readsorb moisture, the oven will do. Once cool, reweigh the
+grain. A one ounce loss in weight indicates the grain had roughly a
+five percent moisture content, 2 ounces indicates that it has a 10%
+moisture content, etc, etc. You might even be able to cut it as fine as
+a half oz loss, but I wouldn't try to take it further than that.
+
+Obviously, this is only a rough measure, but it works and I don't
+have a better idea that could be used by an individual in the home. If
+anyone has a better way of measuring moisture levels which can be done
+without a lab or special equipment I'd surely like to hear it.
+
+
+A.3.2 CLEANING IT YOURSELF
+
+If you've chosen to purchase field-run grain or if the pre-cleaned
+product you've bought isn't clean enough to suit you, you can do it
+yourself.
+
+The fastest and easiest method is "fanning", a form of winnowing.
+This is done by pouring the grain slowly through the air stream of a fan
+or blower into a clean, deep container such as a cardboard box or trash
+can. The wind blowing through the falling grain will blow out most of
+the broken kernels, chaff, smut balls, mouse droppings, etc. If you're
+losing too much good grain, try turning the fan down or moving it
+further back from the container. The deep container will cut down on
+the amount of kernels that bounce out. Repeat fanning as necessary
+until the grain is clean enough to suit or you've blown all of the
+lighter contaminants out.
+
+If the fanning didn't get the grain clean enough then it can be
+further cleaned by running it through a screen or sieve. This should be
+made with holes just big enough to pass an average sized grain of what
+it is you're cleaning. Obviously, the size of the holes will
+necessarily vary depending upon the kernel size of the grain.
+
+Should the kernels still not be clean enough to suit then you'll
+just have to resort to "hand picking" out the offending particles. I'd
+strongly suggest doing this just prior to grinding where it can be done
+in small batches rather than trying to do your entire storage all at
+once. It's much easier to do a few pounds at a time than fifty or a
+hundred.
+
+If you have it in mind to wash the grain, this should not be done
+prior to storage, but, rather, just before use. After it's been rinsed,
+it should be dried immediately in the oven by placing it no deeper than
+1/2 inch and heated at 150 F for an hour. It should be stirred
+occasionally to improve drying.
+
+
+
+A.4 STORING GRAINS AND LEGUMES
+
+
+A.4.1 Moisture and Desiccants
+
+The key to storing grains and legumes for the long term is dry, dry,
+dry. Available oxygen and storage temperature also play roles, but it
+is moisture content that determines whether you get usable food out in
+five years or not.
+
+Therefore, the idea here is to have the food you want to put into
+storage as dry as possible before it goes in and then take steps to deal
+with any moisture trapped, generated or leaked into your storage
+containers.
+
+Ideally, the clean grains and legumes you have on hand will be no
+more than 10% moisture. If this is the case then you can go ahead and
+seal them into your storage containers using the packaging method of
+your choice and have a reasonable expectation of your food staying in
+good condition.
+
+If your storage grains aren't sufficiently low in moisture content
+then you'll need to reduce the water they contain. Wheat has been taken
+out of Egyptian pyramids where it had lain for several thousand years.
+It was the bone dry desert air and the cool interior temperature of the
+pyramids which kept it from rotting away. We can approximate that
+Egyptian climate by several methods.
+
+The least involved method is to wait until the driest time of year
+for your location. I typically wait until January here in Florida. If
+this doesn't suit, then turn your air conditioning on a little high.
+Bring in your buckets, lids, and the storage food. Let everything sit
+in a well-ventilated place where it's going to get plenty of cool from
+the a/c. I'd avoid anywhere near the kitchen or bathroom areas, as they
+put out a lot of moisture. Stir the grains or legumes frequently to
+maximize moisture loss. About three days of cool, constant air flow and
+low humidity ought to dry things out a bit.
+
+If this won't do, you can place a large quantity of desiccant in
+your storage containers. Fill the remaining space with your food
+product and seal on the lid. After about a week, unseal and check the
+desiccant. If it's saturated, change it out with dry desiccant and
+reseal. Continue to do this until the contents are sufficiently dry. If
+it doesn't become saturated the first time, change it anyway before
+sealing the bucket permanently. You'd hate to find later it saturated in
+storage.
+
+I use silica gel for practically everything. Keep in mind that it
+is not edible and you don't want it getting mixed into your food. My
+usual procedure is to save or scrounge clear plastic pill bottles such
+as 500ct aspirin bottles. Fill the bottle with the desiccant (remember
+to dry the gel first) and then use a double thickness of coffee filter
+paper carefully and securely tied around the neck of the bottle to keep
+any of it from leaking out. This way whatever moisture does
+inadvertently get trapped inside can be safely absorbed. It won't dry
+out a *lot* of moisture -- you still need to take steps to get
+everything as dry as possible before you pack it -- but it will take
+care of what little is left.
+
+Once you've dealt with the moisture problem, then you can decide
+whether you want to displace and/or absorb the oxygen out of your
+storage container. There are three common methods of doing this. The
+first two use relatively inert gasses, carbon dioxide and nitrogen, to
+displace the oxygen. The third uses an oxygen-absorbing chemical to
+remove very nearly all of the gas from the container's atmosphere. Some
+folks use inert gas displacement and oxygen absorption together.
+
+
+A.4.2 Dry Ice
+
+Using dry ice to displace oxygen from food storage containers is a
+very straightforward affair. To prevent leaching plastic chemicals from
+the container into your food over a long period of time I recommend
+lining the bucket with a brown paper bag before filling the bucket with
+your product. Be sure to wipe any accumulated frost off of the ice and
+wrap it in a paper towel or something similar so you don't burn anything
+that comes into contact with it. Put the dry ice at the bottom and fill
+the container. Shake or vibrate it to get as much density in the packing
+as possible and to exclude as much air as you can. Put the lid on, but
+do not fully seal it. You want air to be able to escape. Ideally, the
+dry ice should slowly evaporate and the cool CO2 should fill the bottom
+of the bucket, displacing the warmer, lighter atmosphere and pushing it
+out the top of the container. About four ounces of dry ice per five
+gallon bucket is plenty. Do not move or shake the bucket while the dry
+ice is sublimating. You want to keep mixing and turbulence to a
+minimum. After about three hours go ahead and seal the lids, but check
+on them every fifteen minutes or so for an hour to be certain that
+you're not getting a pressure build up. If you don't have to let any
+gas off, then put them away. A *little* positive pressure inside the
+bucket is a good thing, but don't allow it to bulge.
+
+WARNING: Dry ice (frozen carbon dioxide) is *extremely* cold and
+can cause burns to the skin by merely touching it for only a couple of
+seconds. Because of this you should wear gloves whenever handling it.
+Also, dry ice evaporates into carbon dioxide gas, which is why we want
+it. CO2 is not inherently dangerous, but you should make sure the area
+you are packing your storage containers in is adequately ventilated so
+the escaping gas will not build to a level dangerous enough to
+asphyxiate you.
+
+
+A.4.3 Compressed CO2 or Nitrogen
+
+Using compressed gasses calls for a slightly different technique.
+You'll need some plastic bags that are a bit larger in internal volume
+than the bucket, and some brown paper bags to fit inside the plastic
+bags. Additionally, you'll need a tank of the compressed gas that you've
+chosen, a hose to attach to it and a length of straight stiff tubing
+just longer than the bucket to attach to the end of the hose. Last
+you'll need a pack of matches or a cigarette.
+
+Line the interior of the container with the plastic bag and then
+line the plastic bag with a clean brown paper one. Fill the bucket with
+grain, shaking to get it as full as possible. You don't want any pockets
+left between the plastic bag and the container. Once you have gotten it
+full to just short of not being able to fully put on the lid, gather the
+top of the plastic bag together. Take the hose with the copper tubing
+on the end and insert it to the bottom of the grain, (take care not to
+tear the bags), and close the top of the bags around it. Turn on the
+valve and begin to fill the bags with gas. You want to fill it *slowly*
+so you can minimize turbulence and mixing as much as you can. I
+generally will just gradually crack the valve until I can hear it begin
+to hiss out and then put my hand over the end of the probe to feel how
+fast it's flowing. It'll take a little while to fill each bucket --
+about five minutes per bucket. Just as with the dry ice above, the idea
+here is for the cool gas to displace the warmer atmosphere from the
+container. The bags should puff just a bit. When I think it's full
+I'll hold a lit match just above the bag in the air that is escaping
+from it. If it snuffs right out then I figure the oxygen has been
+displaced, I let it run for a minute longer and remove the probe. Tie
+the bag off and seal the bucket. Again, you want to have the bucket as
+full as possible so that there'll be only minimal air space.
+
+
+IMPORTANT NOTE: I want to insert a note of caution here about
+packing foods with nitrogen or CO2. Either gas will do very well for
+oxygen displacement inside the bucket, but the technique that you use is
+very important. Dry ice is extremely cold and if there is much moisture
+in the air trapped in the container with it, and your food, then it will
+condense. If there's enough of it, it's going to cause you problems. If
+you are going to put the dry ice in the bucket, you'll really want to do
+this on a day when the humidity is very low. The temperature of the gas
+coming out of the tank has concerned me, also, since it is rather cold.
+I like to use as long a hose as I can get to allow the gas to expand and
+warm as much as possible before it goes into the bucket. An idea that
+I've had, but have not yet tried is to hook the hose to a copper coil
+(like with a moonshine still) and have the gas go through it to warm
+before putting it into the container. The next time we do any
+experimentation with this I think I will. Whether you use dry ice or
+compressed gas, I would add about four ounces of desiccant to a five
+gallon bucket of stored food.
+
+
+A.4.4 Oxygen Absorption Packets
+
+If all of this messing about with gasses sounds like too much
+trouble, you can try using the oxygen absorption packets that have come
+onto the market in the last ten years or so. Please see Section Two,
+IV.C Oxygen Absorbers for specific instructions in their use. Be certain
+that you do, in fact, have an air tight seal or you'll just deplete your
+packets over time to no positive effect.
+
+
+Once I started using the method above with the drying out of the
+containers and foodstuffs, the *careful* atmospheric displacement with
+inert gasses and the desiccant, I've never lost a container of storage
+goods due to mold. If you've done a proper job with the gasses, you'll
+kill any insects or insect eggs as well. After that, it's just age and
+storage temperatures that degrade the nutritional contents of the foods.
+You should have a rotation plan to deal with this before it becomes a
+problem. Take care in your technique, use only quality goods and
+you'll have food you can eat when you open those containers.
+
+
+B. DRY MILKS
+
+1 SELECTING AND BUYING DRY MILKS
+
+B.1.1 TYPES OF DRY MILKS
+
+
+NONFAT DRY MILK. This is pasteurized skim milk reduced to a powdered
+concentrate. It can be found in two forms, regular and instant. They
+are both made from milk in a spray-drying process, but the instant
+variety has been given further processing to make it more easily soluble
+in water than regular dry milk. Both types have the same nutrient
+composition. The regular variety is more compact and requires less
+storage space than the instantized variety, but it is more difficult to
+reconstitute. The most easily found variety is the instant, available
+in nearly any grocery store. The regular variety has to be sought out
+from baking and restaurant suppliers and storage food dealers.
+
+It takes about 3 tablespoons of instant nonfat dry milk added to 8
+ozs of water to make 1 cup of milk you can drink or cook with just like
+fresh milk, albeit with a considerable flavor difference. Combine the
+dry milk with water at least several hours before you plan to use it to
+give it time to dissolve fully and to develop a fresher flavor. Shaking
+the fluid milk vigorously will incorporate air and will also help to
+improve flavor. I don't care for the stuff to drink, but instead add the
+powder to baked goods, gravies, smoothies, hot cereals, casseroles and
+meat loaf as a nutrition booster.
+
+
+FLAVORED NONFAT DRY MILK. This may be found packaged in a variety
+of forms from a low calorie diet drink (artificially sweetened) to the
+other end of the scale, as cocoa mix or malted milk. The key ingredient
+is the dry milk so buy and store these products accordingly.
+
+
+DRY WHOLE MILK. This dry milk has a higher fat content and
+therefore a shorter shelf life than nonfat. Other than that, it can be
+used in exactly the same way. Dry whole milk is difficult to find, but
+can sometimes be found where camping and outback supplies are sold.
+
+
+DRY BUTTERMILK. Dry buttermilk is for use in recipes calling for
+buttermilk. Since it has a slightly higher fat content than nonfat dry
+milk, it generally does not keep as long.
+
+
+B.1.2 BUYING DRY MILK PRODUCTS
+
+(a)- Be sure the dry milk you are buying has been fortified with
+vitamins A and D. All of the nonfat dry milks I've seen come fortified
+with these two vitamins. The dry buttermilk does not come this way, at
+least the SACO brand does not. I don't know if the flavored mixes and
+the dry whole milk do or not.
+
+(b)- There should be no artificial colors or flavors. I believe it
+is illegal to add preservatives to any dry milk sold in the U.S. so a
+claim of "no preservatives" on the label is of no consequence. Other
+nations may be different, however.
+
+(c)- "Extra Grade" on the label indicates the manufacturer has held
+to higher processing and quality standards and the milk is somewhat
+lower in fat, moisture and bacterial content, is more soluble, and has
+fewer scorched particles.
+
+There are still some manufacturers of dry milk that sell ordinary
+Grade A product, but they are becoming fewer. Every brand of instant
+powdered milk in my local grocery store is the "Extra Grade", even the
+generic store brand.
+
+(d)- Try to buy your dried milk in containers of a size that makes
+sense for the level of consumption in the household. Once it is opened,
+powdered milk has a short shelf life before undesirable changes in
+flavor and nutrient content occurs. If you buy large packages and do
+not use much at one time, consider breaking it down and repackaging into
+smaller containers at the time of purchase.
+
+(e)- As with any storage food you buy, try to deal only with
+reputable dealers. It is particularly important to do this with dry
+milk because of its short shelf life and sensitivity to storage
+conditions. Check expiration dates, then date and rotate packages.
+
+
+B.2.1 STORING OF DRY MILKS
+
+Dry milk products are especially sensitive to storage conditions,
+particularly temperature and light. Vitamins A and D are photo
+sensitive and will break down rapidly if exposed to light.
+
+The area where your dry milk is stored should be kept as cool as
+possible. If it is possible to do so, air-conditioning or even
+refrigeration can greatly extend the nutrient shelf life.
+
+If the storage container is transparent or translucent then it
+should be put into a second container opaque to light or stored in a
+dark room.
+
+Dry milk will absorb moisture and odors from the air so storage
+containers should be impervious to both air and moisture. The dryer it
+can be kept, the better it will keep. Oxygen also speeds decomposition.
+Powdered milk canned with nitrogen or carbon dioxide to replace air
+(which contains oxygen) will keep longer than powdered milk exposed to
+air. Vacuum canning also decreases the available oxygen.
+
+If the dry milk purchased was not packaged for long term storage
+then it should be repackaged right away.
+
+I purchase the instant variety at my local grocery and repack it
+when I get it home. I've seen a number of methods used for this and any
+of them should work well enough for the relatively short nutritive shelf
+life that this product has.
+
+The method I use is to pour the powder into clean, dry one liter
+soda bottles. I use these rather than the two liter bottles because I
+don't use a lot of dry milk at any one time and the last half of the
+bottle would get old before I could use it. I purchase seltzer water
+this way so the bottles start clean. Once the bottles are filled I then
+add a small desiccant pack and seal. The bottles are dated and stored
+in the ubiquitous cool, dark place. We do not reuse the bottles. Once
+the milk they contain has been used they are recycled. I haven't tried
+this yet, but you could also add an O2 absorption packet to each bottle.
+This might be too expensive to do with the one liter bottles, but should
+be relatively inexpensive for the two liter variety. They also would
+help to keep the milk from going stale before it can be used.
+
+Another method I've seen used is to remove the paper envelopes of
+milk powder from the cardboard box they come from the grocery store in
+and to put them in dated plastic bags. These bags are not sealed. The
+unsealed bags are then placed in a larger, air tight, opaque container.
+I've heard of plastic buckets, fifty cal and 20 mm ammo cans being used
+for this purpose. A healthy quantity of desiccant was also placed in
+the container. This would be another area where O2 absorption packets
+should serve well. It's important to remember the containers should be
+clean and odor-free.
+
+Glass canning jars could also be used for the repackaging. While
+they must be guarded against breakage they offer the advantage of not
+holding odors, thus allowing for reuse after suitable cleaning. Since
+they are as transparent as the soda bottles, the contents must be
+protected against light. If desiccant and/or O2 packets are to be used
+they will have to be placed inside the jars themselves.
+
+
+-------------------------------------------------------------------------
+
+B.2.2 From: SacoFoods@aol.com (Amy Thompson)
+To: Dunross@dkeep.com (Alan Hagan)
+Subj: SACO Mix'n Drink Instant Pure Skim Milk
+Date: May 9, 1996
+
+Dear Mr. Hagan:
+
+Thank you for your e-mail today and for your interest in SACO Mix'n
+Drink Pure Skim Milk.
+
+Our Mix'n Drink will keep its nutrition value for up to about two
+years if kept cool and dry, and the only vitamins that actually decrease
+over time are the vitamins A and D. These are not shelf-stable vitamins
+and are sensitive to heat and light. A good rule of thumb to follow is
+that the vitamins A and D will dissipate at a rate of about 20% every
+year if stored properly. The less heat and moisture the milk is exposed
+to, the better the vitamins will keep. A freezer could extend the shelf
+life, as long as the powder does not get moisture in it. If you had to
+put a time limit on the Mix'n Drink, for rotation purposes, I would date
+it at two years after the date of purchase.
+
+
+After opening a package of dry milk, transfer the powder to a
+tightly covered glass or metal container (dry milk can pick up odors
+from plastic containers) and keep it in the refrigerator. Unsealed
+nonfat dry milk keeps for a few months; dry whole milk for a few weeks.
+
+-------------------------------------------------------------------------
+
+B.2.3 From: SacoFoods@aol.com (Amy Thompson)
+To: Dunross@dkeep.com (Alan Hagan)
+Subj: SACO Mix'n Drink Instant Pure Skim Milk
+Date: May 21, 1996
+
+Dear Mr. Hagan:
+
+Since vitamins A and D are heat and light sensitive, I would say
+that your 1 1/2 year shelf life is very reasonable. If you are trying
+to determine when the nutritional value has been affected more than 40%,
+as you previously indicated, you should be pretty safe with that time
+element, as long as it is not exposed to extreme heat.
+
+[Eds note: We were discussing the higher average temperatures found in
+Florida and other hot climates and the effect that it would have on
+their dry milk's nutrient content]
+
+
+C. CANNED GOODS (METAL CANS AND GLASS JARS)
+
+
+1. LIQUID MILK
+
+Preserved liquid milk comes in a number of forms, none of which are
+very similar to each other. The most common forms of these packaged
+milk are as follows:
+
+C.1.1 CANNED MILKS. These are commonly called UHT milks (Ultra
+High Temperature) for the packaging technique used to put them up. They
+come in the same varieties as fresh liquid milks: whole, 2%, 1% and
+skim. It has vitamin D added. For reasons I have not yet discovered,
+the lesser fat content milks do not seem to keep for as long and their
+"use by" dates are shorter term than the whole milk. This milk is
+packaged in aseptic containers, either cans or laminated paper cartons.
+It has the same composition as fresh milk of the same type, and can be
+stored at room temperature because of the special pasteurizing process
+used. The milk has a boiled flavor, but much less than evaporated milk.
+The dates on the label seem to vary. I buy the whole milk and the dates
+are usually for three months, but I've found them for as much six
+months. The milk is still usable past their dates, but the flavor soon
+begins to go stale. I am told by a friend who lived there that in
+Germany not long after this kind of canned milk began to come on the
+market that they were dated for a year.
+
+With only a three to six month shelf life this type of canned milk
+naturally requires a much faster rotation cycle than other types. The
+only brand name for this milk I've seen is Parmalat. It's a lot of
+bother, but to me it's worth it to have whole, fluid milk.
+
+C.1.2 EVAPORATED. This is made from fresh, unpasteurized whole
+milk. The process removes 60% of the water; the concentrate is heated,
+homogenized, and vitamin D is added. It is then canned and heated again
+to sterilize the contents. It may also have other nutrients and chemical
+stabilizers added. A mixture of one part water and one part evaporated
+milk will have about the same nutritional value of an equal amount of
+fresh milk. There is generally no date or "use by" code on evaporated
+milk.
+
+Health and nutrition food stores often carry canned, evaporated
+goat's milk, in a similar concentration.
+
+C.1.3 SWEETENED CONDENSED. This milk goes through much less
+processing than evaporated milk. It starts with pasteurized milk
+combined with a sugar solution. The water is then extracted until the
+mixture is less than half its original weight. It is not heated because
+the high sugar content prevents spoilage. It's very high in calories,
+too: 8 oz has 980 calories.
+
+Although it is often hard to find, the label has a stamped date code
+which indicates the date by which it should be consumed. Sweetened,
+condensed milk may thicken and darken as it ages, but it is still
+edible.
+
+
+Unopened cans of evaporated milk can be stored on a cool, dry shelf
+for up to six months. Canned milk (UHT) should be stored till the
+stamped date code on the package (3 - 6 months). Check the date on
+sweetened, condensed milk for maximum storage.
+
+
+2. CORROSION PREVENTION OF CANNED GOODS
+
+Some areas of the country have difficulty storing metal canned goods
+for long periods of time. This is usually caused by very high humidity
+or exposure to salt in a marine environment. If this is a problem, it
+is possible to extend the life of metal cans by coating their outsides.
+I've seen this used on boats here in Florida, especially when loading
+for a long trip. There are three methods that can be used to do this:
+
+C.2.1 PARAFFIN METHOD: Using a double boiler, paraffin is melted
+and brushed on the clean, unrusted cans. Be certain to get a good coat
+on all seams, particularly the joints. If the can is small enough, it
+can be dipped directly into the wax. Care must be taken to not cause
+the labels to separate from the cans. Do not leave in long enough for
+the can to get warm.
+
+C.2.2 PASTE WAX METHOD: Combine 2-3 ozs of paste or jelly wax with
+a quart of mineral spirits. Warm the mixture CAREFULLY in its container
+by immersing it in a larger container of hot water. DO NOT HEAT OVER AN
+OPEN FLAME!. Stir the wax/spirits thoroughly until it is well mixed and
+dissolved. Paint the cans with a brush in the same manner as above.
+Place the cans on a wire rack until dry.
+
+C.2.3 SPRAY SILICONE: A light coating of ordinary spray silicone
+may be used to deter rust. Spray lightly, allow to dry, wipe gently
+with a clean cloth to remove excess silicone.
+
+
+D. SUGAR, HONEY AND OTHER SWEETENERS
+
+Sugar and Other Sweeteners
+
+There are a wide number of sugars to be found for purposes of
+sweetening foods. Fructose is the primary sugar in fruit and honey;
+maltose is one of the sugars in malted grains; pimentose are found in
+olives and sucrose is what we know as granulated or table sugar. Sucrose
+is a highly refined product made mostly from sugar cane though some may
+still be made from sugar beets. Modern table sugar is now so highly
+refined as to be virtually 100% pure and nearly indestructible if
+protected from moisture. Powdered sugar and brown sugar are simple
+variations on granulated sugar and share its long life.
+
+Liquid sweeteners do not have quite the longevity of dry sugars.
+Honey, molasses, corn syrup and maple syrup may crystallize or mold
+during long storage. These syrups are chemically not as simple as table
+sugar and therefore lose flavor and otherwise break down over a long
+period of time.
+
+
+D.1.1 BUYING AND STORING GRANULATED, POWDERED, BROWN AND RAW SUGARS
+
+Buying granulated sugar and its close cousins is really a very
+simple matter. Buy a brand you know you can trust and be certain the
+package is clean, dry and has no insect infestation. There's very
+little that can go wrong with it.
+
+GRANULATED SUGAR. Granulated sugar does not spoil, but if it gets
+damp it will likely cake up or get lumpy. If it does, it can simply be
+pulverized again until it regains its granulated texture.
+
+POWDERED SUGAR and CONFECTIONER'S SUGAR. Both names refer to the
+same kind of sugar, that is white granulated sugar very finely ground.
+For commercial use there is a range of textures from coarse to
+ultra-fine. For home consumption, what is generally found is either
+Very Fine (6X) or Ultra-Fine (10X). Not all manufacturers will indicate
+the grind on the package though. Sugar refiners usually add a small
+amount of corn starch to prevent caking.
+
+Powdered sugar is as inert as granulated sugar, but it is even more
+hygroscopic and will absorb any moisture present. If it absorbs more
+than a little it may cake up and get hard. It's difficult to reclaim
+hardened powdered sugar, but it can still be used like granulated sugar.
+
+BROWN SUGAR. In the United States brown sugar is basically just
+refined white sugar that has had a bit of molasses added to it. Dark
+brown sugar has more molasses which gives it a stronger flavor, a
+darker color and makes it damp. Light brown sugar has less molasses
+which gives it a milder flavor, a blonder color and is slightly dryer
+than the dark variety. For storage purposes you may want to just stock
+the dark variety. Light brown sugar can be made by combining one fourth
+to one third white sugar to the remainder dark brown sugar and blend
+thoroughly.
+
+Both varieties need to be protected from drying out, or they will
+become very hard and difficult to deal with. Nor do you want to allow
+them to become damper than what they already are.
+
+There are granulated and liquid brown sugars available, but they
+don't have the same cooking qualities as ordinary brown sugars. They
+also don't dry out and harden quite so readily either.
+
+RAW, NATURAL or TURBINADO SUGAR. In recent years, sugar refiners
+have realized that there is a market for less refined forms of cane
+sugar here in the U.S. and have begun to sell this kind of sugar under
+various names and packagings. None of it is really "raw" sugar since it
+is illegal to sell it in this country due to the high impurities level
+in truly raw sugar. All of it has been processed in some form or fashion
+to clean it, but it has not been subjected to the full refining and
+whitening processes of ordinary white table sugar. This leaves some of
+the natural color and a mild flavor in the sweetener. All of these less
+refined sugars should be stored and handled like brown sugar.
+
+
+All granulated sugars have basically the same storage requirements.
+They need to be kept in air tight, insect and moisture proof containers.
+For powdered, granulated and raw sugar you might want to consider using
+some desiccant in the storage container if your local climate is damp.
+Since brown sugars are supposed to be moist, they do not need
+desiccants. Shelf life is indefinite if kept dry, but anything that you
+intend to eat really should be rotated over time. Time has a way of
+affecting even the most durable of foods.
+
+I've used brown sugar that was six years old at the time it was
+removed from storage and other than the molasses settling somewhat
+towards the bottom it was just fine.
+
+D.2.1 SELECTING AND BUYING HONEY
+
+Honey is probably the oldest sweetener known to man. It predates
+recorded history and has been found in the Egyptian pyramids. It's
+typically sweeter than granulated sugar by a factor of 25%-40% depending
+upon the specific flowers from which the bees gather their nectar. This
+means a smaller amount of honey can give the same amount of sweetening
+as sugar. The source flowers also dictate the flavor and the color of
+the sweetener as well. Honey color can range from very dark (nearly
+black) to almost colorless. As a general rule, the lighter the color
+and the more delicate the flavor, the greater the price the honey will
+bring. As you might expect, since honey is sweeter than table sugar, it
+also has more calories as well -- 22 per teaspoon compared to granulated
+sugar's 16 per teaspoon. There are also trivial amounts of minerals and
+vitamins in the bee product while white sugar has none. Raw honey may
+also contain minute quantities of botulinum spores and should not be fed
+to children under one year of age. PLEASE READ THE POST FROM GERI
+GUIDETTI CONCERNING THIS BELOW. Raw honey is OK for older children and
+adults. Honey is not a direct substitute for table sugar however, it's
+use in recipes may call for a bit of alteration to get the recipe to
+turn out right.
+
+Honey comes in a number of forms in the retail market and they all
+have different storage characteristics:
+
+WHOLE-COMB: This is the bee product straight from the hive. This
+is the most unprocessed form in which honey comes, being found as large
+pieces of waxy comb floating in raw honey. The comb itself will contain
+many unopened honey cells.
+
+RAW: This is unheated honey that has been removed from the comb. It
+may contain bits of wax, insect parts and other small detritus.
+
+FILTERED: This is raw honey that has been warmed slightly to make
+it more easy to filter out small particles and impurities. Other than
+being somewhat cleaner than raw honey it is essentially the same.
+Most of nutrients remain intact.
+
+LIQUID: This is honey that has been heated to higher temperatures
+to allow for easier filtering and to kill any microorganisms. Usually
+lighter in color, this form is milder in flavor, resists crystallization
+and generally clearer. It stores the best of the various forms of honey.
+Much of the trace amounts of vitamins, however, are lost.
+
+CRYSTALLIZED or SPUN: This honey has had some of its moisture
+content removed to make a creamy, spread. It is the most processed form
+of honey.
+
+
+Much of the honey sold in supermarkets has been blended from a
+variety of different honeys and some may have even had other sweeteners
+added as well. Like anything involving humans, buying honey can be a
+tricky business. It pays to deal with individuals and brands you know
+you can trust. You should buy and store honey labeled U.S. GRADE A or
+U.S. FANCY if buying in retail outlets. However, be aware there are no
+federal labeling laws governing the sale of honey, so only honey labeled
+"pure" is entirely honey and not blended with other sweeteners. Honey
+grading is a matter of voluntary compliance which means some producers
+may be lax and sloppy about it. This can be a real nuisance when
+producers use words like "organic", "raw", "uncooked" and "unfiltered"
+on their labels, possibly to mislead. Fortunately, most honey producers
+are quite honest in their product labeling so if you're not certain of
+who to deal with, it is worthwhile to ask around to find out who
+produces a good product.
+
+Honey may also contain trace amounts of drugs used in treating
+various bee ailments, including antibiotics. If this is a concern to
+you, then it would be wise to investigate with your local honey producer
+what has been used.
+
+D.2.2 HONEY STORAGE
+
+Honey is much easier to store than to select and buy. Pure honey
+won't mold, but may crystallize over time. Exposure to air and moisture
+can cause color to darken and flavor to intensify and may speed
+crystallization as well. Comb honey doesn't store as well liquid honey
+so you should not expect it to last as long.
+
+Storage temperature is not as important for honey, but it should be
+kept from freezing and not exposed to high temperatures if possible.
+Either extreme can cause crystallization and heat may cause flavor to
+strengthen undesirably.
+
+Filtered liquid honey will last the longest in storage. Storage
+containers should be opaque, airtight, moisture- and odor-proof. Like
+any other stored food, honey should be rotated through the storage cycle
+and replaced with fresh product.
+
+If crystallization does occur, honey can be reliquified by placing
+the container in a larger container of hot water until it has melted.
+
+Avoid storing honey near heat sources and if using plastic pails
+don't keep it near petroleum products (including gasoline engines),
+chemicals or any other odor-producing products.
+
+
+-------------------------------------------------------------------------
+
+D.2.3 From: Geri Guidetti <arkinst@concentric.net>
+
+
+Duane Miles wrote:
+> 
+>If I recall correctly, honey contains very, very small amounts of the
+>bacteria that cause botulism. For adults, this seldom causes problems.
+>Our immune system is capable of dealing with small numbers of even
+>nasty bacteria, they do it all the time. The problem is when we get
+>large numbers of bacteria, or when our immune system is damaged or not
+>yet developed.
+>
+>That is where the problem with honey comes in. Some people used to use
+>honey to sweeten milk or other foods for infants. Infants immune
+>systems sometimes cannot handle the bacteria that cause botulism, and,
+>of course, those infants became seriously ill. So pediatricians now
+>advise strongly against using honey for children under a certain age.
+
+Yes, honey can contain the temperature resistant spores of Clostridium 
+botulinum, the bacterium that causes botulism. The organism is a strict 
+anaerobe, meaning that it only grows in the absence of molecular oxygen.
+The problem with infants and honey is that the small, intestinal tract 
+of an infant apparently is sufficiently anaerobic to allow the spores to 
+germinate into actively growing C. botulinum organisms. Essentially, the 
+infant serves the same role as a sealed, airtight, contaminated can of 
+beans as far as the organisms are concerned. There in the infant's body 
+the bacteria secrete the dangerous toxin that causes the symptoms of 
+botulism. There have been quite a few documented infant deaths due to 
+honey. As I recall, the studies identifying honey as the source were 
+done in the '80s. Most pediatricians recommend no honey for the first 
+year. It is probably best to check with your own for even later 
+updates...Geri Guidetti, The Ark Institute
+
+
+-------------------------------------------------------------------------
+
+D.2.4 Q: My can of honey is bulging. Is it safe to use?
+
+A: Honey can react with the can lining to release a gas
+especially when stored over a long period of time. Honey's high sugar
+content prevents bacteria growth. If there is no sign of mold growth,
+it is safe to eat. FREQUENTLY ASKED FOOD QUESTIONS, FN250
+
+
+D.3.1 MOLASSES, CANE, SORGHUM AND TABLE SYRUPS.
+
+Molasses and cane syrup are not precisely the same thing. Molasses
+is a by-product of sugar refining and cane syrup is simply cane juice
+boiled down to a syrup, in much the same way as maple syrup is produced.
+Non-Southerners may know it better as "unsulphured molasses" even if
+this is not completely correct. Sorghum syrup is produced in the same
+manner, but sorghum cane, rather than sugar cane, is used. Sorghum
+tends to have a thinner, slightly sourer taste than cane syrup. All
+these syrups are generally dark with a rich, heavy flavor. There are
+many "table syrups" sold in supermarkets, but close examination of the
+ingredient lists will reveal mixtures of cane syrup, cane sugar syrup
+and corn syrup. They usually have a much less pronounced flavor.
+
+All of the above syrups, except for those having corn syrup in their
+makeup, have the same storage characteristics. They can be stored on
+the shelf for about two years and up to a year after opening. Once they
+are opened, they are best kept in the refrigerator to retard mold
+growth. If mold growth does occur, the syrup should be discarded. The
+outside of the bottle should be cleaned of drips after each use. Some
+pure cane and sorghum syrups may crystallize in storage, but this causes
+no harm and they can be reliquified using the same method as for honey.
+
+
+D.4.1 CORN SYRUP
+
+Corn syrup is a liquid sweetener made by an enzyme reaction with
+corn starch. Available in both a light and a dark form, the darker
+variety has a flavor similar to molasses and contains refiners syrup (a
+byproduct of sugar refining). Both types often contain flavorings and
+preservatives. They are commonly used in baking and candy making
+because they do not crystallize when heated.
+
+Corn syrup is a poor storer compared to the other common sweeteners
+and because of this it often has a "best if sold by" dating code on the
+bottle. It should be stored in its original bottle, tightly capped, in
+a cool, dry place. New unopened bottles keep about six months from the
+date on the label. After opening, keep the corn syrup four to six
+months. These syrups are very prone to mold and to fermentation so be
+on the lookout for bubbling or a mold haze. If these present
+themselves, throw the syrup out. You should always be certain to wipe
+off any drips from the bottle after every use.
+
+I don't recommend corn syrup as a storage food since it stores so
+poorly.
+
+
+D.5.1 MAPLE SYRUP
+
+Maple syrup is probably the only sweetener that has developed a
+cult-like following (OK, cane syrup has its ardent fans too). Produced
+by boiling down maple sap until it reaches a syrup consistency, it is
+slightly sweeter than table sugar. Maple syrup is judged by much the
+same criteria as honey: lightness of color, clarity and taste. Pure
+maple is generally expensive and most pancake syrups are corn and cane
+sugar syrups with either natural or artificial flavorings.
+
+New unopened bottles of maple syrup may be kept on a cool, dark,
+shelf for up to two years. The sweetener may darken and the flavor get
+stronger, but it is still usable.
+
+After the bottle has been opened, it should be refrigerated. It
+will last about a year. Be careful to look out for mold growth. If mold
+occurs, discard the syrup.
+
+Flavored pancake syrups should be kept and stored as corn syrups.
+
+
+E. FATS AND OILS
+
+
+All oils are fats, but not all fats are oils. They are very similar
+to each other in their chemical makeup, but what makes one an oil and
+another a fat is the percentage of hydrogen saturation in the fatty
+acids of which they are composed. The fats and oils which are available
+to us for culinary purposes are actually mixtures of differing fatty
+acids so for practical purposes we'll say saturated fats are solid at
+room temperature (70 F) and unsaturated fats we call oils are liquid at
+room temperature. For dietary and nutrition purposes fats are generally
+classified as saturated, monosaturated and polyunsaturated, but this is
+just a further refinement of the amount of saturation of the particular
+compositions of fatty acids in the fats.
+
+E.1 Buying and Storing Oils and Fats.
+
+There is a problem with storing oils and fats for the long term and
+that is the fact that they go rancid rather quickly.
+
+There are some general rules you can follow to get the most life out
+of your stored cooking oil.
+
+#1- Although darker colored oils have more flavor than paler ones,
+they don't last as long in storage. Therefore, for longer shelf life,
+buy paler colored oils.
+
+#2- Heat, light and exposure to oxygen are the greatest factors in
+rancidity of cooking oils. If you can, refrigerate your stored oils. If
+possible, buy your oils in dark, opaque, airtight containers. Cooking
+oils should be stored in a cool, dark area.
+
+#3- Unless they have been specially treated or packaged, cooking oils
+have a shelf life of about one year, with a few specialized oils having
+a shorter life. If you don't use a great deal of it, try not to buy
+your fats in large containers. This way you won't be exposing a large
+quantity of oil to the air after you've opened the container.
+
+
+It seems to me that buying oil in large containers and then
+repackaging it into smaller, opaque, perhaps more airtight containers
+would be a good thing to do. I haven't found any data on this yet so I
+do not know if it would actually accomplish any useful extension of
+storage life or not. If anyone reading this should happen to have any
+good data on this, I'd surely like to see it.
+
+Additionally, I'm also looking for information about the usefulness
+of possibly adding anti-oxidants to slow down the oxidative rate, such
+as butylated hydroxyansiole (BHA), butylated hydroxytoleune (BHT),
+propyl gallate or vitamin E.
+
+
+
+Y. COOKING STAPLES
+
+BAKING POWDER. This powder is a combination of an acid, an alkali,
+and a starch to keep the other ingredients stable
+and dry. The powder reacts with liquid by foaming and the resulting
+bubbles can aerate and raise dough. Almost all baking powder now on the
+market is double acting, meaning it has one acid that bubbles at room
+temperature and another acid which only reacts at oven temperatures.
+Unless a recipe specifies otherwise, this is the type to use.
+
+Don't expose baking powder to steam, humid air, wet spoons, or any
+other moisture. Store in a tightly lidded container for no more than
+a year. Even bone dry baking powder eventually loses its potency. To
+test its strength, measure 1 tsp powder into 1/3 cup hot water. The
+mixture should fizz and bubble furiously. If it doesn't, throw the
+baking powder out.
+
+
+BAKING SODA. This gritty powder is sodium bicarbonate also called
+sodium acid bicarbonate (NaHCO3), a mild alkali. It
+is used in baking to leaven bread and does so in the same manner as
+baking powder. When combined with an acid ingredient, the bicarbonate
+reacts to give off carbon dioxide bubbles which causes the baked good to
+rise. If kept well sealed in an air- and moisture-proof container its
+storage life is indefinite. If kept in the cardboard box it usually
+comes in, it will keep for about eighteen months. Do keep in mind that
+baking soda is a wonderful odor absorber. If you don't want your baked
+goods tasting of whatever smells it absorbed then keeping it in an
+airtight container is an excellent idea.
+
+
+HERBS AND SPICES. It is difficult to give exact instructions on how
+best to store culinary herbs and spices because
+there are dozens of different seeds, leaves, roots, etc we call an herb
+or a spice. There are, however, some general rules to be followed to
+best preserve their flavors. All spices, particularly dried, are
+especially sensitive to heat, air and light. Room temperature is fine
+for keeping them, but they should be kept away from heat sources. It is
+common for the household spice cabinet or shelf to be located over the
+stove, but this is really a very poor place. Dark opaque glass is best
+for storage, but failing that, keeping a tightly sealed glass container
+in a dark place is next best. The cellophane packets some products come
+in just won't do for storage. Tightly sealed metal containers will work
+as well. Even dense plastic will do, but glass is best.
+
+Where possible, buy spices whole. Whole nutmegs will keep their
+flavor far longer than ground nutmeg, same for other seeds and roots.
+You'll have to get a grater, grinder or whatever, but the difference in
+flavor will be worth it.
+
+If you buy spices in bulk containers (which is certainly cheaper)
+consider transferring some into smaller containers and keeping the
+larger one tightly sealed in a cool, dark place. This will prevent
+unwanted light and air from continually getting in and playing havoc.
+
+Included in the suppliers addresses is a listing for Penzey's. I
+have never dealt with them myself, but they consistently get many good
+reviews in the rec.cooking newsgroup for the quality and price of their
+herbs and products. It might be worth your while to order a catalog.
+
+
+SALT. Storage life for salt is indefinite. So long as you keep it
+dry and do not let it get contaminated with dirt or whatever,
+it will never go bad. Over time, iodized salt may turn yellow, but this
+is harmless and may still be used. Salt it rather hygroscopic and will
+adsorb moisture from the air if not sealed in an air-tight container.
+If it does adsorb moisture and cakes up, it can be dried in the oven and
+then broken up with no harm done.
+
+All salt, however, is not the same. Salt comes in a number of
+different varieties, each with its own purpose. Very little of the salt
+produced in the U.S. is intended for use in food. The rest of it, about
+98%, has other uses. Therefore, it is important to be certain the salt
+you have is intended for human consumption. Once you are satisfied it
+is, you should then determine its appropriateness for the tasks to which
+you might want to set it to. Below is a partial list of some of the
+available salts. I hope to make it more complete as I find better
+information.
+
+Table Salt: This is by far the most widely known type of salt. It
+comes in two varieties; iodized and non-iodized. There
+is an ingredient added to it to absorb moisture so it will stay free
+flowing in damp weather. This non-caking agent does not dissolve in
+water and can cause cloudiness in whatever solution it is used if
+sufficiently large quantities are used. In canning it won't cause a
+problem since there is very little per jar. For pickling, though, it
+would be noticeable. If you are storing salt for this purpose, you
+should be sure to choose plain pickling salt, or other food grade pure
+salt. In the iodized varieties, the iodine can cause discoloration or
+darkening of pickled foods so be certain not to use it for that purpose.
+
+Canning Salt: This is pure salt and nothing but salt. It can
+usually be found in the canning supplies section of
+most stores. This is the salt to be preferred for most food
+preservation or storage uses.
+
+Kosher Salt: I'm not precisely sure what makes kosher salt
+different from canning salt. I'm presuming that it
+must have been processed in a particular manner in accordance with the
+kosher dietary laws of the Jewish faith because it is used in
+preparation of kosher foods. It is generally larger in grain size than
+table or canning salt and may have even been rolled to produce "flaked"
+kosher salt. Grain size can vary from manufacturer to manufacturer.
+
+Sea Salt: This type of salt comes in about as many different
+varieties as coffee and from about as many different
+places around the world. The "gourmet" versions can be rather
+expensive. In general, the types sold in grocery stores, natural food
+markets and gourmet shops have been purified enough to use in food.
+It's not very suitable for food preservation, though, because the
+mineral content it contains (other than the sodium chloride) may cause
+discoloration of the food.
+
+Rock or Ice Cream Salt: This type of salt comes in large chunky
+crystals and is intended primarily for use
+in home ice cream churns to lower the temperature of the ice filled
+water in which the churn sits. It's also sometimes used in icing down
+beer kegs. It is used in food preservation by some, but none of the
+brands I have been able to find label it as food grade so I would not
+use it for this purpose.
+
+Solar Salt: This is also sometimes confusingly called "sea salt".
+It is not, however, the same thing as the sea salt
+found in food stores. Most importantly, it is *not* food grade. It's
+main purpose is for use in water softeners. The reason it is called
+"solar" and sometimes "sea salt" is that it is produced by evaporation
+of sea water in large ponds in various arid areas of the world. This
+salt type is not purified and still contains the desiccated remains of
+whatever aquatic life might have been trapped in it. Those organic
+remains might react with the proteins in the foods you are attempting to
+preserve and cause it to spoil.
+
+Halite: For those of us fortunate enough to live far enough south
+to not need it, halite is the salt that is used on roads to
+melt snow and ice. It, too, is not food grade and should not be used in
+food preservation.
+
+Salt Substitutes: These are various other kinds of metal salts such
+as potassium chloride used to substitute for the
+ordinary sodium chloride salt we are familiar with. They have their
+uses, but should not be used in foods undergoing a heated preservation
+processing, they can cause the product to taste bad. Even the heat from
+normal cooking is sometimes sufficient to cause this.
+
+VINEGAR: There is vinegar and then there is vinegar and it is
+not all alike. The active ingredient in all vinegars is
+acetic acid, but what the sour stuff is made from can vary widely. The
+most common vinegar is the white distilled variety which is actually
+just diluted distilled acetic acid and not true vinegar at all. It
+keeps pretty much indefinitely if tightly sealed in a plastic or glass
+bottle with a *plastic* cap. The enamel coated metal caps always seem
+to get eaten by the acid over time. It is usually about 5-6% acetic
+acid and for pickling it is the type most often called for.
+
+The next most common variety is apple cider vinegar. There are two
+kinds of this type. A "cider flavored" distilled acetic acid type and a
+true cider vinegar fermented from hard cider. Either will store
+indefinitely at room temperature until a sediment begins to appear on
+the bottom. Stored vinegar will sometimes develop a cloudy substance.
+This is called a "mother of vinegar" and it is harmless. As long as the
+liquid does not begin to smell foul it can be filtered out through
+cheesecloth or a coffee filter and rebottled in a clean container. The
+mother can even be used to make more vinegar. If it begins to smell bad,
+however, it's gone over and should be tossed out.
+
+The more exotic wine vinegars, balsalmic and other types all can be
+stored like cider vinegar. Age and exposure to light and air, however,
+eventually begin to take their toll on their delicate flavors. Tightly
+capped in a cool, dark cabinet or refrigerator is best for their storage.
+
+
+YEAST: Yeast is just not a product you can stow away and forget
+about until you need it next year. It is, after all, a
+living organism and if it's not alive at the time you need it, you won't
+get any use out of it. This ancient leavening, brewing, fermenting
+agent is a single celled microscopic fungus. When we incorporate it
+into our bread dough, beer wort or fruit juice it begins to reproduce
+madly (we hope) and produce several by-products. If you're baking, the
+by-product you want is carbon dioxide which is trapped by the dough and
+subsequently causes it to rise. In brewing or vintning what is wanted
+is the ethyl alcohol. Almost all yeasts used for these purposes are in
+the same genus (Saccharomyces or "sugar fungi"), but many different
+species have evolved and some are more suitable for a particular task
+than others. It's entirely possible to use grocery store bread yeast to
+brew beer or ferment wine, but the results may leave a great deal to be
+desired. It's also possible to use yeast from beer brewing to make
+bread and from what I've read the results were pretty much
+indistinguishable from bread yeast.
+
+Leaving aside the brewing and vintning yeasts which are really
+outside the scope of this FAQ I am going to concentrate on bread yeast.
+It comes in two generally available forms; compressed or fresh and
+dried, sometimes called granular or instant active dry yeast. They are
+different genetic strains of the same species, but have different
+characteristics.
+
+Compressed yeast is only partly dried (about 70% moisture) and
+requires refrigeration and keeps even better in the deep freeze. If
+kept in an air- and moisture-tight container to prevent it from
+desiccating this type of yeast will keep for a year in the freezer (0
+degs F or less, but only about two weeks (maybe a bit more) in the
+refrigerator. Unless your kitchen is rather chilly it will not keep on
+the shelf. It should not have a mottled color or a sour odor.
+
+Dried yeast has only an 8% moisture content and comes packed in foil
+envelopes. The smaller single use packets are not generally vacuum
+packed, but the larger commercial sized "bricks" of about a pound or two
+each generally are. They can last for months on the shelf, up till the
+expiration date which should be clearly stamped on the package. If
+packaged in the same manner as recommended for compressed yeast above
+and kept in the refrigerator or freezer it can last for several years.
+The larger packs of yeast should be transferred to an air and moisture
+tight container after opening.
+
+Either type of yeast can be tested for viability by "proofing" them.
+This is nothing more than mixing a small amount of the yeast with an
+equal amount of sugar in warm water (105-115 deg F for dried; 95 deg F
+for fresh). Within about five minutes active yeast will become bubbly
+and begin to expand (at normal room temperature). Yeast which only
+slowly becomes active can still be used, but you will have to use more
+of it. If it shows no activity at all, it's dead and should be thrown
+out.
+
+There is another means of providing yeast for baking besides buying
+it from the grocery store and that is by using a sourdough starter. I'm
+not going to address it here, but I will point out that it has a
+newsgroup all its own (rec.food.sourdough) and several FAQ's devoted to
+it. Drop in and read for awhile and you'll learn more than you thought
+you could ever want to know.
+
+
+Z. INFANT FORMULA
+
+
+Since most folks into preparedness of one sort or another are
+planning for families, real or as yet hypothetical, I thought it
+important to include something on infant formula. Most baby food that
+comes in jars can be treated like canned goods of types meant for
+adults. Formula, though, is something else. I have to admit, that not
+yet having kids of my own, I've not given this much thought before so
+the below is taken from the book KEEPING FOOD FRESH, by Janet Bailey
+(see book list). In the future, if some of you readers will send it to
+me and/or I come up with more information from my own researches I want
+to expand this section on infant/child food storage.
+------------------------------------------------------------------------
+
+Prepared infant formula is primarily water and nonfat cow's milk.
+Among other ingredients, it contains sweeteners; sometimes lactose which
+is milk sugar; and sometimes corn syrup or other sugars. Coconut and
+soybean oils are common; vitamin and mineral supplements are universal.
+A few 

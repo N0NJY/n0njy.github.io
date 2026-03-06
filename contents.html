@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="author" content="Rick Donaldson, N0NJY">
+<meta name="description" content="Table of Contents">
+<title>Table of Contents – N0NJY</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="starfield" id="starfield"></div>
+
+<div class="topbar">
+  <a href="index.html">Home</a>
+  <a href="begradio.html">Radio</a>
+  <a href="articles.html">Articles</a>
+  <a href="astronomy.html">Space</a>
+  <a href="survival.html">Preparedness</a>
+  <a href="commlink.htm">Contact</a>
+</div>
+
+<div class="page">
+<h1>N0NJY Amateur Radio</h1>
+
+<h2>Real Time Data</h2>
+<div class="section">
+  <a href="http://www.arrl.org/news" target="_blank">Current Ham News (ARRL)</a>
+  <a href="solar.html">Solar Data</a>
+  <a href="http://www.hamqsl.com/solar3.html" target="_blank">Propagation</a>
+</div>
+
+<h2>Site Contents</h2>
+<div class="section">
+  <a href="index.html">Home</a>
+  <a href="articles.html">Articles</a>
+  <a href="astronomy.html">Astronomy</a>
+  <a href="commlink.htm">Email</a>
+  <a href="otherhams.html">Other Hams Pages</a>
+  <a href="packetradio.html">Packet Radio</a>
+  <a href="rickbio.html">Rick's Bio</a>
+  <a href="wxsatellite.html">Satellite Data</a>
+  <a href="solar.html">Solar Activities</a>
+  <a href="stormchaser.html">Storm Chasing</a>
+</div>
+
+<h2>Project Pages</h2>
+<div class="section">
+  <a href="spixie.html">S-Pixie Kit</a>
+  <a href="qcx20m.html">QRP Labs QCX Rig</a>
+</div>
+
+<h2>N0NJY's Other Links</h2>
+<div class="section">
+  <a href="http://jamaicadxpedition2007.blogspot.com/" target="_blank">
+    Rick &amp; JoAnne's Jamaica DXpedition (2007)
+  </a>
+  <a href="https://www.facebook.com/N0NJY/" target="_blank">Rick's N0NJY Facebook Page</a>
+  <a href="https://windsoftime.us" target="_blank">Winds of Time (Sailing Blog)</a>
+</div>
+
+<h2>Amateur Radio Related Links</h2>
+<div class="section">
+  <a href="https://www.qsl.net/kb9mwr/projects/wireless/modify.html" target="_blank">Modifying WiFi for Ham</a>
+</div>
+
+<div class="footer">
+  <p>Please email me at <a href="mailto:n0njy@qsl.net">n0njy@qsl.net</a> about broken links.</p>
+  <p>© N0NJY – Rick Donaldson, 1997–2018</p>
+</div>
+</div>
+
+<script>
+const starfield = document.getElementById('starfield');
+const starCount = 150;
+
+for(let i=0;i<starCount;i++){
+  const star=document.createElement('div');
+  star.className='star';
+  const size=Math.random()*2+1;
+  star.style.width=`${size}px`;
+  star.style.height=`${size}px`;
+  star.style.top=`${Math.random()*window.innerHeight}px`;
+  star.style.left=`${Math.random()*window.innerWidth}px`;
+  star.style.animationDuration=`${5+Math.random()*15}s`;
+  star.style.animationDelay=`${Math.random()*5}s`;
+  starfield.appendChild(star);
+}
+</script>
+
+</body>
+</html>
+

@@ -1,2 +1,2 @@
-# n0njy.github.io
+# n0njy-website
 N0NJY's Ham Radio Web Site

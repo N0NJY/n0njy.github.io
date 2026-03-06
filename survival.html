@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="author" content="Rick Donaldson, N0NJY">
+  <meta name="description" content="Survival Resources – N0NJY Amateur Radio">
+  <title>Survival – N0NJY</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    /* Center content and remove list bullets */
+    .page {
+      max-width: 900px;
+      margin: auto;
+      padding: 2rem 1rem;
+      text-align: center;
+      color: yellow;
+    }
+
+    .page a {
+      color: yellow;
+      text-decoration: none;
+      display: block;
+      margin: 0.5rem 0;
+    }
+
+    .page a:hover {
+      text-decoration: underline;
+    }
+
+    h1, h2 {
+      margin-top: 0.5rem;
+    }
+
+    .footer {
+      margin-top: 3rem;
+      font-size: 0.9rem;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Starfield for drifting stars -->
+  <div class="starfield" id="starfield"></div>
+
+  <!-- Top navigation -->
+  <div class="topbar">
+    <a href="index.html">Home</a>
+    <a href="contents.html">Table of Contents</a>
+    <a href="articles.html">Articles</a>
+    <a href="astronomy.html">Space</a>
+    <a href="otherhams.html">Other Hams</a>
+    <a href="commlink.htm">Contact</a>
+  </div>
+
+  <div class="page">
+    <h1>N0NJY Amateur Radio</h1>
+    <h2>Survival Links</h2>
+
+    <p>This page is currently being edited. Most links may be broken at this time.<br>
+       Updated: November 2018</p>
+
+    <h2>Food and Water Storage</h2>
+    <a href="food1.txt">Food Storage Part One</a>
+    <a href="food2.txt">Food Storage Part Two</a>
+    <a href="food3.txt">Food Storage Part Three</a>
+    <a href="foodwtr.html">Food &amp; Water in an Emergency (Red Cross)</a>
+    <a href="waterhome.htm">Water Storage at Home</a>
+
+    <h2>Red Cross Publications</h2>
+    <a href="emergenc.html">Emergency Handbook</a>
+    <a href="erthqke.html">Earthquake Preparation</a>
+    <a href="family.html">Family Disaster Supplies</a>
+    <a href="fire.html">Fire Emergencies</a>
+    <a href="flood.html">Flood Emergencies</a>
+    <a href="heatwve.html">Heatwave Preparations</a>
+    <a href="hurr.html">Hurricane</a>
+    <a href="thunder.html">Thunderstorms</a>
+    <a href="tornado.html">Tornado</a>
+    <a href="storm.html">Winter Storms</a>
+
+    <h2>Survival Texts</h2>
+    <a href="bobag.html">Bug Out Bag (One Type)</a>
+    <a href="terror.html">Chemical Agent Terrorism</a>
+    <a href="chemical.html">Chemical Defense</a>
+    <a href="prepare.html">Disaster Preparations at Home</a>
+    <a href="homestead.html">Homestead Living as a Survival Option</a>
+    <a href="howbad.html">How Bad Will it Be?</a>
+    <a href="howbad2.html">How Bad Will it Be? (2nd edition)</a>
+    <a href="nukes.html">Nuclear Explosion Information</a>
+    <a href="reality.html">Realities of Being a Survivalist</a>
+    <a href="cachman.html">US Special Forces Cache Manual</a>
+    <a href="whatis.html">What is Survivalism?</a>
+
+    <h2>Military Texts</h2>
+    <a href="fm8107/about.htm">Health Service Support in an NBC Environment</a>
+    <a href="http://www.nbc-med.org/others/" target="_blank">Medical NBC Online</a>
+
+    <div class="footer">
+      <p>Please email me at <a href="mailto:n0njy@qsl.net">n0njy@qsl.net</a> about broken links.</p>
+      <p>© N0NJY – Rick Donaldson, 1997–2026</p>
+    </div>
+  </div>
+
+  <script>
+    const starfield = document.getElementById('starfield');
+    const starCount = 150;
+
+    for(let i=0; i<starCount; i++){
+      const star = document.createElement('div');
+      star.className = 'star';
+      const size = Math.random() * 2 + 1;
+      star.style.width = `${size}px`;
+      star.style.height = `${size}px`;
+      star.style.top = `${Math.random() * window.innerHeight}px`;
+      star.style.left = `${Math.random() * window.innerWidth}px`;
+      star.style.animationDuration = `${5 + Math.random() * 15}s`;
+      star.style.animationDelay = `${Math.random() * 5}s`;
+      starfield.appendChild(star);
+    }
+  </script>
+</body>
+</html>
+

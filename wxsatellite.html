@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="author" content="Rick" >
+  <meta name="description" content="N0NJY – Weather Satellite Resources and Tracking">
+  <title>Weather Satellites – N0NJY</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .page {
+      max-width: 900px;
+      margin: auto;
+      padding: 2rem 1rem;
+      text-align: left;
+      color: #e6f0ff;
+    }
+    .page a {
+      color: #8ecbff;
+    }
+    .page a:hover {
+      color: #ffffff;
+    }
+    .notice {
+      background: rgba(180, 40, 40, 0.25);
+      border: 1px solid #c44;
+      border-radius: 6px;
+      padding: 1rem;
+      margin: 1.5rem 0;
+      text-align: center;
+    }
+    .update-note {
+      font-style: italic;
+      color: #a0c0ff;
+      margin: 1.2rem 0 2rem;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Starfield background -->
+  <div class="starfield" id="starfield"></div>
+
+  <!-- Top navigation -->
+  <div class="topbar">
+    <a href="index.html">Home</a>
+    <a href="contents.html">Table of Contents</a>
+    <a href="begradio.html">Radio</a>
+    <a href="articles.html">Articles</a>
+    <a href="astronomy.html">Space</a>
+    <a href="survival.html">Preparedness</a>
+    <a href="commlink.htm">Contact</a>
+  </div>
+
+  <div class="page">
+    <h1>N0NJY Amateur Radio</h1>
+    <h2>Weather Satellite Data & Tracking</h2>
+
+    <div class="notice">
+      <strong>This page is under revision</strong><br>
+      Many old links no longer work (as of 2018–2025).<br>
+      Several classic satellite tracking programs and real-time data sources have disappeared or moved.
+    </div>
+
+    <p class="update-note">
+      11 Nov 2018 — Removed most broken links.<br>
+      I used to do quite a bit of satellite tracking and even made contacts via birds in the late 90s / early 2000s.<br>
+      Many of the best resources from that era are gone now.<br>
+      If you know of currently working, good satellite tracking, decoding or weather sat resources, please email me — thank you!
+    </p>
+
+    <h3 style="margin-top: 2.5rem;">Remaining / Possible Useful Links</h3>
+
+    <div class="section">
+      <a href="http://www.sat-net.com/winorbit/" target="_blank">WinOrbit - Sat Tracking<a/>
+      <a href="https://www.satnogs.org/" target="_blank">SatNOGS – Open Source Global Network of Satellite Ground Stations</a>
+      <a href="https://network.satnogs.org/" target="_blank">SatNOGS Network – Live observations & data</a>
+      <a href="https://www.n2yo.com/" target="_blank">N2YO.com – Real-time satellite tracking & predictions</a>
+      <a href="https://heavens-above.com/" target="_blank">Heavens-Above – Satellite passes, ISS, Starlink etc.</a>
+      <a href="https://www.rtl-sdr.com/" target="_blank">RTL-SDR.com – Weather satellite reception tutorials (NOAA, Meteor-M etc.)</a>
+      <a href="https://www.scd31.com/" target="_blank">SatDump – Modern open-source weather sat decoder</a>
+      <a href="https://www.wxtoimgrestored.xyz/" target="_blank">WXtoImg Restored – Fork of the classic weather sat decoder</a>
+    </div>
+
+    <div class="footer center" style="margin-top: 4rem;">
+      <p>Please email me at <a href="mailto:n0njy@qsl.net">n0njy@qsl.net</a> about broken links or new good satellite resources.</p>
+      <p>© N0NJY – Rick Donaldson, 1997–2026</p>
+    </div>
+  </div>
+
+  <script>
+    const starfield = document.getElementById('starfield');
+    const starCount = 150;
+    for(let i = 0; i < starCount; i++){
+      const star = document.createElement('div');
+      star.className = 'star';
+      const size = Math.random() * 2 + 1;
+      star.style.width = `${size}px`;
+      star.style.height = `${size}px`;
+      star.style.top = `${Math.random() * window.innerHeight}px`;
+      star.style.left = `${Math.random() * window.innerWidth}px`;
+      star.style.animationDuration = `${5 + Math.random() * 15}s`;
+      star.style.animationDelay = `${Math.random() * 5}s`;
+      starfield.appendChild(star);
+    }
+  </script>
+
+</body>
+</html>

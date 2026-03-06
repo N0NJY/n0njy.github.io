@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="author" content="Rick Donaldson, N0NJY">
+  <meta name="description" content="N0NJY Amateur Radio Homepage">
+  <title>N0NJY Amateur Radio – Home</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .page {
+      max-width: 900px;
+      margin: auto;
+      padding: 2rem 1rem;
+      text-align: center;
+      color: yellow;
+    }
+    .page a {
+      color: yellow;
+      text-decoration: none;
+      display: block;
+      margin: 0.5rem 0;
+    }
+    .page a:hover {
+      text-decoration: underline;
+    }
+    h1, h2 {
+      margin-top: 0.5rem;
+    }
+    .footer {
+      margin-top: 3rem;
+      font-size: 0.9rem;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Starfield for drifting stars -->
+  <div class="starfield" id="starfield"></div>
+
+  <!-- Top navigation -->
+  <div class="topbar">
+    <a href="index.html">Home</a>
+    <a href="contents.html">Table of Contents</a>
+    <a href="articles.html">Articles</a>
+    <a href="otherhams.html">Other Hams</a>
+    <a href="astronomy.html">Space</a>
+    <a href="survival.html">Preparedness</a>
+    <a href="commlink.htm">Contact</a>
+  </div>
+
+  <div class="page">
+    <h1>Welcome to N0NJY Amateur Radio</h1>
+    <p>Explore amateur radio resources, solar and propagation data, projects, and more!</p>
+
+    <h2>Quick Links</h2>
+    <a href="contents.html">Table of Contents</a>
+    <a href="articles.html">Articles</a>
+    <a href="otherhams.html">Other Hams Pages</a>
+    <a href="astronomy.html">Astronomy</a>
+    <a href="survival.html">Preparedness</a>
+    <a href="commlink.htm">Contact</a>
+
+    <div class="footer">
+      <p>Please email me at <a href="mailto:n0njy@qsl.net">n0njy@qsl.net</a> about broken links.</p>
+      <p>© N0NJY – Rick Donaldson, 1997–2026</p>
+    </div>
+  </div>
+
+  <script>
+    const starfield = document.getElementById('starfield');
+    const starCount = 150;
+
+    for(let i=0; i<starCount; i++){
+      const star = document.createElement('div');
+      star.className = 'star';
+      const size = Math.random() * 2 + 1;
+      star.style.width = `${size}px`;
+      star.style.height = `${size}px`;
+      star.style.top = `${Math.random() * window.innerHeight}px`;
+      star.style.left = `${Math.random() * window.innerWidth}px`;
+      star.style.animationDuration = `${5 + Math.random() * 15}s`;
+      star.style.animationDelay = `${Math.random() * 5}s`;
+      starfield.appendChild(star);
+    }
+  </script>
+
+</body>
+</html>
+

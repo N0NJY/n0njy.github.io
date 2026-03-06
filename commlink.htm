@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="author" content="Rick Donaldson, N0NJY">
+  <meta name="description" content="N0NJY Amateur Radio Communications Panel">
+  <title>Communications – N0NJY</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .page {
+      max-width: 900px;
+      margin: auto;
+      padding: 2rem 1rem;
+      text-align: center;
+      color: yellow;
+    }
+    .page a {
+      color: yellow;
+      text-decoration: none;
+      display: block;
+      margin: 0.5rem 0;
+    }
+    .page a:hover {
+      text-decoration: underline;
+    }
+    h1, h2 {
+      margin-top: 0.5rem;
+    }
+    .footer {
+      margin-top: 3rem;
+      font-size: 0.9rem;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Starfield for drifting stars -->
+  <div class="starfield" id="starfield"></div>
+
+  <!-- Top navigation -->
+  <div class="topbar">
+    <a href="index.html">Home</a>
+    <a href="contents.html">Table of Contents</a>
+    <a href="articles.html">Articles</a>
+    <a href="astronomy.html">Space</a>
+    <a href="otherhams.html">Other Hams</a>
+    <a href="survival.html">Preparedness</a>
+  </div>
+
+  <div class="page">
+    <h1>N0NJY Amateur Radio</h1>
+    <h2>Communications Panel</h2>
+
+    <p>Ham Call Sign: <strong>N0NJY</strong></p>
+    <p>Email: <a href="mailto:n0njy@qsl.net">n0njy@qsl.net</a><br>
+       Winlink: n0njy@winlink.org</p>
+
+    <p>Message Boards:<br>
+       <a href="http://communities.anomalies.net/forum/ubbthreads.php" target="_blank">Communities Forum</a></p>
+
+    <p>Facebook: <a href="https://www.facebook.com/TheRealRickDonaldson" target="_blank">Rick Donaldson</a><br>
+       ***You must be a member of Facebook to find me!</p>
+
+    <p>Radio Communications:<br>
+       146.970 MHz PPFMA Repeater (Colorado Springs)<br>
+       146.520 MHz (Ship / traveling)<br>
+       SSB Voice: 17/20/40 meters<br>
+       BPSK: 14.070 MHz<br>
+       RTTY: 20 meters<br>
+       Send me an email for radio Sked; generally listen on 20 meters.</p>
+
+    <div class="footer">
+      <p>Please email me at <a href="mailto:n0njy@qsl.net">n0njy@qsl.net</a> about broken links.</p>
+      <p>© N0NJY – Rick Donaldson, 1997–2026</p>
+    </div>
+  </div>
+
+  <script>
+    const starfield = document.getElementById('starfield');
+    const starCount = 150;
+
+    for(let i=0; i<starCount; i++){
+      const star = document.createElement('div');
+      star.className = 'star';
+      const size = Math.random() * 2 + 1;
+      star.style.width = `${size}px`;
+      star.style.height = `${size}px`;
+      star.style.top = `${Math.random() * window.innerHeight}px`;
+      star.style.left = `${Math.random() * window.innerWidth}px`;
+      star.style.animationDuration = `${5 + Math.random() * 15}s`;
+      star.style.animationDelay = `${Math.random() * 5}s`;
+      starfield.appendChild(star);
+    }
+  </script>
+</body>
+</html>
+
