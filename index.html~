@@ -3,11 +3,10 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="author" content="Rick" >
+  <meta name="author" content="Rick Donaldson, N0NJY">
   <meta name="description" content="N0NJY Amateur Radio Homepage">
   <title>N0NJY Amateur Radio – Home</title>
   <link rel="stylesheet" href="style.css">
-
   <style>
     .page {
       max-width: 900px;
@@ -16,34 +15,24 @@
       text-align: center;
       color: yellow;
     }
-
     .page a {
       color: yellow;
       text-decoration: none;
       display: block;
       margin: 0.5rem 0;
     }
-
     .page a:hover {
       text-decoration: underline;
     }
-
     h1, h2 {
       margin-top: 0.5rem;
     }
-
     .footer {
       margin-top: 3rem;
       font-size: 0.9rem;
     }
-
-    .solar-banner {
-      margin: 2rem 0;
-    }
   </style>
-
 </head>
-
 <body>
 
   <!-- Starfield for drifting stars -->
@@ -61,20 +50,10 @@
   </div>
 
   <div class="page">
-
     <h1>Welcome to N0NJY Amateur Radio</h1>
-
     <p>Explore amateur radio resources, solar and propagation data, projects, and more!</p>
 
-    <!-- Solar Conditions Banner -->
-    <div class="solar-banner">
-      <a href="https://www.hamqsl.com/solar.html" title="Click to add Solar-Terrestrial Data to your website!">
-        <img src="https://www.hamqsl.com/solarn0nbh.php" alt="Solar Terrestrial Data">
-      </a>
-    </div>
-
     <h2>Quick Links</h2>
-
     <a href="contents.html">Table of Contents</a>
     <a href="articles.html">Articles</a>
     <a href="otherhams.html">Other Hams Pages</a>
@@ -86,7 +65,6 @@
       <p>Please email me at <a href="mailto:n0njy@qsl.net">n0njy@qsl.net</a> about broken links.</p>
       <p>© N0NJY – Rick Donaldson, 1997–2026</p>
     </div>
-
   </div>
 
   <script>
@@ -109,3 +87,4 @@
 
 </body>
 </html>
+
