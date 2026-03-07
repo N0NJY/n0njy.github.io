@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="author" content="Rick Donaldson, N0NJY">
+  <meta name="author" content="Rick" >
   <meta name="description" content="N0NJY Amateur Radio Articles">
   <title>Articles – N0NJY</title>
   <link rel="stylesheet" href="style.css">
@@ -58,6 +58,9 @@
     <a href="shelters/shelter.htm">Fallout Shelters and Nuclear Information</a>
     <a href="space.html">Space – The Final Frontier</a>
     <a href="waterhome.htm">Water Storage at Home</a>
+    <a href="https://preppercomm.substack.com/"target="_blank">
+    N0NJY's Ham Radio for Prepper's Substack
+  </a>
 
     <div class="footer">
       <p>Please email me at <a href="mailto:n0njy@qsl.net">n0njy@qsl.net</a> about broken links.</p>
