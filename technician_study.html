@@ -1,262 +1,235 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Self-Study Course: Getting Your USA Amateur Radio Technician License</title>
-    <style>
-        body {
-            background-color: #000; /* Black background for space */
-            color: #fff; /* White text for visibility */
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            position: relative;
-            overflow-x: hidden;
-        }
-        /* Star field CSS - simple animated stars */
-        .star-field {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            pointer-events: none;
-            overflow: hidden;
-        }
-        .star {
-            position: absolute;
-            background: #fff;
-            border-radius: 50%;
-            animation: twinkle 5s infinite;
-        }
-        @keyframes twinkle {
-            0% { opacity: 0; }
-            50% { opacity: 1; }
-            100% { opacity: 0; }
-        }
-        /* Generate random stars via JS, but for static HTML, we'll add some inline */
-        header {
-            background-color: rgba(0, 0, 0, 0.8);
-            padding: 20px;
-            text-align: center;
-        }
-        footer {
-            background-color: rgba(0, 0, 0, 0.8);
-            padding: 10px;
-            text-align: center;
-            margin-top: 20px;
-        }
-        main {
-            max-width: 800px;
-            margin: 20px auto;
-            padding: 20px;
-            background-color: rgba(255, 255, 255, 0.1); /* Semi-transparent for star visibility */
-        }
-        h1, h2, h3 {
-            color: #ffd700; /* Gold for headers */
-        }
-        a {
-            color: #00bfff; /* Light blue for links, but per request, links are text URLs */
-        }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="author" content="Rick Donaldson, N0NJY">
+<meta name="description" content="Self Study Course for the USA Amateur Radio Technician License">
+<title>Technician License Self Study – N0NJY</title>
+
+<link rel="stylesheet" href="style.css">
+
+<style>
+.page{
+  max-width:900px;
+  margin:auto;
+  padding:2rem 1rem;
+  color:yellow;
+}
+
+.page a{
+  color:yellow;
+  text-decoration:none;
+}
+
+.page a:hover{
+  text-decoration:underline;
+}
+
+h1,h2,h3{
+  margin-top:1rem;
+}
+
+ul{
+  margin-bottom:1.2rem;
+}
+
+.footer{
+  margin-top:3rem;
+  font-size:0.9rem;
+}
+</style>
+
 </head>
+
 <body>
-    <div class="star-field">
-        <!-- Static stars for example; add more or use JS for dynamic -->
-        <div class="star" style="top: 10%; left: 20%; width: 2px; height: 2px; animation-delay: 0s;"></div>
-        <div class="star" style="top: 15%; left: 30%; width: 1px; height: 1px; animation-delay: 1s;"></div>
-        <div class="star" style="top: 20%; left: 40%; width: 3px; height: 3px; animation-delay: 2s;"></div>
-        <div class="star" style="top: 25%; left: 50%; width: 2px; height: 2px; animation-delay: 3s;"></div>
-        <div class="star" style="top: 30%; left: 60%; width: 1px; height: 1px; animation-delay: 4s;"></div>
-        <div class="star" style="top: 35%; left: 70%; width: 2px; height: 2px; animation-delay: 0.5s;"></div>
-        <div class="star" style="top: 40%; left: 80%; width: 3px; height: 3px; animation-delay: 1.5s;"></div>
-        <div class="star" style="top: 45%; left: 90%; width: 1px; height: 1px; animation-delay: 2.5s;"></div>
-        <div class="star" style="top: 50%; left: 10%; width: 2px; height: 2px; animation-delay: 3.5s;"></div>
-        <div class="star" style="top: 55%; left: 25%; width: 3px; height: 3px; animation-delay: 4.5s;"></div>
-        <!-- Add more stars as needed for fuller field -->
-    </div>
-    <header>
-        <h1>Self-Study Course: Getting Your USA Amateur Radio Technician License</h1>
-    </header>
-    <main>
-        <p>This course is designed as a simple, self-paced guide to help anyone prepare for the FCC Technician Class license exam. It focuses on the essentials: plain-language explanations of key concepts, the technical knowledge required to pass the test, and links to official resources like the FCC question pool. No prior experience is needed—just read through the modules, review the topics, and practice with the provided tools.</p>
 
-        <p>The course is structured around the 10 subelements (T0–T9) from the FCC Technician question pool (valid for exams through June 30, 2026). Each module includes:</p>
-        <ul>
-            <li>A brief overview.</li>
-            <li>Key topics to study.</li>
-            <li>Simple explanations of technical aspects.</li>
-            <li>Links to free resources for deeper reading and practice.</li>
-        </ul>
+<div class="starfield" id="starfield"></div>
 
-        <p><strong>Important Note on Question Pools:</strong> As of March 2026, the current Technician question pool is valid for exams until June 30, 2026. A new pool (effective July 1, 2026–June 30, 2030) has been released for advance study. If your exam is after June 30, 2026, switch to the updated pool. Links to both are provided below.</p>
+<div class="topbar">
+<a href="index.html">Home</a>
+<a href="contents.html">Table of Contents</a>
+<a href="articles.html">Articles</a>
+<a href="otherhams.html">Other Hams</a>
+<a href="astronomy.html">Space</a>
+<a href="survival.html">Preparedness</a>
+<a href="commlink.htm">Contact</a>
+</div>
 
-        <h2>Getting Started: Basics of Amateur Radio and Licensing</h2>
-        <p>Before diving in, understand why and how to get licensed:</p>
-        <ul>
-            <li><strong>What is Amateur (Ham) Radio?</strong> It's a hobby and service where licensed operators use radio frequencies for non-commercial communication, experimentation, emergency support, and fun. Technicians get access to VHF/UHF bands for local comms, repeaters, and some HF for longer range.</li>
-            <li><strong>Why Technician Level?</strong> It's the entry-level license. Pass a 35-question multiple-choice exam (need 26 correct) covering rules, basics of radio, and safety. No Morse code required.</li>
-            <li><strong>How to Test:</strong> Exams are administered by Volunteer Examiners (VEs). Find sessions via http://www.arrl.org/find-an-amateur-radio-license-exam-session. Cost is usually $15 or less. Register with FCC for a FRN (FCC Registration Number) at https://wireless2.fcc.gov/UlsEntry/licManager/login.jsp.</li>
-            <li><strong>Study Tips:</strong> Read one module per day/week. Use free practice tests to quiz yourself. Aim for 85%+ on practices before testing.</li>
-            <li><strong>Official Question Pool (2022–2026):</strong> Download PDF from https://ncvec.org/downloads/2022-2026%20Tech%20Pool%20PUBLIC%20Release%20FINAL%20ERRATA%20220121.pdf or view interactively at https://hamstudy.org/tech2022. (Includes explanations.)</li>
-            <li><strong>Upcoming Pool (2026–2030):</strong> https://hamstudy.org/tech2026.</li>
-            <li><strong>Free Practice Tools:</strong></li>
-            <ul>
-                <li>https://hamstudy.org/: Flashcards, practice exams, progress tracking.</li>
-                <li>http://arrlexamreview.appspot.com/: Random practice tests by topic.</li>
-                <li>https://www.eham.net/exams/: Simple online quizzes.</li>
-            </ul>
-            <li><strong>Free Study Guides:</strong></li>
-            <ul>
-                <li>https://www.kb6nu.com/wp-content/uploads/2023/03/2022-no-nonsense-tech-study-guide-v2-20230204.pdf: Easy-to-read PDF with all questions/answers explained.</li>
-                <li>https://hamradioprep.com/get-started-for-free: Downloadable course book.</li>
-                <li>https://www.mometrix.com/academy/ham-radio-technician-class/: Free sample questions.</li>
-            </ul>
-        </ul>
+<div class="page">
 
-        <p>This structure is modular, so you can expand it later for General (adds HF privileges, more advanced topics) and Extra (full privileges, deepest tech) by adding similar modules based on their subelements.</p>
+<h1>Self Study Course</h1>
+<h2>Getting Your USA Amateur Radio Technician License</h2>
 
-        <h2>Module 1: FCC Rules (T1)</h2>
-        <p><strong>Overview:</strong> Covers amateur radio definitions, licensing responsibilities, and basic regulations.</p>
-        <p><strong>Key Topics:</strong></p>
-        <ul>
-            <li>Amateur service purpose: Experimentation, self-training, emergency comms.</li>
-            <li>License classes: Technician, General, Extra.</li>
-            <li>Station ID: Say your call sign every 10 minutes and at end of contact.</li>
-            <li>Prohibited: Business use, music, obscene language.</li>
-        </ul>
-        <p><strong>Technical Aspects:</strong> Frequencies allocated to Technician: VHF (2m: 144–148 MHz), UHF (70cm: 420–450 MHz), some HF. Know band plans to avoid interference.</p>
-        <p><strong>Resources:</strong> Read Ch. 1 in KB6NU Guide. Practice at HamStudy.org (T1 section).</p>
+<p>This course is designed as a simple self paced guide to help anyone prepare for the FCC Technician Class license exam. It focuses on the essentials: plain language explanations of key concepts, the technical knowledge required to pass the test, and links to official resources like the FCC question pool.</p>
 
-        <h2>Module 2: Operating Procedures (T2)</h2>
-        <p><strong>Overview:</strong> How to communicate properly on air.</p>
-        <p><strong>Key Topics:</strong></p>
-        <ul>
-            <li>Calling CQ: "CQ CQ this is [call sign]."</li>
-            <li>Repeaters: Input/output frequencies, offsets (e.g., +0.6 MHz for 2m), courtesy tones.</li>
-            <li>Simplex vs. repeater ops.</li>
-            <li>Emergency calls: "Mayday" or break in with priority.</li>
-        </ul>
-        <p><strong>Technical Aspects:</strong> Phonetics (Alpha, Bravo) for clarity. CTCSS tones for repeater access.</p>
-        <p><strong>Resources:</strong> Ch. 2 in Ham Radio Prep book. Video: https://www.youtube.com/watch?v=SO4v_WeHRdc (search for similar free tutorials).</p>
+<p>No prior experience is required. Simply work through the modules, review the topics, and practice using the tools provided.</p>
 
-        <h2>Module 3: Radio Wave Propagation (T3)</h2>
-        <p><strong>Overview:</strong> How signals travel.</p>
-        <p><strong>Key Topics:</strong></p>
-        <ul>
-            <li>Line-of-sight: VHF/UHF limited by horizon.</li>
-            <li>Tropospheric ducting: Weather bends signals farther.</li>
-            <li>Knife-edge diffraction: Signals bend over obstacles.</li>
-        </ul>
-        <p><strong>Technical Aspects:</strong> Wavelength vs. frequency (speed of light / frequency = wavelength). Higher frequency = shorter range in atmosphere.</p>
-        <p><strong>Resources:</strong> Ch. 3 in KB6NU Guide. Interactive: ARRL Propagation Tutorials at http://www.arrl.org/propagation.</p>
+<p>The course follows the ten Technician subelements (T0 through T9) used in the FCC question pool. Each module includes an overview, key topics, simple technical explanations, and links to additional study resources.</p>
 
-        <h2>Module 4: Amateur Practices and Station Setup (T4)</h2>
-        <p><strong>Overview:</strong> Setting up your radio station.</p>
-        <p><strong>Key Topics:</strong></p>
-        <ul>
-            <li>Mobile vs. base stations.</li>
-            <li>Test equipment: Multimeter for voltage/current.</li>
-            <li>Common issues: Weak signals due to low power or poor antenna.</li>
-        </ul>
-        <p><strong>Technical Aspects:</strong> Grounding to prevent shocks. Use fused power supplies.</p>
-        <p><strong>Resources:</strong> Ch. 4 in free guides. ARRL's http://www.arrl.org/your-first-station.</p>
+<h2>Getting Started</h2>
 
-        <h2>Module 5: Electrical Principles (T5)</h2>
-        <p><strong>Overview:</strong> Basic math and electricity for radio.</p>
-        <p><strong>Key Topics:</strong></p>
-        <ul>
-            <li>Units: Volts (V), amps (A), ohms (Ω), watts (W).</li>
-            <li>Ohm's Law: V = I × R.</li>
-            <li>Power: P = V × I.</li>
-        </ul>
-        <p><strong>Technical Aspects:</strong> Series/parallel circuits. Decibels: 3 dB = double power.</p>
-        <p><strong>Resources:</strong> Ch. 5 in KB6NU. Practice math problems at HamStudy.org explanations.</p>
+<ul>
+<li><strong>What is Amateur Radio?</strong> Amateur radio is a hobby and public service where licensed operators use radio frequencies for communication, experimentation, and emergency support.</li>
 
-        <h2>Module 6: Electrical Components (T6)</h2>
-        <p><strong>Overview:</strong> Parts in radio circuits.</p>
-        <p><strong>Key Topics:</strong></p>
-        <ul>
-            <li>Resistors, capacitors, inductors: Store/resist energy.</li>
-            <li>Diodes, transistors: Control current flow.</li>
-            <li>Batteries: Types like lithium-ion (rechargeable).</li>
-        </ul>
-        <p><strong>Technical Aspects:</strong> Schematics: Symbols for components (e.g., zigzag for resistor).</p>
-        <p><strong>Resources:</strong> Ch. 6 in Ham Radio Prep. Free diagrams at https://learn.sparkfun.com/.</p>
+<li><strong>Technician License</strong> is the entry level license. The exam contains 35 multiple choice questions and you must answer 26 correctly to pass.</li>
 
-        <h2>Module 7: Station Equipment (T7)</h2>
-        <p><strong>Overview:</strong> Radios, antennas, troubleshooting.</p>
-        <p><strong>Key Topics:</strong></p>
-        <ul>
-            <li>Transceivers: Combine transmitter/receiver.</li>
-            <li>SWR meter: Checks antenna match (ideal <2:1).</li>
-            <li>Common problems: Distorted audio from overmodulation.</li>
-        </ul>
-        <p><strong>Technical Aspects:</strong> Feed lines: Coax for low loss. Dummy loads for testing.</p>
-        <p><strong>Resources:</strong> Ch. 7 in guides. YouTube: https://www.youtube.com/results?search_query=ham+radio+troubleshooting+basics.</p>
+<li><strong>Find a Test Session</strong><br>
+http://www.arrl.org/find-an-amateur-radio-license-exam-session</li>
 
-        <h2>Module 8: Modulation and Activities (T8)</h2>
-        <p><strong>Overview:</strong> Signal types and special ops.</p>
-        <p><strong>Key Topics:</strong></p>
-        <ul>
-            <li>FM vs. SSB: FM for local, SSB for efficiency.</li>
-            <li>Satellites: Uplink/downlink frequencies.</li>
-            <li>Digital modes: Packet, FT8.</li>
-        </ul>
-        <p><strong>Technical Aspects:</strong> Bandwidth: FM uses more than CW (Morse).</p>
-        <p><strong>Resources:</strong> Ch. 8 in KB6NU. Try https://www.amsat.org/intro-to-satellites/.</p>
+<li><strong>Get an FCC FRN</strong><br>
+https://wireless2.fcc.gov/UlsEntry/licManager/login.jsp</li>
 
-        <h2>Module 9: Antennas and Feed Lines (T9)</h2>
-        <p><strong>Overview:</strong> Getting signals out.</p>
-        <p><strong>Key Topics:</strong></p>
-        <ul>
-            <li>Dipole: Half-wavelength long.</li>
-            <li>Vertical: Omni-directional.</li>
-            <li>Gain: Directional antennas focus power.</li>
-        </ul>
-        <p><strong>Technical Aspects:</strong> Impedance match: 50 ohms typical. SWR high = power reflected.</p>
-        <p><strong>Resources:</strong> Ch. 9 in free books. ARRL http://www.arrl.org/antennas.</p>
+<li><strong>Technician Question Pool (2022–2026)</strong><br>
+https://hamstudy.org/tech2022</li>
 
-        <h2>Module 10: Safety (T0)</h2>
-        <p><strong>Overview:</strong> RF and electrical hazards.</p>
-        <p><strong>Key Topics:</strong></p>
-        <ul>
-            <li>RF exposure: Keep distance from antennas.</li>
-            <li>Tower safety: Grounding, guy wires.</li>
-            <li>AC safety: Three-prong plugs.</li>
-        </ul>
-        <p><strong>Technical Aspects:</strong> MPE limits: Calculate based on power/frequency. Use fuses.</p>
-        <p><strong>Resources:</strong> Ch. 10 in guides. FCC https://www.fcc.gov/engineering-technology/electromagnetic-compatibility-division/radio-frequency-safety/faq/rf-safety.</p>
+<li><strong>New Pool (2026–2030)</strong><br>
+https://hamstudy.org/tech2026</li>
 
-        <h2>Final Steps: Testing and Beyond</h2>
-        <ul>
-            <li><strong>Practice Full Exams:</strong> Use ARRL Exam Review or HamStudy until consistent 85%+.</li>
-            <li><strong>After Passing:</strong> Get your call sign (e.g., via FCC ULS). Join a club via http://www.arrl.org/find-a-club. Buy a radio (start with handheld like Baofeng UV-5R).</li>
-            <li><strong>Expanding to General/Extra:</strong> Reuse this format. General adds HF bands, propagation depth; Extra adds advanced electronics. Use similar free tools—HamStudy has pools for all levels.</li>
-        </ul>
+</ul>
 
-        <p>Study consistently, and you'll pass easily. Good luck, Rick (@n0njy)—welcome to ham radio from Boiling Spring Lakes! If you need tweaks, let me know.</p>
-    </main>
-    <footer>
-        <p>&copy; 2026 <a href="https://n0njy.org">Rick (@n0njy)</a> - Boiling Spring Lakes, NC. All rights reserved.</p>
-    </footer>
-    <script>
-        // Optional: Add more dynamic stars if desired
-        function createStars() {
-            const starField = document.querySelector('.star-field');
-            for (let i = 0; i < 100; i++) {
-                const star = document.createElement('div');
-                star.classList.add('star');
-                star.style.top = `${Math.random() * 100}%`;
-                star.style.left = `${Math.random() * 100}%`;
-                star.style.width = `${Math.random() * 3 + 1}px`;
-                star.style.height = star.style.width;
-                star.style.animationDelay = `${Math.random() * 5}s`;
-                starField.appendChild(star);
-            }
-        }
-        createStars();
-    </script>
+<h2>Free Practice Tools</h2>
+
+<ul>
+<li>https://hamstudy.org</li>
+<li>http://arrlexamreview.appspot.com</li>
+<li>https://www.eham.net/exams</li>
+</ul>
+
+<h2>Free Study Guides</h2>
+
+<ul>
+<li>https://www.kb6nu.com/wp-content/uploads/2023/03/2022-no-nonsense-tech-study-guide-v2-20230204.pdf</li>
+<li>https://hamradioprep.com/get-started-for-free</li>
+<li>https://www.mometrix.com/academy/ham-radio-technician-class</li>
+</ul>
+
+<h2>Module 1 – FCC Rules (T1)</h2>
+
+<ul>
+<li>Purpose of amateur radio service</li>
+<li>License classes: Technician, General, Extra</li>
+<li>Station identification every 10 minutes</li>
+<li>Prohibited transmissions such as business or music</li>
+</ul>
+
+<p>Technicians primarily operate on VHF and UHF bands including 2 meters (144–148 MHz) and 70 centimeters (420–450 MHz).</p>
+
+<h2>Module 2 – Operating Procedures (T2)</h2>
+
+<ul>
+<li>Calling CQ</li>
+<li>Simplex versus repeaters</li>
+<li>Repeater offsets</li>
+<li>Emergency communications</li>
+</ul>
+
+<h2>Module 3 – Radio Wave Propagation (T3)</h2>
+
+<ul>
+<li>Line of sight communication</li>
+<li>Tropospheric ducting</li>
+<li>Diffraction around obstacles</li>
+</ul>
+
+<h2>Module 4 – Station Setup (T4)</h2>
+
+<ul>
+<li>Mobile versus base stations</li>
+<li>Multimeter usage</li>
+<li>Grounding and station safety</li>
+</ul>
+
+<h2>Module 5 – Electrical Principles (T5)</h2>
+
+<ul>
+<li>Volts, amps, ohms, watts</li>
+<li>Ohm's Law</li>
+<li>Power calculations</li>
+</ul>
+
+<h2>Module 6 – Components (T6)</h2>
+
+<ul>
+<li>Resistors</li>
+<li>Capacitors</li>
+<li>Inductors</li>
+<li>Transistors and diodes</li>
+</ul>
+
+<h2>Module 7 – Equipment (T7)</h2>
+
+<ul>
+<li>Transceivers</li>
+<li>SWR meters</li>
+<li>Feed lines</li>
+<li>Dummy loads</li>
+</ul>
+
+<h2>Module 8 – Modes (T8)</h2>
+
+<ul>
+<li>FM</li>
+<li>SSB</li>
+<li>Digital modes</li>
+<li>Satellite communication</li>
+</ul>
+
+<h2>Module 9 – Antennas (T9)</h2>
+
+<ul>
+<li>Dipoles</li>
+<li>Vertical antennas</li>
+<li>Directional antennas</li>
+<li>Standing wave ratio</li>
+</ul>
+
+<h2>Module 10 – Safety (T0)</h2>
+
+<ul>
+<li>RF exposure</li>
+<li>Tower safety</li>
+<li>Electrical grounding</li>
+</ul>
+
+<h2>Final Steps</h2>
+
+<ul>
+<li>Take multiple practice exams</li>
+<li>Score above 85 percent before testing</li>
+<li>Find a local amateur radio club</li>
+<li>Get on the air and start operating</li>
+</ul>
+
+<div class="footer">
+<p>Please email me at <a href="mailto:n0njy@qsl.net">n0njy@qsl.net</a> about broken links.</p>
+<p>© N0NJY – Rick Donaldson, 1997–2026</p>
+</div>
+
+</div>
+
+<script>
+const starfield = document.getElementById('starfield');
+const starCount = 150;
+
+for(let i=0;i<starCount;i++){
+const star=document.createElement('div');
+star.className='star';
+
+const size=Math.random()*2+1;
+
+star.style.width=`${size}px`;
+star.style.height=`${size}px`;
+
+star.style.top=`${Math.random()*window.innerHeight}px`;
+star.style.left=`${Math.random()*window.innerWidth}px`;
+
+star.style.animationDuration=`${5+Math.random()*15}s`;
+star.style.animationDelay=`${Math.random()*5}s`;
+
+starfield.appendChild(star);
+}
+</script>
+
 </body>
 </html>
