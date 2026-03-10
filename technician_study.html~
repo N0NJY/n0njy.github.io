@@ -73,7 +73,7 @@ ul{
 <p>Select a module below. Each section corresponds to a Technician exam subelement.</p>
 
 <ul>
-<li><a href="t0_safety.html">Module 0 - Safety in All things (T0)</a></li>
+<li><a href="t0_safety.html">Module 0 - Safety in All things (T0)</a></li>"
 <li><a href="t1_rules.html">Module 1 – FCC Rules (T1)</a></li>
 <li><a href="t2_operating.html">Module 2 – Operating Procedures (T2)</a></li>
 <li><a href="t3_propagation.html">Module 3 – Radio Wave Propagation (T3)</a></li>
