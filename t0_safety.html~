@@ -80,9 +80,242 @@ PUT YOUR LESSON CONTENT BELOW THIS LINE
 ======================================================
 -->
 
-<p>Insert lesson text here.</p>
+<h2>Safety (T0)</h2>
 
-<p>You can add paragraphs, lists, diagrams, or images.</p>
+<h3>Overview</h3>
+
+<p>Safety is a critical responsibility of every amateur radio operator. Amateur stations use electrical power, antennas, towers, and radio frequency (RF) energy. Without proper precautions, these systems can present hazards to both operators and the public.</p>
+
+<p>The FCC includes safety topics in the Technician license exam because safe operation is part of responsible station operation.</p>
+
+<p>This lesson covers:</p>
+
+<ul>
+<li>Electrical safety</li>
+<li>Power supply hazards</li>
+<li>Antenna and tower safety</li>
+<li>Lightning protection</li>
+<li>RF exposure limits</li>
+<li>Soldering and workshop safety</li>
+<li>Battery safety</li>
+<li>General station safety practices</li>
+</ul>
+
+<h3>Electrical Safety</h3>
+
+<p>Most amateur radio equipment operates from a 13.8-volt DC power supply, but most of the time, 
+that power originates from the household AC electrical system. AC mains voltage can be dangerous or even lethal. </p>
+
+<p>Current as low as 50–150 milliamps (mA) can cause ventricular fibrillation, a life-threatening condition where the 
+heart's pumping action becomes uncoordinated and ineffective, leading to death within minutes without immediate medical intervention. </p>
+
+<p>You do not want to become 'part of the electrical circuit'</p>
+
+<p>Basic electrical safety practices include:</p>
+
+<ul>
+<li>Disconnect power before working on equipment.</li>
+<li>Never touch exposed wiring while power is applied.</li>
+<li>Use properly grounded outlets.</li>
+<li>Inspect power cords regularly.</li>
+<li>Keep electrical equipment dry.</li>
+</ul>
+
+<p>Even low-voltage circuits can produce high current capable of causing burns or starting fires if a short circuit occurs.</p>
+
+<h3>Power Supply Safety</h3>
+
+<p>Power supplies convert household AC power into DC power used by radios and accessories. Because they connect directly to the electrical mains, they must be handled carefully.</p>
+
+<ul>
+<li>Use the correct fuse rating.</li>
+<li>Never bypass a fuse or circuit breaker.</li>
+<li>Ensure adequate ventilation.</li>
+<li>Keep flammable materials away.</li>
+</ul>
+
+<p>If a power supply emits smoke, sparks, or unusual odors, disconnect it immediately.</p>
+
+<h3>Antenna and Tower Safety</h3>
+
+<p>Antennas are often installed outdoors or elevated on masts and towers. Improper installation can lead to serious injury.</p>
+
+<p>Important antenna safety guidelines:</p>
+
+<ul>
+<li>Never install antennas near overhead power lines.</li>
+<li>Ensure that a falling antenna cannot contact utility lines.</li>
+<li>Use proper climbing safety equipment.</li>
+<li>Securely anchor towers and masts.</li>
+<li>Do not climb towers during storms or high winds.</li>
+</ul>
+
+<p>Contact with electrical power lines is one of the most serious hazards in antenna installation.</p>
+
+<h3>Lightning Protection</h3>
+
+<p>Outdoor antennas can attract lightning or conduct lightning energy into a building.</p>
+
+<p>Lightning safety methods include:</p>
+
+<ul>
+<li>Grounding the antenna mast.</li>
+<li>Installing coaxial lightning arrestors.</li>
+<li>Disconnecting antennas during thunderstorms.</li>
+<li>Using proper station grounding systems.</li>
+</ul>
+
+<p>Grounding provides a path for electrical energy to safely dissipate into the earth.</p>
+
+<h3>RF Exposure Safety</h3>
+
+<p>Radio transmitters produce radio frequency energy. At sufficiently high levels, RF energy can heat body tissue and create health hazards.</p>
+
+<p>The FCC requires amateur operators to ensure that RF exposure from their stations does not exceed safe limits.</p>
+
+<p>To reduce RF exposure risk:</p>
+
+<ul>
+<li>Avoid standing close to transmitting antennas.</li>
+<li>Mount antennas away from occupied areas.</li>
+<li>Maintain safe separation distances.</li>
+<li>Use lower power when possible.</li>
+</ul>
+
+<h3>FCC RF Exposure Requirements</h3>
+
+<p>The FCC requires amateur stations to evaluate their compliance with RF exposure limits.</p>
+
+<p>An RF exposure evaluation may be required when:</p>
+
+<ul>
+<li>Using higher transmitter power levels</li>
+<li>Operating directional antennas</li>
+<li>Mounting antennas near occupied buildings</li>
+<li>Operating portable stations near people</li>
+</ul>
+
+<p>Most typical amateur stations operating at moderate power with properly installed antennas easily comply with these limits.</p>
+
+<h3>Soldering Safety</h3>
+
+<p>Soldering is a common activity for amateur radio operators who build or repair electronic equipment.</p>
+
+<p>Safe soldering practices include:</p>
+
+<ul>
+<li>Use a soldering iron stand.</li>
+<li>Work in a well-ventilated area.</li>
+<li>Avoid inhaling solder fumes.</li>
+<li>Keep flammable materials away.</li>
+<li>Wash hands after handling solder.</li>
+</ul>
+
+<p>Soldering irons are extremely hot and can easily cause burns.</p>
+
+<h3>Battery Safety</h3>
+
+<p>Portable and emergency stations often rely on batteries for power.</p>
+
+<p>Battery safety tips include:</p>
+
+<ul>
+<li>Use the proper charger for each battery type.</li>
+<li>Avoid short circuits across battery terminals.</li>
+<li>Store batteries safely.</li>
+<li>Dispose of damaged batteries properly.</li>
+</ul>
+
+<p>Lithium batteries in particular can become hazardous if damaged or improperly charged.</p>
+
+<h3>General Station Safety</h3>
+
+<p>A well-designed station reduces hazards and improves reliability.</p>
+
+<ul>
+<li>Organize cables and wiring.</li>
+<li>Provide proper ventilation for equipment.</li>
+<li>Use surge protection when appropriate.</li>
+<li>Keep fire extinguishers nearby.</li>
+</ul>
+
+<p>A safe operating environment protects both equipment and operators.</p>
+
+<h3>Safety Review Questions</h3>
+
+<p>These questions are similar to those found in the Technician license exam question pool.</p>
+
+<ol>
+
+<li>Why should antennas be installed well away from power lines?</li>
+
+<ul>
+<li>A. To reduce signal loss</li>
+<li>B. To prevent dangerous electrical contact</li>
+<li>C. To improve antenna efficiency</li>
+<li>D. To reduce RF interference</li>
+</ul>
+
+<li>What is the purpose of a fuse in a power supply circuit?</li>
+
+<ul>
+<li>A. To increase transmitter power</li>
+<li>B. To improve audio quality</li>
+<li>C. To protect equipment and wiring from excessive current</li>
+<li>D. To stabilize RF signals</li>
+</ul>
+
+<li>What is a recommended practice when installing an outdoor antenna?</li>
+
+<ul>
+<li>A. Install it as close to power lines as possible</li>
+<li>B. Ensure the antenna cannot fall onto power lines</li>
+<li>C. Use the shortest possible mast</li>
+<li>D. Avoid grounding the antenna system</li>
+</ul>
+
+<li>Why is RF exposure evaluation important?</li>
+
+<ul>
+<li>A. To improve transmitter range</li>
+<li>B. To comply with FCC safety regulations</li>
+<li>C. To increase antenna efficiency</li>
+<li>D. To reduce static noise</li>
+</ul>
+
+<li>What is a safe practice when using a soldering iron?</li>
+
+<ul>
+<li>A. Leave it unattended while heating</li>
+<li>B. Hold it by the metal tip</li>
+<li>C. Place it in a proper stand when not in use</li>
+<li>D. Cool it in water after each use</li>
+</ul>
+
+<li>Why should antenna masts be grounded?</li>
+
+<ul>
+<li>A. To improve RF signal strength</li>
+<li>B. To provide lightning protection</li>
+<li>C. To reduce audio noise</li>
+<li>D. To increase antenna bandwidth</li>
+</ul>
+
+</ol>
+
+<h3>Answer Key</h3>
+
+<ol>
+<li>B</li>
+<li>C</li>
+<li>B</li>
+<li>B</li>
+<li>C</li>
+<li>B</li>
+</ol>
+
+<p>Understanding and practicing these safety principles is part of responsible amateur radio operation.</p>
+
 
 <ul>
 <li>Example concept</li>
