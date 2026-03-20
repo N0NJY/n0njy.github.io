@@ -1,57 +1,48 @@
+```html
 <!doctype html>
-
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-
 <meta name="author" content="Rick" >
-<meta name="description" content="Amateur Radio Technician Study Module">
-
-<title>Technician Module – N0NJY</title>
-
+<meta name="description" content="Amateur Radio Technician Study Module - Electrical Components (T6)">
+<title>Technician Module 6: Electrical Components (T6) – N0NJY</title>
 <link rel="stylesheet" href="style.css">
-
 <style>
-
 .page{
 max-width:900px;
 margin:auto;
 padding:2rem 1rem;
 color:yellow;
 }
-
 .page a{
 color:yellow;
 text-decoration:none;
 }
-
 .page a:hover{
 text-decoration:underline;
 }
-
 h1,h2,h3{
 margin-top:1rem;
 }
-
 .lesson{
 margin-top:1.5rem;
 line-height:1.6;
 }
-
+.question {
+background:rgba(255,255,255,0.08);
+padding:1rem;
+margin:1.2rem 0;
+border-left:4px solid #8ecbff;
+}
 .footer{
 margin-top:3rem;
 font-size:0.9rem;
 }
-
 </style>
-
 </head>
-
 <body>
-
 <div class="starfield" id="starfield"></div>
-
 <div class="topbar">
 <a href="index.html">Home</a>
 <a href="contents.html">Table of Contents</a>
@@ -61,82 +52,174 @@ font-size:0.9rem;
 <a href="survival.html">Preparedness</a>
 <a href="commlink.htm">Contact</a>
 </div>
-
 <div class="page">
-
 <h1>Technician License Study Module</h1>
-
-<h2>MODULE: Electronic Components</h2>
-
+<h2>MODULE 6: Electrical Components (T6)</h2>
 <p>This page is part of the N0NJY self-study course for the USA Amateur Radio Technician License.</p>
-
 <hr>
-
 <div class="lesson">
 
-<!--
-======================================================
-PUT YOUR LESSON CONTENT BELOW THIS LINE
-======================================================
--->
-
-<p>Insert lesson text here.</p>
-
-<p>You can add paragraphs, lists, diagrams, or images.</p>
-
+<h2>Electrical Components (T6)</h2>
+<h3>Overview</h3>
+<p>Every radio is built from basic electronic components that control, store, or transform electrical energy. The Technician exam tests your ability to recognize common components, understand their functions, and identify their schematic symbols. Knowing these parts helps when reading circuit diagrams, troubleshooting radios, or building simple projects.</p>
+<p>This lesson covers:</p>
 <ul>
-<li>Example concept</li>
-<li>Example explanation</li>
-<li>Example exam tip</li>
+<li>Resistors, capacitors, and inductors</li>
+<li>Diodes and transistors</li>
+<li>Batteries and power sources</li>
+<li>Common schematic symbols</li>
+<li>Basic building blocks of a simple receiver and transmitter</li>
 </ul>
 
-<!--
-======================================================
-END OF LESSON CONTENT
-======================================================
--->
+<h3>Resistors</h3>
+<p>Resistors limit current flow and divide voltage. They are used to set operating points in amplifiers, protect LEDs, and form voltage dividers.</p>
+<ul>
+<li>Measured in ohms (Ω), kilohms (kΩ), megohms (MΩ)</li>
+<li>Schematic symbol: zigzag line or rectangle</li>
+<li>Color bands indicate value and tolerance</li>
+</ul>
+
+<h3>Capacitors</h3>
+<p>Capacitors store energy in an electric field and block DC while passing AC. They are used for filtering, coupling signals, tuning circuits, and timing.</p>
+<ul>
+<li>Measured in farads (F): usually microfarads (μF), nanofarads (nF), picofarads (pF)</li>
+<li>Schematic symbol: two parallel lines (non-polar) or one straight and one curved (polarized)</li>
+<li>Electrolytic capacitors are polarized and must be connected correctly</li>
+</ul>
+
+<h3>Inductors</h3>
+<p>Inductors (coils) store energy in a magnetic field and oppose changes in current. They are used in filters, tuners, and power supplies.</p>
+<ul>
+<li>Measured in henries (H): usually millihenries (mH) or microhenries (μH)</li>
+<li>Schematic symbol: series of loops or coils</li>
+</ul>
+
+<h3>Diodes</h3>
+<p>Diodes allow current to flow in one direction only. They are used for rectification, voltage regulation, protection, and signal detection.</p>
+<ul>
+<li>Common types: rectifier, Zener (voltage regulator), LED (light-emitting), Schottky</li>
+<li>Schematic symbol: triangle pointing to a line (arrow shows conventional current direction)</li>
+<li>LEDs require a current-limiting resistor</li>
+</ul>
+
+<h3>Transistors</h3>
+<p>Transistors act as amplifiers or electronic switches. They are the heart of audio amplifiers, RF amplifiers, oscillators, and digital circuits.</p>
+<ul>
+<li>Main types: Bipolar Junction Transistor (BJT) – NPN and PNP</li>
+<li>Field Effect Transistor (FET) – JFET and MOSFET</li>
+<li>Schematic symbol: BJT shows arrow on emitter (pointing out for NPN, in for PNP)</li>
+<li>Small current at base (BJT) or gate (FET) controls larger current between collector/drain and emitter/source</li>
+</ul>
+
+<h3>Batteries and Power Sources</h3>
+<p>Batteries provide portable DC power for handhelds and emergency stations.</p>
+<ul>
+<li>Common rechargeable types: NiMH, lithium-ion (Li-ion), lithium iron phosphate (LiFePO4)</li>
+<li>Non-rechargeable: alkaline, lithium primary cells</li>
+<li>Always match voltage and polarity; use proper chargers</li>
+</ul>
+
+<h3>Schematic Symbols – Quick Reference</h3>
+<ul>
+<li>Resistor: zigzag line</li>
+<li>Capacitor (non-polar): two parallel lines</li>
+<li>Capacitor (polarized): straight line and curved line or + symbol</li>
+<li>Inductor: series of semicircles or coils</li>
+<li>Diode: triangle pointing to a line</li>
+<li>LED: diode symbol with two arrows pointing out</li>
+<li>Transistor (NPN BJT): circle with lines – emitter arrow pointing out</li>
+<li>Ground: triangle of decreasing lines or horizontal lines</li>
+</ul>
+
+<h3>Simple Radio Receiver and Transmitter Concepts</h3>
+<p><strong>Basic receiver block diagram:</strong></p>
+<ul>
+<li>Antenna → RF amplifier → Mixer (with local oscillator) → IF filter → Detector (diode or product detector) → Audio amplifier → Speaker</li>
+<li>Superheterodyne receivers use intermediate frequency (IF) stages for better selectivity</li>
+</ul>
+<p><strong>Basic transmitter block diagram:</strong></p>
+<ul>
+<li>Microphone → Audio amplifier → Modulator → Oscillator (or exciter) → RF power amplifier → Low-pass filter → Antenna</li>
+<li>Common modulation types for Technician: FM (voice), CW (Morse), SSB (voice on HF)</li>
+</ul>
+
+<h3>Electrical Components Review Questions</h3>
+<p>These questions are representative of those found in the Technician license exam question pool.</p>
+<ol>
+<li>What is the schematic symbol for a resistor?</li>
+<ul>
+<li>A. Two parallel lines</li>
+<li>B. A zigzag line</li>
+<li>C. A triangle pointing to a line</li>
+<li>D. A circle with lines</li>
+</ul>
+<li>What component stores energy in a magnetic field?</li>
+<ul>
+<li>A. Resistor</li>
+<li>B. Capacitor</li>
+<li>C. Inductor</li>
+<li>D. Diode</li>
+</ul>
+<li>What electronic component allows current to flow in only one direction?</li>
+<ul>
+<li>A. Resistor</li>
+<li>B. Capacitor</li>
+<li>C. Transistor</li>
+<li>D. Diode</li>
+</ul>
+<li>What is the function of a transistor in a circuit?</li>
+<ul>
+<li>A. Store electrical energy</li>
+<li>B. Amplify or switch current</li>
+<li>C. Limit current flow</li>
+<li>D. Rectify AC to DC</li>
+</ul>
+<li>What type of battery is commonly used in modern handheld transceivers?</li>
+<ul>
+<li>A. Lead-acid</li>
+<li>B. Carbon-zinc</li>
+<li>C. Lithium-ion</li>
+<li>D. Alkaline (non-rechargeable only)</li>
+</ul>
+</ol>
+
+<h3>Answer Key</h3>
+<ol>
+<li>B</li>
+<li>C</li>
+<li>D</li>
+<li>B</li>
+<li>C</li>
+</ol>
+
+<p>Learn to recognize these symbols and functions—they appear in almost every exam question involving schematics. Practice identifying them in simple radio diagrams.</p>
 
 </div>
-
 <hr>
-
 <p>
 <a href="technician_study.html">Return to Technician Course Index</a>
 </p>
-
 <div class="footer">
 <p>Please email me at <a href="mailto:n0njy@qsl.net">n0njy@qsl.net</a> about broken links.</p>
 <p>© N0NJY – Rick Donaldson, 1997–2026</p>
 </div>
-
 </div>
-
 <script>
-
 const starfield = document.getElementById('starfield');
 const starCount = 150;
-
 for(let i=0;i<starCount;i++){
-
 const star=document.createElement('div');
 star.className='star';
-
 const size=Math.random()*2+1;
-
 star.style.width = `${size}px`;
 star.style.height = `${size}px`;
-
 star.style.top = `${Math.random()*window.innerHeight}px`;
 star.style.left = `${Math.random()*window.innerWidth}px`;
-
 star.style.animationDuration = `${5+Math.random()*15}s`;
 star.style.animationDelay = `${Math.random()*5}s`;
-
 starfield.appendChild(star);
-
 }
-
 </script>
-
 </body>
 </html>
+```
