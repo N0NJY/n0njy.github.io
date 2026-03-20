@@ -1,57 +1,48 @@
+```html
 <!doctype html>
-
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-
 <meta name="author" content="Rick" >
-<meta name="description" content="Amateur Radio Technician Study Module">
-
-<title>Technician Module – N0NJY</title>
-
+<meta name="description" content="Amateur Radio Technician Study Module - Modulation and Activities (T8)">
+<title>Technician Module 8: Modulation and Activities (T8) – N0NJY</title>
 <link rel="stylesheet" href="style.css">
-
 <style>
-
 .page{
 max-width:900px;
 margin:auto;
 padding:2rem 1rem;
 color:yellow;
 }
-
 .page a{
 color:yellow;
 text-decoration:none;
 }
-
 .page a:hover{
 text-decoration:underline;
 }
-
 h1,h2,h3{
 margin-top:1rem;
 }
-
 .lesson{
 margin-top:1.5rem;
 line-height:1.6;
 }
-
+.question {
+background:rgba(255,255,255,0.08);
+padding:1rem;
+margin:1.2rem 0;
+border-left:4px solid #8ecbff;
+}
 .footer{
 margin-top:3rem;
 font-size:0.9rem;
 }
-
 </style>
-
 </head>
-
 <body>
-
 <div class="starfield" id="starfield"></div>
-
 <div class="topbar">
 <a href="index.html">Home</a>
 <a href="contents.html">Table of Contents</a>
@@ -61,82 +52,191 @@ font-size:0.9rem;
 <a href="survival.html">Preparedness</a>
 <a href="commlink.htm">Contact</a>
 </div>
-
 <div class="page">
-
 <h1>Technician License Study Module</h1>
-
-<h2>MODULE: Modes of Operation</h2>
-
+<h2>MODULE 8: Modulation and Activities (T8)</h2>
 <p>This page is part of the N0NJY self-study course for the USA Amateur Radio Technician License.</p>
-
 <hr>
-
 <div class="lesson">
 
-<!--
-======================================================
-PUT YOUR LESSON CONTENT BELOW THIS LINE
-======================================================
--->
-
-<p>Insert lesson text here.</p>
-
-<p>You can add paragraphs, lists, diagrams, or images.</p>
-
+<h2>Modulation and Activities (T8)</h2>
+<h3>Overview</h3>
+<p>Modulation is the process of adding information (voice, data, Morse code) to a radio carrier wave so it can be transmitted and received. Different modes have different characteristics, bandwidth requirements, and uses. Technician operators primarily use FM on VHF/UHF, but also encounter CW, SSB, and digital modes. This module covers the most common modes, satellite operation, and popular amateur activities.</p>
+<p>This lesson covers:</p>
 <ul>
-<li>Example concept</li>
-<li>Example explanation</li>
-<li>Example exam tip</li>
+<li>Common voice and data modulation types</li>
+<li>FM vs SSB vs CW bandwidth and characteristics</li>
+<li>Satellite operation basics</li>
+<li>Popular digital modes (Packet, FT8, APRS)</li>
+<li>Amateur activities: repeaters, nets, public service, contesting, DXing</li>
 </ul>
 
-<!--
-======================================================
-END OF LESSON CONTENT
-======================================================
--->
+<h3>Common Modulation Types</h3>
+<p><strong>FM (Frequency Modulation)</strong></p>
+<ul>
+<li>Primary voice mode on 2 m and 70 cm bands</li>
+<li>Wide bandwidth (~10–15 kHz)</li>
+<li>Good audio quality, resistant to static and amplitude noise</li>
+<li>Requires more spectrum than SSB or CW</li>
+<li>Used for repeaters, simplex, and most local communication</li>
+</ul>
+
+<p><strong>SSB (Single Sideband)</strong></p>
+<ul>
+<li>Voice mode used mainly on HF (General/Extra), but Technicians have limited 10 m SSB privileges</li>
+<li>Very efficient — uses about 2–3 kHz bandwidth</li>
+<li>Transmits only one sideband + suppressed carrier → more power in the voice</li>
+<li>Requires precise tuning and good receiver stability</li>
+<li>Long-distance (DX) capability with modest power</li>
+</ul>
+
+<p><strong>CW (Continuous Wave / Morse Code)</strong></p>
+<ul>
+<li>Uses very narrow bandwidth (~100–500 Hz)</li>
+<li>Extremely efficient — best range for given power</li>
+<li>Used for weak-signal work, contests, emergency comms</li>
+<li>No voice — requires learning Morse code (not required for Technician license)</li>
+</ul>
+
+<h3>Bandwidth Comparison</h3>
+<ul>
+<li>CW: ~100–500 Hz (narrowest)</li>
+<li>SSB: ~2–3 kHz</li>
+<li>FM voice: ~10–15 kHz</li>
+<li>Digital modes: Packet ~1–2 kHz, FT8 ~50 Hz</li>
+</ul>
+<p>Higher bandwidth modes (FM) give better audio quality but use more spectrum and are more affected by propagation limits.</p>
+
+<h3>Satellite Operation</h3>
+<p>Amateur radio satellites (OSCARs) allow long-distance VHF/UHF contacts via space.</p>
+<p>Key concepts:</p>
+<ul>
+<li>Uplink: Frequency you transmit on (to satellite)</li>
+<li>Downlink: Frequency satellite transmits on (to you)</li>
+<li>Many satellites use Mode J (2 m uplink / 70 cm downlink) or Mode U (70 cm uplink / 2 m downlink)</li>
+<li>Doppler shift: Adjust frequency as satellite moves toward/away</li>
+<li>FM satellites: Use full-duplex (transmit and receive simultaneously) or split operation</li>
+<li>SSB/CW linear transponder satellites: Allow multiple simultaneous contacts</li>
+</ul>
+<p>Track passes with software (Orbitron, Heavens-Above, AMSAT tools). Always listen before transmitting.</p>
+
+<h3>Digital Modes</h3>
+<p><strong>Packet Radio</strong></p>
+<ul>
+<li>Early digital mode using AX.25 protocol</li>
+<li>1200 baud on 2 m, 9600 baud on higher bands</li>
+<li>Used for APRS, BBS, Winlink email over radio</li>
+</ul>
+
+<p><strong>FT8</strong></p>
+<ul>
+<li>Weak-signal digital mode (WSJT-X software)</li>
+<li>Very narrow bandwidth (~50 Hz)</li>
+<li>Worldwide contacts possible with low power</li>
+<li>Technicians can use FT8 on 10 m HF segment</li>
+</ul>
+
+<p><strong>APRS (Automatic Packet Reporting System)</strong></p>
+<ul>
+<li>Position reporting, messaging, weather stations</li>
+<li>Common on 144.390 MHz (North America)</li>
+<li>Used for tracking, emergency messaging, telemetry</li>
+</ul>
+
+<h3>Popular Amateur Activities</h3>
+<ul>
+<li>Repeater nets: Weekly check-ins, announcements, training</li>
+<li>Public service / emergency comms: ARES, RACES, Skywarn</li>
+<li>Contesting: Competitive contacts on specific bands/modes</li>
+<li>DXing: Contacting distant stations (mostly HF, but possible on 6 m/2 m with propagation)</li>
+<li>Satellite operating: Fun and educational</li>
+<li>Building projects: Kits, QRP, homebrew</li>
+</ul>
+
+<h3>Modulation and Activities Review Questions</h3>
+<p>These questions are representative of those found in the Technician license exam question pool.</p>
+<ol>
+<li>Which emission mode is most commonly used for VHF/UHF voice repeaters?</li>
+<ul>
+<li>A. SSB</li>
+<li>B. FM</li>
+<li>C. CW</li>
+<li>D. AM</li>
+</ul>
+<li>What is the approximate bandwidth of a single-sideband voice signal?</li>
+<ul>
+<li>A. 1 kHz</li>
+<li>B. 3 kHz</li>
+<li>C. 6 kHz</li>
+<li>D. 15 kHz</li>
+</ul>
+<li>What does the term “uplink” mean in satellite operation?</li>
+<ul>
+<li>A. Receiving frequency from the satellite</li>
+<li>B. Transmitting frequency to the satellite</li>
+<li>C. Satellite beacon signal</li>
+<li>D. Satellite telemetry downlink</li>
+</ul>
+<li>Which digital mode is known for very narrow bandwidth and weak-signal performance?</li>
+<ul>
+<li>A. Packet</li>
+<li>B. RTTY</li>
+<li>C. FT8</li>
+<li>D. APRS</li>
+</ul>
+<li>What frequency is most commonly used for APRS in North America?</li>
+<ul>
+<li>A. 144.390 MHz</li>
+<li>B. 146.520 MHz</li>
+<li>C. 223.500 MHz</li>
+<li>D. 446.000 MHz</li>
+</ul>
+</ol>
+
+<h3>Answer Key</h3>
+<ol>
+<li>B</li>
+<li>B</li>
+<li>B</li>
+<li>C</li>
+<li>A</li>
+</ol>
+
+<h3>Recommended Resources</h3>
+<ul>
+<li>KB6NU No-Nonsense Technician-Class Study Guide (Chapter 8): <a href="https://www.kb6nu.com/wp-content/uploads/2023/03/2022-no-nonsense-tech-study-guide-v2-20230204.pdf" target="_blank">Download PDF</a></li>
+<li>AMSAT Satellite Basics and Getting Started: <a href="https://www.amsat.org/intro-to-satellites/" target="_blank">AMSAT Intro to Satellites</a></li>
+<li>ARRL Operating Resources: <a href="http://www.arrl.org/operating" target="_blank">ARRL Operating</a></li>
+</ul>
+
+<p>Experiment with FM repeaters first, then try digital modes and satellites as you gain experience — they open up exciting new ways to enjoy ham radio.</p>
 
 </div>
-
 <hr>
-
 <p>
 <a href="technician_study.html">Return to Technician Course Index</a>
 </p>
-
 <div class="footer">
 <p>Please email me at <a href="mailto:n0njy@qsl.net">n0njy@qsl.net</a> about broken links.</p>
 <p>© N0NJY – Rick Donaldson, 1997–2026</p>
 </div>
-
 </div>
-
 <script>
-
 const starfield = document.getElementById('starfield');
 const starCount = 150;
-
 for(let i=0;i<starCount;i++){
-
 const star=document.createElement('div');
 star.className='star';
-
 const size=Math.random()*2+1;
-
 star.style.width = `${size}px`;
 star.style.height = `${size}px`;
-
 star.style.top = `${Math.random()*window.innerHeight}px`;
 star.style.left = `${Math.random()*window.innerWidth}px`;
-
 star.style.animationDuration = `${5+Math.random()*15}s`;
 star.style.animationDelay = `${Math.random()*5}s`;
-
 starfield.appendChild(star);
-
 }
-
 </script>
-
 </body>
 </html>
+```
