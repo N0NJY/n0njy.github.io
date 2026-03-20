@@ -1,57 +1,47 @@
 <!doctype html>
-
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-
 <meta name="author" content="Rick" >
-<meta name="description" content="Amateur Radio Technician Study Module">
-
-<title>Technician Module – N0NJY</title>
-
+<meta name="description" content="Amateur Radio Technician Study Module - Amateur Practices and Station Setup (T4)">
+<title>Technician Module 4: Amateur Practices and Station Setup (T4) – N0NJY</title>
 <link rel="stylesheet" href="style.css">
-
 <style>
-
 .page{
 max-width:900px;
 margin:auto;
 padding:2rem 1rem;
 color:yellow;
 }
-
 .page a{
 color:yellow;
 text-decoration:none;
 }
-
 .page a:hover{
 text-decoration:underline;
 }
-
 h1,h2,h3{
 margin-top:1rem;
 }
-
 .lesson{
 margin-top:1.5rem;
 line-height:1.6;
 }
-
+.question {
+background:rgba(255,255,255,0.08);
+padding:1rem;
+margin:1.2rem 0;
+border-left:4px solid #8ecbff;
+}
 .footer{
 margin-top:3rem;
 font-size:0.9rem;
 }
-
 </style>
-
 </head>
-
 <body>
-
 <div class="starfield" id="starfield"></div>
-
 <div class="topbar">
 <a href="index.html">Home</a>
 <a href="contents.html">Table of Contents</a>
@@ -61,82 +51,178 @@ font-size:0.9rem;
 <a href="survival.html">Preparedness</a>
 <a href="commlink.htm">Contact</a>
 </div>
-
 <div class="page">
-
 <h1>Technician License Study Module</h1>
-
-<h2>MODULE: The Station</h2>
-
+<h2>MODULE 4: Amateur Practices and Station Setup (T4)</h2>
 <p>This page is part of the N0NJY self-study course for the USA Amateur Radio Technician License.</p>
-
 <hr>
-
 <div class="lesson">
 
-<!--
-======================================================
-PUT YOUR LESSON CONTENT BELOW THIS LINE
-======================================================
--->
-
-<p>Insert lesson text here.</p>
-
-<p>You can add paragraphs, lists, diagrams, or images.</p>
-
+<h2>Amateur Practices and Station Setup (T4)</h2>
+<h3>Overview</h3>
+<p>Setting up a safe, reliable amateur radio station is one of the first practical steps after getting licensed. The Technician exam includes questions on basic station equipment, power supplies, test tools, common problems, and safe installation practices. Good station setup prevents equipment damage, reduces interference, and improves performance.</p>
+<p>This lesson covers:</p>
 <ul>
-<li>Example concept</li>
-<li>Example explanation</li>
-<li>Example exam tip</li>
+<li>Mobile vs. base station differences</li>
+<li>Basic test equipment (multimeter, SWR meter)</li>
+<li>Common operating problems and solutions</li>
+<li>Power supply and grounding requirements</li>
+<li>Safe antenna and feed line installation</li>
+<li>Basic troubleshooting techniques</li>
 </ul>
 
-<!--
-======================================================
-END OF LESSON CONTENT
-======================================================
--->
+<h3>Mobile vs. Base Stations</h3>
+<p>A <strong>mobile station</strong> is installed in a vehicle (car, truck, boat, etc.):</p>
+<ul>
+<li>Typically uses a handheld or mobile transceiver (5–50 W)</li>
+<li>Antenna mounted on vehicle roof or magnetic mount</li>
+<li>Power from vehicle 12 V battery (usually fused)</li>
+<li>Convenient for travel, emergency use, public service events</li>
+</ul>
+<p>A <strong>base station</strong> is fixed at home or a permanent location:</p>
+<ul>
+<li>Higher power (up to legal limit, often 100 W or more)</li>
+<li>Larger antennas (dipoles, verticals, beams) mounted higher</li>
+<li>Stable 13.8 V DC power supply from AC mains</li>
+<li>Better range and performance due to antenna height and power</li>
+</ul>
+
+<h3>Basic Test Equipment</h3>
+<p>Every amateur should have at least these tools:</p>
+<ul>
+<li><strong>Multimeter</strong>: Measures DC voltage, current, resistance, and continuity. Essential for checking power supplies, batteries, fuses, and wiring.</li>
+<li><strong>SWR meter</strong>: Measures Standing Wave Ratio to check antenna match. Ideal SWR is 1:1 to 2:1; high SWR means power is reflected back and not radiated.</li>
+<li><strong>Dummy load</strong>: A non-radiating 50-ohm resistor used for testing transmitters without putting a signal on the air.</li>
+</ul>
+
+<h3>Common Operating Problems and Solutions</h3>
+<p>Weak or no signal received:</p>
+<ul>
+<li>Low transmitter power</li>
+<li>Poor antenna (low height, wrong type, high SWR)</li>
+<li>Bad coax connections or damaged feed line</li>
+<li>Wrong frequency or repeater offset</li>
+</ul>
+<p>Distorted audio or reports of “overmodulation”:</p>
+<ul>
+<li>Mic gain too high</li>
+<li>Speaking too close or too loudly</li>
+<li>Power supply voltage sagging under load</li>
+</ul>
+<p>Interference to home electronics:</p>
+<ul>
+<li>Use ferrite chokes on affected device cables</li>
+<li>Reduce transmitter power</li>
+<li>Improve station grounding</li>
+</ul>
+
+<h3>Power Supply and Grounding</h3>
+<p>Most amateur radios operate on 13.8 V DC. Use a regulated power supply rated for at least the radio’s maximum current draw (usually 20–30 A for 100 W rigs).</p>
+<p>Important power supply practices:</p>
+<ul>
+<li>Use fused power leads (fuse near battery or supply positive terminal)</li>
+<li>Heavy-gauge wire (#10–#12 AWG) to minimize voltage drop</li>
+<li>Never reverse polarity—can destroy the radio instantly</li>
+<li>Provide good ventilation for the supply</li>
+</ul>
+<p>Grounding:</p>
+<ul>
+<li>Connect station equipment to a common ground bus or rod</li>
+<li>Reduces shock hazard and helps eliminate RFI (radio frequency interference)</li>
+<li>Prevents ground loops that cause hum or buzz</li>
+</ul>
+
+<h3>Safe Antenna and Feed Line Installation</h3>
+<p>Feed lines (coax) carry RF to/from the antenna:</p>
+<ul>
+<li>Use good-quality 50-ohm coax (RG-8, RG-213, LMR-400, etc.)</li>
+<li>Keep coax runs short to reduce loss</li>
+<li>Waterproof all outdoor connections</li>
+</ul>
+<p>Antenna installation safety:</p>
+<ul>
+<li>Never install near power lines—contact can be fatal</li>
+<li>Use proper mast/tower guying and anchoring</li>
+<li>Ground the mast for lightning protection</li>
+<li>Install lightning arrestors on coax where it enters the building</li>
+</ul>
+
+<h3>Amateur Practices and Station Setup Review Questions</h3>
+<p>These questions are representative of those found in the Technician license exam question pool.</p>
+<ol>
+<li>What is the purpose of a dummy load?</li>
+<ul>
+<li>A. To increase transmitter power</li>
+<li>B. To test a transmitter without radiating a signal</li>
+<li>C. To match antenna impedance</li>
+<li>D. To filter noise from the receiver</li>
+</ul>
+<li>What should you use to check for proper voltage at your radio?</li>
+<ul>
+<li>A. An SWR meter</li>
+<li>B. A multimeter</li>
+<li>C. A wattmeter</li>
+<li>D. A frequency counter</li>
+</ul>
+<li>What is a common cause of weak transmitted signals?</li>
+<ul>
+<li>A. High SWR due to poor antenna match</li>
+<li>B. Using too much power</li>
+<li>C. Transmitting on the wrong band</li>
+<li>D. Using a dummy load</li>
+</ul>
+<li>Why should all station equipment be connected to a good ground?</li>
+<ul>
+<li>A. To increase transmitted power</li>
+<li>B. To reduce the chance of electrical shock and RF interference</li>
+<li>C. To improve audio quality</li>
+<li>D. To make the station look professional</li>
+</ul>
+<li>What is the correct power connection practice for a mobile installation?</li>
+<ul>
+<li>A. Connect directly to the battery without a fuse</li>
+<li>B. Use fused leads connected as close to the battery as possible</li>
+<li>C. Connect to the cigarette lighter socket</li>
+<li>D. Use household AC power in the car</li>
+</ul>
+</ol>
+
+<h3>Answer Key</h3>
+<ol>
+<li>B</li>
+<li>B</li>
+<li>A</li>
+<li>B</li>
+<li>B</li>
+</ol>
+
+<p>A well-planned station is safe, reliable, and fun to operate. Start simple, test everything, and build from there.</p>
 
 </div>
-
 <hr>
-
 <p>
 <a href="technician_study.html">Return to Technician Course Index</a>
 </p>
-
 <div class="footer">
 <p>Please email me at <a href="mailto:n0njy@qsl.net">n0njy@qsl.net</a> about broken links.</p>
 <p>© N0NJY – Rick Donaldson, 1997–2026</p>
 </div>
-
 </div>
-
 <script>
-
 const starfield = document.getElementById('starfield');
 const starCount = 150;
-
 for(let i=0;i<starCount;i++){
-
 const star=document.createElement('div');
 star.className='star';
-
 const size=Math.random()*2+1;
-
 star.style.width = `${size}px`;
 star.style.height = `${size}px`;
-
 star.style.top = `${Math.random()*window.innerHeight}px`;
 star.style.left = `${Math.random()*window.innerWidth}px`;
-
 star.style.animationDuration = `${5+Math.random()*15}s`;
 star.style.animationDelay = `${Math.random()*5}s`;
-
 starfield.appendChild(star);
-
 }
-
 </script>
-
 </body>
 </html>
