@@ -1,57 +1,47 @@
 <!doctype html>
-
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-
 <meta name="author" content="Rick" >
-<meta name="description" content="Amateur Radio Technician Study Module">
-
-<title>Technician Module – N0NJY</title>
-
+<meta name="description" content="Amateur Radio Technician Study Module - Station Equipment (T7)">
+<title>Technician Module 7: Station Equipment (T7) – N0NJY</title>
 <link rel="stylesheet" href="style.css">
-
 <style>
-
 .page{
 max-width:900px;
 margin:auto;
 padding:2rem 1rem;
 color:yellow;
 }
-
 .page a{
 color:yellow;
 text-decoration:none;
 }
-
 .page a:hover{
 text-decoration:underline;
 }
-
 h1,h2,h3{
 margin-top:1rem;
 }
-
 .lesson{
 margin-top:1.5rem;
 line-height:1.6;
 }
-
+.question {
+background:rgba(255,255,255,0.08);
+padding:1rem;
+margin:1.2rem 0;
+border-left:4px solid #8ecbff;
+}
 .footer{
 margin-top:3rem;
 font-size:0.9rem;
 }
-
 </style>
-
 </head>
-
 <body>
-
 <div class="starfield" id="starfield"></div>
-
 <div class="topbar">
 <a href="index.html">Home</a>
 <a href="contents.html">Table of Contents</a>
@@ -61,82 +51,190 @@ font-size:0.9rem;
 <a href="survival.html">Preparedness</a>
 <a href="commlink.htm">Contact</a>
 </div>
-
 <div class="page">
-
 <h1>Technician License Study Module</h1>
-
-<h2>MODULE: Equipment</h2>
-
+<h2>MODULE 7: Station Equipment (T7)</h2>
 <p>This page is part of the N0NJY self-study course for the USA Amateur Radio Technician License.</p>
-
 <hr>
-
 <div class="lesson">
 
-<!--
-======================================================
-PUT YOUR LESSON CONTENT BELOW THIS LINE
-======================================================
--->
-
-<p>Insert lesson text here.</p>
-
-<p>You can add paragraphs, lists, diagrams, or images.</p>
-
+<h2>Station Equipment (T7)</h2>
+<h3>Overview</h3>
+<p>Station equipment includes the radios, power supplies, meters, feed lines, antennas, and accessories needed to transmit and receive. The Technician exam focuses on identifying common pieces of gear, understanding their purpose, and recognizing basic problems and solutions. This module includes extra detail beyond the exam requirements to help prepare for General-class topics such as antenna theory, feed-line losses, and advanced troubleshooting.</p>
+<p>This lesson covers:</p>
 <ul>
-<li>Example concept</li>
-<li>Example explanation</li>
-<li>Example exam tip</li>
+<li>Transceivers and separate transmitter/receiver setups</li>
+<li>SWR meters and antenna matching</li>
+<li>Dummy loads and their uses</li>
+<li>Feed lines (coaxial cable types and characteristics)</li>
+<li>Common station problems and fixes</li>
+<li>Basic test equipment beyond the multimeter</li>
+<li>Amplifiers, filters, and accessories (preview for General)</li>
 </ul>
 
-<!--
-======================================================
-END OF LESSON CONTENT
-======================================================
--->
+<h3>Transceivers</h3>
+<p>Almost all modern amateur radios are <strong>transceivers</strong> — a single unit that contains both a transmitter and a receiver. This design saves space, simplifies operation, and reduces cost.</p>
+<ul>
+<li>Handheld (HT) transceivers: 5–8 W, portable, battery powered, VHF/UHF</li>
+<li>Mobile transceivers: 25–100 W, 12 V DC powered, often dual-band VHF/UHF</li>
+<li>Base station / all-mode transceivers: 100 W+, 13.8 V DC, multi-band, often including HF (General/Extra)</li>
+</ul>
+<p>Some older or specialized stations use separate transmitters and receivers (vintage equipment or high-performance contest stations), but transceivers are the standard today.</p>
+
+<h3>SWR Meter and Antenna Matching</h3>
+<p>An <strong>SWR meter</strong> (Standing Wave Ratio meter) measures how well the antenna system matches the 50-ohm output of the transmitter.</p>
+<ul>
+<li>Ideal SWR: 1:1 (perfect match — all power radiated)</li>
+<li>Acceptable range for most radios: 1.5:1 to 2:1</li>
+<li>Above 2:1: Significant power reflected, possible radio damage at high power, reduced range</li>
+<li>Above 3:1: Risk of damage to transmitter finals; many modern radios reduce power automatically</li>
+</ul>
+<p>High SWR is usually caused by:</p>
+<ul>
+<li>Wrong antenna length or type for the band</li>
+<li>Damaged coax or bad connectors</li>
+<li>Antenna too close to metal objects or ground</li>
+</ul>
+<p>Use an antenna tuner (matching unit) to bring high SWR down to an acceptable level — especially useful on HF (General/Extra bands).</p>
+
+<h3>Dummy Loads</h3>
+<p>A <strong>dummy load</strong> is a 50-ohm resistor that absorbs RF energy without radiating it. It lets you test transmitters safely on the air without causing interference.</p>
+<ul>
+<li>Used when tuning, testing power output, or troubleshooting</li>
+<li>Common power ratings: 15–100 W (air-cooled), 250 W–1 kW+ (oil-filled or fan-cooled)</li>
+<li>Always use one rated for the transmitter’s full power output</li>
+</ul>
+
+<h3>Feed Lines — Coaxial Cable</h3>
+<p>Coaxial cable (coax) is the most common feed line for VHF/UHF and HF stations. It carries RF to/from the antenna with low loss and good shielding.</p>
+<p>Common types for amateur use:</p>
+<ul>
+<li>RG-58 / RG-58A/U: Small, flexible, higher loss — good for short runs, HTs, 2 m/70 cm</li>
+<li>RG-8X (mini-8): Low-loss version of RG-58, popular for mobile and portable</li>
+<li>RG-213 / RG-8: Larger, lower loss, good for base stations up to ~150 ft</li>
+<li>LMR-400 / 9913F7: Very low loss, excellent for long runs or higher frequencies</li>
+</ul>
+<p>Key specs to compare:</p>
+<ul>
+<li>Attenuation (loss) per 100 ft at different frequencies</li>
+<li>Velocity factor (affects electrical length for phasing lines)</li>
+<li>Power-handling capability</li>
+</ul>
+<p>Always waterproof outdoor connections with coax sealant tape or self-amalgamating tape + UV-resistant cover.</p>
+
+<h3>Common Station Problems and Troubleshooting</h3>
+<p>Distorted audio / reports of overmodulation:</p>
+<ul>
+<li>Mic gain too high</li>
+<li>Speaking too close to microphone</li>
+<li>Power supply voltage dropping under load</li>
+</ul>
+<p>No transmit power or very low output:</p>
+<ul>
+<li>High SWR → radio folds back power</li>
+<li>Bad coax jumper or connector</li>
+<li>Antenna disconnected or shorted</li>
+<li>Radio in low-power mode</li>
+</ul>
+<p>Receiver hears nothing or very weak signals:</p>
+<ul>
+<li>Antenna disconnected or high SWR</li>
+<li>Squelch set too high</li>
+<li>Wrong frequency, offset, or tone</li>
+<li>Coax water ingress or corrosion</li>
+</ul>
+<p>RF interference to TVs, stereos, telephones:</p>
+<ul>
+<li>Install ferrite chokes on affected device cables</li>
+<li>Improve station RF grounding</li>
+<li>Reduce power or use low-pass filter</li>
+</ul>
+
+<h3>Additional Equipment (Preview for General Class)</h3>
+<ul>
+<li>External antenna tuner / matching unit: Matches transmitter to non-resonant antennas (very common on HF)</li>
+<li>Low-pass filter: Reduces harmonics above the operating band</li>
+<li>Amplifier (linear): Increases power output (requires General or Extra license for most bands)</li>
+<li>SWR/power meter with cross-needle display: Shows forward and reflected power simultaneously</li>
+<li>Antenna analyzer: Measures SWR, impedance, resonance across bands (very useful tool)</li>
+</ul>
+
+<h3>Station Equipment Review Questions</h3>
+<p>These questions are representative of those found in the Technician license exam question pool.</p>
+<ol>
+<li>What is the primary function of a dummy load?</li>
+<ul>
+<li>A. To radiate a test signal</li>
+<li>B. To provide a non-radiating 50-ohm load for testing</li>
+<li>C. To match antenna impedance</li>
+<li>D. To filter harmonics</li>
+</ul>
+<li>What does an SWR reading of 4:1 indicate?</li>
+<ul>
+<li>A. Perfect match</li>
+<li>B. Significant reflected power</li>
+<li>C. The antenna is too short</li>
+<li>D. The transmitter is in low-power mode</li>
+</ul>
+<li>What type of feed line is most commonly used for amateur radio stations?</li>
+<ul>
+<li>A. Ladder line</li>
+<li>B. Coaxial cable</li>
+<li>C. Twin-lead</li>
+<li>D. Open-wire line</li>
+</ul>
+<li>What is a common cause of distorted transmit audio?</li>
+<ul>
+<li>A. Microphone gain set too high</li>
+<li>B. Using a dummy load</li>
+<li>C. Low SWR</li>
+<li>D. High receive sensitivity</li>
+</ul>
+<li>What should you do if your SWR is consistently above 3:1?</li>
+<ul>
+<li>A. Increase power to overcome the loss</li>
+<li>B. Check antenna, feed line, and connections</li>
+<li>C. Ignore it — modern radios are protected</li>
+<li>D. Switch to a different band</li>
+</ul>
+</ol>
+
+<h3>Answer Key</h3>
+<ol>
+<li>B</li>
+<li>B</li>
+<li>B</li>
+<li>A</li>
+<li>B</li>
+</ol>
+
+<p>A clean, well-tested station makes operating more enjoyable and reliable. Invest time in good coax, connectors, and basic test gear — it pays off quickly.</p>
 
 </div>
-
 <hr>
-
 <p>
 <a href="technician_study.html">Return to Technician Course Index</a>
 </p>
-
 <div class="footer">
 <p>Please email me at <a href="mailto:n0njy@qsl.net">n0njy@qsl.net</a> about broken links.</p>
 <p>© N0NJY – Rick Donaldson, 1997–2026</p>
 </div>
-
 </div>
-
 <script>
-
 const starfield = document.getElementById('starfield');
 const starCount = 150;
-
 for(let i=0;i<starCount;i++){
-
 const star=document.createElement('div');
 star.className='star';
-
 const size=Math.random()*2+1;
-
 star.style.width = `${size}px`;
 star.style.height = `${size}px`;
-
 star.style.top = `${Math.random()*window.innerHeight}px`;
 star.style.left = `${Math.random()*window.innerWidth}px`;
-
 star.style.animationDuration = `${5+Math.random()*15}s`;
 star.style.animationDelay = `${Math.random()*5}s`;
-
 starfield.appendChild(star);
-
 }
-
 </script>
-
 </body>
 </html>
