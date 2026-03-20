@@ -18,6 +18,7 @@ color:yellow;
 .page a{
 color:yellow;
 text-decoration:none;
+
 }
 .page a:hover{
 text-decoration:underline;
