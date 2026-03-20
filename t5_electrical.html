@@ -1,57 +1,47 @@
 <!doctype html>
-
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-
 <meta name="author" content="Rick" >
-<meta name="description" content="Amateur Radio Technician Study Module">
-
-<title>Technician Module – N0NJY</title>
-
+<meta name="description" content="Amateur Radio Technician Study Module - Electrical Principles (T5)">
+<title>Technician Module 5: Electrical Principles (T5) – N0NJY</title>
 <link rel="stylesheet" href="style.css">
-
 <style>
-
 .page{
 max-width:900px;
 margin:auto;
 padding:2rem 1rem;
 color:yellow;
 }
-
 .page a{
 color:yellow;
 text-decoration:none;
 }
-
 .page a:hover{
 text-decoration:underline;
 }
-
 h1,h2,h3{
 margin-top:1rem;
 }
-
 .lesson{
 margin-top:1.5rem;
 line-height:1.6;
 }
-
+.question {
+background:rgba(255,255,255,0.08);
+padding:1rem;
+margin:1.2rem 0;
+border-left:4px solid #8ecbff;
+}
 .footer{
 margin-top:3rem;
 font-size:0.9rem;
 }
-
 </style>
-
 </head>
-
 <body>
-
 <div class="starfield" id="starfield"></div>
-
 <div class="topbar">
 <a href="index.html">Home</a>
 <a href="contents.html">Table of Contents</a>
@@ -61,82 +51,167 @@ font-size:0.9rem;
 <a href="survival.html">Preparedness</a>
 <a href="commlink.htm">Contact</a>
 </div>
-
 <div class="page">
-
 <h1>Technician License Study Module</h1>
-
-<h2>MODULE: Electrical, Electronics</h2>
-
+<h2>MODULE 5: Electrical Principles (T5)</h2>
 <p>This page is part of the N0NJY self-study course for the USA Amateur Radio Technician License.</p>
-
 <hr>
-
 <div class="lesson">
 
-<!--
-======================================================
-PUT YOUR LESSON CONTENT BELOW THIS LINE
-======================================================
--->
-
-<p>Insert lesson text here.</p>
-
-<p>You can add paragraphs, lists, diagrams, or images.</p>
-
+<h2>Electrical Principles (T5)</h2>
+<h3>Overview</h3>
+<p>Understanding basic electricity is essential for working with amateur radio equipment. Radios use DC power, circuits contain resistors, capacitors, inductors, and other components, and you need to calculate voltage, current, resistance, and power safely. The Technician exam includes many questions on Ohm’s Law, power formulas, units, and simple circuit behavior.</p>
+<p>This lesson covers:</p>
 <ul>
-<li>Example concept</li>
-<li>Example explanation</li>
-<li>Example exam tip</li>
+<li>Basic electrical units and symbols</li>
+<li>Ohm’s Law (V = I × R)</li>
+<li>Power calculations (P = V × I and related forms)</li>
+<li>Series and parallel circuits</li>
+<li>Decibels and power relationships</li>
+<li>Batteries and voltage sources</li>
 </ul>
 
-<!--
-======================================================
-END OF LESSON CONTENT
-======================================================
--->
+<h3>Basic Electrical Units</h3>
+<p>Four fundamental quantities in electronics:</p>
+<ul>
+<li><strong>Voltage (V)</strong> – Electromotive force or potential difference, measured in <strong>volts (V)</strong></li>
+<li><strong>Current (I)</strong> – Flow of electric charge, measured in <strong>amperes (A)</strong> or <strong>amps</strong></li>
+<li><strong>Resistance (R)</strong> – Opposition to current flow, measured in <strong>ohms (Ω)</strong></li>
+<li><strong>Power (P)</strong> – Rate of energy use or production, measured in <strong>watts (W)</strong></li>
+</ul>
+<p>Common prefixes:</p>
+<ul>
+<li>milli (m) = 1/1000 (e.g., mA, mV, mW)</li>
+<li>kilo (k) = 1000 (e.g., kΩ, kW)</li>
+<li>mega (M) = 1,000,000 (e.g., MΩ)</li>
+<li>micro (μ) = 1/1,000,000 (e.g., μF, μH)</li>
+</ul>
+
+<h3>Ohm’s Law</h3>
+<p>Ohm’s Law states that voltage equals current multiplied by resistance:</p>
+<p><strong>V = I × R</strong></p>
+<p>You can rearrange it to solve for any one value:</p>
+<ul>
+<li>I = V / R</li>
+<li>R = V / I</li>
+</ul>
+<p>Example: If a circuit has 12 volts and a 4-ohm resistor, current is 12 / 4 = 3 amps.</p>
+
+<h3>Power Calculations</h3>
+<p>Power is calculated with two common formulas:</p>
+<p><strong>P = V × I</strong></p>
+<p><strong>P = I² × R</strong>  or  <strong>P = V² / R</strong></p>
+<p>Example: A radio draws 10 amps at 13.8 volts. Power = 13.8 × 10 = 138 watts.</p>
+
+<h3>Series and Parallel Circuits</h3>
+<p><strong>Series circuit</strong> – Components connected end-to-end:</p>
+<ul>
+<li>Total resistance = sum of individual resistances (R_total = R1 + R2 + ...)</li>
+<li>Current is the same through all components</li>
+<li>Voltage divides across components</li>
+</ul>
+<p><strong>Parallel circuit</strong> – Components connected side-by-side:</p>
+<ul>
+<li>Total resistance is less than the smallest individual resistance (1/R_total = 1/R1 + 1/R2 + ...)</li>
+<li>Voltage is the same across all components</li>
+<li>Current divides among branches</li>
+</ul>
+
+<h3>Decibels (dB) and Power Relationships</h3>
+<p>Decibels express ratios of power or voltage. In amateur radio, dB is used to describe antenna gain, filter loss, or signal strength changes.</p>
+<p>Key power relationships:</p>
+<ul>
+<li>3 dB increase = power doubles</li>
+<li>3 dB decrease = power halves</li>
+<li>10 dB increase = power multiplies by 10</li>
+<li>10 dB decrease = power divides by 10</li>
+</ul>
+<p>Example: An amplifier with 6 dB gain increases power by a factor of 4 (double twice).</p>
+
+<h3>Batteries and Voltage Sources</h3>
+<p>Common battery types in amateur use:</p>
+<ul>
+<li>Lead-acid (12 V car batteries) – deep cycle preferred for portable stations</li>
+<li>NiMH and lithium-ion rechargeable packs for handhelds</li>
+<li>Never mix old and new batteries or different chemistries</li>
+</ul>
+
+<h3>Electrical Principles Review Questions</h3>
+<p>These questions are representative of those found in the Technician license exam question pool.</p>
+<ol>
+<li>What is the formula for Ohm’s Law?</li>
+<ul>
+<li>A. V = I × R</li>
+<li>B. P = V × I</li>
+<li>C. R = V / I</li>
+<li>D. I = V / R</li>
+</ul>
+<li>How much power is used by a circuit with 12 volts and 2 amps of current?</li>
+<ul>
+<li>A. 6 watts</li>
+<li>B. 24 watts</li>
+<li>C. 14 watts</li>
+<li>D. 10 watts</li>
+</ul>
+<li>In a series circuit with two resistors of 100 ohms each, what is the total resistance?</li>
+<ul>
+<li>A. 50 ohms</li>
+<li>B. 100 ohms</li>
+<li>C. 200 ohms</li>
+<li>D. 0 ohms</li>
+</ul>
+<li>What happens to power when gain increases by 3 dB?</li>
+<ul>
+<li>A. Power is halved</li>
+<li>B. Power doubles</li>
+<li>C. Power increases by a factor of 10</li>
+<li>D. Power stays the same</li>
+</ul>
+<li>What is the approximate resistance of two 100-ohm resistors in parallel?</li>
+<ul>
+<li>A. 200 ohms</li>
+<li>B. 100 ohms</li>
+<li>C. 50 ohms</li>
+<li>D. 0 ohms</li>
+</ul>
+</ol>
+
+<h3>Answer Key</h3>
+<ol>
+<li>A</li>
+<li>B</li>
+<li>C</li>
+<li>B</li>
+<li>C</li>
+</ol>
+
+<p>Practice these calculations until they become second nature. They appear frequently on the exam and are used every time you work on radio equipment.</p>
 
 </div>
-
 <hr>
-
 <p>
 <a href="technician_study.html">Return to Technician Course Index</a>
 </p>
-
 <div class="footer">
 <p>Please email me at <a href="mailto:n0njy@qsl.net">n0njy@qsl.net</a> about broken links.</p>
 <p>© N0NJY – Rick Donaldson, 1997–2026</p>
 </div>
-
 </div>
-
 <script>
-
 const starfield = document.getElementById('starfield');
 const starCount = 150;
-
 for(let i=0;i<starCount;i++){
-
 const star=document.createElement('div');
 star.className='star';
-
 const size=Math.random()*2+1;
-
 star.style.width = `${size}px`;
 star.style.height = `${size}px`;
-
 star.style.top = `${Math.random()*window.innerHeight}px`;
 star.style.left = `${Math.random()*window.innerWidth}px`;
-
 star.style.animationDuration = `${5+Math.random()*15}s`;
 star.style.animationDelay = `${Math.random()*5}s`;
-
 starfield.appendChild(star);
-
 }
-
 </script>
-
 </body>
 </html>
