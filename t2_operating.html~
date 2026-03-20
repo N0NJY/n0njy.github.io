@@ -1,57 +1,48 @@
+```html
 <!doctype html>
-
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-
 <meta name="author" content="Rick" >
-<meta name="description" content="Amateur Radio Technician Study Module">
-
-<title>Technician Module – N0NJY</title>
-
+<meta name="description" content="Amateur Radio Technician Study Module - Operating Procedures (T2)">
+<title>Technician Module 2: Operating Procedures (T2) – N0NJY</title>
 <link rel="stylesheet" href="style.css">
-
 <style>
-
 .page{
 max-width:900px;
 margin:auto;
 padding:2rem 1rem;
 color:yellow;
 }
-
 .page a{
 color:yellow;
 text-decoration:none;
 }
-
 .page a:hover{
 text-decoration:underline;
 }
-
 h1,h2,h3{
 margin-top:1rem;
 }
-
 .lesson{
 margin-top:1.5rem;
 line-height:1.6;
 }
-
+.question {
+background:rgba(255,255,255,0.08);
+padding:1rem;
+margin:1.2rem 0;
+border-left:4px solid #8ecbff;
+}
 .footer{
 margin-top:3rem;
 font-size:0.9rem;
 }
-
 </style>
-
 </head>
-
 <body>
-
 <div class="starfield" id="starfield"></div>
-
 <div class="topbar">
 <a href="index.html">Home</a>
 <a href="contents.html">Table of Contents</a>
@@ -61,82 +52,171 @@ font-size:0.9rem;
 <a href="survival.html">Preparedness</a>
 <a href="commlink.htm">Contact</a>
 </div>
-
 <div class="page">
-
 <h1>Technician License Study Module</h1>
-
-<h2>MODULE: Operating</h2>
-
+<h2>MODULE 2: Operating Procedures (T2)</h2>
 <p>This page is part of the N0NJY self-study course for the USA Amateur Radio Technician License.</p>
-
 <hr>
-
 <div class="lesson">
 
-<!--
-======================================================
-PUT YOUR LESSON CONTENT BELOW THIS LINE
-======================================================
--->
-
-<p>Insert lesson text here.</p>
-
-<p>You can add paragraphs, lists, diagrams, or images.</p>
-
+<h2>Operating Procedures (T2)</h2>
+<h3>Overview</h3>
+<p>Proper operating procedures ensure clear, efficient, and courteous communication on the air. Good procedures reduce confusion, prevent interference, and help emergency messages get through quickly. The Technician exam tests basic voice and repeater operating practices that every new ham must know.</p>
+<p>This lesson covers:</p>
 <ul>
-<li>Example concept</li>
-<li>Example explanation</li>
-<li>Example exam tip</li>
+<li>Calling CQ and making contacts</li>
+<li>Repeater operation (including offsets and tones)</li>
+<li>Simplex operation</li>
+<li>Emergency and priority communications</li>
+<li>Use of standard phonetics</li>
+<li>Courtesy and good operating habits</li>
 </ul>
 
-<!--
-======================================================
-END OF LESSON CONTENT
-======================================================
--->
+<h3>Calling CQ and Making Contacts</h3>
+<p>To initiate a contact on a clear frequency, call CQ:</p>
+<ul>
+<li>Say: "CQ CQ CQ this is [your call sign] [your call sign], over."</li>
+<li>Repeat your call sign 2–3 times clearly.</li>
+<li>Listen for a response before transmitting again.</li>
+</ul>
+<p>When someone answers you, reply with:</p>
+<ul>
+<li>"[Their call sign] this is [your call sign], over."</li>
+</ul>
+<p>Keep transmissions short and pause to allow break-ins, especially on repeaters or during nets.</p>
+
+<h3>Repeater Operation</h3>
+<p>Repeaters extend the range of handheld and mobile radios by receiving on one frequency and retransmitting on another.</p>
+<p>Key repeater concepts:</p>
+<ul>
+<li>Input frequency (what you transmit on)</li>
+<li>Output frequency (what you listen to / what the repeater transmits on)</li>
+<li>Offset: The difference between input and output</li>
+<li>Common 2-meter offset: +0.600 MHz (600 kHz) or –0.600 MHz</li>
+<li>70 cm offset: usually ±5.000 MHz</li>
+<li>CTCSS (PL) tone: A sub-audible tone required by many repeaters to access them (e.g., 100.0 Hz, 88.5 Hz)</li>
+<li>Courtesy tone: A short beep or tone after each transmission to indicate the repeater has dropped</li>
+</ul>
+<p>Always listen before transmitting. Say your call sign and wait for the courtesy tone before continuing.</p>
+
+<h3>Simplex vs. Repeater Operation</h3>
+<p>Simplex means transmitting and receiving on the same frequency (direct radio-to-radio contact).</p>
+<p>Use simplex when:</p>
+<ul>
+<li>Both stations can hear each other directly</li>
+<li>You want to free the repeater for others</li>
+<li>Participating in a local net or event</li>
+</ul>
+<p>Repeater use is preferred when simplex range is insufficient.</p>
+
+<h3>Emergency and Priority Communications</h3>
+<p>In an emergency, break into a conversation politely but firmly:</p>
+<ul>
+<li>Say: "Break break" or "Priority traffic" followed by your call sign</li>
+<li>For immediate life-threatening situations: "Mayday Mayday Mayday" followed by your call sign</li>
+</ul>
+<p>Yield the frequency immediately to emergency traffic. Never argue or delay emergency messages.</p>
+
+<h3>Phonetic Alphabet</h3>
+<p>Use standard ITU phonetics when conditions are poor or letters/numbers could be confused:</p>
+<ul>
+<li>A – Alpha    B – Bravo    C – Charlie    D – Delta</li>
+<li>E – Echo     F – Foxtrot  G – Golf      H – Hotel</li>
+<li>I – India    J – Juliet   K – Kilo      L – Lima</li>
+<li>M – Mike     N – November O – Oscar     P – Papa</li>
+<li>Q – Quebec   R – Romeo    S – Sierra    T – Tango</li>
+<li>U – Uniform  V – Victor   W – Whiskey   X – X-ray</li>
+<li>Y – Yankee   Z – Zulu</li>
+</ul>
+<p>Numbers are spoken normally except: 5 = "Fife", 9 = "Niner", 0 = "Zero".</p>
+
+<h3>Good Operating Habits</h3>
+<ul>
+<li>Listen before transmitting (avoid doubling)</li>
+<li>Keep transmissions brief</li>
+<li>Identify at least every 10 minutes and at the end of contact</li>
+<li>Use clear, calm speech</li>
+<li>Avoid profanity, politics, or controversial topics</li>
+<li>Thank other operators and say "clear" when ending a contact</li>
+</ul>
+
+<h3>Operating Procedures Review Questions</h3>
+<p>These questions are representative of those found in the Technician license exam question pool.</p>
+<ol>
+<li>What should you transmit when responding to a station calling CQ?</li>
+<ul>
+<li>A. The other station's call sign followed by your call sign</li>
+<li>B. Your call sign only</li>
+<li>C. CQ followed by your call sign</li>
+<li>D. The repeater call sign</li>
+</ul>
+<li>What is the most common repeater frequency offset in the 2-meter band?</li>
+<ul>
+<li>A. ±5 MHz</li>
+<li>B. ±600 kHz</li>
+<li>C. ±1 MHz</li>
+<li>D. ±15 kHz</li>
+</ul>
+<li>What does a courtesy tone indicate on a repeater?</li>
+<ul>
+<li>A. The repeater is busy</li>
+<li>B. The repeater has reset and is ready for another transmission</li>
+<li>C. You have exceeded power limits</li>
+<li>D. The repeater is in emergency mode</li>
+</ul>
+<li>When should you use simplex instead of a repeater?</li>
+<ul>
+<li>A. When the stations can communicate directly</li>
+<li>B. When the repeater is down</li>
+<li>C. When using high power</li>
+<li>D. When using HF frequencies</li>
+</ul>
+<li>What phrase is used to interrupt a conversation for emergency traffic?</li>
+<ul>
+<li>A. Break break</li>
+<li>B. CQ emergency</li>
+<li>C. Priority one</li>
+<li>D. Mayday clear</li>
+</ul>
+</ol>
+
+<h3>Answer Key</h3>
+<ol>
+<li>A</li>
+<li>B</li>
+<li>B</li>
+<li>A</li>
+<li>A</li>
+</ol>
+
+<p>Practice these procedures on the air with patience and courtesy. Good habits make you a respected operator.</p>
 
 </div>
-
 <hr>
-
 <p>
 <a href="technician_study.html">Return to Technician Course Index</a>
 </p>
-
 <div class="footer">
 <p>Please email me at <a href="mailto:n0njy@qsl.net">n0njy@qsl.net</a> about broken links.</p>
 <p>© N0NJY – Rick Donaldson, 1997–2026</p>
 </div>
-
 </div>
-
 <script>
-
 const starfield = document.getElementById('starfield');
 const starCount = 150;
-
 for(let i=0;i<starCount;i++){
-
 const star=document.createElement('div');
 star.className='star';
-
 const size=Math.random()*2+1;
-
 star.style.width = `${size}px`;
 star.style.height = `${size}px`;
-
 star.style.top = `${Math.random()*window.innerHeight}px`;
 star.style.left = `${Math.random()*window.innerWidth}px`;
-
 star.style.animationDuration = `${5+Math.random()*15}s`;
 star.style.animationDelay = `${Math.random()*5}s`;
-
 starfield.appendChild(star);
-
 }
-
 </script>
-
 </body>
 </html>
+```
