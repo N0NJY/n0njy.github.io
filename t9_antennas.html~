@@ -1,0 +1,225 @@
+```html
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="author" content="Rick" >
+<meta name="description" content="Amateur Radio Technician Study Module - Antennas and Feed Lines (T9)">
+<title>Technician Module 9: Antennas and Feed Lines (T9) – N0NJY</title>
+<link rel="stylesheet" href="style.css">
+<style>
+.page{
+max-width:900px;
+margin:auto;
+padding:2rem 1rem;
+color:yellow;
+}
+.page a{
+color:yellow;
+text-decoration:none;
+}
+.page a:hover{
+text-decoration:underline;
+}
+h1,h2,h3{
+margin-top:1rem;
+}
+.lesson{
+margin-top:1.5rem;
+line-height:1.6;
+}
+.question {
+background:rgba(255,255,255,0.08);
+padding:1rem;
+margin:1.2rem 0;
+border-left:4px solid #8ecbff;
+}
+.footer{
+margin-top:3rem;
+font-size:0.9rem;
+}
+</style>
+</head>
+<body>
+<div class="starfield" id="starfield"></div>
+<div class="topbar">
+<a href="index.html">Home</a>
+<a href="contents.html">Table of Contents</a>
+<a href="articles.html">Articles</a>
+<a href="otherhams.html">Other Hams</a>
+<a href="astronomy.html">Space</a>
+<a href="survival.html">Preparedness</a>
+<a href="commlink.htm">Contact</a>
+</div>
+<div class="page">
+<h1>Technician License Study Module</h1>
+<h2>MODULE 9: Antennas and Feed Lines (T9)</h2>
+<p>This page is part of the N0NJY self-study course for the USA Amateur Radio Technician License.</p>
+<hr>
+<div class="lesson">
+
+<h2>Antennas and Feed Lines (T9)</h2>
+<h3>Overview</h3>
+<p>The antenna is the most important part of any radio station — it turns electrical energy into radio waves (transmit) and captures radio waves to produce electrical signals (receive). The Technician exam emphasizes basic antenna types, their radiation patterns, gain concepts, impedance matching, and the role of feed lines. Good antenna knowledge directly improves range and signal quality.</p>
+<p>This lesson covers:</p>
+<ul>
+<li>Common antenna types used by Technicians</li>
+<li>Radiation patterns (omni-directional vs. directional)</li>
+<li>Antenna gain and how it affects performance</li>
+<li>Impedance matching and SWR</li>
+<li>Feed-line types and losses</li>
+<li>Basic polarization and mounting considerations</li>
+</ul>
+
+<h3>Dipole Antenna</h3>
+<p>The half-wave dipole is one of the simplest and most effective antennas.</p>
+<ul>
+<li>Length: Approximately ½ wavelength long (total from end to end)</li>
+<li>Formula: Length (feet) ≈ 468 / frequency (MHz)</li>
+<li>Example: 2-meter dipole (146 MHz) ≈ 3.2 feet total (each leg ~1.6 feet)</li>
+<li>Radiation pattern: Broadside figure-8 (maximum signal perpendicular to the wire)</li>
+<li>Polarization: Horizontal (if wire is horizontal)</li>
+<li>Feed point impedance: Approximately 70 ohms in free space (close to 50 ohms in practice)</li>
+</ul>
+
+<h3>Vertical Antenna</h3>
+<p>Vertical antennas are popular for mobile, portable, and base use because they are omnidirectional in the horizontal plane.</p>
+<ul>
+<li>Common types: ¼-wave ground plane, 5/8-wave vertical, J-pole, collinear</li>
+<li>Radiation pattern: Omnidirectional (equal in all horizontal directions)</li>
+<li>Polarization: Vertical</li>
+<li>Requires a good ground plane or radials for best performance</li>
+<li>Very common on 2 meters and 70 cm for repeaters and mobile operation</li>
+</ul>
+
+<h3>Antenna Gain</h3>
+<p>Gain measures how much an antenna concentrates power in a particular direction compared to a reference antenna (usually a dipole or isotropic radiator).</p>
+<ul>
+<li>Expressed in dBi (compared to isotropic) or dBd (compared to dipole)</li>
+<li>3 dB gain ≈ doubles effective power in the main direction</li>
+<li>6 dB gain ≈ quadruples effective power</li>
+<li>Directional antennas (Yagi, beam) have high gain in one direction but little elsewhere</li>
+<li>Omnidirectional antennas (verticals) have low or no gain in the horizontal plane but may have gain toward the horizon</li>
+</ul>
+
+<h3>Impedance Matching and SWR</h3>
+<p>Most amateur radio equipment is designed for 50-ohm impedance. The antenna and feed line should also present close to 50 ohms for maximum power transfer.</p>
+<ul>
+<li>High SWR (Standing Wave Ratio) means power is reflected back to the transmitter instead of being radiated</li>
+<li>Ideal SWR: 1:1</li>
+<li>Acceptable: ≤ 2:1 for most equipment</li>
+<li>High SWR can cause transmitter foldback, overheating, or damage</li>
+<li>Causes of high SWR: Wrong antenna length, bad coax, poor connections, nearby objects</li>
+</ul>
+
+<h3>Feed Lines</h3>
+<p>Feed lines carry RF energy between the transceiver and antenna with minimal loss.</p>
+<ul>
+<li>Coaxial cable (coax): Most common — 50-ohm RG-58, RG-8X, RG-213, LMR-400</li>
+<li>Loss increases with frequency and length</li>
+<li>Example losses at 146 MHz (2 m):</li>
+<li>RG-58: ~5–7 dB/100 ft</li>
+<li>RG-8X: ~3–4 dB/100 ft</li>
+<li>LMR-400: ~1.2–1.5 dB/100 ft</li>
+<li>Use the lowest-loss coax practical for long runs</li>
+<li>Keep feed-line runs as short as possible</li>
+<li>Always seal outdoor connections against water</li>
+</ul>
+
+<h3>Polarization and Mounting</h3>
+<ul>
+<li>Vertical polarization: Standard for FM repeaters and mobile operation</li>
+<li>Horizontal polarization: Common for SSB/CW weak-signal work</li>
+<li>Cross-polarization loss: Up to 20 dB if one station is vertical and the other horizontal</li>
+<li>Mount antennas as high and clear as possible for best range</li>
+</ul>
+
+<h3>Antennas and Feed Lines Review Questions</h3>
+<p>These questions are representative of those found in the Technician license exam question pool.</p>
+<ol>
+<li>What is the approximate length of a half-wavelength dipole antenna for 146 MHz?</li>
+<ul>
+<li>A. 3 feet</li>
+<li>B. 6 feet</li>
+<li>C. 19 feet</li>
+<li>D. 38 feet</li>
+</ul>
+<li>What is the radiation pattern of a vertical antenna in the horizontal plane?</li>
+<ul>
+<li>A. Figure-8</li>
+<li>B. Omnidirectional</li>
+<li>C. Cardioid</li>
+<li>D. Bidirectional</li>
+</ul>
+<li>What does antenna gain indicate?</li>
+<ul>
+<li>A. Increase in transmitted power</li>
+<li>B. Concentration of power in a particular direction</li>
+<li>C. Reduction in feed-line loss</li>
+<li>D. Decrease in SWR</li>
+</ul>
+<li>What happens when the SWR is very high?</li>
+<ul>
+<li>A. More power reaches the antenna</li>
+<li>B. Significant power is reflected back to the transmitter</li>
+<li>C. The antenna radiates better</li>
+<li>D. The radio automatically switches bands</li>
+</ul>
+<li>Which feed line is most commonly used to connect a transceiver to an antenna?</li>
+<ul>
+<li>A. Ladder line</li>
+<li>B. 50-ohm coaxial cable</li>
+<li>C. Twin-lead</li>
+<li>D. Open-wire line</li>
+</ul>
+</ol>
+
+<h3>Answer Key</h3>
+<ol>
+<li>A</li>
+<li>B</li>
+<li>B</li>
+<li>B</li>
+<li>B</li>
+</ol>
+
+<h3>Recommended Resources</h3>
+<ul>
+<li>KB6NU No-Nonsense Technician-Class Study Guide (Chapter 9): <a href="https://www.kb6nu.com/wp-content/uploads/2023/03/2022-no-nonsense-tech-study-guide-v2-20230204.pdf" target="_blank">Download PDF</a></li>
+<li>ARRL Antennas and Transmission Lines Resources: <a href="http://www.arrl.org/antennas" target="_blank">http://www.arrl.org/antennas</a></li>
+<li>ARRL Antenna Book (preview sections online or purchase for deeper study)</li>
+<li>Practical antenna projects and calculators: <a href="https://www.antenna-theory.com/" target="_blank">Antenna-Theory.com</a></li>
+</ul>
+
+<p>A well-chosen and properly installed antenna often makes the biggest difference in station performance. Experiment safely and enjoy the improvement in your contacts.</p>
+
+</div>
+<hr>
+<p>
+<a href="technician_study.html">Return to Technician Course Index</a>
+</p>
+<div class="footer">
+<p>Please email me at <a href="mailto:n0njy@qsl.net">n0njy@qsl.net</a> about broken links.</p>
+<p>© N0NJY – Rick Donaldson, 1997–2026</p>
+</div>
+</div>
+<script>
+const starfield = document.getElementById('starfield');
+const starCount = 150;
+for(let i=0;i<starCount;i++){
+const star=document.createElement('div');
+star.className='star';
+const size=Math.random()*2+1;
+star.style.width = `${size}px`;
+star.style.height = `${size}px`;
+star.style.top = `${Math.random()*window.innerHeight}px`;
+star.style.left = `${Math.random()*window.innerWidth}px`;
+star.style.animationDuration = `${5+Math.random()*15}s`;
+star.style.animationDelay = `${Math.random()*5}s`;
+starfield.appendChild(star);
+}
+</script>
+</body>
+</html>
+```
