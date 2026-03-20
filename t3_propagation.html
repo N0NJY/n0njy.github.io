@@ -1,57 +1,48 @@
+```html
 <!doctype html>
-
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-
 <meta name="author" content="Rick" >
-<meta name="description" content="Amateur Radio Technician Study Module">
-
-<title>Technician Module – N0NJY</title>
-
+<meta name="description" content="Amateur Radio Technician Study Module - Radio Wave Propagation (T3)">
+<title>Technician Module 3: Radio Wave Propagation (T3) – N0NJY</title>
 <link rel="stylesheet" href="style.css">
-
 <style>
-
 .page{
 max-width:900px;
 margin:auto;
 padding:2rem 1rem;
 color:yellow;
 }
-
 .page a{
 color:yellow;
 text-decoration:none;
 }
-
 .page a:hover{
 text-decoration:underline;
 }
-
 h1,h2,h3{
 margin-top:1rem;
 }
-
 .lesson{
 margin-top:1.5rem;
 line-height:1.6;
 }
-
+.question {
+background:rgba(255,255,255,0.08);
+padding:1rem;
+margin:1.2rem 0;
+border-left:4px solid #8ecbff;
+}
 .footer{
 margin-top:3rem;
 font-size:0.9rem;
 }
-
 </style>
-
 </head>
-
 <body>
-
 <div class="starfield" id="starfield"></div>
-
 <div class="topbar">
 <a href="index.html">Home</a>
 <a href="contents.html">Table of Contents</a>
@@ -61,82 +52,135 @@ font-size:0.9rem;
 <a href="survival.html">Preparedness</a>
 <a href="commlink.htm">Contact</a>
 </div>
-
 <div class="page">
-
 <h1>Technician License Study Module</h1>
-
-<h2>MODULE: Propagation</h2>
-
+<h2>MODULE 3: Radio Wave Propagation (T3)</h2>
 <p>This page is part of the N0NJY self-study course for the USA Amateur Radio Technician License.</p>
-
 <hr>
-
 <div class="lesson">
 
-<!--
-======================================================
-PUT YOUR LESSON CONTENT BELOW THIS LINE
-======================================================
--->
-
-<p>Insert lesson text here.</p>
-
-<p>You can add paragraphs, lists, diagrams, or images.</p>
-
+<h2>Radio Wave Propagation (T3)</h2>
+<h3>Overview</h3>
+<p>Radio wave propagation describes how radio signals travel from a transmitting antenna to a receiving antenna. Understanding propagation helps explain why some contacts are easy while others are impossible, and why VHF/UHF signals behave differently from HF signals.</p>
+<p>The Technician exam focuses on the basic ways VHF and UHF signals (the primary bands for Technician operators) travel, and the factors that affect range and reliability.</p>
+<p>This lesson covers:</p>
 <ul>
-<li>Example concept</li>
-<li>Example explanation</li>
-<li>Example exam tip</li>
+<li>Line-of-sight propagation</li>
+<li>The radio horizon and its effect on range</li>
+<li>Tropospheric ducting and enhancement</li>
+<li>Knife-edge diffraction and obstacle effects</li>
+<li>Relationship between frequency, wavelength, and range</li>
 </ul>
 
-<!--
-======================================================
-END OF LESSON CONTENT
-======================================================
--->
+<h3>Line-of-Sight Propagation</h3>
+<p>VHF (2 meters and above) and UHF (70 cm and above) signals travel primarily by line-of-sight. This means the transmitting and receiving antennas must have a relatively unobstructed path between them.</p>
+<p>The usable range is limited by the radio horizon, which is farther than the visual horizon due to the slight bending of radio waves around the Earth’s curvature (refraction in the lower atmosphere).</p>
+<p>Typical handheld-to-handheld range on 2 meters is about 5–10 miles in flat terrain, depending on antenna height and power. Raising antennas (mobile on car roof, base on mast or tower) significantly increases range.</p>
+
+<h3>The Radio Horizon</h3>
+<p>The distance to the radio horizon can be estimated with the formula:</p>
+<p>Distance (miles) ≈ 1.415 × √(height of transmitting antenna in feet) + 1.415 × √(height of receiving antenna in feet)</p>
+<p>Example: A 50-foot tower to a 6-foot mobile antenna gives roughly 30–35 miles of reliable range under normal conditions.</p>
+
+<h3>Tropospheric Ducting</h3>
+<p>Under certain weather conditions, a temperature inversion in the troposphere (lower atmosphere) can create a “duct” that traps VHF/UHF signals and allows them to travel hundreds of miles—far beyond normal line-of-sight.</p>
+<p>Ducting is most common during warm, stable weather, especially near large bodies of water or during temperature inversions. It can make distant repeaters suddenly accessible or allow long-distance simplex contacts.</p>
+
+<h3>Knife-Edge Diffraction</h3>
+<p>When a radio signal encounters a sharp obstacle (ridge, mountain, building edge), some energy bends around it through diffraction. This allows communication even when there is no direct line-of-sight path.</p>
+<p>Knife-edge diffraction is weak but can be enough for reliable contacts over hills or between valleys, especially on VHF/UHF with sufficient power and good antennas.</p>
+
+<h3>Frequency, Wavelength, and Range</h3>
+<p>The wavelength of a radio signal is calculated as:</p>
+<p>Wavelength (meters) = speed of light (300,000,000 m/s) / frequency (Hz)</p>
+<p>or approximately: Wavelength (meters) ≈ 300 / frequency (MHz)</p>
+<p>Examples:</p>
+<ul>
+<li>2 meters (146 MHz) → wavelength ≈ 2 meters</li>
+<li>70 cm (440 MHz) → wavelength ≈ 0.68 meters</li>
+<li>6 meters (52 MHz) → wavelength ≈ 5.77 meters</li>
+</ul>
+<p>Higher frequency = shorter wavelength = more line-of-sight behavior, less ability to bend around obstacles, and generally shorter reliable range in typical terrain.</p>
+
+<h3>Radio Wave Propagation Review Questions</h3>
+<p>These questions are representative of those found in the Technician license exam question pool.</p>
+<ol>
+<li>What type of propagation is most commonly used for VHF and UHF signals?</li>
+<ul>
+<li>A. Skywave</li>
+<li>B. Line-of-sight</li>
+<li>C. Ground wave</li>
+<li>D. Ionospheric scatter</li>
+</ul>
+<li>What is the approximate radio horizon distance for a 50-foot high antenna?</li>
+<ul>
+<li>A. About 5 miles</li>
+<li>B. About 10 miles</li>
+<li>C. About 20–25 miles</li>
+<li>D. About 100 miles</li>
+</ul>
+<li>What weather condition can cause VHF/UHF signals to travel much farther than normal?</li>
+<ul>
+<li>A. Heavy rain</li>
+<li>B. Tropospheric ducting</li>
+<li>C. High winds</li>
+<li>D. Snow</li>
+</ul>
+<li>What allows VHF signals to sometimes be received beyond a hill or ridge?</li>
+<ul>
+<li>A. Knife-edge diffraction</li>
+<li>B. Ionospheric reflection</li>
+<li>C. Ground wave propagation</li>
+<li>D. Meteor scatter</li>
+</ul>
+<li>What is the approximate wavelength of a 2-meter signal?</li>
+<ul>
+<li>A. 2 meters</li>
+<li>B. 0.7 meters</li>
+<li>C. 5 meters</li>
+<li>D. 10 meters</li>
+</ul>
+</ol>
+
+<h3>Answer Key</h3>
+<ol>
+<li>B</li>
+<li>C</li>
+<li>B</li>
+<li>A</li>
+<li>A</li>
+</ol>
+
+<p>Understanding how VHF/UHF signals travel helps you choose the right times, locations, and antennas for reliable communication.</p>
 
 </div>
-
 <hr>
-
 <p>
 <a href="technician_study.html">Return to Technician Course Index</a>
 </p>
-
 <div class="footer">
 <p>Please email me at <a href="mailto:n0njy@qsl.net">n0njy@qsl.net</a> about broken links.</p>
 <p>© N0NJY – Rick Donaldson, 1997–2026</p>
 </div>
-
 </div>
-
 <script>
-
 const starfield = document.getElementById('starfield');
 const starCount = 150;
-
 for(let i=0;i<starCount;i++){
-
 const star=document.createElement('div');
 star.className='star';
-
 const size=Math.random()*2+1;
-
 star.style.width = `${size}px`;
 star.style.height = `${size}px`;
-
 star.style.top = `${Math.random()*window.innerHeight}px`;
 star.style.left = `${Math.random()*window.innerWidth}px`;
-
 star.style.animationDuration = `${5+Math.random()*15}s`;
 star.style.animationDelay = `${Math.random()*5}s`;
-
 starfield.appendChild(star);
-
 }
-
 </script>
-
 </body>
 </html>
+```
+
+**Note:** This module follows the same detailed, explanatory style as the Safety (T0) example you provided, with clear sections, technical explanations, and representative exam-style review questions.
