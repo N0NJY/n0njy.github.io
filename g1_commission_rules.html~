@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="author" content="Rick" >
+<meta name="description" content="General Class Study Module - Commission’s Rules (G1)">
+<title>General Module G1: Commission’s Rules – N0NJY</title>
+<link rel="stylesheet" href="style.css">
+<style>
+.page{
+max-width:900px;
+margin:auto;
+padding:2rem 1rem;
+color:yellow;
+}
+.page a{
+color:yellow;
+text-decoration:none;
+}
+.page a:hover{
+text-decoration:underline;
+}
+h1,h2,h3{
+margin-top:1rem;
+}
+.lesson{
+margin-top:1.5rem;
+line-height:1.6;
+}
+.question {
+background:rgba(255,255,255,0.08);
+padding:1rem;
+margin:1.2rem 0;
+border-left:4px solid #8ecbff;
+}
+.footer{
+margin-top:3rem;
+font-size:0.9rem;
+}
+</style>
+</head>
+<body>
+<div class="starfield" id="starfield"></div>
+<div class="topbar">
+<a href="index.html">Home</a>
+<a href="contents.html">Table of Contents</a>
+<a href="articles.html">Articles</a>
+<a href="otherhams.html">Other Hams</a>
+<a href="astronomy.html">Space</a>
+<a href="survival.html">Preparedness</a>
+<a href="commlink.htm">Contact</a>
+</div>
+<div class="page">
+<h1>General License Study Module</h1>
+<h2>MODULE G1: Commission’s Rules</h2>
+<p>This page is part of the N0NJY self-study course for the USA Amateur Radio General License.</p>
+<hr>
+<div class="lesson">
+
+<h2>Commission’s Rules (G1)</h2>
+<h3>Overview & Why Study This</h3>
+<p>General Class expands your HF privileges dramatically. G1 covers the new rules you must know to operate legally on HF bands. It builds directly on Technician rules (T1) by adding HF frequency allocations, power limits, international coordination, and advanced control operator responsibilities.</p>
+<p>New knowledge: You will learn exact HF band segments, when you can use phone vs. CW/data, third-party traffic rules with foreign countries, and beacon/repeater restrictions on HF.</p>
+
+<h3>Key Topics</h3>
+<ul>
+<li>General class frequency privileges and primary/secondary allocations</li>
+<li>Transmitter power limits (1500 W PEP maximum on most HF bands)</li>
+<li>60-meter channel rules and power restrictions</li>
+<li>Volunteer Examiner system and exam procedures</li>
+<li>Third-party traffic and international agreements</li>
+<li>Repeater and beacon operation on HF</li>
+<li>Prohibited transmissions and good engineering practice</li>
+</ul>
+
+<h3>Official Resources & Pools</h3>
+<ul>
+<li>Current General Pool (2023–2027): <a href="https://hamstudy.org/general" target="_blank">https://hamstudy.org/general</a></li>
+<li>Full PDF: <a href="https://ncvec.org/index.php/2023-2027-general-question-pool-release" target="_blank">NCVEC General Pool</a></li>
+<li>KB6NU No-Nonsense General Study Guide (Ch. 1): Paid PDF available at kb6nu.com</li>
+</ul>
+
+<h3>Sample Questions from the General Question Pool</h3>
+
+<div class="question">
+<p><strong>G1A01</strong></p>
+<p>On which HF/MF bands does a General class licensee have phone privileges?</p>
+<p>A. Only on the 80 meter band</p>
+<p>B. On all bands below 30 MHz</p>
+<p>C. Only on the 160 meter band</p>
+<p>D. On the 30, 60, and 160 meter bands</p>
+<p><strong>Correct answer: B</strong></p>
+</div>
+
+<div class="question">
+<p><strong>G1B01</strong></p>
+<p>What is the maximum height above ground for an antenna structure at an amateur station without requiring FAA notification?</p>
+<p>A. 50 feet</p>
+<p>B. 100 feet</p>
+<p>C. 200 feet</p>
+<p>D. 300 feet</p>
+<p><strong>Correct answer: C</strong></p>
+</div>
+
+<div class="question">
+<p><strong>G1C01</strong></p>
+<p>What is the maximum transmitting power an amateur station may use on 10.140 MHz?</p>
+<p>A. 200 watts PEP</p>
+<p>B. 1500 watts PEP</p>
+<p>C. 50 watts PEP</p>
+<p>D. 100 watts PEP</p>
+<p><strong>Correct answer: B</strong></p>
+</div>
+
+<h3>Answer Key</h3>
+<ol>
+<li>B</li>
+<li>C</li>
+<li>B</li>
+</ol>
+
+</div>
+<hr>
+<p>
+<a href="general_study.html">Return to General Course Index</a>
+</p>
+<div class="footer">
+<p>Please email me at <a href="mailto:n0njy@qsl.net">n0njy@qsl.net</a> about broken links.</p>
+<p>© N0NJY – Rick Donaldson, 1997–2026</p>
+</div>
+</div>
+<script>
+const starfield = document.getElementById('starfield');
+const starCount = 150;
+for(let i=0;i<starCount;i++){
+const star=document.createElement('div');
+star.className='star';
+const size=Math.random()*2+1;
+star.style.width = `${size}px`;
+star.style.height = `${size}px`;
+star.style.top = `${Math.random()*window.innerHeight}px`;
+star.style.left = `${Math.random()*window.innerWidth}px`;
+star.style.animationDuration = `${5+Math.random()*15}s`;
+star.style.animationDelay = `${Math.random()*5}s`;
+starfield.appendChild(star);
+}
+</script>
+</body>
+</html>

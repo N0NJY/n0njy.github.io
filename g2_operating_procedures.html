@@ -1,0 +1,146 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="author" content="Rick" >
+<meta name="description" content="General Class Study Module - Operating Procedures (G2)">
+<title>General Module G2: Operating Procedures – N0NJY</title>
+<link rel="stylesheet" href="style.css">
+<style>
+.page{
+max-width:900px;
+margin:auto;
+padding:2rem 1rem;
+color:yellow;
+}
+.page a{
+color:yellow;
+text-decoration:none;
+}
+.page a:hover{
+text-decoration:underline;
+}
+h1,h2,h3{
+margin-top:1rem;
+}
+.lesson{
+margin-top:1.5rem;
+line-height:1.6;
+}
+.question {
+background:rgba(255,255,255,0.08);
+padding:1rem;
+margin:1.2rem 0;
+border-left:4px solid #8ecbff;
+}
+.footer{
+margin-top:3rem;
+font-size:0.9rem;
+}
+</style>
+</head>
+<body>
+<div class="starfield" id="starfield"></div>
+<div class="topbar">
+<a href="index.html">Home</a>
+<a href="contents.html">Table of Contents</a>
+<a href="articles.html">Articles</a>
+<a href="otherhams.html">Other Hams</a>
+<a href="astronomy.html">Space</a>
+<a href="survival.html">Preparedness</a>
+<a href="commlink.htm">Contact</a>
+</div>
+<div class="page">
+<h1>General License Study Module</h1>
+<h2>MODULE G2: Operating Procedures</h2>
+<p>This page is part of the N0NJY self-study course for the USA Amateur Radio General License.</p>
+<hr>
+<div class="lesson">
+
+<h2>Operating Procedures (G2)</h2>
+<h3>Overview & Why Study This</h3>
+<p>HF operation introduces new procedures for DX, nets, CW, and digital modes. G2 expands on Technician T2 operating practices with HF-specific conventions, breaking into pile-ups, and emergency protocols. It connects directly to your Technician voice and repeater skills while adding the international “Q” code usage and band-plan etiquette required for General HF privileges.</p>
+
+<h3>Key Topics</h3>
+<ul>
+<li>Phone operating procedures (USB/LSB conventions, DX pile-ups)</li>
+<li>CW procedures and Q signals</li>
+<li>Digital mode operating (FT8, RTTY, PSK31)</li>
+<li>Band plans and emergency communications (RACES/ARES)</li>
+<li>HF net operation and traffic handling</li>
+</ul>
+
+<h3>Official Resources & Pools</h3>
+<ul>
+<li>Current General Pool: <a href="https://hamstudy.org/general" target="_blank">https://hamstudy.org/general</a></li>
+<li>ARRL Operating Manual and HF band-plan charts</li>
+</ul>
+
+<h3>Sample Questions from the General Question Pool</h3>
+
+<div class="question">
+<p><strong>G2A01</strong></p>
+<p>Which mode is normally used for HF phone operation on the 80-meter band?</p>
+<p>A. USB</p>
+<p>B. LSB</p>
+<p>C. AM</p>
+<p>D. FM</p>
+<p><strong>Correct answer: B</strong></p>
+</div>
+
+<div class="question">
+<p><strong>G2B01</strong></p>
+<p>What is the purpose of the “Q” signal “QSL”?</p>
+<p>A. To confirm receipt of a message</p>
+<p>B. To request a signal report</p>
+<p>C. To end a contact</p>
+<p>D. To ask for location</p>
+<p><strong>Correct answer: A</strong></p>
+</div>
+
+<div class="question">
+<p><strong>G2E01</strong></p>
+<p>What is the most common method of sending and receiving digital signals on HF?</p>
+<p>A. Packet</p>
+<p>B. FT8</p>
+<p>C. RTTY</p>
+<p>D. All of these choices are correct</p>
+<p><strong>Correct answer: D</strong></p>
+</div>
+
+<h3>Answer Key</h3>
+<ol>
+<li>B</li>
+<li>A</li>
+<li>D</li>
+</ol>
+
+</div>
+<hr>
+<p>
+<a href="general_study.html">Return to General Course Index</a>
+</p>
+<div class="footer">
+<p>Please email me at <a href="mailto:n0njy@qsl.net">n0njy@qsl.net</a> about broken links.</p>
+<p>© N0NJY – Rick Donaldson, 1997–2026</p>
+</div>
+</div>
+<script>
+const starfield = document.getElementById('starfield');
+const starCount = 150;
+for(let i=0;i<starCount;i++){
+const star=document.createElement('div');
+star.className='star';
+const size=Math.random()*2+1;
+star.style.width = `${size}px`;
+star.style.height = `${size}px`;
+star.style.top = `${Math.random()*window.innerHeight}px`;
+star.style.left = `${Math.random()*window.innerWidth}px`;
+star.style.animationDuration = `${5+Math.random()*15}s`;
+star.style.animationDelay = `${Math.random()*5}s`;
+starfield.appendChild(star);
+}
+</script>
+</body>
+</html>

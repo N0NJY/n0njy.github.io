@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="author" content="Rick" >
+<meta name="description" content="General Class Self-Study Course Outline – N0NJY">
+<title>General Class Study Outline – N0NJY</title>
+<link rel="stylesheet" href="style.css">
+<style>
+.page{
+max-width:900px;
+margin:auto;
+padding:2rem 1rem;
+color:yellow;
+}
+h1,h2,h3{
+margin-top:1rem;
+}
+.lesson{
+margin-top:1.5rem;
+line-height:1.6;
+}
+.page ul {
+list-style-type:none;
+padding-left:0;
+}
+.page li {
+margin:0.6rem 0;
+}
+.page a {
+color:#8ecbff;
+}
+.page a:hover {
+color:#ffffff;
+text-decoration:underline;
+}
+</style>
+</head>
+<body>
+<div class="starfield" id="starfield"></div>
+<div class="topbar">
+<a href="index.html">Home</a>
+<a href="contents.html">Table of Contents</a>
+<a href="articles.html">Articles</a>
+<a href="otherhams.html">Other Hams</a>
+<a href="astronomy.html">Space</a>
+<a href="survival.html">Preparedness</a>
+<a href="commlink.htm">Contact</a>
+</div>
+<div class="page">
+<h1>General Class Self-Study Course Outline</h1>
+<p>This course follows the official 2023–2027 FCC General Class (Element 3) question pool structure. It builds directly on your Technician knowledge, adding HF privileges, advanced rules, propagation, circuitry, and safety. Each module includes explanations, why the material matters, connections to Technician topics, new General-level concepts, sample pool questions, and free resources. Modules are designed for independent study and expansion.</p>
+<hr>
+<div class="lesson">
+<h2>Course Modules (G1–G0)</h2>
+<ul>
+<li><a href="g1_commission_rules.html">G1: Commission’s Rules</a> – Advanced FCC regulations, HF privileges, power limits, international rules</li>
+<li><a href="g2_operating_procedures.html">G2: Operating Procedures</a> – HF voice/CW/digital procedures, DX, nets, emergencies</li>
+<li><a href="g3_radio_wave_propagation.html">G3: Radio Wave Propagation</a> – HF skywave, ionosphere, sunspots, MUF/LUF, NVIS</li>
+<li><a href="g4_amateur_radio_practices.html">G4: Amateur Radio Practices</a> – Station setup, test equipment, interference, mobile/portable</li>
+<li><a href="g5_electrical_principles.html">G5: Electrical Principles</a> – Reactance, impedance, decibels, RMS, PEP, transformers</li>
+<li><a href="g6_circuit_components.html">G6: Circuit Components</a> – Advanced components, ICs, vacuum tubes, ferrites</li>
+<li><a href="g7_practical_circuits.html">G7: Practical Circuits</a> – Power supplies, amplifiers, oscillators, DSP, filters</li>
+<li><a href="g8_signals_and_emissions.html">G8: Signals and Emissions</a> – Modulation types, bandwidth, digital modes, harmonics</li>
+<li><a href="g9_antennas_and_feed_lines.html">G9: Antennas and Feed Lines</a> – Advanced antennas, matching, SWR calculations, losses</li>
+<li><a href="g0_electrical_and_rf_safety.html">G0: Electrical and RF Safety</a> – RF exposure evaluation, grounding, tower safety (expanded)</li>
+</ul>
+</div>
+<hr>
+<p>
+<a href="technician_study.html">Return to Technician Course Index</a>
+</p>
+<div class="footer">
+<p>Please email me at <a href="mailto:n0njy@qsl.net">n0njy@qsl.net</a> about broken links.</p>
+<p>© N0NJY – Rick Donaldson, 1997–2026</p>
+</div>
+</div>
+<script>
+const starfield = document.getElementById('starfield');
+const starCount = 150;
+for(let i=0;i<starCount;i++){
+const star=document.createElement('div');
+star.className='star';
+const size=Math.random()*2+1;
+star.style.width = `${size}px`;
+star.style.height = `${size}px`;
+star.style.top = `${Math.random()*window.innerHeight}px`;
+star.style.left = `${Math.random()*window.innerWidth}px`;
+star.style.animationDuration = `${5+Math.random()*15}s`;
+star.style.animationDelay = `${Math.random()*5}s`;
+starfield.appendChild(star);
+}
+</script>
+</body>
+</html>
