@@ -1,194 +1,225 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Module 5: Electrical Principles &mdash; General Class Course &mdash; N&Oslash;NJY</title>
-  <link rel="stylesheet" href="/style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="author" content="Rick">
+<meta name="description" content="General Class Module G5 – Impedance, Reactance, Resonance, Decibels – N0NJY">
+<title>G5: Electrical Principles &ndash; N0NJY</title>
+<link rel="stylesheet" href="style.css">
+<style>
+.page{
+max-width:900px;
+margin:auto;
+padding:2rem 1rem;
+color:yellow;
+}
+.page a{
+color:#8ecbff;
+text-decoration:none;
+}
+.page a:hover{
+text-decoration:underline;
+color:#ffffff;
+}
+h1,h2,h3{
+margin-top:1rem;
+}
+.lesson{
+margin-top:1.5rem;
+line-height:1.6;
+}
+.footer{
+margin-top:3rem;
+font-size:0.9rem;
+}
+.question-block{
+margin:1rem 0 1.5rem 0;
+padding:0.8rem 1rem;
+background:rgba(255,255,255,0.04);
+border-left:3px solid #8ecbff;
+border-radius:4px;
+}
+.answer-key{
+margin-top:1.5rem;
+padding:0.8rem 1rem;
+background:rgba(0,80,0,0.18);
+border-left:3px solid #66cc66;
+border-radius:4px;
+}
+table.band-table{
+width:100%;
+border-collapse:collapse;
+margin:1rem 0;
+font-size:0.92em;
+}
+table.band-table th{
+background:rgba(255,255,255,0.1);
+color:#8ecbff;
+padding:0.4rem 0.7rem;
+text-align:left;
+border-bottom:1px solid rgba(255,255,255,0.2);
+}
+table.band-table td{
+padding:0.35rem 0.7rem;
+border-bottom:1px solid rgba(255,255,255,0.07);
+color:#e0e0e0;
+}
+</style>
 </head>
 <body>
+<div class="starfield" id="starfield"></div>
+<div class="topbar">
+<a href="index.html">Home</a>
+<a href="contents.html">Table of Contents</a>
+<a href="articles.html">Articles</a>
+<a href="otherhams.html">Other Hams</a>
+<a href="astronomy.html">Space</a>
+<a href="survival.html">Preparedness</a>
+<a href="commlink.htm">Contact</a>
+</div>
+<div class="page">
+<h1>General Class License Study</h1>
+<h2>G5: Electrical Principles</h2>
+<p>This page is part of the N0NJY General Class self-study course for Technician operators upgrading to General.</p>
+<hr>
+<div class="lesson">
 
-<!-- Drifting stars canvas -->
-<canvas id="starfield"></canvas>
+<h2>Overview</h2>
+<p>Technician covered basic DC theory. General Class goes deeper into AC circuits: impedance, reactance,
+resonance, transformers, power calculations, and decibels. These are the foundations for understanding
+antenna systems, transmission lines, and transceiver design.</p>
 
-<!-- Top Navigation -->
-<div id="navbar">
-  <a href="/index.html">Home</a>
-  <a href="/contents.html">Contents</a>
-  <a href="/articles.html">Articles</a>
-  <a href="/begradio.html">Beginner Radio</a>
-  <a href="/technician_study.html">Tech Study</a>
-  <a href="/survival.html">Survival</a>
-  <a href="/commlink.htm">CommLink</a>
+<h2>Impedance and Reactance</h2>
+<p><strong>Resistance (R):</strong> Opposition to current that dissipates energy as heat. Measured in ohms.
+Constant regardless of frequency.</p>
+<p><strong>Inductive Reactance (XL):</strong> XL = 2&pi;fL &mdash; Increases with frequency. An inductor resists
+changes in current.</p>
+<p><strong>Capacitive Reactance (XC):</strong> XC = 1/(2&pi;fC) &mdash; Decreases as frequency increases.
+A capacitor resists changes in voltage.</p>
+<p><strong>Impedance (Z):</strong> The total opposition to AC current flow, combining resistance and reactance.
+Z = R + jX. The magnitude |Z| = &radic;(R&sup2; + X&sup2;). Measured in ohms.</p>
+
+<h2>Series and Parallel Resonance</h2>
+<p>A resonant circuit contains an inductor and capacitor tuned so that XL = XC. At the resonant frequency:</p>
+<p style="text-align:center;"><strong>f = 1 / (2&pi;&radic;LC)</strong></p>
+<ul>
+<li><strong>Series resonance:</strong> Impedance is at its <em>minimum</em> (equal to resistance only)</li>
+<li><strong>Parallel resonance:</strong> Impedance is at its <em>maximum</em></li>
+<li><strong>Q factor:</strong> Q = XL/R. High Q = sharp, narrow resonance. Low Q = broad resonance.</li>
+</ul>
+
+<h2>Transformers and Baluns</h2>
+<p>A transformer uses mutual inductance to transfer energy between windings.</p>
+<ul>
+<li>Voltage turns ratio: Vs/Vp = Ns/Np</li>
+<li>Impedance transformation: Zs/Zp = (Ns/Np)&sup2;</li>
+<li>A 2:1 turns ratio transforms a 200-ohm load to 50 ohms</li>
+</ul>
+<p>A <strong>balun</strong> (BALanced-UNbalanced) connects a balanced antenna (dipole) to unbalanced feedline (coax).
+A 1:1 current choke balun is generally the best choice for a dipole-to-coax connection.
+A 4:1 balun transforms 200 ohms to 50 ohms.</p>
+
+<h2>AC Power</h2>
+<ul>
+<li><strong>True power (watts):</strong> P = E &times; I &times; cos(&theta;)</li>
+<li><strong>Power factor:</strong> PF = cos(&theta;) = P / S</li>
+<li><strong>PEP (Peak Envelope Power):</strong> The average power during one RF cycle at the modulation peak.
+The FCC measures transmitter output power as PEP.</li>
+<li><strong>RMS voltage:</strong> VRMS = Vpeak &times; 0.707</li>
+</ul>
+
+<h2>Decibels</h2>
+<p>The decibel (dB) is a logarithmic ratio expressing power relationships:</p>
+<p style="text-align:center;"><strong>dB = 10 &times; log<sub>10</sub>(P2/P1)</strong></p>
+<p>Values you must memorize:</p>
+<ul>
+<li>+3 dB = power doubled &nbsp;|&nbsp; &minus;3 dB = power halved</li>
+<li>+10 dB = power &times; 10 &nbsp;|&nbsp; &minus;10 dB = power &divide; 10</li>
+<li>+20 dB = power &times; 100 &nbsp;|&nbsp; +30 dB = power &times; 1000</li>
+<li>0 dBd = 2.15 dBi (dipole vs. isotropic reference for antenna gain)</li>
+</ul>
+
+<hr>
+<h2>Practice Questions</h2>
+
+<div class="question-block">
+<p><strong>Q1 (G5A01)</strong> &mdash; What is impedance?</p>
+<ul><li>A. The rate of energy transfer in a resonant circuit</li><li>B. The opposition to the flow of current in an AC circuit</li><li>C. The opposition to the flow of current in a DC circuit</li><li>D. The force that produces voltage in a circuit</li></ul>
 </div>
 
-<!-- Page Content -->
-<div id="content">
-
-  <p class="breadcrumb">
-    <a href="/contents.html">Contents</a> &rsaquo;
-    <a href="/general_class.html">General Class Course</a> &rsaquo;
-    Module 5: Electrical Principles
-  </p>
-
-  <h1>Module 5: Electrical Principles</h1>
-  <h2 class="subtitle">Subelement G5 &mdash; Impedance, Reactance, Resonance, Power, and Decibels</h2>
-  <p class="author">By Rick Donaldson, N&Oslash;NJY &mdash;
-    <a href="mailto:n0njy@qsl.net">n0njy@qsl.net</a>
-  </p>
-  <hr class="section-rule">
-
-
-
-  <section>
-    <h3>5.1 Introduction</h3>
-    <p>The General Class exam includes a meaningful number of questions on electrical theory. You covered basic DC theory for your Technician license. Now you go deeper into AC circuits, impedance, resonance, and power &mdash; the foundations for understanding antenna systems, transmission lines, and transceiver circuits.</p>
-  </section>
-
-  <section>
-    <h3>5.2 Impedance and Reactance</h3>
-    <p><p><strong>Resistance (R):</strong> Opposes current and dissipates energy as heat. Constant regardless of frequency.</p><p><strong>Inductive Reactance:</strong> X<sub>L</sub> = 2&pi;fL &mdash; Increases with frequency.</p><p><strong>Capacitive Reactance:</strong> X<sub>C</sub> = 1/(2&pi;fC) &mdash; Decreases with frequency.</p><p><strong>Impedance:</strong> Z = R + jX, magnitude |Z| = &radic;(R&sup2; + X&sup2;). Measured in ohms.</p></p>
-  </section>
-
-  <section>
-    <h3>5.3 Resonance</h3>
-    <p>A resonant circuit has its inductive and capacitive reactances equal and canceling. Resonant frequency: f = 1/(2&pi;&radic;LC). In a series resonant circuit, impedance is at <em>minimum</em> at resonance. In a parallel resonant circuit, impedance is at <em>maximum</em> at resonance. <strong>Q factor</strong> measures the sharpness of the resonance: Q = X<sub>L</sub>/R.</p>
-  </section>
-
-  <section>
-    <h3>5.4 Transformers and Baluns</h3>
-    <p>A transformer uses mutual inductance to transfer energy between windings. Turns ratio: V<sub>s</sub>/V<sub>p</sub> = N<sub>s</sub>/N<sub>p</sub>. Impedance transformation: Z<sub>s</sub>/Z<sub>p</sub> = (N<sub>s</sub>/N<sub>p</sub>)&sup2;. A <strong>balun</strong> (BALanced-UNbalanced) connects a balanced antenna (dipole) to an unbalanced feedline (coax). A 1:1 current balun reduces common-mode current on the coax shield.</p>
-  </section>
-
-  <section>
-    <h3>5.5 Power and PEP</h3>
-    <p>True power P = E &times; I &times; cos(&theta;). Power factor PF = cos(&theta;). <strong>PEP (Peak Envelope Power)</strong> is the average power during one RF cycle at the peak of the modulation envelope. The FCC measures transmitter power as PEP.</p>
-  </section>
-
-  <section>
-    <h3>5.6 Decibels</h3>
-    <p><p>dB = 10 &times; log<sub>10</sub>(P<sub>2</sub>/P<sub>1</sub>)</p><p><strong>Key values:</strong></p><ul><li>+3&nbsp;dB = power doubled</li><li>&minus;3&nbsp;dB = power halved</li><li>+10&nbsp;dB = power &times; 10</li><li>+20&nbsp;dB = power &times; 100</li><li>+30&nbsp;dB = power &times; 1000</li><li>0&nbsp;dBd = 2.15&nbsp;dBi</li></ul></p>
-  </section>
-
-  <section class="practice-questions">
-    <h3>Module 5 Practice Questions</h3>
-
-    <div class="question">
-      <p><strong>Q1 (G5A01)</strong> &mdash; What is impedance?</p>
-      <ol type="A"><li>The rate of energy transfer in a resonant circuit</li><li>The opposition to the flow of current in an AC circuit</li><li>The opposition to the flow of current in a DC circuit</li><li>The force that produces voltage in a circuit</li></ol>
-    </div>
-
-    <div class="question">
-      <p><strong>Q2 (G5B01)</strong> &mdash; What dB change represents a two-times increase or decrease in power?</p>
-      <ol type="A"><li>Approximately 6&nbsp;dB</li><li>Approximately 3&nbsp;dB</li><li>Approximately 10&nbsp;dB</li><li>Approximately 1&nbsp;dB</li></ol>
-    </div>
-
-    <div class="question">
-      <p><strong>Q3 (G5A03)</strong> &mdash; What is the unit of impedance?</p>
-      <ol type="A"><li>Volt</li><li>Ampere</li><li>Ohm</li><li>Watt</li></ol>
-    </div>
-
-    <div class="question">
-      <p><strong>Q4 (G5C01)</strong> &mdash; What causes a voltage to appear across the secondary winding of a transformer?</p>
-      <ol type="A"><li>Capacitive coupling between the windings</li><li>Mutual inductance</li><li>Resistive coupling through the core</li><li>Electrostatic charge buildup</li></ol>
-    </div>
-
-    <div class="question">
-      <p><strong>Q5 (G5B03)</strong> &mdash; How many watts are consumed by a 12-VDC light bulb drawing 0.2 amperes?</p>
-      <ol type="A"><li>2.4 watts</li><li>60 watts</li><li>0.024 watts</li><li>24 watts</li></ol>
-    </div>
-
-    <div class="question">
-      <p><strong>Q6 (G5A07)</strong> &mdash; What happens when load impedance equals internal source impedance?</p>
-      <ol type="A"><li>Maximum voltage is delivered to the load</li><li>Maximum current is delivered to the load</li><li>Maximum power transfer occurs</li><li>No power is delivered to the load</li></ol>
-    </div>
-
-    <div class="question">
-      <p><strong>Q7 (G5B09)</strong> &mdash; What is the RMS voltage of a sine wave with a peak value of 17 volts?</p>
-      <ol type="A"><li>12 volts</li><li>17 volts</li><li>24 volts</li><li>8.5 volts</li></ol>
-    </div>
-
-    <div class="question">
-      <p><strong>Q8 (G5A11)</strong> &mdash; What is inductive reactance?</p>
-      <ol type="A"><li>The opposition to DC current flow in an inductor</li><li>The opposition to AC current flow due to the inductance of a coil</li><li>The amount of energy stored in a capacitor</li><li>The resistance of the wire in an inductor</li></ol>
-    </div>
-
-    <div class="answer-key">
-      <h4>Answer Key</h4>
-      <ol><li><strong>B</strong> &mdash; Impedance is the total opposition to AC current flow</li><li><strong>B</strong> &mdash; 3&nbsp;dB represents a doubling or halving of power</li><li><strong>C</strong> &mdash; Ohms are the unit of impedance</li><li><strong>B</strong> &mdash; Mutual inductance causes the secondary voltage</li><li><strong>A</strong> &mdash; P = E &times; I = 12 &times; 0.2 = 2.4 watts</li><li><strong>C</strong> &mdash; Maximum power transfer occurs when source and load impedances are equal</li><li><strong>A</strong> &mdash; RMS = Peak &times; 0.707 = 17 &times; 0.707 &asymp; 12 volts</li><li><strong>B</strong> &mdash; Inductive reactance is the opposition to AC current due to inductance</li></ol>
-    </div>
-  </section>
-
-
-  <hr class="section-rule">
-  <div class="module-nav">
-    <div class="mod-nav-left"><!-- prev link injected per file --></div>
-    <div class="mod-nav-center"><a href="/general_class.html">&#8617; Course Index</a></div>
-    <div class="mod-nav-right"><!-- next link injected per file --></div>
-  </div>
-
-</div><!-- /content -->
-
-<div id="footer">
-  <p>N&Oslash;NJY &mdash; Rick Donaldson &mdash;
-    <a href="http://n0njy.org">n0njy.org</a> &mdash;
-    <a href="mailto:n0njy@qsl.net">n0njy@qsl.net</a>
-  </p>
-  <p>&copy; Rick Donaldson 1997&ndash;2026. All Rights Reserved.</p>
+<div class="question-block">
+<p><strong>Q2 (G5B01)</strong> &mdash; What dB change represents a two-times increase or decrease in power?</p>
+<ul><li>A. Approximately 6 dB</li><li>B. Approximately 3 dB</li><li>C. Approximately 10 dB</li><li>D. Approximately 1 dB</li></ul>
 </div>
 
+<div class="question-block">
+<p><strong>Q3 (G5A03)</strong> &mdash; What is the unit of impedance?</p>
+<ul><li>A. Volt</li><li>B. Ampere</li><li>C. Ohm</li><li>D. Watt</li></ul>
+</div>
+
+<div class="question-block">
+<p><strong>Q4 (G5C01)</strong> &mdash; What causes a voltage to appear across the secondary winding of a transformer?</p>
+<ul><li>A. Capacitive coupling between the windings</li><li>B. Mutual inductance</li><li>C. Resistive coupling through the core</li><li>D. Electrostatic charge buildup</li></ul>
+</div>
+
+<div class="question-block">
+<p><strong>Q5 (G5B03)</strong> &mdash; How many watts are consumed by a 12-VDC light bulb drawing 0.2 amperes?</p>
+<ul><li>A. 2.4 watts</li><li>B. 60 watts</li><li>C. 0.024 watts</li><li>D. 24 watts</li></ul>
+</div>
+
+<div class="question-block">
+<p><strong>Q6 (G5A07)</strong> &mdash; What happens when the impedance of a load equals the internal impedance of the power source?</p>
+<ul><li>A. Maximum voltage is delivered to the load</li><li>B. Maximum current is delivered to the load</li><li>C. Maximum power transfer occurs</li><li>D. No power is delivered to the load</li></ul>
+</div>
+
+<div class="question-block">
+<p><strong>Q7 (G5B09)</strong> &mdash; What is the RMS voltage of a sine wave with a peak value of 17 volts?</p>
+<ul><li>A. 12 volts</li><li>B. 17 volts</li><li>C. 24 volts</li><li>D. 8.5 volts</li></ul>
+</div>
+
+<div class="question-block">
+<p><strong>Q8 (G5A11)</strong> &mdash; What is inductive reactance?</p>
+<ul><li>A. The opposition to DC current in an inductor</li><li>B. The opposition to AC current due to the inductance of a coil</li><li>C. The amount of energy stored in a capacitor</li><li>D. The resistance of the wire in an inductor</li></ul>
+</div>
+
+<div class="answer-key">
+<h3>Answer Key</h3>
+<ol>
+<li><strong>B</strong> &mdash; Impedance is the total opposition to AC current flow</li>
+<li><strong>B</strong> &mdash; 3 dB represents a doubling or halving of power</li>
+<li><strong>C</strong> &mdash; Ohms are the unit of impedance</li>
+<li><strong>B</strong> &mdash; Mutual inductance causes the secondary voltage</li>
+<li><strong>A</strong> &mdash; P = E &times; I = 12 &times; 0.2 = 2.4 watts</li>
+<li><strong>C</strong> &mdash; Maximum power transfer occurs when source and load impedances are equal</li>
+<li><strong>A</strong> &mdash; RMS = Peak &times; 0.707 = 17 &times; 0.707 &asymp; 12 volts</li>
+<li><strong>B</strong> &mdash; Inductive reactance is the opposition to AC current due to inductance</li>
+</ol>
+</div>
+
+</div>
+<hr>
+<p><a href="general_study.html">Return to General Class Course Index</a></p>
+<div class="footer">
+<p>Please email me at <a href="mailto:n0njy@qsl.net">n0njy@qsl.net</a> about broken links.</p>
+<p>&copy; N0NJY &ndash; Rick Donaldson, 1997&ndash;2026</p>
+</div>
+</div>
 <script>
-// Drifting stars — matches style.css companion script
-(function() {
-  const canvas = document.getElementById('starfield');
-  if (!canvas) return;
-  const ctx = canvas.getContext('2d');
-  let W, H, stars = [];
-  const N = 160;
-
-  function resize() {
-    W = canvas.width  = window.innerWidth;
-    H = canvas.height = window.innerHeight;
-  }
-
-  function randomStar() {
-    return {
-      x: Math.random() * W,
-      y: Math.random() * H,
-      r: Math.random() * 1.4 + 0.3,
-      dx: (Math.random() - 0.5) * 0.18,
-      dy: (Math.random() - 0.5) * 0.18,
-      alpha: Math.random() * 0.6 + 0.3
-    };
-  }
-
-  function init() {
-    resize();
-    stars = [];
-    for (let i = 0; i < N; i++) stars.push(randomStar());
-  }
-
-  function draw() {
-    ctx.clearRect(0, 0, W, H);
-    for (const s of stars) {
-      ctx.beginPath();
-      ctx.arc(s.x, s.y, s.r, 0, Math.PI * 2);
-      ctx.fillStyle = `rgba(255,255,255,${s.alpha})`;
-      ctx.fill();
-      s.x += s.dx; s.y += s.dy;
-      if (s.x < 0) s.x = W;
-      if (s.x > W) s.x = 0;
-      if (s.y < 0) s.y = H;
-      if (s.y > H) s.y = 0;
-    }
-    requestAnimationFrame(draw);
-  }
-
-  window.addEventListener('resize', resize);
-  init();
-  draw();
-})();
+const starfield = document.getElementById('starfield');
+const starCount = 150;
+for(let i=0;i<starCount;i++){
+const star=document.createElement('div');
+star.className='star';
+const size=Math.random()*2+1;
+star.style.width=`${size}px`;
+star.style.height=`${size}px`;
+star.style.top=`${Math.random()*window.innerHeight}px`;
+star.style.left=`${Math.random()*window.innerWidth}px`;
+star.style.animationDuration=`${5+Math.random()*15}s`;
+star.style.animationDelay=`${Math.random()*5}s`;
+starfield.appendChild(star);
+}
 </script>
-
 </body>
 </html>

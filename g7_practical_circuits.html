@@ -1,189 +1,223 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Module 7: Practical Circuits &mdash; General Class Course &mdash; N&Oslash;NJY</title>
-  <link rel="stylesheet" href="/style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="author" content="Rick">
+<meta name="description" content="General Class Module G7 – Receivers, Transmitters, Power Supplies, Filters – N0NJY">
+<title>G7: Practical Circuits &ndash; N0NJY</title>
+<link rel="stylesheet" href="style.css">
+<style>
+.page{
+max-width:900px;
+margin:auto;
+padding:2rem 1rem;
+color:yellow;
+}
+.page a{
+color:#8ecbff;
+text-decoration:none;
+}
+.page a:hover{
+text-decoration:underline;
+color:#ffffff;
+}
+h1,h2,h3{
+margin-top:1rem;
+}
+.lesson{
+margin-top:1.5rem;
+line-height:1.6;
+}
+.footer{
+margin-top:3rem;
+font-size:0.9rem;
+}
+.question-block{
+margin:1rem 0 1.5rem 0;
+padding:0.8rem 1rem;
+background:rgba(255,255,255,0.04);
+border-left:3px solid #8ecbff;
+border-radius:4px;
+}
+.answer-key{
+margin-top:1.5rem;
+padding:0.8rem 1rem;
+background:rgba(0,80,0,0.18);
+border-left:3px solid #66cc66;
+border-radius:4px;
+}
+table.band-table{
+width:100%;
+border-collapse:collapse;
+margin:1rem 0;
+font-size:0.92em;
+}
+table.band-table th{
+background:rgba(255,255,255,0.1);
+color:#8ecbff;
+padding:0.4rem 0.7rem;
+text-align:left;
+border-bottom:1px solid rgba(255,255,255,0.2);
+}
+table.band-table td{
+padding:0.35rem 0.7rem;
+border-bottom:1px solid rgba(255,255,255,0.07);
+color:#e0e0e0;
+}
+</style>
 </head>
 <body>
+<div class="starfield" id="starfield"></div>
+<div class="topbar">
+<a href="index.html">Home</a>
+<a href="contents.html">Table of Contents</a>
+<a href="articles.html">Articles</a>
+<a href="otherhams.html">Other Hams</a>
+<a href="astronomy.html">Space</a>
+<a href="survival.html">Preparedness</a>
+<a href="commlink.htm">Contact</a>
+</div>
+<div class="page">
+<h1>General Class License Study</h1>
+<h2>G7: Practical Circuits</h2>
+<p>This page is part of the N0NJY General Class self-study course for Technician operators upgrading to General.</p>
+<hr>
+<div class="lesson">
 
-<!-- Drifting stars canvas -->
-<canvas id="starfield"></canvas>
+<h2>Overview</h2>
+<p>This module connects electrical theory to actual hardware in amateur radio equipment. You will learn how
+superheterodyne receivers work, how SSB transmitters are built, how power supplies operate, and what the
+different filter types do.</p>
 
-<!-- Top Navigation -->
-<div id="navbar">
-  <a href="/index.html">Home</a>
-  <a href="/contents.html">Contents</a>
-  <a href="/articles.html">Articles</a>
-  <a href="/begradio.html">Beginner Radio</a>
-  <a href="/technician_study.html">Tech Study</a>
-  <a href="/survival.html">Survival</a>
-  <a href="/commlink.htm">CommLink</a>
+<h2>Superheterodyne Receivers</h2>
+<p>The superheterodyne (superhet) design is standard in virtually all HF transceivers. The incoming RF signal
+is mixed with a local oscillator (LO) to produce an intermediate frequency (IF). All filtering, amplification,
+and detection occurs at this fixed IF regardless of the receive frequency.</p>
+<p><strong>Why use an IF?</strong> It is far easier to build a sharp, stable filter at one fixed frequency than
+to rebuild it for every possible receive frequency. The IF filter does the heavy lifting for selectivity.</p>
+<p><strong>Image frequency problem:</strong> A second undesired frequency will also mix with the LO to produce
+the same IF. This image must be rejected by a pre-selector filter before the mixer. For example, with an IF of
+10.7 MHz and an LO of 14.000 MHz, signals at both 3.3 MHz and 24.7 MHz would produce the 10.7 MHz IF.</p>
+<p><strong>SDR (Software Defined Radio):</strong> Replaces traditional IF hardware with an analog-to-digital
+converter and software processing. Wide-bandwidth waterfall displays show all band activity simultaneously.
+SDR has become popular for HF monitoring and is increasingly used in transceiver designs.</p>
+
+<h2>SSB Transmitter Signal Chain</h2>
+<ol>
+<li>Microphone amplifier</li>
+<li>Balanced modulator &mdash; produces double-sideband suppressed-carrier (DSB-SC)</li>
+<li>Sideband filter &mdash; selects upper or lower sideband, removes the other</li>
+<li>Mixer/VFO &mdash; translates to the desired transmit frequency</li>
+<li>Driver amplifier</li>
+<li>Final power amplifier (PA)</li>
+<li>Low-pass filter &mdash; removes harmonics from the PA output</li>
+</ol>
+<p><strong>ALC (Automatic Level Control):</strong> Senses the output level and reduces drive to prevent
+distortion. The ALC meter should swing on voice peaks but not remain pegged. Excessive ALC action compresses
+audio and can actually increase distortion by over-correcting.</p>
+
+<h2>Power Supplies</h2>
+<p><strong>Full-wave bridge rectifier:</strong> Four diodes in a bridge configuration rectify both half-cycles
+of the AC input, producing pulsating DC at twice the AC frequency. This is the most common rectifier design.</p>
+<p><strong>Filtering:</strong> Large electrolytic capacitors smooth the pulsating DC. The larger the capacitor,
+the less ripple on the output.</p>
+<p><strong>Linear regulator:</strong> Maintains constant output by dissipating the excess voltage as heat.
+Very clean output but inefficient &mdash; the wasted power becomes heat in the pass transistor.</p>
+<p><strong>Switching power supply:</strong> Converts DC to high-frequency AC, transforms, rectifies, and
+filters it again. Highly efficient &mdash; most modern amateur power supplies are switching types. The
+switching frequency (typically 20&ndash;100 kHz) can generate interference if the supply is poorly designed.</p>
+
+<h2>Filters</h2>
+<ul>
+<li><strong>Low-pass:</strong> Passes frequencies below the cutoff, blocks above. Used after the PA to remove harmonics.</li>
+<li><strong>High-pass:</strong> Passes frequencies above the cutoff. Used to block AM broadcast interference from entering HF receivers.</li>
+<li><strong>Bandpass:</strong> Passes a range of frequencies. Used as the IF filter in receivers.</li>
+<li><strong>Notch (band-reject):</strong> Blocks a narrow range. Removes a specific interfering carrier.</li>
+<li><strong>Crystal filter:</strong> Uses the very high Q of quartz crystals to create extremely sharp bandpass
+filters for receiver IF stages.</li>
+</ul>
+
+<hr>
+<h2>Practice Questions</h2>
+
+<div class="question-block">
+<p><strong>Q1 (G7A01)</strong> &mdash; What is the peak-inverse-voltage across the rectifier in a full-wave bridge rectifier?</p>
+<ul><li>A. Equal to half the normal peak output voltage</li><li>B. Equal to twice the normal peak output voltage</li><li>C. Equal to the normal peak output voltage</li><li>D. Equal to the RMS output voltage</li></ul>
 </div>
 
-<!-- Page Content -->
-<div id="content">
-
-  <p class="breadcrumb">
-    <a href="/contents.html">Contents</a> &rsaquo;
-    <a href="/general_class.html">General Class Course</a> &rsaquo;
-    Module 7: Practical Circuits
-  </p>
-
-  <h1>Module 7: Practical Circuits</h1>
-  <h2 class="subtitle">Subelement G7 &mdash; Receivers, Transmitters, Power Supplies, and Filters</h2>
-  <p class="author">By Rick Donaldson, N&Oslash;NJY &mdash;
-    <a href="mailto:n0njy@qsl.net">n0njy@qsl.net</a>
-  </p>
-  <hr class="section-rule">
-
-
-
-  <section>
-    <h3>7.1 Introduction</h3>
-    <p>This module connects theory to hardware &mdash; actual circuit configurations found in amateur radio equipment. You will learn how receivers, transmitters, and power supplies work internally, plus filter basics.</p>
-  </section>
-
-  <section>
-    <h3>7.2 Superheterodyne Receiver</h3>
-    <p>The superheterodyne (superhet) design is the standard for virtually all HF receivers. The incoming RF signal is mixed with a local oscillator (LO) to produce an intermediate frequency (IF). All filtering, amplification, and detection occurs at this fixed IF, making it practical to build sharp, stable filters regardless of receive frequency. <strong>Image frequency</strong>: A second undesired frequency will also mix with the LO to produce the same IF. Pre-selector filters must reject the image before the mixer. <strong>SDR (Software Defined Radio)</strong>: Replaces IF hardware with digital processing. Wide-bandwidth waterfall displays show all band activity simultaneously.</p>
-  </section>
-
-  <section>
-    <h3>7.3 SSB Transmitter Stages</h3>
-    <p><ol><li>Microphone amplifier</li><li>Balanced modulator &mdash; produces DSB-SC signal</li><li>Sideband filter &mdash; selects one sideband</li><li>Mixer/VFO &mdash; translates to transmit frequency</li><li>Driver amplifier</li><li>Final power amplifier (PA)</li><li>Low-pass filter &mdash; removes harmonics</li></ol><p><strong>ALC (Automatic Level Control):</strong> Prevents overdriving the transmitter. Excessive ALC action compresses audio and causes distortion. The ALC indicator should swing on voice peaks but not remain pegged continuously.</p></p>
-  </section>
-
-  <section>
-    <h3>7.4 Power Supplies</h3>
-    <p><p><strong>Full-wave bridge rectifier:</strong> Four diodes producing pulsating DC at twice the input frequency. Large electrolytic capacitors filter the pulsating output.</p><p><strong>Linear regulator:</strong> Maintains constant output by dissipating excess voltage as heat. Inefficient but very clean output.</p><p><strong>Switching (switch-mode) power supply:</strong> Converts DC to high-frequency AC, transforms, rectifies, and filters. Very high efficiency. Most modern amateur power supplies are switching types.</p></p>
-  </section>
-
-  <section>
-    <h3>7.5 Filters</h3>
-    <p><ul><li><strong>Low-pass:</strong> After the PA to remove harmonics</li><li><strong>High-pass:</strong> To block AM broadcast interference</li><li><strong>Bandpass:</strong> IF filters in receivers</li><li><strong>Notch (band-reject):</strong> Removes a single interfering carrier</li><li><strong>Crystal filter:</strong> Very high Q using quartz crystals. Forms the sharp IF filters in HF receivers.</li></ul></p>
-  </section>
-
-  <section class="practice-questions">
-    <h3>Module 7 Practice Questions</h3>
-
-    <div class="question">
-      <p><strong>Q1 (G7A01)</strong> &mdash; What is the peak-inverse-voltage across the rectifier in a full-wave bridge rectifier?</p>
-      <ol type="A"><li>Equal to half the normal peak output voltage</li><li>Equal to twice the normal peak output voltage</li><li>Equal to the normal peak output voltage</li><li>Equal to the RMS output voltage</li></ol>
-    </div>
-
-    <div class="question">
-      <p><strong>Q2 (G7C01)</strong> &mdash; What is the function of a product detector?</p>
-      <ol type="A"><li>To convert an AM signal to SSB</li><li>To detect CW and SSB signals by combining with a locally generated carrier</li><li>To measure the output power of a transmitter</li><li>To measure the intermodulation distortion of an amplifier</li></ol>
-    </div>
-
-    <div class="question">
-      <p><strong>Q3 (G7B01)</strong> &mdash; Complex digital circuitry can often be replaced by what type of device?</p>
-      <ol type="A"><li>A field-effect transistor</li><li>A bipolar junction transistor</li><li>A microprocessor</li><li>A linear voltage regulator</li></ol>
-    </div>
-
-    <div class="question">
-      <p><strong>Q4 (G7A03)</strong> &mdash; Which is the output waveform of an unfiltered full-wave rectifier with a sine wave input?</p>
-      <ol type="A"><li>A square wave</li><li>A sine wave</li><li>A series of pulses at twice the input frequency</li><li>A constant DC voltage</li></ol>
-    </div>
-
-    <div class="question">
-      <p><strong>Q5 (G7C05)</strong> &mdash; Which of the following is characteristic of a good SSB phone transmitted signal?</p>
-      <ol type="A"><li>High average power</li><li>Absence of spurious signals</li><li>Narrow audio bandwidth</li><li>High carrier level</li></ol>
-    </div>
-
-    <div class="question">
-      <p><strong>Q6 (G7B09)</strong> &mdash; What is the function of the product detector in an SSB receiver?</p>
-      <ol type="A"><li>It converts the detected audio back to RF</li><li>It multiplies the IF signal and BFO to produce audio</li><li>It measures the product of the IF filter bandwidth</li><li>It filters the mixer output</li></ol>
-    </div>
-
-    <div class="question">
-      <p><strong>Q7 (G7A08)</strong> &mdash; Which is an advantage of a switched-mode power supply over a linear supply?</p>
-      <ol type="A"><li>Quieter operation</li><li>Higher efficiency</li><li>Better voltage regulation at high loads</li><li>Simpler circuit design</li></ol>
-    </div>
-
-    <div class="question">
-      <p><strong>Q8 (G7C03)</strong> &mdash; What is the purpose of a de-emphasis network in an FM receiver?</p>
-      <ol type="A"><li>To prevent interference from AM signals</li><li>To complement the pre-emphasis and restore flat audio response</li><li>To reduce the receiver&rsquo;s noise floor</li><li>To filter the detected audio signal</li></ol>
-    </div>
-
-    <div class="answer-key">
-      <h4>Answer Key</h4>
-      <ol><li><strong>C</strong> &mdash; PIV across each diode in a bridge equals the peak output voltage</li><li><strong>B</strong> &mdash; A product detector combines the IF with the BFO to produce audio</li><li><strong>C</strong> &mdash; A microprocessor replaces complex digital circuitry</li><li><strong>C</strong> &mdash; Full-wave rectifier output consists of positive pulses at twice the input frequency</li><li><strong>B</strong> &mdash; A good SSB signal is free of spurious emissions</li><li><strong>B</strong> &mdash; The product detector multiplies the IF signal by the BFO to produce audio</li><li><strong>B</strong> &mdash; Switching power supplies are far more efficient than linear types</li><li><strong>B</strong> &mdash; De-emphasis restores flat audio response, complementing transmitter pre-emphasis</li></ol>
-    </div>
-  </section>
-
-
-  <hr class="section-rule">
-  <div class="module-nav">
-    <div class="mod-nav-left"><!-- prev link injected per file --></div>
-    <div class="mod-nav-center"><a href="/general_class.html">&#8617; Course Index</a></div>
-    <div class="mod-nav-right"><!-- next link injected per file --></div>
-  </div>
-
-</div><!-- /content -->
-
-<div id="footer">
-  <p>N&Oslash;NJY &mdash; Rick Donaldson &mdash;
-    <a href="http://n0njy.org">n0njy.org</a> &mdash;
-    <a href="mailto:n0njy@qsl.net">n0njy@qsl.net</a>
-  </p>
-  <p>&copy; Rick Donaldson 1997&ndash;2026. All Rights Reserved.</p>
+<div class="question-block">
+<p><strong>Q2 (G7C01)</strong> &mdash; What is the function of a product detector?</p>
+<ul><li>A. To convert an AM signal to SSB</li><li>B. To detect CW and SSB by combining them with a locally generated carrier</li><li>C. To measure transmitter output power</li><li>D. To measure intermodulation distortion</li></ul>
 </div>
 
+<div class="question-block">
+<p><strong>Q3 (G7B01)</strong> &mdash; Complex digital circuitry can often be replaced by what type of device?</p>
+<ul><li>A. A field-effect transistor</li><li>B. A bipolar junction transistor</li><li>C. A microprocessor</li><li>D. A linear voltage regulator</li></ul>
+</div>
+
+<div class="question-block">
+<p><strong>Q4 (G7A03)</strong> &mdash; What is the output waveform of an unfiltered full-wave rectifier with a sine wave input?</p>
+<ul><li>A. A square wave</li><li>B. A sine wave</li><li>C. A series of pulses at twice the input frequency</li><li>D. A constant DC voltage</li></ul>
+</div>
+
+<div class="question-block">
+<p><strong>Q5 (G7C05)</strong> &mdash; Which is characteristic of a good SSB phone transmitted signal?</p>
+<ul><li>A. High average power</li><li>B. Absence of spurious signals</li><li>C. Narrow audio bandwidth</li><li>D. High carrier level</li></ul>
+</div>
+
+<div class="question-block">
+<p><strong>Q6 (G7B09)</strong> &mdash; What is the function of the product detector in an SSB receiver?</p>
+<ul><li>A. It converts detected audio back to RF</li><li>B. It multiplies the IF signal and the BFO to produce audio</li><li>C. It measures the IF filter bandwidth</li><li>D. It filters the mixer output</li></ul>
+</div>
+
+<div class="question-block">
+<p><strong>Q7 (G7A08)</strong> &mdash; Which is an advantage of a switched-mode power supply over a linear supply?</p>
+<ul><li>A. Quieter operation</li><li>B. Higher efficiency</li><li>C. Better voltage regulation at high loads</li><li>D. Simpler circuit design</li></ul>
+</div>
+
+<div class="question-block">
+<p><strong>Q8 (G7C03)</strong> &mdash; What is the purpose of a de-emphasis network in an FM receiver?</p>
+<ul><li>A. To prevent AM interference</li><li>B. To complement the pre-emphasis used in the transmitter and restore flat audio response</li><li>C. To reduce the receiver noise floor</li><li>D. To filter the detected audio</li></ul>
+</div>
+
+<div class="answer-key">
+<h3>Answer Key</h3>
+<ol>
+<li><strong>C</strong> &mdash; PIV across each bridge diode equals the peak output voltage</li>
+<li><strong>B</strong> &mdash; A product detector combines the IF with the BFO (carrier) to produce audio</li>
+<li><strong>C</strong> &mdash; A microprocessor replaces complex digital circuitry</li>
+<li><strong>C</strong> &mdash; The output is positive pulses at twice the AC input frequency</li>
+<li><strong>B</strong> &mdash; A good SSB signal is free of spurious emissions</li>
+<li><strong>B</strong> &mdash; The product detector multiplies the IF by the BFO to produce audio</li>
+<li><strong>B</strong> &mdash; Switching power supplies are far more efficient than linear types</li>
+<li><strong>B</strong> &mdash; De-emphasis restores flat audio, complementing transmitter pre-emphasis</li>
+</ol>
+</div>
+
+</div>
+<hr>
+<p><a href="general_study.html">Return to General Class Course Index</a></p>
+<div class="footer">
+<p>Please email me at <a href="mailto:n0njy@qsl.net">n0njy@qsl.net</a> about broken links.</p>
+<p>&copy; N0NJY &ndash; Rick Donaldson, 1997&ndash;2026</p>
+</div>
+</div>
 <script>
-// Drifting stars — matches style.css companion script
-(function() {
-  const canvas = document.getElementById('starfield');
-  if (!canvas) return;
-  const ctx = canvas.getContext('2d');
-  let W, H, stars = [];
-  const N = 160;
-
-  function resize() {
-    W = canvas.width  = window.innerWidth;
-    H = canvas.height = window.innerHeight;
-  }
-
-  function randomStar() {
-    return {
-      x: Math.random() * W,
-      y: Math.random() * H,
-      r: Math.random() * 1.4 + 0.3,
-      dx: (Math.random() - 0.5) * 0.18,
-      dy: (Math.random() - 0.5) * 0.18,
-      alpha: Math.random() * 0.6 + 0.3
-    };
-  }
-
-  function init() {
-    resize();
-    stars = [];
-    for (let i = 0; i < N; i++) stars.push(randomStar());
-  }
-
-  function draw() {
-    ctx.clearRect(0, 0, W, H);
-    for (const s of stars) {
-      ctx.beginPath();
-      ctx.arc(s.x, s.y, s.r, 0, Math.PI * 2);
-      ctx.fillStyle = `rgba(255,255,255,${s.alpha})`;
-      ctx.fill();
-      s.x += s.dx; s.y += s.dy;
-      if (s.x < 0) s.x = W;
-      if (s.x > W) s.x = 0;
-      if (s.y < 0) s.y = H;
-      if (s.y > H) s.y = 0;
-    }
-    requestAnimationFrame(draw);
-  }
-
-  window.addEventListener('resize', resize);
-  init();
-  draw();
-})();
+const starfield = document.getElementById('starfield');
+const starCount = 150;
+for(let i=0;i<starCount;i++){
+const star=document.createElement('div');
+star.className='star';
+const size=Math.random()*2+1;
+star.style.width=`${size}px`;
+star.style.height=`${size}px`;
+star.style.top=`${Math.random()*window.innerHeight}px`;
+star.style.left=`${Math.random()*window.innerWidth}px`;
+star.style.animationDuration=`${5+Math.random()*15}s`;
+star.style.animationDelay=`${Math.random()*5}s`;
+starfield.appendChild(star);
+}
 </script>
-
 </body>
 </html>

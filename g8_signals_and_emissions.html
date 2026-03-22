@@ -1,189 +1,229 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Module 8: Signals and Emissions &mdash; General Class Course &mdash; N&Oslash;NJY</title>
-  <link rel="stylesheet" href="/style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="author" content="Rick">
+<meta name="description" content="General Class Module G8 – Modulation, Digital Modes, Bandwidth, Spurious – N0NJY">
+<title>G8: Signals and Emissions &ndash; N0NJY</title>
+<link rel="stylesheet" href="style.css">
+<style>
+.page{
+max-width:900px;
+margin:auto;
+padding:2rem 1rem;
+color:yellow;
+}
+.page a{
+color:#8ecbff;
+text-decoration:none;
+}
+.page a:hover{
+text-decoration:underline;
+color:#ffffff;
+}
+h1,h2,h3{
+margin-top:1rem;
+}
+.lesson{
+margin-top:1.5rem;
+line-height:1.6;
+}
+.footer{
+margin-top:3rem;
+font-size:0.9rem;
+}
+.question-block{
+margin:1rem 0 1.5rem 0;
+padding:0.8rem 1rem;
+background:rgba(255,255,255,0.04);
+border-left:3px solid #8ecbff;
+border-radius:4px;
+}
+.answer-key{
+margin-top:1.5rem;
+padding:0.8rem 1rem;
+background:rgba(0,80,0,0.18);
+border-left:3px solid #66cc66;
+border-radius:4px;
+}
+table.band-table{
+width:100%;
+border-collapse:collapse;
+margin:1rem 0;
+font-size:0.92em;
+}
+table.band-table th{
+background:rgba(255,255,255,0.1);
+color:#8ecbff;
+padding:0.4rem 0.7rem;
+text-align:left;
+border-bottom:1px solid rgba(255,255,255,0.2);
+}
+table.band-table td{
+padding:0.35rem 0.7rem;
+border-bottom:1px solid rgba(255,255,255,0.07);
+color:#e0e0e0;
+}
+</style>
 </head>
 <body>
+<div class="starfield" id="starfield"></div>
+<div class="topbar">
+<a href="index.html">Home</a>
+<a href="contents.html">Table of Contents</a>
+<a href="articles.html">Articles</a>
+<a href="otherhams.html">Other Hams</a>
+<a href="astronomy.html">Space</a>
+<a href="survival.html">Preparedness</a>
+<a href="commlink.htm">Contact</a>
+</div>
+<div class="page">
+<h1>General Class License Study</h1>
+<h2>G8: Signals and Emissions</h2>
+<p>This page is part of the N0NJY General Class self-study course for Technician operators upgrading to General.</p>
+<hr>
+<div class="lesson">
 
-<!-- Drifting stars canvas -->
-<canvas id="starfield"></canvas>
+<h2>Overview</h2>
+<p>This module covers the technical details of how signals are generated, modulated, and transmitted. You need
+to understand emission types, modulation modes, digital mode characteristics, bandwidth, and what causes
+unwanted spurious emissions.</p>
 
-<!-- Top Navigation -->
-<div id="navbar">
-  <a href="/index.html">Home</a>
-  <a href="/contents.html">Contents</a>
-  <a href="/articles.html">Articles</a>
-  <a href="/begradio.html">Beginner Radio</a>
-  <a href="/technician_study.html">Tech Study</a>
-  <a href="/survival.html">Survival</a>
-  <a href="/commlink.htm">CommLink</a>
+<h2>FCC Emission Type Designators</h2>
+<ul>
+<li><strong>A1A:</strong> CW &mdash; on-off keyed unmodulated carrier</li>
+<li><strong>A3E:</strong> AM double-sideband with full carrier</li>
+<li><strong>J3E:</strong> SSB with suppressed carrier (what everyone calls "SSB")</li>
+<li><strong>F3E:</strong> FM analog voice</li>
+<li><strong>F1B:</strong> FSK &mdash; used for RTTY and some digital modes</li>
+</ul>
+
+<h2>Modulation Modes</h2>
+<p><strong>AM (Amplitude Modulation):</strong> The carrier amplitude varies with the audio signal. The carrier
+is always present, even when no audio is transmitted. Double-sideband AM occupies twice the bandwidth of SSB.
+AM is used in the AM broadcast band and in some aviation communications.</p>
+<p><strong>SSB (Single Sideband):</strong> The carrier and one sideband are removed. All transmitter power goes
+into the information-bearing sideband. Bandwidth is approximately half that of AM. SSB is the standard for HF
+voice operation.</p>
+<p><strong>FM (Frequency Modulation):</strong> The carrier frequency varies with the audio amplitude.
+Carrier amplitude is constant. FM has excellent noise rejection (capture effect) and is standard for VHF/UHF
+voice. FM requires more bandwidth than SSB but provides very high audio quality when the signal is adequate.</p>
+
+<h2>Digital Modes &mdash; Technical Summary</h2>
+<p><strong>RTTY:</strong> FSK (frequency-shift keying). Carrier shifts between mark and space tones.
+Standard amateur RTTY: 45.45 baud, 170 Hz shift, approximately 250&ndash;300 Hz occupied bandwidth.</p>
+<p><strong>PSK31:</strong> Phase-shift keying at 31.25 baud. Occupied bandwidth: approximately 31 Hz.
+Excellent weak-signal performance. Popular for keyboard QSOs.</p>
+<p><strong>FT8:</strong> 8-tone FSK (8-FSK), 15-second transmit/receive cycles, 50 Hz bandwidth.
+Decodes signals 20+ dB below the noise floor. Has become the dominant weak-signal HF mode worldwide.
+Not conversational &mdash; structured exchanges only.</p>
+<p><strong>APRS / Packet:</strong> AX.25 protocol. 1200 baud on VHF using AFSK (audio frequency-shift keying).
+Integrates with GPS for real-time position tracking. Used in APRS (Automatic Packet Reporting System).</p>
+
+<h2>Bandwidth Reference</h2>
+<table class="band-table">
+<tr><th>Mode</th><th>Approximate Bandwidth</th></tr>
+<tr><td>CW</td><td>50&ndash;150 Hz</td></tr>
+<tr><td>PSK31</td><td>31 Hz</td></tr>
+<tr><td>FT8</td><td>50 Hz</td></tr>
+<tr><td>RTTY (170 Hz shift)</td><td>~250 Hz</td></tr>
+<tr><td>SSB voice</td><td>2.4 kHz</td></tr>
+<tr><td>AM voice</td><td>6 kHz</td></tr>
+<tr><td>VHF FM voice</td><td>10&ndash;15 kHz</td></tr>
+</table>
+<p>FCC rules require that emissions be no wider than necessary for the information being transmitted.</p>
+
+<h2>Spurious Emissions</h2>
+<p><strong>Harmonics:</strong> Integer multiples of the transmit frequency produced in the final amplifier.
+A 14 MHz transmitter may produce harmonics at 28, 42, and 56 MHz. A low-pass filter at the transmitter output
+suppresses them effectively.</p>
+<p><strong>Intermodulation Distortion (IMD):</strong> When two or more signals mix in a non-linear device, they
+produce products at various frequency combinations. An overdriven SSB transmitter creates splatter &mdash;
+unwanted sidebands that spread across the band. IMD is a common cause of interference complaints.</p>
+<p><strong>Parasitic Oscillations:</strong> Unintended RF oscillation caused by stray capacitance and inductance
+in amplifier circuits. Parasitic suppressors (small resistors or ferrite beads in the amplifier) prevent them.</p>
+
+<hr>
+<h2>Practice Questions</h2>
+
+<div class="question-block">
+<p><strong>Q1 (G8A01)</strong> &mdash; How is an FSK signal generated?</p>
+<ul><li>A. By varying the amplitude of the RF signal</li><li>B. By changing the center frequency between two discrete values</li><li>C. By shifting the phase of the carrier</li><li>D. By mixing two carriers of different amplitude</li></ul>
 </div>
 
-<!-- Page Content -->
-<div id="content">
-
-  <p class="breadcrumb">
-    <a href="/contents.html">Contents</a> &rsaquo;
-    <a href="/general_class.html">General Class Course</a> &rsaquo;
-    Module 8: Signals and Emissions
-  </p>
-
-  <h1>Module 8: Signals and Emissions</h1>
-  <h2 class="subtitle">Subelement G8 &mdash; Modulation, Digital Modes, Bandwidth, and Spurious Emissions</h2>
-  <p class="author">By Rick Donaldson, N&Oslash;NJY &mdash;
-    <a href="mailto:n0njy@qsl.net">n0njy@qsl.net</a>
-  </p>
-  <hr class="section-rule">
-
-
-
-  <section>
-    <h3>8.1 Emission Type Designators</h3>
-    <p><p>The FCC standardized emission designators:</p><ul><li><strong>A1A:</strong> CW (keyed carrier)</li><li><strong>A3E:</strong> AM double-sideband full carrier</li><li><strong>J3E:</strong> SSB suppressed carrier (what we call &ldquo;SSB&rdquo;)</li><li><strong>F3E:</strong> FM analog voice</li><li><strong>F1B:</strong> FSK (RTTY)</li></ul></p>
-  </section>
-
-  <section>
-    <h3>8.2 Modulation Modes</h3>
-    <p><p><strong>AM:</strong> Carrier amplitude varies with audio. Requires twice the bandwidth of SSB. Carrier present even when no audio.</p><p><strong>SSB:</strong> Carrier and one sideband removed. All power in the information-bearing sideband. Bandwidth approximately half that of AM.</p><p><strong>FM:</strong> Carrier frequency varies with audio amplitude. Constant amplitude. Excellent noise rejection. Standard for VHF/UHF voice.</p></p>
-  </section>
-
-  <section>
-    <h3>8.3 Digital Modes</h3>
-    <p><p><strong>RTTY:</strong> FSK at 45.45 baud, 170&nbsp;Hz shift. ~250&nbsp;Hz occupied bandwidth.</p><p><strong>PSK31:</strong> Phase-shift keying at 31.25 baud. ~31&nbsp;Hz bandwidth. Excellent for marginal conditions.</p><p><strong>FT8:</strong> 8-FSK, 15-second cycles, 50&nbsp;Hz bandwidth. Can decode 20&nbsp;dB below noise floor. Dominant weak-signal mode.</p><p><strong>Packet/APRS:</strong> AX.25 protocol. 1200 baud on VHF. Integrates with GPS for position tracking.</p></p>
-  </section>
-
-  <section>
-    <h3>8.4 Bandwidth Reference</h3>
-    <p><table class='data-table'><tr><th>Mode</th><th>Approx. Bandwidth</th></tr><tr><td>CW</td><td>50&ndash;150 Hz</td></tr><tr><td>PSK31</td><td>31 Hz</td></tr><tr><td>FT8</td><td>50 Hz</td></tr><tr><td>RTTY</td><td>250 Hz</td></tr><tr><td>SSB</td><td>2.4 kHz</td></tr><tr><td>AM voice</td><td>6 kHz</td></tr><tr><td>FM voice</td><td>10&ndash;15 kHz</td></tr></table></p>
-  </section>
-
-  <section>
-    <h3>8.5 Spurious Emissions</h3>
-    <p><p><strong>Harmonics:</strong> Integer multiples of the transmit frequency. A 14&nbsp;MHz transmitter may produce harmonics at 28, 42&nbsp;MHz, etc. Suppressed by a low-pass filter at the transmitter output.</p><p><strong>Intermodulation distortion (IMD):</strong> Products at various frequency combinations when signals mix in a non-linear device. Overdriven SSB transmitters create splatter &mdash; unwanted sidebands across the band.</p><p><strong>Parasitic oscillations:</strong> Unintended RF oscillation caused by stray capacitance and inductance in amplifier stages. Prevented by parasitic suppressors (small resistors or ferrite beads).</p></p>
-  </section>
-
-  <section class="practice-questions">
-    <h3>Module 8 Practice Questions</h3>
-
-    <div class="question">
-      <p><strong>Q1 (G8A01)</strong> &mdash; How is an FSK signal generated?</p>
-      <ol type="A"><li>By varying the amplitude of the RF signal</li><li>By changing the center frequency between two discrete values</li><li>By shifting the phase of the carrier</li><li>By mixing two carriers of different amplitude</li></ol>
-    </div>
-
-    <div class="question">
-      <p><strong>Q2 (G8B01)</strong> &mdash; What is the definition of symbol rate in a digital transmission?</p>
-      <ol type="A"><li>The number of data bits transmitted per second</li><li>The rate at which the waveform changes to convey information</li><li>The number of error correcting bits per second</li><li>The ratio of signal bandwidth to data rate</li></ol>
-    </div>
-
-    <div class="question">
-      <p><strong>Q3 (G8C01)</strong> &mdash; Which digital mode is designed to make it easier for stations to find each other across an entire HF band?</p>
-      <ol type="A"><li>RTTY</li><li>PSK31</li><li>FT8</li><li>PACTOR</li></ol>
-    </div>
-
-    <div class="question">
-      <p><strong>Q4 (G8A05)</strong> &mdash; What type of modulation varies only the frequency of the RF signal?</p>
-      <ol type="A"><li>Amplitude modulation</li><li>Phase modulation</li><li>Frequency modulation</li><li>Pulse-width modulation</li></ol>
-    </div>
-
-    <div class="question">
-      <p><strong>Q5 (G8B05)</strong> &mdash; What is the approximate bandwidth of a VHF repeater FM phone transmission?</p>
-      <ol type="A"><li>Less than 500&nbsp;Hz</li><li>About 150&nbsp;kHz</li><li>Between 10 and 15&nbsp;kHz</li><li>Between 50 and 100&nbsp;kHz</li></ol>
-    </div>
-
-    <div class="question">
-      <p><strong>Q6 (G8C05)</strong> &mdash; Which APRS feature enables real-time digital communication of GPS position data?</p>
-      <ol type="A"><li>The ability to store messages for later retrieval</li><li>Integration of packet radio and GPS data for position tracking</li><li>Built-in support for Winlink messages</li><li>Emergency-only position broadcasting</li></ol>
-    </div>
-
-    <div class="question">
-      <p><strong>Q7 (G8A11)</strong> &mdash; What is the advantage of CDMA (code division multiple access)?</p>
-      <ol type="A"><li>It allows multiple users to share the same channel simultaneously</li><li>It reduces transmitter power requirements</li><li>It provides better voice quality than FM</li><li>It uses less bandwidth than SSB</li></ol>
-    </div>
-
-    <div class="question">
-      <p><strong>Q8 (G8A03)</strong> &mdash; What is the term for unwanted signals at frequencies outside of the transmitted bandwidth?</p>
-      <ol type="A"><li>Intermodulation</li><li>Splatter</li><li>Spurious emissions</li><li>Parasitic oscillations</li></ol>
-    </div>
-
-    <div class="answer-key">
-      <h4>Answer Key</h4>
-      <ol><li><strong>B</strong> &mdash; FSK shifts the transmitted frequency between two discrete values</li><li><strong>B</strong> &mdash; Symbol rate is the rate at which the waveform changes to convey information</li><li><strong>C</strong> &mdash; FT8 uses structured protocol to enable contacts in noise</li><li><strong>C</strong> &mdash; Frequency modulation varies only the frequency of the carrier</li><li><strong>C</strong> &mdash; VHF FM repeater voice is approximately 10&ndash;15&nbsp;kHz wide</li><li><strong>B</strong> &mdash; APRS integrates packet radio and GPS for position tracking</li><li><strong>A</strong> &mdash; CDMA allows multiple users to share the same channel simultaneously</li><li><strong>C</strong> &mdash; Unwanted signals outside the transmitted bandwidth are spurious emissions</li></ol>
-    </div>
-  </section>
-
-
-  <hr class="section-rule">
-  <div class="module-nav">
-    <div class="mod-nav-left"><!-- prev link injected per file --></div>
-    <div class="mod-nav-center"><a href="/general_class.html">&#8617; Course Index</a></div>
-    <div class="mod-nav-right"><!-- next link injected per file --></div>
-  </div>
-
-</div><!-- /content -->
-
-<div id="footer">
-  <p>N&Oslash;NJY &mdash; Rick Donaldson &mdash;
-    <a href="http://n0njy.org">n0njy.org</a> &mdash;
-    <a href="mailto:n0njy@qsl.net">n0njy@qsl.net</a>
-  </p>
-  <p>&copy; Rick Donaldson 1997&ndash;2026. All Rights Reserved.</p>
+<div class="question-block">
+<p><strong>Q2 (G8B01)</strong> &mdash; What is the definition of symbol rate in a digital transmission?</p>
+<ul><li>A. The number of data bits transmitted per second</li><li>B. The rate at which the waveform changes to convey information</li><li>C. The number of error-correcting bits per second</li><li>D. The ratio of signal bandwidth to data rate</li></ul>
 </div>
 
+<div class="question-block">
+<p><strong>Q3 (G8C01)</strong> &mdash; Which digital mode is designed to make it easier for stations to find each other across an entire HF band?</p>
+<ul><li>A. RTTY</li><li>B. PSK31</li><li>C. FT8</li><li>D. PACTOR</li></ul>
+</div>
+
+<div class="question-block">
+<p><strong>Q4 (G8A05)</strong> &mdash; What type of modulation varies only the frequency of the RF signal?</p>
+<ul><li>A. Amplitude modulation</li><li>B. Phase modulation</li><li>C. Frequency modulation</li><li>D. Pulse-width modulation</li></ul>
+</div>
+
+<div class="question-block">
+<p><strong>Q5 (G8B05)</strong> &mdash; What is the approximate bandwidth of a VHF repeater FM phone transmission?</p>
+<ul><li>A. Less than 500 Hz</li><li>B. About 150 kHz</li><li>C. Between 10 and 15 kHz</li><li>D. Between 50 and 100 kHz</li></ul>
+</div>
+
+<div class="question-block">
+<p><strong>Q6 (G8C05)</strong> &mdash; Which APRS feature enables real-time digital communication of GPS position data?</p>
+<ul><li>A. The ability to store messages for later retrieval</li><li>B. Integration of packet radio and GPS data for position tracking</li><li>C. Built-in support for Winlink messages</li><li>D. Emergency-only position broadcasting</li></ul>
+</div>
+
+<div class="question-block">
+<p><strong>Q7 (G8A11)</strong> &mdash; What is an advantage of CDMA (code division multiple access)?</p>
+<ul><li>A. It allows multiple users to share the same channel simultaneously</li><li>B. It reduces transmitter power requirements</li><li>C. It provides better voice quality than FM</li><li>D. It uses less bandwidth than SSB</li></ul>
+</div>
+
+<div class="question-block">
+<p><strong>Q8 (G8A03)</strong> &mdash; What is the term for unwanted signals at frequencies outside of the transmitted bandwidth?</p>
+<ul><li>A. Intermodulation</li><li>B. Splatter</li><li>C. Spurious emissions</li><li>D. Parasitic oscillations</li></ul>
+</div>
+
+<div class="answer-key">
+<h3>Answer Key</h3>
+<ol>
+<li><strong>B</strong> &mdash; FSK shifts the transmitted frequency between two discrete values</li>
+<li><strong>B</strong> &mdash; Symbol rate is the rate at which the waveform changes to convey information</li>
+<li><strong>C</strong> &mdash; FT8 uses structured protocol to enable contacts even in very high noise</li>
+<li><strong>C</strong> &mdash; Frequency modulation varies only the frequency of the carrier</li>
+<li><strong>C</strong> &mdash; VHF FM repeater voice is approximately 10&ndash;15 kHz wide</li>
+<li><strong>B</strong> &mdash; APRS integrates packet radio and GPS for position tracking</li>
+<li><strong>A</strong> &mdash; CDMA allows multiple users to share the same channel simultaneously</li>
+<li><strong>C</strong> &mdash; Unwanted signals outside the transmitted bandwidth are spurious emissions</li>
+</ol>
+</div>
+
+</div>
+<hr>
+<p><a href="general_study.html">Return to General Class Course Index</a></p>
+<div class="footer">
+<p>Please email me at <a href="mailto:n0njy@qsl.net">n0njy@qsl.net</a> about broken links.</p>
+<p>&copy; N0NJY &ndash; Rick Donaldson, 1997&ndash;2026</p>
+</div>
+</div>
 <script>
-// Drifting stars — matches style.css companion script
-(function() {
-  const canvas = document.getElementById('starfield');
-  if (!canvas) return;
-  const ctx = canvas.getContext('2d');
-  let W, H, stars = [];
-  const N = 160;
-
-  function resize() {
-    W = canvas.width  = window.innerWidth;
-    H = canvas.height = window.innerHeight;
-  }
-
-  function randomStar() {
-    return {
-      x: Math.random() * W,
-      y: Math.random() * H,
-      r: Math.random() * 1.4 + 0.3,
-      dx: (Math.random() - 0.5) * 0.18,
-      dy: (Math.random() - 0.5) * 0.18,
-      alpha: Math.random() * 0.6 + 0.3
-    };
-  }
-
-  function init() {
-    resize();
-    stars = [];
-    for (let i = 0; i < N; i++) stars.push(randomStar());
-  }
-
-  function draw() {
-    ctx.clearRect(0, 0, W, H);
-    for (const s of stars) {
-      ctx.beginPath();
-      ctx.arc(s.x, s.y, s.r, 0, Math.PI * 2);
-      ctx.fillStyle = `rgba(255,255,255,${s.alpha})`;
-      ctx.fill();
-      s.x += s.dx; s.y += s.dy;
-      if (s.x < 0) s.x = W;
-      if (s.x > W) s.x = 0;
-      if (s.y < 0) s.y = H;
-      if (s.y > H) s.y = 0;
-    }
-    requestAnimationFrame(draw);
-  }
-
-  window.addEventListener('resize', resize);
-  init();
-  draw();
-})();
+const starfield = document.getElementById('starfield');
+const starCount = 150;
+for(let i=0;i<starCount;i++){
+const star=document.createElement('div');
+star.className='star';
+const size=Math.random()*2+1;
+star.style.width=`${size}px`;
+star.style.height=`${size}px`;
+star.style.top=`${Math.random()*window.innerHeight}px`;
+star.style.left=`${Math.random()*window.innerWidth}px`;
+star.style.animationDuration=`${5+Math.random()*15}s`;
+star.style.animationDelay=`${Math.random()*5}s`;
+starfield.appendChild(star);
+}
 </script>
-
 </body>
 </html>
