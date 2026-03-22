@@ -3,68 +3,35 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="author" content="Rick">
-<meta name="description" content="General Class Module G2 – HF Voice, CW, Nets, DX, Digital Operating – N0NJY">
-<title>G2: Operating Procedures &ndash; N0NJY</title>
+<meta name="author" content="Rick Donaldson N0NJY">
+<meta name="description" content="General Class Module G2 – Operating Procedures – Operator Knowledge, HF Etiquette, Band Conditions – N0NJY">
+<title>G2: Operating Procedures – N0NJY</title>
 <link rel="stylesheet" href="style.css">
 <style>
-.page{
-max-width:900px;
-margin:auto;
-padding:2rem 1rem;
-color:yellow;
-}
-.page a{
-color:#8ecbff;
-text-decoration:none;
-}
-.page a:hover{
-text-decoration:underline;
-color:#ffffff;
-}
-h1,h2,h3{
-margin-top:1rem;
-}
-.lesson{
-margin-top:1.5rem;
-line-height:1.6;
-}
-.footer{
-margin-top:3rem;
-font-size:0.9rem;
-}
-.question-block{
-margin:1rem 0 1.5rem 0;
-padding:0.8rem 1rem;
-background:rgba(255,255,255,0.04);
-border-left:3px solid #8ecbff;
-border-radius:4px;
-}
-.answer-key{
-margin-top:1.5rem;
-padding:0.8rem 1rem;
-background:rgba(0,80,0,0.18);
-border-left:3px solid #66cc66;
-border-radius:4px;
-}
-table.band-table{
-width:100%;
-border-collapse:collapse;
-margin:1rem 0;
-font-size:0.92em;
-}
-table.band-table th{
-background:rgba(255,255,255,0.1);
-color:#8ecbff;
-padding:0.4rem 0.7rem;
-text-align:left;
-border-bottom:1px solid rgba(255,255,255,0.2);
-}
-table.band-table td{
-padding:0.35rem 0.7rem;
-border-bottom:1px solid rgba(255,255,255,0.07);
-color:#e0e0e0;
-}
+.page{max-width:900px;margin:auto;padding:2rem 1rem;color:yellow;}
+.page a{color:#8ecbff;text-decoration:none;}
+.page a:hover{text-decoration:underline;color:#ffffff;}
+h1,h2,h3,h4{margin-top:1rem;}
+.lesson{margin-top:1.5rem;line-height:1.7;}
+.footer{margin-top:3rem;font-size:0.9rem;}
+.module-sections{display:flex;gap:0.5rem;margin:1.5rem 0 0.5rem 0;flex-wrap:wrap;}
+.module-sections a{background:rgba(255,255,255,0.07);border:1px solid rgba(255,255,255,0.2);border-radius:4px;padding:0.4rem 1rem;color:#8ecbff;font-size:0.9rem;font-weight:600;text-decoration:none;}
+.module-sections a:hover{background:rgba(255,255,255,0.15);color:#fff;}
+.elmer-box{background:rgba(255,200,0,0.07);border-left:4px solid #FFD700;border-radius:0 6px 6px 0;padding:0.9rem 1.2rem;margin:1.4rem 0;}
+.elmer-box strong{color:#FFD700;}
+.warning-box{background:rgba(255,80,80,0.07);border-left:4px solid #ff6060;border-radius:0 6px 6px 0;padding:0.9rem 1.2rem;margin:1.4rem 0;}
+.warning-box strong{color:#ff9090;}
+.tip-box{background:rgba(100,200,100,0.07);border-left:4px solid #66cc66;border-radius:0 6px 6px 0;padding:0.9rem 1.2rem;margin:1.4rem 0;}
+.tip-box strong{color:#90ee90;}
+.question-block{margin:1rem 0 1.5rem 0;padding:0.8rem 1rem;background:rgba(255,255,255,0.04);border-left:3px solid #8ecbff;border-radius:4px;}
+.answer-key{margin-top:1.5rem;padding:0.8rem 1rem;background:rgba(0,80,0,0.18);border-left:3px solid #66cc66;border-radius:4px;}
+.resource-list{list-style:none;padding:0;}
+.resource-list li{margin:0.7rem 0;padding-left:1.2rem;position:relative;}
+.resource-list li::before{content:"›";position:absolute;left:0;color:#8ecbff;font-weight:bold;}
+.phonetic-table{width:100%;border-collapse:collapse;margin:1rem 0;font-size:0.95em;}
+.phonetic-table th{text-align:left;padding:0.3rem 0.6rem;color:#8ecbff;border-bottom:1px solid rgba(255,255,255,0.2);}
+.phonetic-table td{padding:0.25rem 0.6rem;}
+hr{border:none;border-top:1px solid rgba(255,255,255,0.15);margin:2rem 0;}
 </style>
 </head>
 <body>
@@ -82,86 +49,206 @@ color:#e0e0e0;
 <h1>General Class License Study</h1>
 <h2>G2: Operating Procedures</h2>
 <p>This page is part of the N0NJY General Class self-study course for Technician operators upgrading to General.</p>
+<div class="module-sections">
+<a href="#operator">Operator Knowledge</a>
+<a href="#exam">Exam Coverage</a>
+<a href="#resources">Resources</a>
+</div>
 <hr>
 <div class="lesson">
 
-<h2>Overview</h2>
-<p>HF operating has its own culture, protocols, and procedures. Technicians are accustomed to FM repeater
-operation. HF is different &mdash; you will encounter SSB voice, CW, digital modes, DX pileups, and directed
-nets. Knowing the correct procedures makes you a more effective and courteous operator.</p>
-
-<h2>SSB Voice &mdash; Which Sideband?</h2>
-<p>Single sideband suppresses the carrier and one sideband, putting all transmitter power into the
-information-carrying sideband. The convention for which sideband to use:</p>
-<ul>
-<li><strong>Upper Sideband (USB):</strong> 20, 17, 15, 12, 10 meters and above</li>
-<li><strong>Lower Sideband (LSB):</strong> 40, 80, and 160 meters</li>
-<li>The dividing line is 14 MHz. At or above 14 MHz, use USB.</li>
-</ul>
-<p>This is not a legal requirement but is the universal standard. Operating on the wrong sideband
-creates interference and confusion.</p>
-
-<h2>Calling CQ</h2>
-<p>Listen before transmitting. If the frequency is clear, a standard CQ call sounds like this:</p>
-<p><em>"CQ CQ CQ, this is November Zero November Juliet Yankee, N0NJY, calling CQ and standing by."</em></p>
-<p>Keep CQ calls short &mdash; three CQ repetitions followed by your callsign once or twice is the standard.
-Long CQ calls are considered poor operating practice on HF.</p>
-
-<h2>CW Operating &mdash; QSK</h2>
-<p><strong>QSK (Full Break-In CW):</strong> The receiver opens between every dit and dah you send, allowing
-you to hear signals &mdash; or interference &mdash; during the gaps in your own transmission. If the other
-station is calling you, you hear it immediately without finishing your over. QSK is considered superior CW
-technique but causes more mechanical wear on older relays.</p>
-<p><strong>Semi Break-In:</strong> The receiver opens only between complete characters or words. Less wear
-on the rig but you may miss signals while transmitting.</p>
-
-<h2>Net Operations</h2>
-<p>A <strong>net</strong> is a scheduled on-air meeting of amateur stations for a specific purpose.
-Nets may be directed (run by a Net Control Station) or informal.</p>
-<ul>
-<li>The <strong>Net Control Station (NCS)</strong> manages the net, determines check-in order, and directs traffic flow.</li>
-<li>When checking in, wait for the NCS to call for check-ins, then transmit your callsign once clearly.</li>
-<li>Do not transmit without being recognized by the NCS unless you have emergency traffic.</li>
-<li>Emergency and priority traffic always supersedes routine net traffic. Announce it immediately.</li>
-</ul>
-
-<h2>DX Operating and Split Operation</h2>
-<p>DX means communicating with distant stations, typically in other countries. Popular DX stations
-often attract large pileups and operate <strong>split</strong> &mdash; they transmit on one frequency and
-listen on a different frequency or range.</p>
-<ul>
-<li>Do not call a DX station when it specifies a region you are not in ("EU only", "JA only")</li>
-<li>Never transmit on the DX station's transmit frequency &mdash; transmit on their listening frequency</li>
-<li>If the DX says "listening 5 to 10 up," transmit 5 to 10 kHz above their transmit frequency</li>
-<li>Listen to understand the pileup pattern before calling</li>
-</ul>
-
-<h2>Digital Modes</h2>
-<p><strong>PSK31:</strong> Phase-shift keying at 31.25 baud. Only 31 Hz wide. Excellent for keyboard
-conversations in marginal conditions.</p>
-<p><strong>FT8:</strong> 8-tone FSK, 15-second transmit/receive cycles, 50 Hz wide. Decodes signals
-20 dB below the noise floor. Has become the dominant weak-signal HF mode. Not conversational &mdash;
-exchanges are structured and brief (callsigns, signal report, grid square).</p>
-<p><strong>RTTY:</strong> FSK at 45.45 baud, 170 Hz tone shift, approximately 250 Hz wide. Oldest
-digital mode still in common use. Popular in HF contests.</p>
-<p><strong>Winlink / VARA:</strong> Email messaging over amateur radio. Used extensively in ARES/RACES
-emergency communications. Messages are stored and forwarded through a network of stations.</p>
-
-<h2>Emergency Communications</h2>
-<p><strong>ARES</strong> (Amateur Radio Emergency Service) is organized by the ARRL. <strong>RACES</strong>
-(Radio Amateur Civil Emergency Service) is organized with local and state civil defense agencies. Both
-serve disaster communications needs. In emergency operations:</p>
-<ul>
-<li>Use plain language, not amateur radio codes or abbreviations</li>
-<li>Be clear and concise &mdash; time and frequency are critical resources</li>
-<li>Follow the directions of the served agency and the emergency net control</li>
-</ul>
+<h2 id="operator">Part 1 &mdash; Operator Knowledge</h2>
+<p>Everything in this section comes from real HF operating experience &mdash; the kind of knowledge that does not appear in any question pool and is rarely written down. Read it carefully. The exam gets you a license. This section gets you on the air without embarrassing yourself or causing problems for others.</p>
 
 <hr>
-<h2>Practice Questions</h2>
+<h3>The First Rule of HF: Listen Before You Transmit</h3>
+<p>Before you transmit anything &mdash; a CQ call, a response to a CQ, anything at all &mdash; you must listen to the frequency first. This is not just an FCC rule. It is the single most important operating habit you can develop, and it is the one new HF operators most consistently fail to follow.</p>
+<p>On VHF FM through a repeater, the system handles coordination for you. On HF there is no such system. A frequency that sounds completely empty to you may have two stations in a contact that you simply cannot hear because of your antenna, your location, or the current propagation. If you transmit on top of them, you have caused interference to operators who were there first &mdash; and you had no idea you were doing it.</p>
+<p>Listen for at least 30 seconds before transmitting, longer on a busy band. Before calling CQ, ask if the frequency is in use: <em>"Is this frequency in use?"</em> Wait. If you hear nothing, ask once more. Then proceed. This takes less than a minute and prevents you from being that operator.</p>
+<div class="elmer-box">
+<strong>From the elmer's notebook:</strong> New operators often assume that if they cannot hear anyone, no one is there. On HF that assumption will fail you regularly. Propagation is asymmetric &mdash; a station 1,500 miles away may be hearing a DX station clearly while you hear nothing from that same DX. Both of them can hear you. Listen long enough to be sure.
+</div>
+
+<hr>
+<h3>Fear of the Microphone &mdash; Get Over It</h3>
+<p>The second most common problem with new HF operators is the opposite of the first: they are afraid to transmit at all. They sit and listen for weeks, convincing themselves they are not ready. They are waiting to feel confident before getting on the air. The problem is that confidence only comes from getting on the air.</p>
+<p>Nobody sounds polished on their first HF contact. Nobody. Experienced operators know this and make allowances for it. If you hear someone call CQ, respond. If you stumble over your callsign, say it again. If you lose your place, a simple <em>"Please stand by"</em> gives you a moment to collect yourself. The HF bands are full of patient operators who genuinely enjoy working new licensees.</p>
+<div class="tip-box">
+<strong>Practical first steps:</strong> Start on 40 meters in the evenings. The band is usually active, contacts are regional to national, and the pace of most ragchew QSOs is relaxed. A dipole at 25 feet and 100 watts will get you on the air. You do not need a perfect station for your first contacts &mdash; you need to key up.
+</div>
+
+<hr>
+<h3>Standard ITU Phonetics &mdash; Use Them, Every Time</h3>
+<p>When you give your callsign in less-than-perfect conditions, phonetics ensure each letter is understood. The ITU phonetic alphabet is the international standard, and it is what every amateur operator worldwide is expected to use.</p>
+<table class="phonetic-table">
+<tr><th>Letter</th><th>ITU Word</th><th>Letter</th><th>ITU Word</th></tr>
+<tr><td>A</td><td>Alfa</td><td>N</td><td>November</td></tr>
+<tr><td>B</td><td>Bravo</td><td>O</td><td>Oscar</td></tr>
+<tr><td>C</td><td>Charlie</td><td>P</td><td>Papa</td></tr>
+<tr><td>D</td><td>Delta</td><td>Q</td><td>Quebec</td></tr>
+<tr><td>E</td><td>Echo</td><td>R</td><td>Romeo</td></tr>
+<tr><td>F</td><td>Foxtrot</td><td>S</td><td>Sierra</td></tr>
+<tr><td>G</td><td>Golf</td><td>T</td><td>Tango</td></tr>
+<tr><td>H</td><td>Hotel</td><td>U</td><td>Uniform</td></tr>
+<tr><td>I</td><td>India</td><td>V</td><td>Victor</td></tr>
+<tr><td>J</td><td>Juliett</td><td>W</td><td>Whiskey</td></tr>
+<tr><td>K</td><td>Kilo</td><td>X</td><td>X-ray</td></tr>
+<tr><td>L</td><td>Lima</td><td>Y</td><td>Yankee</td></tr>
+<tr><td>M</td><td>Mike</td><td>Z</td><td>Zulu</td></tr>
+</table>
+<p>Do not improvise. You will hear operators using "America" for A, "Boston" for B, or "New York" for N. Some of it is habit, some regional tradition. None of it is correct. An operator in Japan or Germany has learned <em>November</em>, not <em>Nancy</em>. Use the standard.</p>
+<p>The callsign N0NJY is given as: <em>November Zero November Juliett Yankee.</em> Practice your own callsign in ITU phonetics until it is completely automatic.</p>
+<div class="warning-box">
+<strong>Zero vs. Oh:</strong> Always say "zero" for the digit 0, never "oh." On a noisy HF path, "oh" and the letter O are identical. "Zero" is unambiguous. This matters most in your callsign and when exchanging frequencies or signal reports.
+</div>
+
+<hr>
+<h3>Station Identification &mdash; The Rules and the Reality</h3>
+<p>FCC Part 97 requires you to identify at the end of each contact and at least every ten minutes during a contact. Your callsign is the only legally acceptable identification. No nickname, no handle, no club name satisfies this requirement.</p>
+<p>Most operators identify more frequently than required, and that is fine. What you want to avoid is losing track of time during a long ragchew and drifting well past ten minutes without identifying. Set a mental habit: every time you turn it over to the other station, consider whether ten minutes is approaching. If it is, give your callsign before throwing it back.</p>
+<p>You do not need phonetics every time you identify. In a clear, stable contact, your callsign spoken normally is perfectly acceptable. Use phonetics when conditions are marginal, at the start of a contact, and whenever there is any doubt the other station has your callsign right.</p>
+
+<hr>
+<h3>Frequency Disputes &mdash; What Is Actually Happening</h3>
+<p>At some point you will be in the middle of a contact on a clear frequency when suddenly another station appears &mdash; and they are convinced that <em>you</em> are causing the interference. Both sides can be right. Neither is necessarily at fault. This is one of the most misunderstood situations in HF operating and it causes more unnecessary conflict than almost anything else on the bands.</p>
+<p>Here is what is happening. HF propagation is constantly changing. When you established your contact an hour ago, the skip zone between you and a group 2,000 miles away put them completely out of range. Then the ionosphere shifted, the skip zone shortened, and suddenly you can all hear each other. You were both on the frequency. Neither group did anything wrong.</p>
+<p>The correct response is calm negotiation, not escalation. One group moves a few kilohertz. It costs nothing. What you should never do is key up and tell the other station to get off your frequency in an aggressive tone. No amateur operator has an exclusive claim to any frequency. This is written directly into Part 97.</p>
+<div class="elmer-box">
+<strong>From the elmer's notebook:</strong> The operators who get into frequency arguments are almost always the ones who do not fully understand propagation. Once you understand that conditions are fluid and that two groups can arrive at the same frequency without either doing anything wrong, the situation stops being an insult and becomes a minor inconvenience. Move a few kHz and carry on. The contact is worth more than the argument.
+</div>
+
+<hr>
+<h3>How an HF Contact Actually Flows</h3>
+<p>A basic HF SSB contact follows a recognizable pattern. Knowing this pattern before your first contact removes most of the uncertainty that makes new operators hesitant.</p>
+
+<h4>Calling CQ</h4>
+<p>Check that the frequency is clear. Then:</p>
+<p><em>"CQ CQ CQ, this is November Zero November Juliett Yankee, N0NJY, calling CQ and standing by."</em></p>
+<p>Keep it to two or three CQ repetitions followed by your callsign. Do not call CQ for thirty seconds straight. Long CQ calls are poor practice and mark you as inexperienced. If nobody responds after two or three calls, wait a moment, then try again or move to a different frequency.</p>
+
+<h4>Answering a CQ</h4>
+<p>When you hear a CQ you want to answer:</p>
+<p><em>"W1ABC, this is November Zero November Juliett Yankee, N0NJY, over."</em></p>
+<p>Give their callsign once, then your callsign once in phonetics. That is all. Do not give a long introduction. In marginal conditions or a pileup, shorter is better.</p>
+
+<h4>The Exchange</h4>
+<p>Once contact is established, a typical casual HF exchange includes a signal report, your name, your location (city and state minimum), and brief station information (rig, antenna, power). From there the contact can be as short or as long as both parties want.</p>
+
+<h4>Closing the Contact</h4>
+<p><em>"W1ABC, it has been a pleasure. 73, this is N0NJY, November Zero November Juliett Yankee, clear."</em></p>
+<p>"73" means best regards. "Clear" means you are leaving the frequency. Do not say "over and out" &mdash; that is a movie trope. "Over" means you expect a reply. "Out" means the contact is finished. Using both together is contradictory.</p>
+
+<hr>
+<h3>The RST Signal Reporting System</h3>
+<p>On HF voice you use the RS system (Readability and Strength). CW adds a third digit for Tone.</p>
+<p><strong>Readability (1&ndash;5):</strong> 1=unreadable, 3=readable with difficulty, 5=perfectly readable.</p>
+<p><strong>Strength (1&ndash;9):</strong> 1=barely perceptible, 5=fairly good, 9=extremely strong.</p>
+<p>A report of 59 (spoken "five nine") means perfectly readable at extremely strong signal strength. You will hear "59" given reflexively as a courtesy on almost every contact. Try to give honest reports instead &mdash; a "57" or "44" tells the other operator something genuinely useful about their signal.</p>
+
+<hr>
+<h3>Reading HF Band Conditions &mdash; Real Tools, Not Theory</h3>
+<p>Understanding propagation theory is one thing. Knowing how to check actual conditions before you sit down to operate is another skill entirely, and it makes you a dramatically more effective HF operator.</p>
+
+<h4>Solar Flux Index (SFI) &mdash; What It Means Practically</h4>
+<ul>
+<li><strong>SFI below 80:</strong> Upper bands (10, 12, 15m) likely poor or closed for DX. Focus on 40 and 20 meters.</li>
+<li><strong>SFI 80&ndash;120:</strong> 20 and 17 meters reliably open. 15 meters may open during the day.</li>
+<li><strong>SFI above 150:</strong> 10 and 15 meters can be open around the clock. Excellent DX conditions on all bands. This is when you will hear stations from everywhere.</li>
+</ul>
+
+<h4>The K-Index and Band Disruptions</h4>
+<p>The K-index measures geomagnetic disturbance. When it rises above 4, propagation at mid-to-high latitudes degrades significantly. At K=5 or higher (a geomagnetic storm), HF bands at higher latitudes can go dead for hours. When 20 meters sounds empty despite a high SFI, check the K-index first.</p>
+
+<h4>Greyline Propagation</h4>
+<p>The greyline is the boundary between the sunlit and dark sides of Earth. For roughly 30 minutes on each side of local sunrise and sunset, the D layer &mdash; which absorbs lower HF frequencies during the day &mdash; is either disappearing or has not yet formed. During this window, 160, 80, and 40 meters can produce remarkable long-path propagation. Stations that are unworkable at any other time become reachable. This is not luck. It is a predictable physical phenomenon that experienced operators exploit routinely.</p>
+<p>On the East Coast of the United States, the greyline at sunrise produces a window for working Europe and Africa on 40 meters with signals that may be 20 dB stronger than at any other time of day.</p>
+
+<h4>Real-Time Propagation Tools</h4>
+<ul class="resource-list">
+<li><strong>DX Maps</strong> (<a href="https://www.dxmaps.com" target="_blank" rel="noopener">dxmaps.com</a>) &mdash; Real-time propagation map based on DX cluster spots. If stations in your region are being heard in Europe on 15 meters right now, the map shows it.</li>
+<li><strong>PSKReporter</strong> (<a href="https://pskreporter.info" target="_blank" rel="noopener">pskreporter.info</a>) &mdash; Transmit a few FT8 frames and within two minutes see exactly which parts of the world are hearing you. The single best real-time propagation check available.</li>
+<li><strong>NOAA Space Weather</strong> (<a href="https://www.swpc.noaa.gov" target="_blank" rel="noopener">swpc.noaa.gov</a>) &mdash; Official SFI, K-index, A-index, and storm alerts. Bookmark this page.</li>
+<li><strong>DXWatch</strong> (<a href="https://www.dxwatch.com" target="_blank" rel="noopener">dxwatch.com</a>) &mdash; DX cluster aggregator showing who is being spotted, on what frequency, and from where right now.</li>
+</ul>
+<div class="elmer-box">
+<strong>From the elmer's notebook:</strong> The single most useful thing a new HF operator can do before ever transmitting is spend time just listening. Tune 20 meters from bottom to top and notice which accents and languages you hear. Tune 40 meters at sunset and notice how the band changes over 30 minutes as the D layer drops. Tune 10 meters on a high-SFI day and hear stations from six continents. None of that requires a license. All of it teaches you more about propagation than any textbook.
+</div>
+
+<hr>
+<h3>HF Operating Culture &mdash; The Unwritten Rules</h3>
+<p>Every community has norms enforced by social pressure rather than rules. Violating these will not get you fined, but they will get you a reputation. The amateur radio community has a long memory.</p>
+
+<h4>Do not ragchew in the DX window</h4>
+<p>By convention, the lower portion of the phone band on 20, 15, and 10 meters is treated as a DX window where DX stations are worked. A domestic ragchew in this area creates interference for operators trying to work rare DX. On 20 meters, stay above 14.225 MHz for domestic contacts.</p>
+
+<h4>Do not call a DX station on their transmit frequency</h4>
+<p>When a DX station is operating split, they transmit on one frequency and listen on another. Transmitting on their frequency accomplishes nothing &mdash; they are not listening there &mdash; and blocks other stations from hearing them. Listen for "listening up 5" or similar instructions before calling.</p>
+
+<h4>The Q-codes that actually matter on SSB</h4>
+<p>Q-codes were developed for CW. On SSB phone, most are unnecessary &mdash; just say what you mean. However, these are used so universally that you need to know them:</p>
+<ul>
+<li><strong>QSY</strong> &mdash; Change frequency</li>
+<li><strong>QRM</strong> &mdash; Man-made interference</li>
+<li><strong>QRN</strong> &mdash; Natural static / atmospheric noise</li>
+<li><strong>QSB</strong> &mdash; Signal fading</li>
+<li><strong>QRZ</strong> &mdash; Who is calling me? (Not "who is on frequency")</li>
+<li><strong>QSL</strong> &mdash; I confirm / acknowledge</li>
+<li><strong>QRT</strong> &mdash; Stopping transmission</li>
+<li><strong>QTH</strong> &mdash; Location</li>
+</ul>
+
+<h4>Keep your signal clean</h4>
+<p>A splattery, over-driven SSB signal is the audio equivalent of spraying a fire hose on your neighbors. If people tell you your signal is wide, listen to them. Back off the microphone gain. Check your ALC &mdash; if it is pegged continuously, you are overdriving the transmitter. A clean 100-watt signal carries further than a distorted 150-watt signal, and it does not cause interference to adjacent frequencies.</p>
+
+<hr>
+<h3>Working DX Pileups</h3>
+<p>A rare DX station attracts a pileup &mdash; dozens or hundreds of stations all calling at once. Working a pileup is a skill. Doing it wrong just makes things worse for everyone.</p>
+<p><strong>Listen first.</strong> Before calling, listen long enough to understand the pattern. Is the DX working stations by region? By callsign suffix? Understanding this dramatically improves your odds.</p>
+<p><strong>Transmit on their listening frequency.</strong> If the DX says "listening up five to ten," set your transmit VFO to five to ten kHz above their transmit frequency. Do not transmit on their transmit frequency.</p>
+<p><strong>Give your callsign once, clearly, then wait.</strong> In a pileup, give your full callsign once in phonetics. Then stop. Do not repeat it four times. Do not transmit while the DX station is transmitting. The operators who work the DX are invariably the disciplined ones.</p>
+<div class="warning-box">
+<strong>Do not do these things in a pileup:</strong> Do not transmit while the DX station is transmitting. Do not call repeatedly without pausing. Do not give only a partial callsign. Do not argue with other stations over the frequency. All of these behaviors are immediately recognizable and mark you as someone who does not know what they are doing.
+</div>
+
+<hr>
+<h2 id="exam">Part 2 &mdash; Exam Coverage</h2>
+<p>The following covers G2 subelement topics as tested in the 2023&ndash;2027 FCC General Class question pool.</p>
+
+<h3>SSB Voice &mdash; Which Sideband?</h3>
+<ul>
+<li><strong>USB:</strong> 20, 17, 15, 12, 10 meters and above (at or above 14 MHz)</li>
+<li><strong>LSB:</strong> 40, 80, and 160 meters (below 14 MHz)</li>
+</ul>
+
+<h3>CW &mdash; QSK</h3>
+<p><strong>QSK (Full Break-In):</strong> Receiver opens between every dit and dah &mdash; you can hear signals during your own transmission. Superior technique but increases relay wear. <strong>Semi break-in</strong> opens the receiver only between complete characters.</p>
+
+<h3>Net Operations</h3>
+<ul>
+<li>A directed net is controlled by a <strong>Net Control Station (NCS)</strong> who determines order of operations</li>
+<li>Do not transmit without being recognized by NCS unless you have emergency traffic</li>
+<li>Emergency traffic always supersedes routine net traffic</li>
+</ul>
+
+<h3>Digital Modes</h3>
+<ul>
+<li><strong>PSK31:</strong> 31 Hz wide, phase-shift keying, excellent for weak-signal keyboard QSOs</li>
+<li><strong>FT8:</strong> 8-FSK, 15-second cycles, 50 Hz wide, decodes 20 dB below noise floor</li>
+<li><strong>RTTY:</strong> FSK at 45.45 baud, 170 Hz shift, ~250 Hz wide</li>
+<li><strong>Winlink/VARA:</strong> Email messaging over amateur radio, common in emergency communications</li>
+</ul>
+
+<h3>60 Meters</h3>
+<p>Five specific channels only, not a continuous allocation. Maximum 100W ERP. USB phone, CW, and certain digital modes only. Common exam frequency: <strong>5.332 MHz</strong>.</p>
+
+<h3>Emergency Communications</h3>
+<p>ARES is ARRL-organized. RACES is organized with civil defense agencies. Use plain language in emergency nets &mdash; not amateur codes the served agency may not understand.</p>
+
+<hr>
+<h3>Practice Questions</h3>
 
 <div class="question-block">
-<p><strong>Q1 (G2A01)</strong> &mdash; Which sideband is most commonly used for voice communications on frequencies of 14 MHz or higher?</p>
+<p><strong>Q1 (G2A01)</strong> &mdash; Which sideband is most commonly used for voice on frequencies of 14 MHz or higher?</p>
 <ul><li>A. Lower sideband</li><li>B. Upper sideband</li><li>C. Suppressed sideband</li><li>D. Double sideband</li></ul>
 </div>
 
@@ -196,7 +283,7 @@ serve disaster communications needs. In emergency operations:</p>
 </div>
 
 <div class="question-block">
-<p><strong>Q8 (G2A05)</strong> &mdash; Which of the following is a common frequency for 60-meter amateur operations?</p>
+<p><strong>Q8 (G2A05)</strong> &mdash; Which is a common frequency for 60-meter amateur operations?</p>
 <ul><li>A. 5.332 MHz</li><li>B. 5.000 MHz</li><li>C. 5.500 MHz</li><li>D. 5.100 MHz</li></ul>
 </div>
 
@@ -214,7 +301,38 @@ serve disaster communications needs. In emergency operations:</p>
 </ol>
 </div>
 
-</div>
+<hr>
+<h2 id="resources">Part 3 &mdash; External Resources</h2>
+
+<h3>Books</h3>
+<ul class="resource-list">
+<li><strong>ARRL General Class License Manual</strong> &mdash; Standard study guide for the exam pool.<br><a href="https://home.arrl.org/action/Shop/Store" target="_blank" rel="noopener">ARRL Store</a></li>
+<li><strong>The ARRL Operating Manual</strong> &mdash; Covers operating practices, net procedures, DX operating, contests, emergency communications, and digital modes in depth. This is the book for this module.<br><a href="https://home.arrl.org/action/Shop/Store" target="_blank" rel="noopener">ARRL Store</a></li>
+<li><strong>The ARRL Handbook for Radio Communications</strong> &mdash; The reference every HF operator should have on the shelf. Updated annually.<br><a href="https://home.arrl.org/action/Shop/Store" target="_blank" rel="noopener">ARRL Store</a></li>
+<li><strong>No-Nonsense General Class Study Guide (KB6NU)</strong> &mdash; Free PDF, plain language coverage of the question pool.<br><a href="https://www.kb6nu.com/study-guides/" target="_blank" rel="noopener">kb6nu.com/study-guides</a></li>
+</ul>
+
+<h3>Online Operating References</h3>
+<ul class="resource-list">
+<li><strong>ARRL Band Plans</strong> &mdash; Accepted operating segments by mode for each band.<br><a href="https://www.arrl.org/band-plan" target="_blank" rel="noopener">arrl.org/band-plan</a></li>
+<li><strong>ARRL DX Bulletin (ARLD)</strong> &mdash; Weekly bulletin covering active DX stations and propagation summaries. Free subscription.<br><a href="https://www.arrl.org/w1aw-bulletins-archive-dx" target="_blank" rel="noopener">ARRL DX Bulletins</a></li>
+<li><strong>DX World</strong> &mdash; News and information on active DX expeditions.<br><a href="https://www.dx-world.net" target="_blank" rel="noopener">dx-world.net</a></li>
+</ul>
+
+<h3>Real-Time Propagation Tools</h3>
+<ul class="resource-list">
+<li><strong>DX Maps</strong> &mdash; Real-time propagation map based on DX cluster spots.<br><a href="https://www.dxmaps.com" target="_blank" rel="noopener">dxmaps.com</a></li>
+<li><strong>PSKReporter</strong> &mdash; See where your signal is being received in real time.<br><a href="https://pskreporter.info" target="_blank" rel="noopener">pskreporter.info</a></li>
+<li><strong>NOAA Space Weather Prediction Center</strong> &mdash; Official SFI, K-index, A-index, storm alerts.<br><a href="https://www.swpc.noaa.gov" target="_blank" rel="noopener">swpc.noaa.gov</a></li>
+<li><strong>DXWatch</strong> &mdash; DX cluster aggregator showing live spots.<br><a href="https://www.dxwatch.com" target="_blank" rel="noopener">dxwatch.com</a></li>
+</ul>
+
+<h3>Practice Exams</h3>
+<ul class="resource-list">
+<li><strong>HamStudy.org</strong> &mdash; Free practice exams tracking weak areas by subelement.<br><a href="https://hamstudy.org" target="_blank" rel="noopener">hamstudy.org</a></li>
+<li><strong>QRZ.com Practice Exams</strong> &mdash; Full simulated exams from the actual pool.<br><a href="https://www.qrz.com/hamtest/" target="_blank" rel="noopener">qrz.com/hamtest</a></li>
+</ul>
+
 <hr>
 <p><a href="general_study.html">Return to General Class Course Index</a></p>
 <div class="footer">
@@ -222,9 +340,11 @@ serve disaster communications needs. In emergency operations:</p>
 <p>&copy; N0NJY &ndash; Rick Donaldson, 1997&ndash;2026</p>
 </div>
 </div>
+</div>
+
 <script>
-const starfield = document.getElementById('starfield');
-const starCount = 150;
+const starfield=document.getElementById('starfield');
+const starCount=150;
 for(let i=0;i<starCount;i++){
 const star=document.createElement('div');
 star.className='star';
