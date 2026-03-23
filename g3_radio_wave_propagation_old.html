@@ -1,0 +1,240 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="author" content="Rick">
+<meta name="description" content="General Class Module G3 – Ionosphere, Solar Cycle, NVIS, Skip – N0NJY">
+<title>G3: Radio Wave Propagation &ndash; N0NJY</title>
+<link rel="stylesheet" href="style.css">
+<style>
+.page{
+max-width:900px;
+margin:auto;
+padding:2rem 1rem;
+color:yellow;
+}
+.page a{
+color:#8ecbff;
+text-decoration:none;
+}
+.page a:hover{
+text-decoration:underline;
+color:#ffffff;
+}
+h1,h2,h3{
+margin-top:1rem;
+}
+.lesson{
+margin-top:1.5rem;
+line-height:1.6;
+}
+.footer{
+margin-top:3rem;
+font-size:0.9rem;
+}
+.question-block{
+margin:1rem 0 1.5rem 0;
+padding:0.8rem 1rem;
+background:rgba(255,255,255,0.04);
+border-left:3px solid #8ecbff;
+border-radius:4px;
+}
+.answer-key{
+margin-top:1.5rem;
+padding:0.8rem 1rem;
+background:rgba(0,80,0,0.18);
+border-left:3px solid #66cc66;
+border-radius:4px;
+}
+table.band-table{
+width:100%;
+border-collapse:collapse;
+margin:1rem 0;
+font-size:0.92em;
+}
+table.band-table th{
+background:rgba(255,255,255,0.1);
+color:#8ecbff;
+padding:0.4rem 0.7rem;
+text-align:left;
+border-bottom:1px solid rgba(255,255,255,0.2);
+}
+table.band-table td{
+padding:0.35rem 0.7rem;
+border-bottom:1px solid rgba(255,255,255,0.07);
+color:#e0e0e0;
+}
+</style>
+</head>
+<body>
+<div class="starfield" id="starfield"></div>
+<div class="topbar">
+<a href="index.html">Home</a>
+<a href="contents.html">Table of Contents</a>
+<a href="articles.html">Articles</a>
+<a href="otherhams.html">Other Hams</a>
+<a href="astronomy.html">Space</a>
+<a href="survival.html">Preparedness</a>
+<a href="commlink.htm">Contact</a>
+</div>
+<div class="page">
+<h1>General Class License Study</h1>
+<h2>G3: Radio Wave Propagation</h2>
+<p>This page is part of the N0NJY General Class self-study course for Technician operators upgrading to General.</p>
+<hr>
+<div class="lesson">
+
+<h2>Overview</h2>
+<p>Understanding propagation separates a skilled HF operator from someone who simply turns the radio on and
+hopes for the best. HF signals travel worldwide because they interact with the ionosphere &mdash; a region of
+the upper atmosphere that can refract radio waves back to Earth. The solar cycle controls the ionosphere,
+so learning to read solar conditions is a core HF skill.</p>
+
+<h2>The Ionosphere</h2>
+<p>The ionosphere extends from roughly 60 km to 1,000 km altitude. Solar radiation ionizes gas molecules,
+creating free electrons that can refract radio waves. It is divided into layers:</p>
+
+<p><strong>D Layer (60&ndash;90 km)</strong><br>
+Exists only during daylight. The D layer <em>absorbs</em> lower HF frequencies rather than refracting them.
+This is why 160, 80, and 40 meters are largely useless for long-distance contacts during the day. The D layer
+disappears at night, allowing those signals to reach the F layer and propagate long distances.</p>
+
+<p><strong>E Layer (90&ndash;150 km)</strong><br>
+Forms during daylight, mostly disappears at night. Can support propagation at 1,000&ndash;2,000 km distances.
+<strong>Sporadic-E (Es)</strong> is unpredictable dense ionization in the E layer that can enable propagation
+on frequencies up to 150 MHz. Sporadic-E is common in late spring and early summer.</p>
+
+<p><strong>F Layer (150&ndash;500 km)</strong><br>
+The primary layer for long-distance HF propagation. Splits into F1 and F2 during the day; merges at night.
+The F2 layer can support globe-spanning propagation. It persists at night because ion recombination is slow
+at high altitudes.</p>
+
+<h2>The Solar Cycle</h2>
+<p>Solar activity follows an approximately 11-year cycle. More solar activity means better ionospheric
+ionization and better propagation on the higher HF bands.</p>
+<ul>
+<li><strong>Solar Flux Index (SFI):</strong> Measures the sun's radio output at 10.7 cm. Higher SFI = better propagation.
+SFI above 150 generally indicates excellent 10 and 15-meter conditions.</li>
+<li><strong>K-index:</strong> Measures geomagnetic activity. K of 0&ndash;1 is calm and favorable. K of 4 or higher
+indicates a geomagnetic storm that can severely disrupt HF propagation, especially at high latitudes.</li>
+<li><strong>Sudden Ionospheric Disturbance (SID):</strong> A solar flare can black out HF propagation on the
+sunlit side of Earth for minutes to hours.</li>
+</ul>
+
+<h2>Skip Distance and MUF</h2>
+<p>When a signal is launched at a low angle, it travels up to the ionosphere and is refracted back to Earth at
+some distance away. The area between the transmitter and the nearest return point is the <strong>skip zone</strong>
+&mdash; unreachable by either ground wave or sky wave.</p>
+<p><strong>Maximum Usable Frequency (MUF):</strong> The highest frequency that will be refracted by the ionosphere
+for a given path at a given time. Above the MUF, signals pass through and are lost to space. Operating near
+but below the MUF gives the best signals.</p>
+<p><strong>Lowest Usable Frequency (LUF):</strong> The lowest frequency usable for a given path. Below the LUF,
+D-layer absorption is too high for the signal to survive the trip.</p>
+
+<h2>NVIS Propagation</h2>
+<p>Near Vertical Incidence Skywave (NVIS) is designed specifically for short-range HF communication &mdash;
+typically 0 to 300 miles. Instead of low-angle radiation, NVIS uses nearly vertical radiation angles.
+The signal goes almost straight up, hits the F layer, and falls almost straight back down, eliminating
+the skip zone.</p>
+<ul>
+<li>NVIS is ideal for regional emergency communications where repeaters and infrastructure may be unavailable</li>
+<li>Effective frequencies: <strong>3.5 to 10 MHz</strong></li>
+<li>Daytime NVIS: 7&ndash;10 MHz &nbsp;|&nbsp; Nighttime NVIS: 3.5&ndash;5 MHz</li>
+<li>The antenna is a <em>low</em> dipole &mdash; 8 to 15 feet above ground works well for 40-meter NVIS</li>
+</ul>
+
+<h2>Other Propagation Modes</h2>
+<p><strong>Transequatorial Propagation (TEP):</strong> Signals cross the geomagnetic equator. Primarily affects
+6 meters, most common in spring and fall. Can enable contacts exceeding 10,000 miles on 6 meters.</p>
+<p><strong>Sporadic-E:</strong> Unpredictable E-layer enhancement enabling VHF propagation to hundreds or
+thousands of miles. Common on 6 meters and 10 meters during late spring and summer.</p>
+<p><strong>Meteor Scatter:</strong> Signals reflect off ionized meteor trails. Brief bursts (milliseconds to
+seconds) on VHF/UHF. Requires high-speed digital modes.</p>
+<p><strong>Tropospheric Ducting:</strong> Temperature inversions in the lower atmosphere create a refractive
+duct for VHF/UHF signals. Distances of hundreds to thousands of miles are possible. Common over water
+and in coastal areas &mdash; relevant to your location at Caswell Beach.</p>
+
+<hr>
+<h2>Practice Questions</h2>
+
+<div class="question-block">
+<p><strong>Q1 (G3A01)</strong> &mdash; Which are good indicators of approaching solar maximum?</p>
+<ul><li>A. Fewer sunspots and lower solar flux</li><li>B. Increasing sunspots and higher solar flux</li><li>C. Decreasing geomagnetic activity</li><li>D. More stable ionospheric conditions</li></ul>
+</div>
+
+<div class="question-block">
+<p><strong>Q2 (G3B07)</strong> &mdash; What is NVIS propagation?</p>
+<ul><li>A. Long-distance HF propagation from the outer atmosphere</li><li>B. Propagation by signals reflected from the Moon</li><li>C. Short-distance HF propagation using high elevation angles</li><li>D. Propagation by VHF signals through the ionosphere</li></ul>
+</div>
+
+<div class="question-block">
+<p><strong>Q3 (G3C01)</strong> &mdash; Which frequency range is most useful for NVIS propagation?</p>
+<ul><li>A. 50 MHz</li><li>B. 28 MHz</li><li>C. 14 MHz</li><li>D. 3.5 to 10 MHz</li></ul>
+</div>
+
+<div class="question-block">
+<p><strong>Q4 (G3A04)</strong> &mdash; What does a high K-index indicate?</p>
+<ul><li>A. Good short-wave propagation conditions</li><li>B. High geomagnetic activity</li><li>C. Low solar flux</li><li>D. Absence of ionospheric layers</li></ul>
+</div>
+
+<div class="question-block">
+<p><strong>Q5 (G3B05)</strong> &mdash; What is the maximum usable frequency (MUF)?</p>
+<ul><li>A. The minimum frequency that produces useful propagation for a given path</li><li>B. The highest frequency that will be refracted by the ionosphere for a given path</li><li>C. The frequency with the lowest D-layer absorption</li><li>D. The frequency used to determine the lowest skip distance</li></ul>
+</div>
+
+<div class="question-block">
+<p><strong>Q6 (G3C05)</strong> &mdash; Which propagation type most likely allows 6-meter communication between stations 10,000 miles apart?</p>
+<ul><li>A. Sporadic-E</li><li>B. Transequatorial</li><li>C. Meteor scatter</li><li>D. Tropospheric ducting</li></ul>
+</div>
+
+<div class="question-block">
+<p><strong>Q7 (G3A12)</strong> &mdash; What is the effect of a sudden ionospheric disturbance on HF propagation?</p>
+<ul><li>A. Temporarily improved at high latitudes</li><li>B. Temporarily enhanced due to increased ionization</li><li>C. Blocked on the sunlit side of Earth</li><li>D. Permanently disrupted</li></ul>
+</div>
+
+<div class="question-block">
+<p><strong>Q8 (G3B03)</strong> &mdash; Why is the F2 region mainly responsible for the longest long-distance propagation?</p>
+<ul><li>A. It is the densest ionospheric layer</li><li>B. It exists only at night, reducing absorption</li><li>C. It is the highest ionospheric region and persists day and night</li><li>D. It absorbs the fewest radio signals</li></ul>
+</div>
+
+<div class="answer-key">
+<h3>Answer Key</h3>
+<ol>
+<li><strong>B</strong> &mdash; Increasing sunspots and higher solar flux indicate approaching solar maximum</li>
+<li><strong>C</strong> &mdash; NVIS uses high elevation angles for short-distance HF communication</li>
+<li><strong>D</strong> &mdash; 3.5 to 10 MHz is the effective NVIS range</li>
+<li><strong>B</strong> &mdash; A high K-index means high geomagnetic activity, often disrupting propagation</li>
+<li><strong>B</strong> &mdash; The MUF is the highest frequency the ionosphere will refract for a given path</li>
+<li><strong>B</strong> &mdash; Transequatorial propagation enables 6-meter contacts over 10,000 miles</li>
+<li><strong>C</strong> &mdash; A sudden ionospheric disturbance (solar flare) blocks HF on the sunlit side of Earth</li>
+<li><strong>C</strong> &mdash; The F2 layer is the highest and most persistent ionospheric region</li>
+</ol>
+</div>
+
+</div>
+<hr>
+<p><a href="general_study.html">Return to General Class Course Index</a></p>
+<div class="footer">
+<p>Please email me at <a href="mailto:n0njy@qsl.net">n0njy@qsl.net</a> about broken links.</p>
+<p>&copy; N0NJY &ndash; Rick Donaldson, 1997&ndash;2026</p>
+</div>
+</div>
+<script>
+const starfield = document.getElementById('starfield');
+const starCount = 150;
+for(let i=0;i<starCount;i++){
+const star=document.createElement('div');
+star.className='star';
+const size=Math.random()*2+1;
+star.style.width=`${size}px`;
+star.style.height=`${size}px`;
+star.style.top=`${Math.random()*window.innerHeight}px`;
+star.style.left=`${Math.random()*window.innerWidth}px`;
+star.style.animationDuration=`${5+Math.random()*15}s`;
+star.style.animationDelay=`${Math.random()*5}s`;
+starfield.appendChild(star);
+}
+</script>
+</body>
+</html>
