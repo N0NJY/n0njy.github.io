@@ -1,0 +1,226 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="author" content="Rick">
+<meta name="description" content="General Class Module G4 – Station Setup, Test Equipment, Grounding – N0NJY">
+<title>G4: Amateur Radio Practices &ndash; N0NJY</title>
+<link rel="stylesheet" href="style.css">
+<style>
+.page{
+max-width:900px;
+margin:auto;
+padding:2rem 1rem;
+color:yellow;
+}
+.page a{
+color:#8ecbff;
+text-decoration:none;
+}
+.page a:hover{
+text-decoration:underline;
+color:#ffffff;
+}
+h1,h2,h3{
+margin-top:1rem;
+}
+.lesson{
+margin-top:1.5rem;
+line-height:1.6;
+}
+.footer{
+margin-top:3rem;
+font-size:0.9rem;
+}
+.question-block{
+margin:1rem 0 1.5rem 0;
+padding:0.8rem 1rem;
+background:rgba(255,255,255,0.04);
+border-left:3px solid #8ecbff;
+border-radius:4px;
+}
+.answer-key{
+margin-top:1.5rem;
+padding:0.8rem 1rem;
+background:rgba(0,80,0,0.18);
+border-left:3px solid #66cc66;
+border-radius:4px;
+}
+table.band-table{
+width:100%;
+border-collapse:collapse;
+margin:1rem 0;
+font-size:0.92em;
+}
+table.band-table th{
+background:rgba(255,255,255,0.1);
+color:#8ecbff;
+padding:0.4rem 0.7rem;
+text-align:left;
+border-bottom:1px solid rgba(255,255,255,0.2);
+}
+table.band-table td{
+padding:0.35rem 0.7rem;
+border-bottom:1px solid rgba(255,255,255,0.07);
+color:#e0e0e0;
+}
+</style>
+</head>
+<body>
+<div class="starfield" id="starfield"></div>
+<div class="topbar">
+<a href="index.html">Home</a>
+<a href="contents.html">Table of Contents</a>
+<a href="articles.html">Articles</a>
+<a href="otherhams.html">Other Hams</a>
+<a href="astronomy.html">Space</a>
+<a href="survival.html">Preparedness</a>
+<a href="commlink.htm">Contact</a>
+</div>
+<div class="page">
+<h1>General Class License Study</h1>
+<h2>G4: Amateur Radio Practices</h2>
+<p>This page is part of the N0NJY General Class self-study course for Technician operators upgrading to General.</p>
+<hr>
+<div class="lesson">
+
+<h2>Overview</h2>
+<p>This module covers the practical side of HF station operation: transceiver controls you will use daily,
+test equipment for troubleshooting, interference reduction, digital interfaces, and proper station grounding.</p>
+
+<h2>HF Transceiver Controls</h2>
+<p><strong>IF Filter:</strong> Controls the bandwidth of signals passed to the detector. A narrower filter rejects
+signals outside the desired passband. Typical SSB filter: 2.4 kHz. CW filter: as narrow as 250 Hz.</p>
+<p><strong>Notch Filter:</strong> Places a sharp null within the passband, eliminating a single interfering carrier
+(a heterodyne) without significantly affecting the desired signal. Adjustable to the exact interference frequency.</p>
+<p><strong>Noise Blanker (NB):</strong> Suppresses pulse-type interference such as automotive ignition noise.
+Works by muting the receiver during brief, high-amplitude noise pulses. Should be switched off when not needed
+as it can introduce distortion.</p>
+<p><strong>DSP Noise Reduction:</strong> Digitally processes the received signal to suppress random noise. Very
+effective but aggressive settings create "watery" or "mushy" audio artifacts. Use the minimum setting that works.</p>
+<p><strong>AGC (Automatic Gain Control):</strong> Automatically adjusts receiver gain to prevent strong signals
+from overdriving the receiver. Fast AGC is best for CW; slow AGC is preferred for SSB.</p>
+<p><strong>RIT / Clarifier:</strong> Adjusts the receive frequency slightly without changing your transmit frequency.
+Useful when the other station is slightly off frequency.</p>
+
+<h2>Test Equipment</h2>
+<p><strong>SWR Meter:</strong> Measures the impedance match between the transmitter and antenna system. An SWR of
+1:1 is perfect; 2:1 or less is generally acceptable. Inserted in series between the transmitter and antenna.</p>
+<p><strong>Dummy Load:</strong> A non-radiating resistive load for testing and adjusting transmitters. All transmitter
+testing should be done into a dummy load, not an antenna. Prevents interference and protects the transmitter.</p>
+<p><strong>Oscilloscope:</strong> Displays waveform shape versus time. Used to check modulation quality, identify
+distortion, and verify CW keying waveforms. A two-tone test on an oscilloscope verifies SSB linearity.</p>
+<p><strong>Spectrum Analyzer:</strong> Displays amplitude versus frequency. Used to identify spurious emissions,
+check signal bandwidth, and locate interference sources. The oscilloscope shows time; the spectrum analyzer
+shows frequency.</p>
+<p><strong>Dip Meter (Grid Dip Oscillator):</strong> Determines the resonant frequency of an antenna or tuned
+circuit without connecting test leads. The oscillator output dips when held near a resonant circuit.</p>
+
+<h2>Antenna Tuners</h2>
+<p>An antenna tuner (coupler) transforms the impedance seen at the feedline input to the 50 ohms the transmitter
+expects. It does not change the antenna's resonance or radiation efficiency. A tuner with a mismatched load on
+a lossy coax feedline may satisfy the transmitter while significant power is still lost in the feedline itself.</p>
+
+<h2>Station Grounding</h2>
+<p><strong>Safety ground:</strong> Connects all equipment chassis to the AC safety ground. Prevents dangerous
+voltages on equipment surfaces in case of a fault. Follow electrical code requirements.</p>
+<p><strong>RF ground:</strong> The return path for the antenna current. A poor RF ground reduces antenna
+efficiency and causes RF to appear in the shack on cables and equipment surfaces. Use a short, wide conductor
+(copper strap is far better than wire) from the station to a ground rod or antenna radial system.</p>
+<p><strong>Symptoms of RF in the shack:</strong> Microphone feedback, erratic computer behavior during transmit,
+tingling sensation from equipment surfaces. Fix: proper bonding and common-mode chokes (ferrite cores) on feedlines.</p>
+
+<h2>Digital Mode Interfaces</h2>
+<p>Connecting a computer to the transceiver for digital modes requires an interface that handles audio in/out
+and PTT (push-to-talk) control.</p>
+<ul>
+<li>Use audio <strong>isolation transformers</strong> to prevent ground loops and RF feedback between the computer
+and transceiver</li>
+<li><strong>CAT control</strong> (Computer Aided Transceiver) allows software to control frequency, mode, and PTT
+via serial or USB. Required by most digital mode software (WSJT-X for FT8, etc.)</li>
+</ul>
+
+<hr>
+<h2>Practice Questions</h2>
+
+<div class="question-block">
+<p><strong>Q1 (G4A01)</strong> &mdash; What is the purpose of the notch filter found on many HF transceivers?</p>
+<ul><li>A. To reduce noise from local atmospheric sources</li><li>B. To reduce interference from carriers in the receiver passband</li><li>C. To reduce power supply hum</li><li>D. To remove impulse noise from the receiver</li></ul>
+</div>
+
+<div class="question-block">
+<p><strong>Q2 (G4B05)</strong> &mdash; What is an advantage of digital signal processing (DSP)?</p>
+<ul><li>A. It eliminates all types of interference</li><li>B. It can perform filtering and noise reduction difficult with analog circuits</li><li>C. It increases transmitter power output</li><li>D. It increases frequency stability</li></ul>
+</div>
+
+<div class="question-block">
+<p><strong>Q3 (G4D01)</strong> &mdash; What is the purpose of a speech processor in an SSB transmitter?</p>
+<ul><li>A. To reduce transmitter power consumption</li><li>B. To improve voice quality during contests</li><li>C. To increase intelligibility by increasing average power</li><li>D. To remove distortion from the microphone signal</li></ul>
+</div>
+
+<div class="question-block">
+<p><strong>Q4 (G4B01)</strong> &mdash; Which test instrument displays the shape of a transmitted waveform?</p>
+<ul><li>A. A spectrum analyzer</li><li>B. A frequency counter</li><li>C. An oscilloscope</li><li>D. A field strength meter</li></ul>
+</div>
+
+<div class="question-block">
+<p><strong>Q5 (G4B02)</strong> &mdash; What is an advantage of a spectrum analyzer over an oscilloscope for RF measurements?</p>
+<ul><li>A. It can measure voltages in AC circuits</li><li>B. It displays signal amplitude versus frequency simultaneously</li><li>C. It is more accurate for time-domain measurements</li><li>D. It requires less calibration</li></ul>
+</div>
+
+<div class="question-block">
+<p><strong>Q6 (G4A12)</strong> &mdash; What is the function of automatic gain control (AGC)?</p>
+<ul><li>A. It adjusts transmitter power based on signal strength</li><li>B. It prevents strong signals from overdriving the receiver</li><li>C. It controls the bandwidth of the IF filter</li><li>D. It reduces the output of the final amplifier</li></ul>
+</div>
+
+<div class="question-block">
+<p><strong>Q7 (G4C05)</strong> &mdash; What is the most common cause of RF interference from an HF mobile installation?</p>
+<ul><li>A. Inadequate bonding of the vehicle's electrical system</li><li>B. A poorly aimed antenna</li><li>C. Excessive transmitter power</li><li>D. A poorly filtered audio system</li></ul>
+</div>
+
+<div class="question-block">
+<p><strong>Q8 (G4E05)</strong> &mdash; Which of the following is a disadvantage of using a dummy load?</p>
+<ul><li>A. It does not allow SWR measurement</li><li>B. It will not allow adjustment under actual operating conditions</li><li>C. It cannot be connected to an antenna tuner</li><li>D. It converts RF power to heat without radiating</li></ul>
+</div>
+
+<div class="answer-key">
+<h3>Answer Key</h3>
+<ol>
+<li><strong>B</strong> &mdash; A notch filter eliminates a specific interfering carrier within the passband</li>
+<li><strong>B</strong> &mdash; DSP implements filtering and noise reduction difficult to achieve with analog circuits</li>
+<li><strong>C</strong> &mdash; A speech processor increases average power, improving intelligibility</li>
+<li><strong>C</strong> &mdash; An oscilloscope displays waveform shape in the time domain</li>
+<li><strong>B</strong> &mdash; A spectrum analyzer shows amplitude vs. frequency simultaneously</li>
+<li><strong>B</strong> &mdash; AGC prevents receiver overload from strong signals</li>
+<li><strong>A</strong> &mdash; Inadequate electrical bonding is the most common mobile RF interference cause</li>
+<li><strong>D</strong> &mdash; Converting RF to heat without radiating is the intended function, not truly a disadvantage for testing purposes</li>
+</ol>
+</div>
+
+</div>
+<hr>
+<p><a href="general_study.html">Return to General Class Course Index</a></p>
+<div class="footer">
+<p>Please email me at <a href="mailto:n0njy@qsl.net">n0njy@qsl.net</a> about broken links.</p>
+<p>&copy; N0NJY &ndash; Rick Donaldson, 1997&ndash;2026</p>
+</div>
+</div>
+<script>
+const starfield = document.getElementById('starfield');
+const starCount = 150;
+for(let i=0;i<starCount;i++){
+const star=document.createElement('div');
+star.className='star';
+const size=Math.random()*2+1;
+star.style.width=`${size}px`;
+star.style.height=`${size}px`;
+star.style.top=`${Math.random()*window.innerHeight}px`;
+star.style.left=`${Math.random()*window.innerWidth}px`;
+star.style.animationDuration=`${5+Math.random()*15}s`;
+star.style.animationDelay=`${Math.random()*5}s`;
+starfield.appendChild(star);
+}
+</script>
+</body>
+</html>

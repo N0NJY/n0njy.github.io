@@ -3,68 +3,35 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="author" content="Rick">
-<meta name="description" content="General Class Module G4 – Station Setup, Test Equipment, Grounding – N0NJY">
-<title>G4: Amateur Radio Practices &ndash; N0NJY</title>
+<meta name="author" content="Rick Donaldson N0NJY">
+<meta name="description" content="General Class Module G4 – Amateur Radio Practices – Station Setup, Grounding, Test Equipment, Audio – N0NJY">
+<title>G4: Amateur Radio Practices – N0NJY</title>
 <link rel="stylesheet" href="style.css">
 <style>
-.page{
-max-width:900px;
-margin:auto;
-padding:2rem 1rem;
-color:yellow;
-}
-.page a{
-color:#8ecbff;
-text-decoration:none;
-}
-.page a:hover{
-text-decoration:underline;
-color:#ffffff;
-}
-h1,h2,h3{
-margin-top:1rem;
-}
-.lesson{
-margin-top:1.5rem;
-line-height:1.6;
-}
-.footer{
-margin-top:3rem;
-font-size:0.9rem;
-}
-.question-block{
-margin:1rem 0 1.5rem 0;
-padding:0.8rem 1rem;
-background:rgba(255,255,255,0.04);
-border-left:3px solid #8ecbff;
-border-radius:4px;
-}
-.answer-key{
-margin-top:1.5rem;
-padding:0.8rem 1rem;
-background:rgba(0,80,0,0.18);
-border-left:3px solid #66cc66;
-border-radius:4px;
-}
-table.band-table{
-width:100%;
-border-collapse:collapse;
-margin:1rem 0;
-font-size:0.92em;
-}
-table.band-table th{
-background:rgba(255,255,255,0.1);
-color:#8ecbff;
-padding:0.4rem 0.7rem;
-text-align:left;
-border-bottom:1px solid rgba(255,255,255,0.2);
-}
-table.band-table td{
-padding:0.35rem 0.7rem;
-border-bottom:1px solid rgba(255,255,255,0.07);
-color:#e0e0e0;
-}
+.page{max-width:900px;margin:auto;padding:2rem 1rem;color:yellow;}
+.page a{color:#8ecbff;text-decoration:none;}
+.page a:hover{text-decoration:underline;color:#ffffff;}
+h1,h2,h3,h4{margin-top:1rem;}
+.lesson{margin-top:1.5rem;line-height:1.7;}
+.footer{margin-top:3rem;font-size:0.9rem;}
+.module-sections{display:flex;gap:0.5rem;margin:1.5rem 0 0.5rem 0;flex-wrap:wrap;}
+.module-sections a{background:rgba(255,255,255,0.07);border:1px solid rgba(255,255,255,0.2);border-radius:4px;padding:0.4rem 1rem;color:#8ecbff;font-size:0.9rem;font-weight:600;text-decoration:none;}
+.module-sections a:hover{background:rgba(255,255,255,0.15);color:#fff;}
+.elmer-box{background:rgba(255,200,0,0.07);border-left:4px solid #FFD700;border-radius:0 6px 6px 0;padding:0.9rem 1.2rem;margin:1.4rem 0;}
+.elmer-box strong{color:#FFD700;}
+.warning-box{background:rgba(255,80,80,0.07);border-left:4px solid #ff6060;border-radius:0 6px 6px 0;padding:0.9rem 1.2rem;margin:1.4rem 0;}
+.warning-box strong{color:#ff9090;}
+.tip-box{background:rgba(100,200,100,0.07);border-left:4px solid #66cc66;border-radius:0 6px 6px 0;padding:0.9rem 1.2rem;margin:1.4rem 0;}
+.tip-box strong{color:#90ee90;}
+.question-block{margin:1rem 0 1.5rem 0;padding:0.8rem 1rem;background:rgba(255,255,255,0.04);border-left:3px solid #8ecbff;border-radius:4px;}
+.answer-key{margin-top:1.5rem;padding:0.8rem 1rem;background:rgba(0,80,0,0.18);border-left:3px solid #66cc66;border-radius:4px;}
+.resource-list{list-style:none;padding:0;}
+.resource-list li{margin:0.7rem 0;padding-left:1.2rem;position:relative;}
+.resource-list li::before{content:"›";position:absolute;left:0;color:#8ecbff;font-weight:bold;}
+table.equip-table{width:100%;border-collapse:collapse;margin:1rem 0;font-size:0.9em;}
+table.equip-table th{background:rgba(255,255,255,0.1);color:#8ecbff;padding:0.4rem 0.7rem;text-align:left;border-bottom:1px solid rgba(255,255,255,0.25);}
+table.equip-table td{padding:0.35rem 0.7rem;border-bottom:1px solid rgba(255,255,255,0.07);color:#e0e0e0;vertical-align:top;}
+hr{border:none;border-top:1px solid rgba(255,255,255,0.15);margin:2rem 0;}
 </style>
 </head>
 <body>
@@ -82,123 +49,851 @@ color:#e0e0e0;
 <h1>General Class License Study</h1>
 <h2>G4: Amateur Radio Practices</h2>
 <p>This page is part of the N0NJY General Class self-study course for Technician operators upgrading to General.</p>
+<div class="module-sections">
+<a href="#operator">Operator Knowledge</a>
+<a href="#exam">Exam Coverage</a>
+<a href="#resources">Resources</a>
+</div>
 <hr>
 <div class="lesson">
 
-<h2>Overview</h2>
-<p>This module covers the practical side of HF station operation: transceiver controls you will use daily,
-test equipment for troubleshooting, interference reduction, digital interfaces, and proper station grounding.</p>
+<!-- ============================================================
+     PART 1: OPERATOR KNOWLEDGE
+     ============================================================ -->
+<h2 id="operator">Part 1 &mdash; Operator Knowledge</h2>
 
-<h2>HF Transceiver Controls</h2>
-<p><strong>IF Filter:</strong> Controls the bandwidth of signals passed to the detector. A narrower filter rejects
-signals outside the desired passband. Typical SSB filter: 2.4 kHz. CW filter: as narrow as 250 Hz.</p>
-<p><strong>Notch Filter:</strong> Places a sharp null within the passband, eliminating a single interfering carrier
-(a heterodyne) without significantly affecting the desired signal. Adjustable to the exact interference frequency.</p>
-<p><strong>Noise Blanker (NB):</strong> Suppresses pulse-type interference such as automotive ignition noise.
-Works by muting the receiver during brief, high-amplitude noise pulses. Should be switched off when not needed
-as it can introduce distortion.</p>
-<p><strong>DSP Noise Reduction:</strong> Digitally processes the received signal to suppress random noise. Very
-effective but aggressive settings create "watery" or "mushy" audio artifacts. Use the minimum setting that works.</p>
-<p><strong>AGC (Automatic Gain Control):</strong> Automatically adjusts receiver gain to prevent strong signals
-from overdriving the receiver. Fast AGC is best for CW; slow AGC is preferred for SSB.</p>
-<p><strong>RIT / Clarifier:</strong> Adjusts the receive frequency slightly without changing your transmit frequency.
-Useful when the other station is slightly off frequency.</p>
+<p>G4 is the most practical module in the General Class course. It covers how your station actually works
+day to day &mdash; the controls on your transceiver, how to set up a clean station, how to troubleshoot
+problems, what test equipment you need and how to use it, and how to connect a computer for digital
+modes without creating a mess of interference and ground loops. Getting these things right from the
+beginning saves you months of frustrating troubleshooting later.</p>
 
-<h2>Test Equipment</h2>
-<p><strong>SWR Meter:</strong> Measures the impedance match between the transmitter and antenna system. An SWR of
-1:1 is perfect; 2:1 or less is generally acceptable. Inserted in series between the transmitter and antenna.</p>
-<p><strong>Dummy Load:</strong> A non-radiating resistive load for testing and adjusting transmitters. All transmitter
-testing should be done into a dummy load, not an antenna. Prevents interference and protects the transmitter.</p>
-<p><strong>Oscilloscope:</strong> Displays waveform shape versus time. Used to check modulation quality, identify
-distortion, and verify CW keying waveforms. A two-tone test on an oscilloscope verifies SSB linearity.</p>
-<p><strong>Spectrum Analyzer:</strong> Displays amplitude versus frequency. Used to identify spurious emissions,
-check signal bandwidth, and locate interference sources. The oscilloscope shows time; the spectrum analyzer
-shows frequency.</p>
-<p><strong>Dip Meter (Grid Dip Oscillator):</strong> Determines the resonant frequency of an antenna or tuned
-circuit without connecting test leads. The oscillator output dips when held near a resonant circuit.</p>
+<hr>
+<h3>Read Your Manual &mdash; All of It</h3>
 
-<h2>Antenna Tuners</h2>
-<p>An antenna tuner (coupler) transforms the impedance seen at the feedline input to the 50 ohms the transmitter
-expects. It does not change the antenna's resonance or radiation efficiency. A tuner with a mismatched load on
-a lossy coax feedline may satisfy the transmitter while significant power is still lost in the feedline itself.</p>
+<p>This section comes first because it is the one piece of advice that would prevent the majority of
+problems new HF operators encounter. Your transceiver manual is not optional reading. It is the
+authoritative reference for how your specific radio works, and no two radios are identical in every
+detail. Advice from an online forum, from this course, or from an experienced operator may be
+generally correct but subtly wrong for your particular model. The manual is always right about
+your radio.</p>
 
-<h2>Station Grounding</h2>
-<p><strong>Safety ground:</strong> Connects all equipment chassis to the AC safety ground. Prevents dangerous
-voltages on equipment surfaces in case of a fault. Follow electrical code requirements.</p>
-<p><strong>RF ground:</strong> The return path for the antenna current. A poor RF ground reduces antenna
-efficiency and causes RF to appear in the shack on cables and equipment surfaces. Use a short, wide conductor
-(copper strap is far better than wire) from the station to a ground rod or antenna radial system.</p>
-<p><strong>Symptoms of RF in the shack:</strong> Microphone feedback, erratic computer behavior during transmit,
-tingling sensation from equipment surfaces. Fix: proper bonding and common-mode chokes (ferrite cores) on feedlines.</p>
+<p>Modern HF transceivers are sophisticated instruments. A typical mid-range radio has forty or
+fifty distinct controls, menus, and adjustable parameters. Many of them interact with each other in
+ways that are not obvious until you read the manual. The noise blanker that works well on automotive
+ignition interference can produce distortion when left on during strong-signal conditions. The AGC
+setting that is ideal for SSB may make CW sound terrible. The speech processor that improves your
+signal in a pileup can cause your audio to sound compressed and harsh in a casual ragchew. None of
+this is a flaw in the radio &mdash; all of it is by design. But you will only know how to use these
+functions correctly if you understand what they do.</p>
 
-<h2>Digital Mode Interfaces</h2>
-<p>Connecting a computer to the transceiver for digital modes requires an interface that handles audio in/out
-and PTT (push-to-talk) control.</p>
+<p>Read the manual before you operate for the first time, not after you encounter a problem.
+At a minimum, read the sections on: basic operating, receiver controls (AGC, filters, noise blanker),
+transmitter controls (speech processor, ALC, power output), menus, and the procedure for resetting
+the radio to factory defaults if something goes wrong. Budget an evening for this. It will save you
+hours of frustration.</p>
+
+<div class="elmer-box">
+<strong>From the elmer's notebook:</strong> The most common call for help from new HF operators goes
+like this: "My radio sounds terrible" or "I can't hear anything on 20 meters." In the majority of
+cases, the answer is a single mis-set control &mdash; a noise blanker left on, an IF filter set too
+narrow, a band scope display mistaken for a received signal, or a receive attenuator engaged. All of
+these are in the manual. None of them require a service technician. Read the manual.
+</div>
+
+<hr>
+<h3>HF Transceiver Controls &mdash; What They Do and When to Use Them</h3>
+
+<p>Coming from VHF FM operation, most of these controls will be new to you. FM radios have minimal
+adjustments because FM's capture effect handles most signal variations automatically. HF is entirely
+different &mdash; signals arrive from all angles, strengths, and with varying levels of interference.
+The controls on your HF transceiver are tools for managing that complexity.</p>
+
+<h4>IF Filters &mdash; Bandwidth Control</h4>
+<p>The IF (intermediate frequency) filter controls how wide a slice of the radio spectrum your
+receiver passes to the detector. A wider filter lets in more signal energy, which is useful when
+signals are weak and the band is quiet. A narrower filter rejects signals outside your desired
+passband, which is essential when the band is crowded or when there are interfering stations nearby.</p>
+
+<p>Typical filter settings by mode:</p>
 <ul>
-<li>Use audio <strong>isolation transformers</strong> to prevent ground loops and RF feedback between the computer
-and transceiver</li>
-<li><strong>CAT control</strong> (Computer Aided Transceiver) allows software to control frequency, mode, and PTT
-via serial or USB. Required by most digital mode software (WSJT-X for FT8, etc.)</li>
+<li><strong>SSB voice:</strong> 2.4 to 2.8 kHz. Wide enough to pass the full voice audio bandwidth
+without cutting the highs that aid readability.</li>
+<li><strong>CW:</strong> 500 Hz for general use; 250 Hz or narrower when the CW band is crowded.
+Narrow CW filters are one of the most effective tools for pulling a weak CW signal out of a
+crowded band.</li>
+<li><strong>Digital modes:</strong> 2.4 kHz for FT8 and PSK31 (the software does the filtering
+within that passband); 500 Hz or less for RTTY when operating on a crowded band.</li>
+</ul>
+
+<p>Do not use the narrowest filter all the time. A very narrow SSB filter cuts the high-frequency
+audio components that make speech intelligible, making a readable signal sound muffled and harder
+to copy. Narrow filters are tools for difficult conditions, not everyday defaults.</p>
+
+<h4>Notch Filter</h4>
+<p>The notch filter places a sharp, deep null at a specific frequency within your receiver passband.
+Its primary purpose is to eliminate a heterodyne &mdash; the annoying whistle produced when two
+carriers are slightly offset from each other. When you hear a tone on top of the station you are
+trying to copy, engage the notch filter and tune it to the exact pitch of the tone. The tone
+disappears while the voice signal remains largely unaffected.</p>
+
+<p>Many modern transceivers include an <em>auto-notch</em> that finds and removes tones automatically.
+Auto-notch is effective for single tones but can sometimes attack desired audio components if the
+audio contains sustained tones (as in digital mode monitoring). When using auto-notch for SSB voice
+reception, it generally works well. Disable it when monitoring digital modes or when using CW.</p>
+
+<h4>Noise Blanker (NB)</h4>
+<p>The noise blanker is designed to suppress pulse-type interference &mdash; the rapid, repetitive
+clicks produced by automotive ignition systems, power line insulators, and some types of electrical
+equipment. It works by sensing brief, high-amplitude pulses and muting the receiver for the duration
+of each pulse. This effectively blanks the noise without significantly affecting the desired signal,
+because the pulses are so brief.</p>
+
+<p>The noise blanker works well on its intended target &mdash; pulse noise. It does not work well,
+and can make things worse, in these situations:</p>
+<ul>
+<li>Strong signals nearby: the blanker can false-trigger on strong signal peaks, producing distortion
+and degraded audio on a signal you want to copy</li>
+<li>Band conditions with many strong signals: same problem at scale</li>
+<li>Non-pulse noise (static, QRM from other stations): the blanker has no effect on these</li>
+</ul>
+<p>Leave the noise blanker off by default. Enable it specifically when you are experiencing pulse
+noise interference, and disable it when the interference stops or when it is causing problems.</p>
+
+<h4>DSP Noise Reduction</h4>
+<p>Digital signal processing (DSP) noise reduction applies statistical algorithms to separate the
+desired signal from random noise. It is more sophisticated than the noise blanker and can
+significantly improve the readability of weak signals on a noisy band.</p>
+
+<p>The practical tradeoff: DSP noise reduction at aggressive settings introduces audio processing
+artifacts. Voices take on a synthetic, watery, or hollow quality. CW can sound smeared. For casual
+operating on a reasonably quiet band, minimal or no DSP noise reduction produces better audio quality.
+For weak-signal work on a very noisy band, moderate DSP reduction can make the difference between
+copying a signal and not. Start at the lowest setting that helps and increase only as needed.</p>
+
+<h4>AGC &mdash; Automatic Gain Control</h4>
+<p>The AGC automatically adjusts the receiver's gain based on signal strength, preventing strong
+signals from overdriving the audio chain while allowing the receiver to hear weak signals. Without
+AGC, a strong signal would blast your speakers while a weak signal would be inaudible. With AGC,
+both are brought to a usable listening level automatically.</p>
+
+<p>AGC has speed settings that matter in practice:</p>
+<ul>
+<li><strong>Slow AGC:</strong> The gain adjusts slowly, maintaining a consistent average audio level.
+Best for SSB voice, where rapid gain changes between syllables would produce unnatural-sounding audio.</li>
+<li><strong>Fast AGC:</strong> The gain adjusts rapidly. Best for CW, where each element needs to
+be at full level as soon as it arrives, and for rapidly fading signals where slow AGC would not
+respond quickly enough to sudden drops in signal strength.</li>
+<li><strong>AGC off:</strong> Used in specific situations where you want the receiver to operate at
+a fixed gain &mdash; for example, during certain types of digital mode reception or when making
+signal strength measurements. Not a normal operating mode for most contacts.</li>
+</ul>
+
+<h4>RF Gain</h4>
+<p>The RF gain control reduces the overall sensitivity of the receiver front end. On most bands
+under normal conditions, you want maximum RF gain. However, on a crowded band with many strong
+signals, reducing RF gain slightly can prevent overload and intermodulation distortion in the
+receiver front end. This is the opposite of what many new operators expect &mdash; turning down
+sensitivity sometimes produces a cleaner received signal when the band is very busy.</p>
+
+<h4>RIT &mdash; Receiver Incremental Tuning</h4>
+<p>RIT (also called Clarifier on some radios) allows you to shift your receive frequency slightly
+without changing your transmit frequency. When the station you are working is slightly off frequency
+&mdash; their audio sounds a bit high or low pitched &mdash; you can use RIT to bring them to the
+correct pitch without moving off the frequency you established for the contact. This is particularly
+useful on CW, where a few hundred Hz of offset between stations is common and RIT lets you optimize
+the received pitch without causing problems for the other station.</p>
+
+<div class="tip-box">
+<strong>The controls you will actually use every day:</strong> IF filter bandwidth, AGC speed,
+and RF gain are the three controls that most directly affect what you hear. Get comfortable with
+those first. The notch filter, noise blanker, and DSP noise reduction are tools for specific
+problems &mdash; know what problems they solve so you reach for them when needed, not randomly.
+</div>
+
+<hr>
+<h3>Station Grounding &mdash; Two Different Problems, Two Different Solutions</h3>
+
+<p>Grounding is one of the most misunderstood topics in amateur radio station setup, primarily because
+the word "ground" is used for two completely different things that require different approaches.
+Confusing them leads to stations that have one problem solved and another created. You need to
+understand both.</p>
+
+<h4>Safety Ground &mdash; Protecting You from the Electrical System</h4>
+<p>The safety ground connects the chassis of all your station equipment to the AC electrical safety
+ground &mdash; the third pin on your outlets, connected to the ground rod at your electrical panel.
+Its purpose is to ensure that if an internal fault develops inside a piece of equipment and connects
+the AC line voltage to the chassis, the fault current flows through the ground wire to the panel and
+trips the circuit breaker rather than through you when you touch the equipment.</p>
+
+<p>The safety ground is not optional. Every piece of equipment in your station should have its
+chassis bonded to the safety ground through the power cord. Do not defeat the ground pin on any
+equipment. Do not use two-prong adapters. This is basic electrical safety and it applies whether
+you are a radio operator or not.</p>
+
+<h4>RF Ground &mdash; Protecting Your Station from Itself</h4>
+<p>The RF ground is an entirely different concern. On HF, particularly with verticals and end-fed
+antennas, the antenna system requires a return current path. If that return path is not provided
+properly, RF current will find its own path &mdash; and it will find the most convenient conductors
+available, which are your coaxial feedlines, your computer cables, your microphone cable, and the
+wiring in your equipment. When RF appears on these conductors, you get the classic symptoms of
+RF in the shack.</p>
+
+<h4>Symptoms of RF in the Shack</h4>
+<p>You almost certainly have an RF grounding problem if you experience any of the following:</p>
+<ul>
+<li>A tingling or mild shock sensation when touching the microphone or equipment during transmission</li>
+<li>Your computer freezes, reboots, or produces errors when you key up</li>
+<li>Your logging software or digital mode software crashes or loses the serial connection when
+you transmit</li>
+<li>Audio feedback through your microphone during transmit (your own voice feeding back)</li>
+<li>Television interference (TVI) in your own household that appears only when you transmit</li>
+<li>The SWR meter reading changes when you touch the microphone or move cables</li>
+<li>Your voice audio sounds distorted or your ALC behaves erratically</li>
+</ul>
+
+<h4>Solving RF in the Shack</h4>
+<p>The solutions address the root cause: RF current needs a proper return path that does not run
+through your station equipment and cables.</p>
+
+<p><strong>Common-mode chokes on feedlines:</strong> A common-mode choke (also called a choke balun
+or line isolator) wound from coaxial cable on a ferrite core is the single most effective first step.
+Install one at the point where your feedline enters the shack. This prevents RF current from traveling
+back into the shack on the outside of the coax shield. You can wind your own by making eight to ten
+turns of coax through a large ferrite toroid (Type 31 material is excellent for HF common-mode
+chokes). Commercial versions are also available.</p>
+
+<p><strong>RF ground to earth:</strong> A dedicated RF ground conductor from your station to a
+ground rod outside provides a low-impedance return path for RF current. This conductor should be
+as short and as wide as possible. A flat copper strap (2 inches wide is common) is far more effective
+than round wire of the same cross-sectional area because of the skin effect at RF frequencies.
+Round wire has most of its current-carrying capacity at DC; at RF, only the surface matters and
+a wide flat strap has much more surface area than a round wire of equal mass.</p>
+
+<p><strong>Bonding station equipment together:</strong> Bond all equipment chassis together with
+short copper strap runs. A star-ground arrangement, with all equipment bonded back to a single
+ground point that then connects to the earth ground rod, is more effective than a daisy-chain
+arrangement.</p>
+
+<p><strong>Ferrite beads on cables:</strong> Clamp-on ferrite beads slipped over computer cables,
+microphone cables, and power supply cables attenuate RF current on those conductors. Use Type 31
+or Type 43 ferrite material for HF. These are inexpensive and available from electronics suppliers.
+Multiple beads on the same cable are more effective than a single bead.</p>
+
+<div class="warning-box">
+<strong>Safety ground and RF ground are not the same conductor:</strong> Do not attempt to solve
+RF-in-the-shack problems by connecting everything to the safety ground. The safety ground is not
+designed for RF. More importantly, running RF current through the safety ground can create
+interference and potentially unsafe conditions in your home's electrical wiring. Solve RF problems
+with RF solutions: chokes, ferrite, and a dedicated RF ground conductor.
+</div>
+
+<hr>
+<h3>Test Equipment &mdash; What You Need vs. What Looks Good on a Shelf</h3>
+
+<p>New operators often either have no test equipment at all, or they assemble an impressive-looking
+bench full of instruments they do not know how to use. Neither extreme serves you well. The goal
+is a small set of tools you understand thoroughly and actually use.</p>
+
+<h4>What You Need Before You Operate</h4>
+
+<p><strong>SWR meter / directional wattmeter:</strong> This is the one piece of test equipment that
+is non-negotiable for HF operation. An SWR meter inserted between your transmitter and antenna tells
+you whether your antenna system presents a reasonable load to the transmitter. Operating into a badly
+mismatched antenna at full power can damage the final amplifier stage of your transceiver. An SWR
+of 2:1 or less is generally acceptable for most transceivers. Above 3:1, most modern radios begin
+reducing power automatically to protect themselves. A directional wattmeter shows both forward power
+(toward the antenna) and reflected power (returning from the antenna), from which you can calculate
+or read the SWR directly.</p>
+
+<p>How to use it: insert it in series with the feedline between the transmitter output and the
+antenna tuner (if used) or the antenna feedline. Key up at reduced power into a clear frequency,
+note the forward and reflected power readings, and check the SWR. Do this when you first set up
+any antenna, after any changes to the antenna system, and periodically as part of station maintenance.
+An SWR that has changed unexpectedly is telling you something has changed in your antenna system &mdash;
+a bad connector, a wire break, water in the feedline.</p>
+
+<p><strong>Digital multimeter (DMM):</strong> A basic digital multimeter measuring voltage, current,
+and resistance is the second essential tool. You will use it to check power supply voltages, verify
+that your ground connections have low resistance, trace wiring faults, check fuses and connectors,
+and troubleshoot virtually any piece of equipment in the shack. An inexpensive DMM from a hardware
+store or electronics supplier is adequate for most amateur radio work. Buy one with a current
+measurement range of at least 10 amps so you can measure current draw from your power supply.</p>
+
+<h4>What to Add Next</h4>
+
+<p><strong>Antenna analyzer:</strong> An antenna analyzer is the single most useful test instrument
+for the HF operator beyond the SWR meter and DMM. It sweeps a range of frequencies and shows you
+the impedance, SWR, and resonant frequency of your antenna system across the entire band &mdash;
+not just at one spot. With an antenna analyzer you can trim a dipole to resonance, find the
+resonant frequency of a mystery coil, diagnose a feedline problem, and verify that an antenna
+tuner is doing what you expect. Modern antenna analyzers in the $100 to $200 range (the RigExpert
+AA-35 Zoom and the MFJ-259 are popular examples) provide far more information than a simple SWR
+meter and are no harder to use. If you are building antennas &mdash; and you should be &mdash;
+an antenna analyzer is the most worthwhile instrument purchase you can make.</p>
+
+<p><strong>Dummy load:</strong> A dummy load is a non-radiating 50-ohm resistive load designed to
+absorb transmitter power without radiating it as radio waves. Every station should have one. You
+use a dummy load when adjusting your transmitter, testing audio levels, aligning a microphone,
+checking speech processor settings, or troubleshooting any transmitter problem. Testing into an
+antenna radiates your test transmissions onto the air and causes interference to other operators.
+Testing into a dummy load is quiet, courteous, and tells you just as much about your transmitter's
+behavior. Dummy loads for 100-watt operation are inexpensive. Build one yourself (a resistor network
+in an oil-filled enclosure) or buy a commercial unit.</p>
+
+<table class="equip-table">
+<tr><th>Equipment</th><th>Priority</th><th>Approximate Cost</th><th>Primary Use</th></tr>
+<tr><td>SWR / Wattmeter</td><td>Essential — buy before operating</td><td>$30&ndash;$150</td><td>Verify antenna match, measure power</td></tr>
+<tr><td>Digital Multimeter</td><td>Essential — buy before operating</td><td>$20&ndash;$60</td><td>Voltage, current, resistance measurements</td></tr>
+<tr><td>Dummy Load</td><td>High — buy or build early</td><td>$20&ndash;$80 or build</td><td>Testing transmitter without radiating</td></tr>
+<tr><td>Antenna Analyzer</td><td>High — buy when building antennas</td><td>$100&ndash;$250</td><td>Antenna resonance, impedance, tuning</td></tr>
+<tr><td>Oscilloscope</td><td>Useful — add when troubleshooting audio/RF</td><td>$100+ used</td><td>Waveform shape, modulation quality</td></tr>
+<tr><td>Spectrum Analyzer</td><td>Advanced — not needed early</td><td>$200+ (SDR-based)</td><td>Spurious emissions, signal bandwidth</td></tr>
+</table>
+
+<div class="elmer-box">
+<strong>From the elmer's notebook:</strong> You can do a lot with a DMM, an SWR meter, and a dummy
+load. Buy those three things, learn to use them well, and you will be able to diagnose ninety percent
+of the problems you encounter at a typical amateur radio station. An antenna analyzer comes next.
+Everything else is useful but not urgent. Resist the temptation to buy instruments you do not yet
+understand &mdash; an oscilloscope sitting on a shelf does you no good. Learn each tool thoroughly
+before adding the next one.
+</div>
+
+<h4>How to Use a Dummy Load Correctly</h4>
+<p>Connect the dummy load to the transmitter's antenna output (remove the feedline first). Set your
+power to a low level &mdash; 10 to 25 watts. Key the transmitter. The dummy load absorbs all that
+power as heat without radiating anything. Now you can adjust microphone gain, test speech processor
+settings, check ALC behavior, and verify your audio sounds correct using a monitoring receiver or
+the radio's built-in monitor function. When you are satisfied with your settings, reconnect the
+antenna feedline. Always verify SWR before transmitting at full power after reconnecting.</p>
+
+<hr>
+<h3>Getting a Clean SSB Signal &mdash; Audio and Speech Processing</h3>
+
+<p>Your transmitted audio quality affects every contact you make. A clean, natural-sounding SSB signal
+is easier to copy than a processed, compressed, or distorted one &mdash; regardless of power level.
+A station running 100 watts with excellent audio is more effective than one running 200 watts with
+poor audio. This is worth the time to get right.</p>
+
+<h4>Microphone Gain</h4>
+<p>The microphone gain control sets how much your audio input level drives the transmitter's modulator.
+Too low and your signal will be weak relative to your power output. Too high and you will overdrive
+the modulator, causing splatter &mdash; a distorted, wide signal that bleeds into adjacent frequencies
+and causes interference. Proper microphone gain setting is the single most important factor in
+transmitted audio quality.</p>
+
+<p>Set microphone gain by transmitting into a dummy load while someone monitors your signal on a
+nearby receiver, or by watching your ALC meter. The ALC should deflect on speech peaks &mdash; moving
+noticeably when you speak loudly. It should not be pinned at maximum continuously. A continuously
+pegged ALC means you are overdriving the transmitter. Reduce microphone gain until the ALC responds
+to peaks but recovers between them.</p>
+
+<h4>ALC &mdash; What It Is and What It Tells You</h4>
+<p>The ALC (Automatic Level Control) circuit monitors the transmitter's output level and automatically
+reduces the drive when the signal approaches the transmitter's rated maximum. It is a protection
+mechanism, not a processing tool. Think of it as the transmitter telling you: "You are asking me to
+do too much." A healthy ALC behavior is deflection on audio peaks with recovery between peaks. A
+continuously pinned ALC means your microphone gain is too high. Reduce it. A continuously pinned
+ALC is not the transmitter working hard &mdash; it is the transmitter being abused, and the result
+is a distorted, wide signal.</p>
+
+<h4>Speech Processor</h4>
+<p>The speech processor (also called the processor or compression) increases the average power of
+your transmitted signal relative to its peak power. An unprocessed voice signal has a high peak-to-average
+ratio &mdash; loud syllables are much louder than quiet ones, meaning the transmitter is only near
+its peak output briefly. The speech processor compresses this ratio, bringing the quieter syllables
+up in level, which increases the average power without increasing the peak power.</p>
+
+<p>The benefit is real: moderate speech processing can increase effective average power by 6 to 10 dB,
+which is equivalent to quadrupling or more your power output in terms of signal readability under
+difficult conditions. In a pileup or on a noisy path, processed audio cuts through better.</p>
+
+<p>The cost is audio quality. Heavy processing makes voices sound unnatural, harsh, and fatiguing
+to listen to. In a casual ragchew, heavy processing is annoying and unnecessary. Use light processing
+(or none) for normal contacts. Use moderate processing when conditions are difficult and you need
+every dB you can get. Do not use heavy processing as a substitute for a proper antenna or more power.</p>
+
+<h4>Microphone Technique</h4>
+<p>How you use the microphone matters as much as how you set the controls. Talk across the microphone
+rather than directly into it &mdash; this reduces plosive sounds (the hard B and P sounds that
+produce loud thumps in the audio). Keep a consistent distance from the microphone. Moving closer
+and farther as you talk produces varying audio levels that the ALC must constantly chase. Speak
+at a normal conversational level, not louder than you would in person. Shouting into the microphone
+does not make your signal louder &mdash; it overdrives the audio chain and produces distortion.</p>
+
+<div class="tip-box">
+<strong>The simplest audio test:</strong> After setting up your microphone and gain levels, make a
+recording of your transmitted audio using your radio's built-in monitor function, or ask a local
+station to give you an honest audio report. What you hear in your headphones through the monitor
+is what other stations hear. If it sounds harsh, compressed, or distorted to you, it sounds that
+way to everyone you contact. Fix it before you operate routinely.
+</div>
+
+<hr>
+<h3>Digital Mode Interfaces &mdash; Connecting a Computer Correctly</h3>
+
+<p>Operating digital modes (FT8, PSK31, RTTY, Winlink) requires connecting your computer to your
+transceiver for audio and PTT (push-to-talk) control. Done correctly, this is straightforward and
+reliable. Done incorrectly, it creates ground loops, audio interference, RF feedback into the
+computer, and unstable operation. Most digital mode interface problems fall into one of three
+categories.</p>
+
+<h4>The Three Common Interface Problems</h4>
+
+<p><strong>1. Ground loops:</strong> A ground loop occurs when two pieces of equipment are connected
+by both their audio cables and their power grounds, creating a loop that acts as an antenna for
+electrical noise. The symptom is a 60 Hz (or 120 Hz) hum in the received audio and sometimes in
+the transmitted audio. The solution is audio isolation transformers between the computer and the
+transceiver's audio connections. Most commercial digital mode interfaces (SignaLink, RigBlaster,
+Digirig, etc.) include these transformers. If you are building your own interface, include them.
+They are inexpensive and solve the hum problem definitively.</p>
+
+<p><strong>2. RF feedback into the computer:</strong> When you transmit, your antenna radiates RF
+energy that can couple back into the audio and USB cables connecting your computer to the transceiver.
+This RF on the cable appears as audio interference in the received signal and can cause the computer
+to lose the serial connection to the radio, hang the digital mode software, or in severe cases
+reboot the computer. The solution is ferrite chokes on every cable between the computer and the
+transceiver: the USB cable, the audio cables, and the power cable to the interface. This is the
+same common-mode choke technique described in the grounding section &mdash; it prevents RF from
+riding on cables into equipment where it does not belong.</p>
+
+<p><strong>3. Audio level mismatch:</strong> The transceiver's audio output level and the computer's
+sound card input level may not be matched correctly. Too low and the digital mode software cannot
+decode signals. Too high and the audio clips, producing false decodes and missed signals. The solution
+is careful adjustment of the radio's audio output level and the computer's recording level until the
+software's audio level meter reads in the normal operating range (typically shown in the software
+documentation). For FT8 using WSJT-X, the waterfall display should show signals without the level
+indicator showing red clipping. Start with the radio's audio output at a low setting and increase
+it slowly while watching the software level meter.</p>
+
+<h4>CAT Control</h4>
+<p>Computer Aided Transceiver (CAT) control allows digital mode software to control your radio's
+frequency, mode, and PTT switching via a USB or serial connection. Most digital mode software
+(WSJT-X for FT8, fldigi for PSK31 and RTTY, JS8Call, etc.) requires or strongly benefits from
+CAT control. With CAT control, the software can automatically switch the radio to the correct
+frequency and mode, handle PTT via the serial port, and log contacts with accurate frequency
+information.</p>
+
+<p>Setting up CAT control requires knowing your radio's COM port assignment (check Device Manager
+on Windows or /dev/ttyUSB* on Linux Mint) and the correct baud rate and settings for your specific
+radio model. These are in your radio's manual under "computer interface" or "CAT system." Get CAT
+control working before trying to operate digital modes &mdash; it makes everything else easier.</p>
+
+<h4>Choosing an Interface</h4>
+<p>For a new operator setting up for digital modes, a commercial interface is the most reliable
+starting point. Purpose-built interfaces like the Tigertronics SignaLink USB, the RigBlaster,
+or the Digirig Mobile include the audio isolation transformers, level adjustment controls, and
+PTT switching needed for clean digital mode operation. They connect between your radio and computer
+via USB and are recognized as USB sound cards by your operating system. Drivers are generally
+not needed on Linux. These devices eliminate most common interface problems by design.</p>
+
+<hr>
+<h3>Antenna Tuners &mdash; What They Do and What They Do Not Do</h3>
+
+<p>An antenna tuner (properly called an antenna coupler or impedance matching network) matches the
+impedance presented by your feedline to the 50-ohm output impedance your transmitter expects.
+Understanding what the tuner actually does prevents a common misconception that causes operators
+to overestimate their antenna system's performance.</p>
+
+<p>The antenna tuner makes the transmitter happy by presenting it with a 50-ohm load. It does this
+by transforming the impedance at the input of the tuner &mdash; whatever comes from the feedline &mdash;
+to 50 ohms at the transmitter connection. The transmitter sees 50 ohms, transfers maximum power to
+the tuner, and is satisfied.</p>
+
+<p>What the tuner does not do: it does not change the antenna's radiation efficiency, it does not
+change the SWR on the feedline between the tuner and the antenna, and it does not reduce the power
+lost in a feedline with high SWR. If your antenna system has a 5:1 SWR and you have 100 feet of
+RG-8 feedline, there is significant power being lost as heat in that feedline. The tuner fixes the
+SWR <em>at the transmitter</em> but does nothing about the loss in the feedline. The transmitter
+is happy; a significant fraction of your power is still being dissipated in the cable.</p>
+
+<p>This matters practically when choosing between a 50-ohm resonant antenna (no tuner needed, low
+feedline loss) and a non-resonant antenna with a tuner (feedline loss depends on SWR and cable
+quality). For most field and portable operations, a resonant dipole cut for the band you are using
+and fed with short, quality coax is more efficient than any tuner-antenna combination.</p>
+
+<hr>
+<h3>Portable and Expedient Antennas &mdash; Getting on the Air Quickly</h3>
+
+<p>Most new General Class operators are focused on getting on the air, and they should be. The
+antenna you actually put up today beats the perfect antenna you are still planning. A few practical
+points for getting started quickly with reliable results:</p>
+
+<p><strong>A dipole for the band you want:</strong> Cut a simple dipole for 40 meters (about 66 feet
+total wire) or 20 meters (about 33 feet total wire), hang it as high as you can manage with whatever
+supports are available, and connect it with 50-ohm coax through a 1:1 balun. This antenna costs
+almost nothing, takes an hour to build and install, and performs well. It is the benchmark against
+which every other antenna is measured. Start here.</p>
+
+<p><strong>Height matters more than perfection:</strong> A dipole at 35 feet is significantly better
+than a dipole at 15 feet for DX work. A dipole at 15 feet is still a functional antenna and will
+make contacts. Get it as high as you can with the supports you have, and raise it later when you
+can manage a better installation. Do not wait for the perfect installation before operating.</p>
+
+<p><strong>End-fed half-wave (EFHW) antennas:</strong> End-fed half-wave antennas have become popular
+for portable operation because they require only one elevated support point. They need a 49:1 or
+64:1 impedance transformer at the feed point and may need a short counterpoise wire for best results.
+They are more sensitive to installation variables than a center-fed dipole but are very practical
+for field use where a single tall tree or mast is available.</p>
+
+<p><strong>Verify with an SWR check before transmitting at full power:</strong> Whatever antenna
+you put up, check SWR at the transmitter end of the feedline before transmitting at full power.
+Start at low power (10 to 25 watts), check SWR, confirm it is 3:1 or below, then increase to
+operating power. This protects your radio and tells you immediately if something in the antenna
+system is wrong.</p>
+
+<hr>
+<!-- ============================================================
+     PART 2: EXAM COVERAGE
+     ============================================================ -->
+<h2 id="exam">Part 2 &mdash; Exam Coverage</h2>
+<p>The G4 subelement covers station setup, operating practices, test equipment, and interference
+as tested in the 2023&ndash;2027 FCC General Class question pool. The operator knowledge section
+above provides the context; this section provides concise exam answers and all pool questions.</p>
+
+<h3>G4A &mdash; Station Operation and Set-Up</h3>
+<ul>
+<li>ALC: senses output level and reduces drive to prevent distortion; should deflect on peaks, not stay pegged</li>
+<li>Notch filter: eliminates a specific carrier (heterodyne) within the receiver passband</li>
+<li>Noise blanker: suppresses pulse-type interference; may cause distortion on strong signals</li>
+<li>DSP noise reduction: improves weak signal readability; aggressive settings produce audio artifacts</li>
+<li>AGC slow: best for SSB; AGC fast: best for CW and rapid fading</li>
+<li>RF gain reduction: reduces front-end overload when band is crowded with strong signals</li>
+<li>RIT/Clarifier: adjusts receive frequency without changing transmit frequency</li>
+</ul>
+
+<h3>G4B &mdash; Test and Monitoring Equipment</h3>
+<ul>
+<li>Oscilloscope: displays waveform shape vs. time; used to check modulation quality and CW keying waveform</li>
+<li>Spectrum analyzer: displays amplitude vs. frequency; used to identify spurious emissions and signal bandwidth</li>
+<li>Dummy load: non-radiating 50-ohm load for testing transmitters without causing on-air interference</li>
+<li>Two-tone test: two audio tones fed to SSB transmitter while observing oscilloscope; checks linearity and distortion</li>
+<li>SWR meter: measures impedance match between transmitter and antenna; inserted in series with feedline</li>
+<li>Field strength meter: measures relative RF signal strength; used to check antenna radiation patterns</li>
+</ul>
+
+<h3>G4C &mdash; Interference with Consumer Electronics</h3>
+<ul>
+<li>RF interference causes: common-mode RF current on cables; inadequate bonding; antenna too close to equipment</li>
+<li>Solutions: ferrite chokes on cables; common-mode chokes on feedlines; proper station grounding and bonding</li>
+<li>Mobile HF interference: most commonly caused by inadequate bonding of vehicle electrical system</li>
+<li>Computer crashes on transmit: RF on USB or serial cables; add ferrite chokes to affected cables</li>
+<li>TVI: often caused by harmonic or spurious emissions; low-pass filter at transmitter output; check feedline routing</li>
+</ul>
+
+<h3>G4D &mdash; Speech Processors and S-Meters</h3>
+<ul>
+<li>Speech processor: increases average transmitted power by compressing dynamic range; improves signal
+  readability in difficult conditions; excessive processing degrades audio quality</li>
+<li>S-meter: measures received signal strength; calibrated in S-units where one S-unit = 6 dB; S9 = reference</li>
+<li>S9 reference level: defined as 50 microvolts at the receiver input (on HF)</li>
+<li>Signal above S9: reported in dB over S9 (e.g., "20 dB over S9")</li>
+</ul>
+
+<h3>G4E &mdash; HF Mobile and Portable Operation</h3>
+<ul>
+<li>HF mobile antenna challenge: antenna must be electrically short at most HF frequencies; requires loading coil</li>
+<li>Loading coil: adds inductance to electrically lengthen a short mobile antenna to resonance</li>
+<li>Mobile bonding: bond all vehicle body panels, engine block, and equipment chassis together; prevents RF from
+  appearing on audio and control cables</li>
+<li>Portable power: solar panels, battery banks, and generator combinations; match power source capacity to
+  transceiver current draw</li>
+<li>Dummy load for portable testing: essential; do not test into an untested antenna at full power in the field</li>
 </ul>
 
 <hr>
-<h2>Practice Questions</h2>
+<h3>Practice Questions &mdash; G4 Complete Pool Coverage</h3>
+
+<h4>G4A &mdash; Station Operation</h4>
 
 <div class="question-block">
-<p><strong>Q1 (G4A01)</strong> &mdash; What is the purpose of the notch filter found on many HF transceivers?</p>
-<ul><li>A. To reduce noise from local atmospheric sources</li><li>B. To reduce interference from carriers in the receiver passband</li><li>C. To reduce power supply hum</li><li>D. To remove impulse noise from the receiver</li></ul>
+<p><strong>Q1 (G4A01)</strong> &mdash; What is the purpose of the "notch filter" found on many HF transceivers?</p>
+<ul><li>A. To reduce noise from local atmospheric sources</li><li>B. To reduce interference from carriers in the receiver passband</li><li>C. To reduce power supply hum in the receiver audio</li><li>D. To remove impulse noise from the received signal</li></ul>
 </div>
 
 <div class="question-block">
-<p><strong>Q2 (G4B05)</strong> &mdash; What is an advantage of digital signal processing (DSP)?</p>
-<ul><li>A. It eliminates all types of interference</li><li>B. It can perform filtering and noise reduction difficult with analog circuits</li><li>C. It increases transmitter power output</li><li>D. It increases frequency stability</li></ul>
+<p><strong>Q2 (G4A02)</strong> &mdash; What is one advantage of selecting the opposite or "reverse" sideband when receiving CW signals on a typical HF transceiver?</p>
+<ul><li>A. Interference from impulse noise will be eliminated</li><li>B. More stations can be accommodated within a given signal bandwidth</li><li>C. Interference from carriers occurring on the high side of the passband is reduced</li><li>D. It has no effect and is not recommended</li></ul>
 </div>
 
 <div class="question-block">
-<p><strong>Q3 (G4D01)</strong> &mdash; What is the purpose of a speech processor in an SSB transmitter?</p>
-<ul><li>A. To reduce transmitter power consumption</li><li>B. To improve voice quality during contests</li><li>C. To increase intelligibility by increasing average power</li><li>D. To remove distortion from the microphone signal</li></ul>
+<p><strong>Q3 (G4A03)</strong> &mdash; What is normally meant by operating a transceiver in "split" mode?</p>
+<ul><li>A. The transceiver is used to generate both a 60 Hz carrier and audio in the AFSK mode</li><li>B. The transceiver is operating on two different frequencies, one for transmit and one for receive</li><li>C. The transceiver is using a local oscillator to achieve super-heterodyne reception</li><li>D. The transceiver is connected to a second receiver for enhanced reception</li></ul>
 </div>
 
 <div class="question-block">
-<p><strong>Q4 (G4B01)</strong> &mdash; Which test instrument displays the shape of a transmitted waveform?</p>
-<ul><li>A. A spectrum analyzer</li><li>B. A frequency counter</li><li>C. An oscilloscope</li><li>D. A field strength meter</li></ul>
+<p><strong>Q4 (G4A04)</strong> &mdash; What reading on the plate current meter of a vacuum tube RF power amplifier indicates correct adjustment of the plate tuning control?</p>
+<ul><li>A. A pronounced peak</li><li>B. A pronounced dip</li><li>C. No change observed</li><li>D. A slow, steady rise to a maximum</li></ul>
 </div>
 
 <div class="question-block">
-<p><strong>Q5 (G4B02)</strong> &mdash; What is an advantage of a spectrum analyzer over an oscilloscope for RF measurements?</p>
-<ul><li>A. It can measure voltages in AC circuits</li><li>B. It displays signal amplitude versus frequency simultaneously</li><li>C. It is more accurate for time-domain measurements</li><li>D. It requires less calibration</li></ul>
+<p><strong>Q5 (G4A05)</strong> &mdash; What is a reason to use Automatic Level Control (ALC) with an RF power amplifier?</p>
+<ul><li>A. To balance the transmitter audio frequency response</li><li>B. To reduce RF gain to a safe level when a sudden increase in drive signal occurs</li><li>C. To slowly increase the RF drive to the amplifier during warm-up to prevent overload</li><li>D. To eliminate AGC action in the receiver during transmission</li></ul>
 </div>
 
 <div class="question-block">
-<p><strong>Q6 (G4A12)</strong> &mdash; What is the function of automatic gain control (AGC)?</p>
-<ul><li>A. It adjusts transmitter power based on signal strength</li><li>B. It prevents strong signals from overdriving the receiver</li><li>C. It controls the bandwidth of the IF filter</li><li>D. It reduces the output of the final amplifier</li></ul>
+<p><strong>Q6 (G4A06)</strong> &mdash; What is the purpose of a receiver noise blanker?</p>
+<ul><li>A. To reduce receiver gain when strong signals are present</li><li>B. To reduce noise from impulse sources such as ignition systems</li><li>C. To automatically adjust the bandwidth of the receiver to the bandwidth of the signal being received</li><li>D. To reduce power supply ripple</li></ul>
 </div>
 
 <div class="question-block">
-<p><strong>Q7 (G4C05)</strong> &mdash; What is the most common cause of RF interference from an HF mobile installation?</p>
-<ul><li>A. Inadequate bonding of the vehicle's electrical system</li><li>B. A poorly aimed antenna</li><li>C. Excessive transmitter power</li><li>D. A poorly filtered audio system</li></ul>
+<p><strong>Q7 (G4A07)</strong> &mdash; What happens as a receiver's noise figure decreases?</p>
+<ul><li>A. The signal-to-noise ratio decreases</li><li>B. RF interference increases</li><li>C. The receiver's dynamic range decreases</li><li>D. The receiver's sensitivity increases</li></ul>
 </div>
 
 <div class="question-block">
-<p><strong>Q8 (G4E05)</strong> &mdash; Which of the following is a disadvantage of using a dummy load?</p>
-<ul><li>A. It does not allow SWR measurement</li><li>B. It will not allow adjustment under actual operating conditions</li><li>C. It cannot be connected to an antenna tuner</li><li>D. It converts RF power to heat without radiating</li></ul>
+<p><strong>Q8 (G4A08)</strong> &mdash; What is the effect on receiver performance of using a too-narrow filter bandwidth?</p>
+<ul><li>A. It reduces the receiver's dynamic range</li><li>B. It leads to reduced selectivity</li><li>C. It will cause loss of high-frequency audio response</li><li>D. It will cause loss of low-frequency audio response</li></ul>
+</div>
+
+<div class="question-block">
+<p><strong>Q9 (G4A09)</strong> &mdash; What is the purpose of the "AGC" control on a receiver?</p>
+<ul><li>A. It smooths out the gain of the audio amplifier stage</li><li>B. It maintains fairly constant receiver output when the input signal varies in strength</li><li>C. It controls the gain of the RF amplifier to prevent overloading by strong input signals</li><li>D. It provides a means to control the gain of the IF amplifier stage independently</li></ul>
+</div>
+
+<div class="question-block">
+<p><strong>Q10 (G4A10)</strong> &mdash; What is the purpose of an antenna tuner?</p>
+<ul><li>A. It resonates the antenna</li><li>B. It matches the antenna system impedance to the transceiver's output impedance</li><li>C. It is used to transmit simultaneously on multiple bands</li><li>D. It improves the radiation efficiency of the antenna</li></ul>
+</div>
+
+<div class="question-block">
+<p><strong>Q11 (G4A11)</strong> &mdash; Why should the ALC system be set to just barely keep the peak power at or below the legal or desired maximum?</p>
+<ul><li>A. To prevent damage to the microphone</li><li>B. To maintain the best transmitter efficiency</li><li>C. To reduce the chance of distorting the transmitted signal</li><li>D. To eliminate third-order intermodulation distortion products</li></ul>
+</div>
+
+<div class="question-block">
+<p><strong>Q12 (G4A12)</strong> &mdash; What is the function of automatic gain control, or AGC?</p>
+<ul><li>A. It smooths out the gain of the audio amplifier</li><li>B. It maintains fairly constant audio output from the receiver when the signal amplitude varies</li><li>C. It controls the gain of the transmitter when the input signal varies</li><li>D. It prevents interference from strong signals by reducing their amplitude</li></ul>
+</div>
+
+<h4>G4B &mdash; Test Equipment</h4>
+
+<div class="question-block">
+<p><strong>Q13 (G4B01)</strong> &mdash; What item of test equipment contains horizontal and vertical channel amplifiers?</p>
+<ul><li>A. A spectrum analyzer</li><li>B. A vector network analyzer</li><li>C. An oscilloscope</li><li>D. A time-domain reflectometer</li></ul>
+</div>
+
+<div class="question-block">
+<p><strong>Q14 (G4B02)</strong> &mdash; Which of the following is an advantage of an oscilloscope over a spectrum analyzer?</p>
+<ul><li>A. An oscilloscope displays both the amplitude and frequency content of a signal</li><li>B. An oscilloscope can display the time domain of a waveform</li><li>C. A spectrum analyzer can display a wider range of frequencies</li><li>D. A spectrum analyzer has better resolution</li></ul>
+</div>
+
+<div class="question-block">
+<p><strong>Q15 (G4B03)</strong> &mdash; Which of the following is the best instrument to use when checking the keying waveform of a CW transmitter?</p>
+<ul><li>A. A spectrum analyzer</li><li>B. A frequency counter</li><li>C. An oscilloscope</li><li>D. A SINAD meter</li></ul>
+</div>
+
+<div class="question-block">
+<p><strong>Q16 (G4B04)</strong> &mdash; What is the purpose of a dummy load?</p>
+<ul><li>A. To prevent transmitting when the receiver is in use</li><li>B. To allow testing of a transmitter without radiating a signal</li><li>C. To improve the efficiency of the transmitter</li><li>D. To prevent the use of the transmitter when no antenna is installed</li></ul>
+</div>
+
+<div class="question-block">
+<p><strong>Q17 (G4B05)</strong> &mdash; What is the purpose of a two-tone test of an SSB transmitter?</p>
+<ul><li>A. Modulation of an SSB transmitter must be tested with two pure tones to ensure that excessive audio harmonic distortion is not present at the output</li><li>B. Intermodulation distortion products in the audio stage and the RF stage of the transmitter can be viewed by monitoring the output with a spectrum analyzer</li><li>C. It checks to see that the transmitter uses the appropriate bandwidth</li><li>D. Transmitter performance can be evaluated under simulated phone (voice) conditions</li></ul>
+</div>
+
+<div class="question-block">
+<p><strong>Q18 (G4B06)</strong> &mdash; What is the purpose of a field strength meter?</p>
+<ul><li>A. To determine the radiation resistance of an antenna</li><li>B. To measure the relative strength of an RF field</li><li>C. To verify the accuracy of a frequency counter</li><li>D. To measure the strength of the Earth's magnetic field</li></ul>
+</div>
+
+<div class="question-block">
+<p><strong>Q19 (G4B07)</strong> &mdash; What signal source is connected to the vertical deflection input of an oscilloscope when you are testing the modulation characteristics of an SSB transmitter?</p>
+<ul><li>A. The RF output of the transmitter</li><li>B. The output of the audio frequency modulator</li><li>C. A 60 Hz line voltage reference</li><li>D. The audio output from the microphone</li></ul>
+</div>
+
+<h4>G4C &mdash; Interference</h4>
+
+<div class="question-block">
+<p><strong>Q20 (G4C01)</strong> &mdash; Which of the following might be useful in reducing RF interference to audio-frequency devices?</p>
+<ul><li>A. Bypass capacitors</li><li>B. A low-pass filter</li><li>C. Ferrite chokes</li><li>D. All of these choices are correct</li></ul>
+</div>
+
+<div class="question-block">
+<p><strong>Q21 (G4C02)</strong> &mdash; Which of the following could be a cause of interference covering a wide range of frequencies?</p>
+<ul><li>A. Not using a balun or line isolator to feed the antenna</li><li>B. Arcing at a poor electrical connection</li><li>C. Using a balun incorrectly</li><li>D. Excessive voltages on the incoming power line</li></ul>
+</div>
+
+<div class="question-block">
+<p><strong>Q22 (G4C03)</strong> &mdash; What sound is heard from a public address (PA) system if it is having radio frequency interference from a nearby CW transmitter?</p>
+<ul><li>A. A steady hum whenever the transmitter is on the air</li><li>B. On-and-off humming or clicking</li><li>C. Distorted audio</li><li>D. Clearly audible CW signals at a very high audio level</li></ul>
+</div>
+
+<div class="question-block">
+<p><strong>Q23 (G4C04)</strong> &mdash; What is the effect on RF performance of a loose connection in a feedline?</p>
+<ul><li>A. Reduction in signal strength</li><li>B. Erratic changes in SWR</li><li>C. Transmission of noise pulses</li><li>D. All of these choices are correct</li></ul>
+</div>
+
+<div class="question-block">
+<p><strong>Q24 (G4C05)</strong> &mdash; What is the most likely cause of radio frequency interference to consumer electronics devices?</p>
+<ul><li>A. Broadband noise floor of the consumer electronics device</li><li>B. Inadequate RF filtering in the consumer electronics device</li><li>C. Spurious emissions from the amateur station transmitter</li><li>D. The consumer electronics device operating at the same frequency as the amateur transmission</li></ul>
+</div>
+
+<h4>G4D &mdash; Speech Processors and S-Meters</h4>
+
+<div class="question-block">
+<p><strong>Q25 (G4D01)</strong> &mdash; What is the purpose of a speech processor as used in a single-sideband phone transmitter?</p>
+<ul><li>A. Increases the intelligibility of transmitted phone signals during poor conditions</li><li>B. Increases the average power of the transmitted signal</li><li>C. Improves the fidelity of the transmitted audio</li><li>D. Decreases the bandwidth of the transmitted signal</li></ul>
+</div>
+
+<div class="question-block">
+<p><strong>Q26 (G4D02)</strong> &mdash; Which of the following describes the effect of speech processing on a transmitted SSB signal?</p>
+<ul><li>A. Increases the peak envelope power</li><li>B. Reduces average power</li><li>C. Increases average power</li><li>D. Reduces distortion</li></ul>
+</div>
+
+<div class="question-block">
+<p><strong>Q27 (G4D03)</strong> &mdash; Which of the following can be the result of an incorrectly adjusted speech processor?</p>
+<ul><li>A. Reduced received signal strength</li><li>B. Increased SWR</li><li>C. Audible hum on received audio</li><li>D. Distorted transmitted audio</li></ul>
+</div>
+
+<div class="question-block">
+<p><strong>Q28 (G4D04)</strong> &mdash; What does an S-meter measure?</p>
+<ul><li>A. Modulation index</li><li>B. Receiver audio output</li><li>C. Received signal strength</li><li>D. Transmitter power output</li></ul>
+</div>
+
+<div class="question-block">
+<p><strong>Q29 (G4D05)</strong> &mdash; How does a signal that reads 20 dB over S9 compare to one that reads S9 on a receiver, assuming a properly calibrated S-meter?</p>
+<ul><li>A. It is 10 times less powerful</li><li>B. It is 20 times less powerful</li><li>C. It is 20 times more powerful</li><li>D. It is 100 times more powerful</li></ul>
+</div>
+
+<h4>G4E &mdash; Mobile and Portable Operation</h4>
+
+<div class="question-block">
+<p><strong>Q30 (G4E01)</strong> &mdash; What is the purpose of a loading coil used with an HF mobile antenna?</p>
+<ul><li>A. To increase the SWR bandwidth of the antenna</li><li>B. To electrically lengthen a physically short antenna</li><li>C. To lower the losses in the antenna feedline</li><li>D. To reduce the Q of the antenna and increase bandwidth</li></ul>
+</div>
+
+<div class="question-block">
+<p><strong>Q31 (G4E02)</strong> &mdash; What is one disadvantage of a shortened mobile antenna as compared to a full-size antenna?</p>
+<ul><li>A. Short antennas are more likely to cause distortion of transmitted signals</li><li>B. Short antennas can only receive signals, not transmit them</li><li>C. Operating bandwidth may be very limited</li><li>D. Harmonic radiation may increase</li></ul>
+</div>
+
+<div class="question-block">
+<p><strong>Q32 (G4E03)</strong> &mdash; Which of the following direct, fused power connections would be the best for a 100-watt HF mobile installation?</p>
+<ul><li>A. To the battery using heavy gauge wire</li><li>B. To the alternator output terminal using heavy gauge wire</li><li>C. To the vehicle ground strap using heavy gauge wire</li><li>D. To the generator using heavy gauge wire</li></ul>
+</div>
+
+<div class="question-block">
+<p><strong>Q33 (G4E04)</strong> &mdash; Why should a mobile HF antenna loading coil have a high ratio of reactance to resistance?</p>
+<ul><li>A. To swamp out harmonics</li><li>B. To maximize losses in the coil</li><li>C. To minimize losses in the coil</li><li>D. To minimize the Q of the antenna</li></ul>
+</div>
+
+<div class="question-block">
+<p><strong>Q34 (G4E05)</strong> &mdash; What is one disadvantage of using a dipole antenna instead of a vertically polarized antenna for mobile operation?</p>
+<ul><li>A. The pattern of a dipole is not omnidirectional</li><li>B. The feedpoint impedance varies too much based on speed of the vehicle</li><li>C. It will not radiate polarized signals</li><li>D. It cannot be used for digital communications</li></ul>
 </div>
 
 <div class="answer-key">
-<h3>Answer Key</h3>
+<h3>Answer Key &mdash; G4 Complete</h3>
 <ol>
-<li><strong>B</strong> &mdash; A notch filter eliminates a specific interfering carrier within the passband</li>
-<li><strong>B</strong> &mdash; DSP implements filtering and noise reduction difficult to achieve with analog circuits</li>
-<li><strong>C</strong> &mdash; A speech processor increases average power, improving intelligibility</li>
-<li><strong>C</strong> &mdash; An oscilloscope displays waveform shape in the time domain</li>
-<li><strong>B</strong> &mdash; A spectrum analyzer shows amplitude vs. frequency simultaneously</li>
-<li><strong>B</strong> &mdash; AGC prevents receiver overload from strong signals</li>
-<li><strong>A</strong> &mdash; Inadequate electrical bonding is the most common mobile RF interference cause</li>
-<li><strong>D</strong> &mdash; Converting RF to heat without radiating is the intended function, not truly a disadvantage for testing purposes</li>
+<li><strong>B</strong> &mdash; The notch filter reduces interference from a carrier (heterodyne) within the receiver passband</li>
+<li><strong>C</strong> &mdash; Reverse sideband reduces interference from carriers on the high side of the passband by placing them on the opposite side</li>
+<li><strong>B</strong> &mdash; Split mode means transmitting on one frequency and receiving on another</li>
+<li><strong>B</strong> &mdash; Correct plate tuning is indicated by a pronounced dip in plate current</li>
+<li><strong>B</strong> &mdash; ALC reduces RF drive to prevent overload from sudden increases in drive signal</li>
+<li><strong>B</strong> &mdash; The noise blanker reduces noise from impulse sources such as ignition systems</li>
+<li><strong>D</strong> &mdash; A lower noise figure means better sensitivity (lower noise figure = receiver adds less noise)</li>
+<li><strong>C</strong> &mdash; A too-narrow filter causes loss of high-frequency audio response, making the signal sound muffled</li>
+<li><strong>B</strong> &mdash; AGC maintains fairly constant receiver output when the input signal varies in strength</li>
+<li><strong>B</strong> &mdash; An antenna tuner matches the antenna system impedance to the transceiver's output impedance</li>
+<li><strong>C</strong> &mdash; ALC set correctly reduces the chance of distorting the transmitted signal</li>
+<li><strong>B</strong> &mdash; AGC maintains fairly constant audio output from the receiver as signal amplitude varies</li>
+<li><strong>C</strong> &mdash; An oscilloscope contains horizontal and vertical channel amplifiers</li>
+<li><strong>B</strong> &mdash; The oscilloscope's advantage is its ability to display the time domain (waveform shape vs. time)</li>
+<li><strong>C</strong> &mdash; An oscilloscope is best for checking the CW keying waveform shape</li>
+<li><strong>B</strong> &mdash; A dummy load allows testing without radiating a signal on the air</li>
+<li><strong>D</strong> &mdash; The two-tone test evaluates transmitter performance under simulated voice (phone) conditions</li>
+<li><strong>B</strong> &mdash; A field strength meter measures the relative strength of an RF field</li>
+<li><strong>A</strong> &mdash; The RF output of the transmitter is connected to the vertical deflection input when testing SSB modulation</li>
+<li><strong>D</strong> &mdash; All of the listed items (bypass capacitors, low-pass filter, ferrite chokes) may be useful</li>
+<li><strong>B</strong> &mdash; Arcing at a poor electrical connection causes broadband interference across a wide range of frequencies</li>
+<li><strong>B</strong> &mdash; CW interference to a PA system sounds like on-and-off humming or clicking corresponding to the CW keying</li>
+<li><strong>D</strong> &mdash; A loose connection causes all of these: reduced signal strength, erratic SWR, and noise pulses</li>
+<li><strong>B</strong> &mdash; The most likely cause is inadequate RF filtering in the consumer electronics device</li>
+<li><strong>A</strong> &mdash; A speech processor increases the intelligibility of transmitted phone signals during poor conditions</li>
+<li><strong>C</strong> &mdash; Speech processing increases average power (by compressing the dynamic range)</li>
+<li><strong>D</strong> &mdash; An incorrectly adjusted (over-driven) speech processor results in distorted transmitted audio</li>
+<li><strong>C</strong> &mdash; An S-meter measures received signal strength</li>
+<li><strong>D</strong> &mdash; 20 dB over S9 is 100 times more powerful than S9 (20 dB = 10&times;10 in power ratio)</li>
+<li><strong>B</strong> &mdash; A loading coil electrically lengthens a physically short mobile antenna to resonance</li>
+<li><strong>C</strong> &mdash; A shortened antenna has very limited operating bandwidth</li>
+<li><strong>A</strong> &mdash; Direct connection to the battery using heavy gauge fused wire is the correct mobile power connection</li>
+<li><strong>C</strong> &mdash; A high reactance-to-resistance ratio (high Q) minimizes losses in the loading coil</li>
+<li><strong>A</strong> &mdash; A dipole is not omnidirectional, which is a disadvantage for mobile operation where direction changes constantly</li>
 </ol>
 </div>
 
-</div>
+<hr>
+<!-- ============================================================
+     PART 3: RESOURCES
+     ============================================================ -->
+<h2 id="resources">Part 3 &mdash; External Resources</h2>
+
+<h3>Station Setup and Grounding</h3>
+<ul class="resource-list">
+<li><strong>ARRL RF Interference Handbook</strong> &mdash; The definitive reference for diagnosing and
+solving RF interference problems including RF in the shack, TVI, and digital interference. If you
+are experiencing any interference problem, start here.<br>
+<a href="https://home.arrl.org/action/Shop/Store" target="_blank" rel="noopener">ARRL Store</a></li>
+<li><strong>K9YC RF Grounding and Bonding Guide</strong> &mdash; Jim Brown K9YC has published extensively
+on station grounding, common-mode chokes, and ferrite selection for HF stations. His application notes
+are free and authoritative.<br>
+<a href="https://k9yc.com/publish.htm" target="_blank" rel="noopener">k9yc.com/publish.htm</a></li>
+<li><strong>W8JI Station Grounding</strong> &mdash; Tom Rauch W8JI's detailed technical articles on
+station grounding and RF interference. Excellent for understanding why solutions work, not just what
+to do.<br>
+<a href="https://www.w8ji.com" target="_blank" rel="noopener">w8ji.com</a></li>
+</ul>
+
+<h3>Digital Mode Interfaces</h3>
+<ul class="resource-list">
+<li><strong>WSJT-X Documentation</strong> &mdash; The official documentation for FT8, FT4, JT65, and
+other WSJT modes. Includes detailed setup instructions for audio levels, CAT control, and PTT on
+all major transceivers. Free download.<br>
+<a href="https://physics.princeton.edu/pulsar/k1jt/wsjtx.html" target="_blank" rel="noopener">physics.princeton.edu/pulsar/k1jt/wsjtx.html</a></li>
+<li><strong>Fldigi Documentation</strong> &mdash; Setup guide for PSK31, RTTY, CW, and other modes
+using the fldigi software. Runs on Linux, Windows, and Mac.<br>
+<a href="http://www.w1hkj.com" target="_blank" rel="noopener">w1hkj.com</a></li>
+<li><strong>Digirig Mobile Interface</strong> &mdash; An inexpensive, well-designed digital mode
+interface that works well on Linux. Plug-and-play USB audio and CAT support for most modern
+transceivers.<br>
+<a href="https://digirig.net" target="_blank" rel="noopener">digirig.net</a></li>
+</ul>
+
+<h3>Test Equipment</h3>
+<ul class="resource-list">
+<li><strong>RigExpert Antenna Analyzers</strong> &mdash; Popular, well-regarded antenna analyzers
+at various price points. The AA-35 Zoom is an excellent first analyzer for HF through VHF work.<br>
+<a href="https://rigexpert.com" target="_blank" rel="noopener">rigexpert.com</a></li>
+<li><strong>ARRL Test Equipment for the Radio Amateur</strong> &mdash; Covers how to use and
+understand test equipment including oscilloscopes, spectrum analyzers, SWR meters, and dummy loads.
+Good reference for new operators building their test bench.<br>
+<a href="https://home.arrl.org/action/Shop/Store" target="_blank" rel="noopener">ARRL Store</a></li>
+</ul>
+
+<h3>Books</h3>
+<ul class="resource-list">
+<li><strong>ARRL General Class License Manual</strong> &mdash; Standard exam study guide covering
+all G4 subelement topics.<br>
+<a href="https://home.arrl.org/action/Shop/Store" target="_blank" rel="noopener">ARRL Store</a></li>
+<li><strong>The ARRL Handbook for Radio Communications</strong> &mdash; Comprehensive treatment of
+station setup, test equipment, interference, and all technical topics in G4 and beyond.<br>
+<a href="https://home.arrl.org/action/Shop/Store" target="_blank" rel="noopener">ARRL Store</a></li>
+<li><strong>No-Nonsense General Class Study Guide (KB6NU)</strong> &mdash; Free PDF covering all
+pool questions including G4.<br>
+<a href="https://www.kb6nu.com/study-guides/" target="_blank" rel="noopener">kb6nu.com/study-guides</a></li>
+</ul>
+
+<h3>Practice Exams</h3>
+<ul class="resource-list">
+<li><strong>HamStudy.org</strong> &mdash; Free practice exams with per-subelement performance tracking.<br>
+<a href="https://hamstudy.org" target="_blank" rel="noopener">hamstudy.org</a></li>
+<li><strong>QRZ.com Practice Exams</strong> &mdash; Full simulated General Class exams from the actual pool.<br>
+<a href="https://www.qrz.com/hamtest/" target="_blank" rel="noopener">qrz.com/hamtest</a></li>
+</ul>
+
 <hr>
 <p><a href="general_study.html">Return to General Class Course Index</a></p>
 <div class="footer">
@@ -206,9 +901,11 @@ via serial or USB. Required by most digital mode software (WSJT-X for FT8, etc.)
 <p>&copy; N0NJY &ndash; Rick Donaldson, 1997&ndash;2026</p>
 </div>
 </div>
+</div>
+
 <script>
-const starfield = document.getElementById('starfield');
-const starCount = 150;
+const starfield=document.getElementById('starfield');
+const starCount=150;
 for(let i=0;i<starCount;i++){
 const star=document.createElement('div');
 star.className='star';
