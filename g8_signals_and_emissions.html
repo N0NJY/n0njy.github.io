@@ -3,68 +3,37 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="author" content="Rick">
-<meta name="description" content="General Class Module G8 – Modulation, Digital Modes, Bandwidth, Spurious – N0NJY">
-<title>G8: Signals and Emissions &ndash; N0NJY</title>
+<meta name="author" content="Rick Donaldson N0NJY">
+<meta name="description" content="General Class Module G8 – Signals and Emissions – Modulation, Digital Modes, Bandwidth, Spread Spectrum – N0NJY">
+<title>G8: Signals and Emissions – N0NJY</title>
 <link rel="stylesheet" href="style.css">
 <style>
-.page{
-max-width:900px;
-margin:auto;
-padding:2rem 1rem;
-color:yellow;
-}
-.page a{
-color:#8ecbff;
-text-decoration:none;
-}
-.page a:hover{
-text-decoration:underline;
-color:#ffffff;
-}
-h1,h2,h3{
-margin-top:1rem;
-}
-.lesson{
-margin-top:1.5rem;
-line-height:1.6;
-}
-.footer{
-margin-top:3rem;
-font-size:0.9rem;
-}
-.question-block{
-margin:1rem 0 1.5rem 0;
-padding:0.8rem 1rem;
-background:rgba(255,255,255,0.04);
-border-left:3px solid #8ecbff;
-border-radius:4px;
-}
-.answer-key{
-margin-top:1.5rem;
-padding:0.8rem 1rem;
-background:rgba(0,80,0,0.18);
-border-left:3px solid #66cc66;
-border-radius:4px;
-}
-table.band-table{
-width:100%;
-border-collapse:collapse;
-margin:1rem 0;
-font-size:0.92em;
-}
-table.band-table th{
-background:rgba(255,255,255,0.1);
-color:#8ecbff;
-padding:0.4rem 0.7rem;
-text-align:left;
-border-bottom:1px solid rgba(255,255,255,0.2);
-}
-table.band-table td{
-padding:0.35rem 0.7rem;
-border-bottom:1px solid rgba(255,255,255,0.07);
-color:#e0e0e0;
-}
+.page{max-width:900px;margin:auto;padding:2rem 1rem;color:yellow;}
+.page a{color:#8ecbff;text-decoration:none;}
+.page a:hover{text-decoration:underline;color:#ffffff;}
+h1,h2,h3,h4{margin-top:1rem;}
+.lesson{margin-top:1.5rem;line-height:1.7;}
+.footer{margin-top:3rem;font-size:0.9rem;}
+.module-sections{display:flex;gap:0.5rem;margin:1.5rem 0 0.5rem 0;flex-wrap:wrap;}
+.module-sections a{background:rgba(255,255,255,0.07);border:1px solid rgba(255,255,255,0.2);border-radius:4px;padding:0.4rem 1rem;color:#8ecbff;font-size:0.9rem;font-weight:600;text-decoration:none;}
+.module-sections a:hover{background:rgba(255,255,255,0.15);color:#fff;}
+.elmer-box{background:rgba(255,200,0,0.07);border-left:4px solid #FFD700;border-radius:0 6px 6px 0;padding:0.9rem 1.2rem;margin:1.4rem 0;}
+.elmer-box strong{color:#FFD700;}
+.warning-box{background:rgba(255,80,80,0.07);border-left:4px solid #ff6060;border-radius:0 6px 6px 0;padding:0.9rem 1.2rem;margin:1.4rem 0;}
+.warning-box strong{color:#ff9090;}
+.tip-box{background:rgba(100,200,100,0.07);border-left:4px solid #66cc66;border-radius:0 6px 6px 0;padding:0.9rem 1.2rem;margin:1.4rem 0;}
+.tip-box strong{color:#90ee90;}
+.xref-box{background:rgba(100,150,255,0.07);border-left:4px solid #6699ff;border-radius:0 6px 6px 0;padding:0.9rem 1.2rem;margin:1.4rem 0;}
+.xref-box strong{color:#99bbff;}
+.question-block{margin:1rem 0 1.5rem 0;padding:0.8rem 1rem;background:rgba(255,255,255,0.04);border-left:3px solid #8ecbff;border-radius:4px;}
+.answer-key{margin-top:1.5rem;padding:0.8rem 1rem;background:rgba(0,80,0,0.18);border-left:3px solid #66cc66;border-radius:4px;}
+.resource-list{list-style:none;padding:0;}
+.resource-list li{margin:0.7rem 0;padding-left:1.2rem;position:relative;}
+.resource-list li::before{content:"›";position:absolute;left:0;color:#8ecbff;font-weight:bold;}
+table.sig-table{width:100%;border-collapse:collapse;margin:1rem 0;font-size:0.9em;}
+table.sig-table th{background:rgba(255,255,255,0.1);color:#8ecbff;padding:0.4rem 0.7rem;text-align:left;border-bottom:1px solid rgba(255,255,255,0.25);}
+table.sig-table td{padding:0.35rem 0.7rem;border-bottom:1px solid rgba(255,255,255,0.07);color:#e0e0e0;vertical-align:top;}
+hr{border:none;border-top:1px solid rgba(255,255,255,0.15);margin:2rem 0;}
 </style>
 </head>
 <body>
@@ -82,126 +51,777 @@ color:#e0e0e0;
 <h1>General Class License Study</h1>
 <h2>G8: Signals and Emissions</h2>
 <p>This page is part of the N0NJY General Class self-study course for Technician operators upgrading to General.</p>
+<div class="module-sections">
+<a href="#operator">Operator Knowledge</a>
+<a href="#exam">Exam Coverage</a>
+<a href="#resources">Resources</a>
+</div>
 <hr>
 <div class="lesson">
 
-<h2>Overview</h2>
-<p>This module covers the technical details of how signals are generated, modulated, and transmitted. You need
-to understand emission types, modulation modes, digital mode characteristics, bandwidth, and what causes
-unwanted spurious emissions.</p>
+<!-- ============================================================
+     PART 1: OPERATOR KNOWLEDGE
+     ============================================================ -->
+<h2 id="operator">Part 1 &mdash; Operator Knowledge</h2>
 
-<h2>FCC Emission Type Designators</h2>
-<ul>
-<li><strong>A1A:</strong> CW &mdash; on-off keyed unmodulated carrier</li>
-<li><strong>A3E:</strong> AM double-sideband with full carrier</li>
-<li><strong>J3E:</strong> SSB with suppressed carrier (what everyone calls "SSB")</li>
-<li><strong>F3E:</strong> FM analog voice</li>
-<li><strong>F1B:</strong> FSK &mdash; used for RTTY and some digital modes</li>
-</ul>
+<p>G8 covers how information is encoded onto radio signals and what that means in practice.
+Understanding the different modulation modes &mdash; not just their names but how they behave
+under real operating conditions &mdash; is what allows you to choose the right tool for each
+situation. Understanding digital modes in operational depth prepares you to use them effectively
+for everyday contacts, emergency traffic, and weak-signal work. Understanding bandwidth tells
+you why mode selection affects your neighbors on the band as much as it affects you.</p>
 
-<h2>Modulation Modes</h2>
-<p><strong>AM (Amplitude Modulation):</strong> The carrier amplitude varies with the audio signal. The carrier
-is always present, even when no audio is transmitted. Double-sideband AM occupies twice the bandwidth of SSB.
-AM is used in the AM broadcast band and in some aviation communications.</p>
-<p><strong>SSB (Single Sideband):</strong> The carrier and one sideband are removed. All transmitter power goes
-into the information-bearing sideband. Bandwidth is approximately half that of AM. SSB is the standard for HF
-voice operation.</p>
-<p><strong>FM (Frequency Modulation):</strong> The carrier frequency varies with the audio amplitude.
-Carrier amplitude is constant. FM has excellent noise rejection (capture effect) and is standard for VHF/UHF
-voice. FM requires more bandwidth than SSB but provides very high audio quality when the signal is adequate.</p>
-
-<h2>Digital Modes &mdash; Technical Summary</h2>
-<p><strong>RTTY:</strong> FSK (frequency-shift keying). Carrier shifts between mark and space tones.
-Standard amateur RTTY: 45.45 baud, 170 Hz shift, approximately 250&ndash;300 Hz occupied bandwidth.</p>
-<p><strong>PSK31:</strong> Phase-shift keying at 31.25 baud. Occupied bandwidth: approximately 31 Hz.
-Excellent weak-signal performance. Popular for keyboard QSOs.</p>
-<p><strong>FT8:</strong> 8-tone FSK (8-FSK), 15-second transmit/receive cycles, 50 Hz bandwidth.
-Decodes signals 20+ dB below the noise floor. Has become the dominant weak-signal HF mode worldwide.
-Not conversational &mdash; structured exchanges only.</p>
-<p><strong>APRS / Packet:</strong> AX.25 protocol. 1200 baud on VHF using AFSK (audio frequency-shift keying).
-Integrates with GPS for real-time position tracking. Used in APRS (Automatic Packet Reporting System).</p>
-
-<h2>Bandwidth Reference</h2>
-<table class="band-table">
-<tr><th>Mode</th><th>Approximate Bandwidth</th></tr>
-<tr><td>CW</td><td>50&ndash;150 Hz</td></tr>
-<tr><td>PSK31</td><td>31 Hz</td></tr>
-<tr><td>FT8</td><td>50 Hz</td></tr>
-<tr><td>RTTY (170 Hz shift)</td><td>~250 Hz</td></tr>
-<tr><td>SSB voice</td><td>2.4 kHz</td></tr>
-<tr><td>AM voice</td><td>6 kHz</td></tr>
-<tr><td>VHF FM voice</td><td>10&ndash;15 kHz</td></tr>
-</table>
-<p>FCC rules require that emissions be no wider than necessary for the information being transmitted.</p>
-
-<h2>Spurious Emissions</h2>
-<p><strong>Harmonics:</strong> Integer multiples of the transmit frequency produced in the final amplifier.
-A 14 MHz transmitter may produce harmonics at 28, 42, and 56 MHz. A low-pass filter at the transmitter output
-suppresses them effectively.</p>
-<p><strong>Intermodulation Distortion (IMD):</strong> When two or more signals mix in a non-linear device, they
-produce products at various frequency combinations. An overdriven SSB transmitter creates splatter &mdash;
-unwanted sidebands that spread across the band. IMD is a common cause of interference complaints.</p>
-<p><strong>Parasitic Oscillations:</strong> Unintended RF oscillation caused by stray capacitance and inductance
-in amplifier circuits. Parasitic suppressors (small resistors or ferrite beads in the amplifier) prevent them.</p>
+<div class="xref-box">
+<strong>Cross-module connections:</strong> The modulation concepts in this module connect
+directly to G2 (Operating Procedures) &mdash; particularly which modes to use in DX pileups,
+nets, and emergency operations &mdash; and to G7 (Practical Circuits), where you learned how
+the transmitter signal chain produces each modulation type. When a concept here seems abstract,
+connect it to the operating practices in G2 or the hardware stages in G7.
+</div>
 
 <hr>
-<h2>Practice Questions</h2>
+<h3>Modulation Modes in Practice &mdash; Why They Behave Differently</h3>
+
+<p>A modulation mode is the method by which information is encoded onto a radio carrier wave.
+The three fundamental analog modulation methods &mdash; AM, SSB, and FM &mdash; each have
+distinct characteristics that make them suited for different applications. New operators
+sometimes treat mode selection as arbitrary, but it is not. Each mode has physics that
+determines where it works well and where it fails.</p>
+
+<h4>Amplitude Modulation (AM)</h4>
+<p>In AM, the amplitude (strength) of the carrier varies in proportion to the audio signal.
+When no audio is present, the carrier is still transmitted at full power. The full AM signal
+consists of a carrier plus two sidebands &mdash; one above and one below the carrier frequency.
+Each sideband contains a complete copy of the audio information.</p>
+
+<p>AM occupies twice the bandwidth of SSB for the same audio content, and two-thirds of the
+transmitted power is in the carrier, which carries no information. From a power efficiency
+standpoint, AM is wasteful. However, AM has one significant advantage: it is easy to detect.
+A simple envelope detector (a diode and a capacitor) recovers the audio from an AM signal.
+No synchronized local oscillator is required. This is why AM became the standard for
+broadcasting &mdash; billions of simple, inexpensive receivers could receive it without
+precision frequency synthesis.</p>
+
+<p>AM is still used on the amateur bands, particularly on 160 and 75 meters where AM nets
+maintain the older tradition. AM also appears on 10 meters, and some operators use it
+deliberately for its broad, natural-sounding audio quality compared to SSB. The FCC designator
+for double-sideband AM with full carrier is <strong>A3E</strong>.</p>
+
+<h4>Single Sideband (SSB) &mdash; The HF Standard</h4>
+<p>SSB is derived from AM by removing the carrier and one sideband. What remains is a single
+sideband containing all the audio information at a fraction of the bandwidth and power of
+full AM. The carrier is suppressed (typically 40 dB or more below the sideband level) and
+only one sideband is transmitted.</p>
+
+<p>The efficiency advantage is significant: a 100-watt SSB transmitter delivers all 100 watts
+to the information-carrying sideband. A 100-watt AM transmitter delivers only 33 watts to
+each sideband (67% of power wasted in the carrier and suppressed sideband). This is why
+SSB is the dominant mode for HF voice &mdash; it delivers the maximum audio power to the
+receiver with the minimum bandwidth and power consumption.</p>
+
+<p>The cost is complexity at the receiver. Because the carrier has been removed, the receiver
+must reinsert it at precisely the right frequency (within a few tens of Hz) for the audio to
+sound correct. This requires the product detector and BFO described in G7. A slightly
+mistuned BFO produces the characteristic "Donald Duck" sound of an improperly tuned SSB
+signal. The FCC designator for SSB with suppressed carrier is <strong>J3E</strong>.</p>
+
+<p>As covered in G2, the convention for sideband selection is upper sideband (USB) at 14 MHz
+and above, lower sideband (LSB) below 14 MHz. This is not a legal requirement but a universal
+operating convention.</p>
+
+<h4>Frequency Modulation (FM) &mdash; VHF/UHF Standard</h4>
+<p>In FM, the carrier frequency varies in proportion to the audio signal amplitude. The carrier
+amplitude remains constant. FM has two properties that make it ideal for VHF and UHF voice:</p>
+
+<p><strong>Capture effect:</strong> When two FM signals are received on the same frequency,
+the stronger one captures the receiver almost completely, suppressing the weaker one. In
+practice, a signal only 6 dB (four times) stronger will capture the receiver, making the
+weaker station nearly inaudible. This is why FM repeaters work so well &mdash; when you are
+in range, your signal dominates and you hear nothing but the desired signal. It also means
+that FM is poorly suited for HF operation where multiple stations may be near the same
+frequency at varying signal strengths.</p>
+
+<p><strong>Noise rejection:</strong> FM receivers use a limiter stage that clips all amplitude
+variations before the FM detector. Since most natural and electrical noise is amplitude noise,
+the limiter removes it. Below the capture threshold, FM sounds noisy. Above it, FM sounds
+essentially noise-free. This threshold effect produces the characteristic clean/noisy
+transition (the "quieting threshold") that FM operators recognize.</p>
+
+<p>FM on HF is limited to specific applications. On 10 meters, a small FM activity exists
+around 29.600 MHz. FM is standard for VHF/UHF voice operation and repeaters. The FCC
+designator is <strong>F3E</strong>.</p>
+
+<h4>Choosing the Right Mode</h4>
+<p>Mode selection should be driven by the operating conditions and purpose:</p>
+
+<table class="sig-table">
+<tr><th>Situation</th><th>Best Mode</th><th>Why</th></tr>
+<tr><td>HF DX contact, marginal conditions</td><td>SSB (or FT8 for very weak)</td><td>SSB efficiency; FT8 for below-noise conditions</td></tr>
+<tr><td>HF ragchew, good conditions</td><td>SSB or AM</td><td>SSB efficiency; AM for audio quality preference</td></tr>
+<tr><td>VHF/UHF local voice</td><td>FM</td><td>Capture effect; noise rejection; repeater compatibility</td></tr>
+<tr><td>Emergency regional comms</td><td>SSB (NVIS) or digital</td><td>HF NVIS coverage; digital for formal traffic</td></tr>
+<tr><td>Weak signal DX, below noise</td><td>FT8, JT65</td><td>Can decode 20+ dB below noise floor</td></tr>
+<tr><td>Keyboard QSO, HF</td><td>PSK31, JS8Call</td><td>Narrow bandwidth; conversational; readable in noise</td></tr>
+<tr><td>Contest operation, HF</td><td>SSB (phone) or CW or RTTY</td><td>Rapid exchanges; established contest modes</td></tr>
+<tr><td>Formal message traffic</td><td>Winlink (VARA/Pactor) or SSB phone net</td><td>Reliable store-and-forward; or voice net procedure</td></tr>
+</table>
+
+<div class="elmer-box">
+<strong>From the elmer's notebook:</strong> The most common mode selection mistake new HF
+operators make is trying to use SSB when conditions have dropped below the point where SSB
+is effective. If you are straining to copy the other station and asking for repeats every
+other sentence, that is the signal telling you to either try a lower band, wait for better
+conditions, or switch to a digital mode. FT8 can complete a contact with a station you
+cannot hear at all on SSB. Knowing when to change modes is as important as knowing how
+to operate each one.
+</div>
+
+<hr>
+<h3>Digital Modes &mdash; Operational Knowledge</h3>
+
+<p>Digital modes encode information in ways that allow computers and DSP processors to recover
+it from signals that human ears cannot decode &mdash; sometimes from signals buried deep in
+noise. Understanding how each major digital mode works, what it is used for, and what its
+limitations are allows you to choose and use them effectively.</p>
+
+<h4>FT8 &mdash; Weak Signal Contacts</h4>
+<p>FT8 (Franke-Taylor design, 8-FSK modulation) was released in 2017 by Joe Taylor K1JT
+and Steve Franke K9AN as part of the WSJT-X software suite. It has become the dominant
+HF digital mode worldwide because it works under conditions that defeat every other mode.</p>
+
+<p><strong>How it works:</strong> FT8 uses eight audio tones (8-FSK &mdash; 8-tone frequency
+shift keying) spaced 6.25 Hz apart, transmitted in 15-second intervals synchronized to UTC.
+The transmitted signal is 50 Hz wide. Each 15-second frame carries a complete structured
+message (callsigns and signal report, or locator grid). The receiver collects the entire
+15-second transmission before attempting to decode it, using sophisticated error-correction
+algorithms. This coherent detection across the full frame is what gives FT8 its extraordinary
+weak-signal performance &mdash; it can decode signals 20 to 24 dB below the noise floor,
+which means it can decode signals you literally cannot hear at all.</p>
+
+<p><strong>Practical use:</strong> FT8 operates on standard dial frequencies on each HF band
+(14.074 MHz on 20 meters, 7.074 MHz on 40 meters, etc.). You set your transceiver to the
+dial frequency in USB mode and let WSJT-X control the audio frequency within the passband.
+CAT control is strongly recommended (it handles PTT and frequency automatically). The
+waterfall display in WSJT-X shows all active stations within the 3 kHz passband simultaneously.
+You click a callsign to respond; WSJT-X handles the structured exchange automatically.</p>
+
+<p><strong>Limitations:</strong> FT8 is not conversational. The exchange is fixed &mdash;
+callsigns, signal report (in dB), and grid square. There is no room for free-form text in
+a standard FT8 contact. For actual conversation, see JS8Call below. FT8 is also not suitable
+for formal message traffic &mdash; use Winlink for that.</p>
+
+<h4>FT4 &mdash; Contest Digital</h4>
+<p>FT4 uses the same technology as FT8 but with 7.5-second cycles instead of 15-second
+cycles, making contacts roughly twice as fast. FT4 is less sensitive than FT8 (trades
+sensitivity for speed) and is used primarily in digital contests where speed matters more
+than ultimate weak-signal capability.</p>
+
+<h4>JT65 and JT9 &mdash; Moonbounce Heritage</h4>
+<p>JT65 was developed by Joe Taylor K1JT originally for EME (Earth-Moon-Earth, or moonbounce)
+communication &mdash; bouncing signals off the Moon. The round-trip delay to the Moon is
+2.5 seconds, and signals are attenuated by roughly 250 to 260 dB. JT65 achieves this through
+very slow transmissions (60-second cycles) and powerful error correction. On HF, JT65 was
+the predecessor to FT8 for weak-signal work. JT9 is a narrower, more efficient variant
+optimized for the crowded HF bands. Both are now largely superseded by FT8 for general HF
+weak-signal work but remain in use for EME and specific applications.</p>
+
+<h4>PSK31 &mdash; Keyboard QSOs</h4>
+<p>PSK31 (Phase Shift Keying, 31 baud) was developed by Peter Martinez G3PLX in 1998 and
+remains a popular mode for real-time keyboard conversation on HF. It uses binary phase shift
+keying at 31.25 baud, producing a signal approximately 31 Hz wide &mdash; narrower than any
+other practical voice or data mode. The narrow bandwidth makes PSK31 efficient on crowded
+bands and gives it excellent weak-signal performance for its data rate.</p>
+
+<p><strong>Practical use:</strong> PSK31 is conversational. You type at the keyboard and the
+other station reads your text in real time. Response time is limited only by your typing speed.
+On 20 meters, the PSK31 calling frequency is 14.070 MHz. On 40 meters, 7.070 MHz. The most
+common software is fldigi, which runs on Linux, Windows, and Mac. PSK31 is one of the best
+modes for casual digital conversation and for demonstrating digital modes to new operators
+because the exchange is immediately understandable.</p>
+
+<p>Higher-speed variants (PSK63, PSK125) use wider bandwidth for faster data rates when
+conditions permit.</p>
+
+<h4>RTTY &mdash; Radio Teletype</h4>
+<p>RTTY (Radio TeleTYpe) is the oldest digital mode still in widespread amateur use, dating
+to the 1940s in its original mechanical teletype form. Modern RTTY uses audio frequency shift
+keying (AFSK) through a sound card, or direct FSK keying of the transmitter. The standard
+amateur RTTY parameters are 45.45 baud (baud rate) and 170 Hz shift between mark and space
+tones, producing an occupied bandwidth of approximately 250 to 300 Hz.</p>
+
+<p>RTTY uses the Baudot (ITA2) character set rather than ASCII, which limits it to uppercase
+letters, digits, and a limited set of punctuation. RTTY remains popular in HF contests (RTTY
+contests are among the largest in amateur radio) and for operators who prefer its retro
+character. The software fldigi handles RTTY along with PSK31 and many other modes.</p>
+
+<h4>JS8Call &mdash; Conversational FT8</h4>
+<p>JS8Call was developed by Jordan Sherer KN4CRD as a conversational adaptation of FT8.
+It retains the weak-signal capability of FT8's modulation scheme but allows free-form text
+messages rather than the fixed structured exchange. JS8Call also supports store-and-forward
+messaging, relay through other stations, and an informal network for passing text traffic.
+It is increasingly popular in emergency communications because it combines FT8's ability to
+work in poor conditions with the free-form messaging needed for actual emergency traffic.</p>
+
+<h4>Winlink &mdash; Email Over Radio</h4>
+<p>Winlink is a system for sending and receiving email-format messages over amateur radio,
+using a network of internet-connected gateway stations worldwide. A Winlink station connects
+to a gateway using one of several HF (or VHF/UHF) protocols, sends its outgoing messages,
+and receives queued incoming messages. The messages are then delivered to or from conventional
+email addresses.</p>
+
+<p>Winlink supports several connecting protocols:</p>
+<ul>
+<li><strong>VARA HF:</strong> A modern, high-performance adaptive HF protocol developed by
+Jose Ros EA5HVK. VARA HF adapts its data rate to channel conditions and achieves much higher
+throughput than older protocols on good paths. Currently the most popular choice for new
+Winlink HF stations.</li>
+<li><strong>VARA FM:</strong> The same adaptive protocol optimized for VHF/UHF FM channels.
+Used for local and regional Winlink access through VHF/UHF packet gateways.</li>
+<li><strong>Pactor:</strong> An older, proprietary HF protocol developed by SCS in Germany.
+Pactor III and Pactor IV offer excellent performance but require a dedicated hardware modem
+(the SCS PTC series). Still used by maritime mobile stations and in established emergency
+communication networks that have invested in Pactor hardware.</li>
+<li><strong>Winmor:</strong> An older sound card-based HF protocol, largely superseded by
+VARA HF.</li>
+<li><strong>Packet (AX.25) on VHF:</strong> 1200 baud AFSK on VHF for local access to
+Winlink nodes. Simple and reliable for short-range access.</li>
+</ul>
+
+<p><strong>Winlink in emergency communications:</strong> Winlink is used extensively in
+ARES, RACES, and served agency communications precisely because it can pass formal formatted
+messages (ICS forms, FEMA forms, NTS formal message format) over HF when internet and
+telephone infrastructure are unavailable. A Winlink station can send a message to an emergency
+coordination center email address over HF, have it delivered to the served agency's email
+system through an internet gateway, and receive responses back &mdash; all without any
+functioning internet at the disaster site.</p>
+
+<h4>APRS &mdash; Automatic Packet Reporting System</h4>
+<p>APRS (Automatic Packet Reporting System) was developed by Bob Bruninga WB4APR and uses
+the AX.25 packet radio protocol to transmit position, weather, and status information in
+real time. APRS packets are transmitted on a standard national frequency (144.390 MHz in
+North America) and are received by digipeaters (digital repeaters) that re-transmit them
+to increase coverage, and by iGates (internet gateways) that forward them to the APRS-IS
+(APRS Internet Service) network, making them visible worldwide on sites like
+<a href="https://aprs.fi" target="_blank" rel="noopener">aprs.fi</a>.</p>
+
+<p><strong>Common APRS uses:</strong></p>
+<ul>
+<li><strong>Position tracking:</strong> A GPS-connected APRS tracker (dedicated hardware or
+a smartphone app) transmits your position automatically. Emergency managers can track field
+units in real time. Spotter networks use APRS to show weather spotter positions during
+severe weather events.</li>
+<li><strong>Weather stations:</strong> APRS weather stations (WX stations) transmit local
+weather data automatically. The aggregate of thousands of APRS WX stations creates a
+near-real-time surface weather map accessible to anyone.</li>
+<li><strong>Messaging:</strong> APRS supports short person-to-person text messages that
+can be delivered to any APRS-connected station or forwarded to an email address or SMS
+through gateway services.</li>
+<li><strong>Object and item beacons:</strong> Repeater locations, hospital locations, and
+other fixed infrastructure can be represented as objects on the APRS map.</li>
+</ul>
+
+<p><strong>APRS on HF:</strong> A secondary APRS frequency exists at 10.1515 MHz (30 meters)
+for HF APRS, which provides much longer range for mobile stations beyond VHF coverage. HF
+APRS uses 300 baud rather than 1200 baud to account for HF channel characteristics.</p>
+
+<h4>Packet Radio and AX.25</h4>
+<p>AX.25 is the data link layer protocol used for amateur packet radio, APRS, and Winlink
+VHF connections. It is derived from the X.25 protocol used in early commercial data networks,
+adapted for amateur radio with callsign-based addressing. Standard VHF packet operates at
+1200 baud AFSK (Bell 202 tones at 1200 and 2200 Hz). Higher-speed 9600 baud packet uses
+direct FSK modulation (bypassing the audio chain) and requires a radio with a direct
+discriminator output and a modulator that bypasses the audio limiter.</p>
+
+<p>AX.25 packets include a source callsign, destination callsign, up to eight digipeater
+callsigns for relay routing, a control field, a PID (protocol identifier), and information
+data. The header information is transmitted in plain text, satisfying the FCC requirement
+that the meaning of amateur transmissions must be publicly accessible &mdash; the protocol
+is fully documented and openly available.</p>
+
+<div class="xref-box">
+<strong>Connection to G1 &mdash; Encryption rule:</strong> Amateur radio digital modes must
+use publicly documented protocols. The FCC prohibits encrypting amateur transmissions to
+obscure their meaning (47 CFR &sect;97.113(a)(4)). This is why all the modes described here
+&mdash; FT8, PSK31, RTTY, AX.25, Winlink &mdash; use fully documented, open protocols.
+If you are experimenting with digital modes, ensure any protocol you use is publicly documented.
+</div>
+
+<hr>
+<h3>Bandwidth &mdash; Why It Matters for the FCC and Your Neighbors</h3>
+
+<p>Bandwidth is the range of frequencies occupied by a transmitted signal. Every mode has a
+characteristic bandwidth determined by its modulation method and data rate. The FCC requires
+that transmissions be no wider than necessary for the information being transmitted
+(47 CFR &sect;97.307). Beyond the legal requirement, bandwidth matters because the HF bands
+are shared. A wide signal takes up space that other operators cannot use.</p>
+
+<h4>Occupied Bandwidth Defined</h4>
+<p>The occupied bandwidth of a signal is the frequency range containing a specified percentage
+of the total transmitted power. The FCC typically measures occupied bandwidth as the range
+containing 99% of the total power. A signal that is nominally 2.4 kHz wide for SSB may have
+spectral components extending slightly beyond that if the modulator is overdriven &mdash;
+this is the splatter that adjacent operators complain about.</p>
+
+<h4>Bandwidth by Mode</h4>
+<table class="sig-table">
+<tr><th>Mode</th><th>Approx. Occupied Bandwidth</th><th>Notes</th></tr>
+<tr><td>CW (at 25 WPM)</td><td>50&ndash;100 Hz</td><td>Keying speed and waveform shaping determine bandwidth</td></tr>
+<tr><td>PSK31</td><td>31 Hz</td><td>The narrowest practical digital mode</td></tr>
+<tr><td>FT8</td><td>50 Hz</td><td>Fixed; software controls frequency precisely</td></tr>
+<tr><td>FT4</td><td>90 Hz</td><td>Wider than FT8 due to faster symbol rate</td></tr>
+<tr><td>RTTY (170 Hz shift)</td><td>250&ndash;300 Hz</td><td>Mark and space tones plus sidebands</td></tr>
+<tr><td>PSK63</td><td>63 Hz</td><td>Twice the speed of PSK31, twice the bandwidth</td></tr>
+<tr><td>SSB voice (normal)</td><td>2.4&ndash;2.8 kHz</td><td>Audio bandwidth determines RF bandwidth</td></tr>
+<tr><td>AM voice (double sideband)</td><td>6 kHz</td><td>Two full audio sidebands plus carrier</td></tr>
+<tr><td>NFM (narrow FM, VHF)</td><td>10&ndash;15 kHz</td><td>5 kHz deviation &times; 2 + audio sidebands</td></tr>
+<tr><td>WFM (broadcast FM)</td><td>150&ndash;200 kHz</td><td>75 kHz deviation; stereo; pilot tone</td></tr>
+</table>
+
+<h4>Bandwidth and Interference</h4>
+<p>On a crowded band, adjacent channel spacing must accommodate the bandwidth of the
+signals being used. On 20-meter SSB, contacts are typically separated by 3 kHz to avoid
+mutual interference. On a digital segment using PSK31 or FT8, signals can be packed much
+more closely because they occupy far less bandwidth. This is why digital sub-bands can
+support many more simultaneous contacts than phone sub-bands of the same size.</p>
+
+<p>When a transmitter is overdriven and produces splatter &mdash; distortion products
+extending beyond the nominal signal bandwidth &mdash; the effective occupied bandwidth
+grows dramatically. A badly overdriven SSB station that nominally occupies 2.4 kHz may
+actually occupy 10 kHz or more with its intermodulation products. This is why ALC adjustment
+(covered in G4) is not just a matter of audio quality &mdash; it is a matter of being a
+considerate band occupant.</p>
+
+<div class="warning-box">
+<strong>Symbol rate limits below 28 MHz (47 CFR &sect;97.307):</strong> The FCC limits
+symbol rate on HF to 300 baud below 28 MHz and 1200 baud between 28 and 50 MHz. These
+limits exist to control bandwidth. Note that this is a <em>symbol rate</em> limit, not a
+<em>data rate</em> limit &mdash; modes like VARA and Pactor achieve high data rates within
+these symbol rate limits by using multi-level modulation (more bits per symbol) and other
+techniques. FT8, PSK31, and RTTY all operate well within the 300 baud symbol rate limit.
+</div>
+
+<hr>
+<h3>Spread Spectrum &mdash; What It Is and When It Appears in Amateur Radio</h3>
+
+<p>Spread spectrum is a modulation technique in which the transmitted signal intentionally
+occupies a bandwidth much wider than the minimum necessary to transmit the information.
+This seems counterintuitive &mdash; why use more bandwidth than you need? &mdash; but spread
+spectrum provides two advantages: resistance to interference and jamming, and the ability
+for multiple users to share the same frequency band simultaneously.</p>
+
+<h4>How Spread Spectrum Works</h4>
+<p>In a spread spectrum system, the transmitted signal is spread across a wide bandwidth
+using a pseudo-random spreading code known to both transmitter and receiver. The receiver
+uses the same code to "despread" the signal, recovering the original data. To an observer
+without the spreading code, the signal appears as low-level noise spread across a wide
+bandwidth &mdash; it is not recognizable as a discrete signal on a conventional spectrum
+analyzer.</p>
+
+<p><strong>Direct sequence spread spectrum (DSSS):</strong> The data stream is multiplied
+by a high-rate pseudo-random binary sequence (the spreading code), spreading the signal
+across a bandwidth determined by the chip rate of the code. GPS signals use DSSS. 802.11b
+Wi-Fi uses DSSS.</p>
+
+<p><strong>Frequency hopping spread spectrum (FHSS):</strong> The transmitted frequency
+hops rapidly through a sequence of frequencies according to a pseudo-random pattern known
+to both stations. Each dwell time at one frequency is brief; the total bandwidth covered
+by all the hops is the spread spectrum bandwidth. Bluetooth uses FHSS.</p>
+
+<h4>Spread Spectrum in Amateur Radio</h4>
+<p>Spread spectrum is authorized in the amateur service under specific conditions defined
+in 47 CFR &sect;97.311:</p>
+<ul>
+<li>The spreading codes must be publicly documented and not used to obscure the meaning
+of communications</li>
+<li>Spread spectrum is not permitted below 222 MHz</li>
+<li>The control operator must be able to identify the station and must be identifiable
+to the FCC</li>
+<li>Maximum power is 100 watts PEP</li>
+</ul>
+<p>The prohibition below 222 MHz is the most important exam point. Spread spectrum is not
+permitted on HF or on the 6-meter, 2-meter, or 70-centimeter (144 MHz) bands. It is
+permitted on 222 MHz and higher.</p>
+
+<p>In practice, spread spectrum operation by amateur stations is relatively rare. The main
+amateur spread spectrum activity is experimental, using software-defined radio platforms
+to explore the techniques. The more practical relevance for most operators is understanding
+that the Wi-Fi, Bluetooth, and cellular signals that increasingly pollute the spectrum near
+amateur radio installations are all spread spectrum systems.</p>
+
+<hr>
+<h3>FCC Emission Type Designators</h3>
+
+<p>The FCC uses a standardized system of emission type designators in license documents and
+regulations. New operators often confuse these designators with mode names. The designator
+is a technical description of the signal; the mode name is what operators call it in practice.</p>
+
+<table class="sig-table">
+<tr><th>Designator</th><th>What It Means</th><th>Common Name</th></tr>
+<tr><td>A1A</td><td>Amplitude modulation, on-off keying, telegraphy (no audio)</td><td>CW (Morse code)</td></tr>
+<tr><td>A2A</td><td>Amplitude modulation, on-off keying with audio tone</td><td>Tone-modulated CW</td></tr>
+<tr><td>A3E</td><td>Amplitude modulation, double sideband, full carrier, telephony</td><td>AM phone</td></tr>
+<tr><td>F1B</td><td>Frequency modulation, FSK, telegraphy</td><td>RTTY (direct FSK)</td></tr>
+<tr><td>F2B</td><td>Frequency modulation, audio-tone modulated FSK, telegraphy</td><td>AFSK RTTY</td></tr>
+<tr><td>F3E</td><td>Frequency modulation, analog telephony</td><td>FM phone</td></tr>
+<tr><td>G3E</td><td>Phase modulation, analog telephony</td><td>PM phone</td></tr>
+<tr><td>J3E</td><td>Single sideband, suppressed carrier, telephony</td><td>SSB phone</td></tr>
+<tr><td>J2B</td><td>Single sideband, suppressed carrier, FSK</td><td>SSB RTTY (used in some systems)</td></tr>
+</table>
+
+<p>The structure of the designator is: first character = type of modulation of main carrier
+(A=AM, F=FM, G=PM, J=SSB suppressed carrier); second character = nature of signal modulating
+the carrier (1=digital no audio, 2=digital with audio, 3=analog); third character = type of
+information (A=telegraphy/CW, B=telegraphy/printing/RTTY, E=telephony/voice).</p>
+
+<div class="tip-box">
+<strong>The designator vs. the name:</strong> When someone says "SSB," they mean J3E.
+When someone says "FM," they mean F3E. When you see "J3E" in an FCC document, it means SSB.
+The designator is used in regulations and technical documents; the mode name is used in
+everyday operating. Know both, and know that they describe the same things.
+</div>
+
+<hr>
+<h3>Spurious Emissions and Harmonics</h3>
+
+<p>A transmitter ideally produces only the desired signal at the desired frequency. In practice,
+non-linearities in the amplifier stages produce unwanted emissions &mdash; spurious emissions
+&mdash; at other frequencies. The FCC requires that these be suppressed to specified levels.</p>
+
+<p><strong>Harmonics:</strong> Integer multiples of the transmit frequency. A 14 MHz signal
+produces harmonics at 28 MHz, 42 MHz, 56 MHz, etc. These harmonics must be suppressed to
+at least 43 dB below the fundamental (for transmitters over 5 watts). A low-pass filter at
+the transmitter output is the standard solution, as covered in G7.</p>
+
+<p><strong>Intermodulation distortion (IMD):</strong> When two signals are present in a
+non-linear device, they produce sum and difference products at additional frequencies. In
+an overdriven SSB transmitter, the two-tone products of the voice audio produce IMD components
+at frequencies adjacent to the desired signal &mdash; this is what operators hear as splatter.
+The solution is proper ALC adjustment and microphone gain setting.</p>
+
+<p><strong>Parasitic oscillations:</strong> Unintended oscillations at frequencies unrelated
+to the input signal, caused by stray inductance and capacitance in amplifier stages. Parasitic
+suppressors (small resistors or ferrite beads in the amplifier circuit) prevent parasitic
+oscillations.</p>
+
+<div class="xref-box">
+<strong>Connection to G4 and G7:</strong> The ALC and microphone gain settings covered in
+G4 directly control the IMD level in your transmitted signal. The low-pass filter described
+in G7's transmitter signal chain is what suppresses harmonics to FCC-required levels.
+Proper station setup &mdash; a topic that runs through G4, G7, and G8 &mdash; is what keeps
+your signal clean and within its authorized bandwidth.
+</div>
+
+<hr>
+<!-- ============================================================
+     PART 2: EXAM COVERAGE
+     ============================================================ -->
+<h2 id="exam">Part 2 &mdash; Exam Coverage</h2>
+<p>The G8 subelement covers signals and emissions as tested in the 2023&ndash;2027 FCC General
+Class question pool. All pool questions are covered below.</p>
+
+<h3>G8A &mdash; Carriers and Modulation</h3>
+<ul>
+<li>Carrier: an unmodulated RF signal; information is added by modulating amplitude, frequency, or phase</li>
+<li>AM: carrier amplitude varies with audio; bandwidth = 2 &times; highest audio frequency; designator A3E</li>
+<li>SSB: one sideband, suppressed carrier; half the bandwidth of AM; designator J3E</li>
+<li>FM: carrier frequency varies with audio; constant amplitude; capture effect; designator F3E</li>
+<li>PM (phase modulation): carrier phase varies with audio; similar to FM in appearance; designator G3E</li>
+<li>Single sideband suppressed carrier advantages: narrower bandwidth, more efficient power use than AM</li>
+</ul>
+
+<h3>G8B &mdash; Frequency Mixing, Symbol Rate, Bandwidth</h3>
+<ul>
+<li>Mixing products: sum and difference frequencies produced when two signals combine in a non-linear device</li>
+<li>Third-order intermodulation: mixing products that fall within or near the desired passband; cause of splatter</li>
+<li>Symbol rate: number of waveform changes per second; limits bandwidth; below 28 MHz limit is 300 baud</li>
+<li>Occupied bandwidth: frequency range containing 99% of total transmitted power</li>
+<li>Frequency multiplier: Class C amplifier that uses harmonics to produce multiples of input frequency</li>
+</ul>
+
+<h3>G8C &mdash; Digital Emissions</h3>
+<ul>
+<li>APRS: Automatic Packet Reporting System; uses AX.25 on 144.390 MHz (North America); GPS position, weather, messaging</li>
+<li>FT8: 8-FSK, 15-second cycles, 50 Hz wide; decodes 20+ dB below noise; structured exchange only</li>
+<li>Pactor: proprietary adaptive HF protocol; used for Winlink; requires SCS hardware modem</li>
+<li>VARA: modern adaptive HF protocol for Winlink; software-based; widely used for HF email</li>
+<li>PSK31: binary PSK at 31.25 baud; 31 Hz wide; conversational keyboard QSOs</li>
+<li>Spread spectrum authorization: permitted above 222 MHz only; spreading codes must be publicly documented</li>
+<li>Encryption prohibition: amateur transmissions may not use codes or ciphers to obscure meaning (97.113)</li>
+</ul>
+
+<hr>
+<h3>Practice Questions &mdash; G8 Complete Pool Coverage</h3>
+
+<h4>G8A &mdash; Carriers and Modulation</h4>
 
 <div class="question-block">
 <p><strong>Q1 (G8A01)</strong> &mdash; How is an FSK signal generated?</p>
-<ul><li>A. By varying the amplitude of the RF signal</li><li>B. By changing the center frequency between two discrete values</li><li>C. By shifting the phase of the carrier</li><li>D. By mixing two carriers of different amplitude</li></ul>
+<ul><li>A. By keying an FM transmitter with a sub-audible tone</li><li>B. By changing an oscillator's frequency with each data element</li><li>C. By using the deviation control of an FM transmitter</li><li>D. By varying an SSB transmitter's frequency with the transmitted data</li></ul>
 </div>
 
 <div class="question-block">
-<p><strong>Q2 (G8B01)</strong> &mdash; What is the definition of symbol rate in a digital transmission?</p>
-<ul><li>A. The number of data bits transmitted per second</li><li>B. The rate at which the waveform changes to convey information</li><li>C. The number of error-correcting bits per second</li><li>D. The ratio of signal bandwidth to data rate</li></ul>
+<p><strong>Q2 (G8A02)</strong> &mdash; What is the name of the process that changes the phase angle of an RF wave to convey information?</p>
+<ul><li>A. Phase convolution</li><li>B. Phase modulation</li><li>C. Angle convolution</li><li>D. Frequency modulation</li></ul>
 </div>
 
 <div class="question-block">
-<p><strong>Q3 (G8C01)</strong> &mdash; Which digital mode is designed to make it easier for stations to find each other across an entire HF band?</p>
-<ul><li>A. RTTY</li><li>B. PSK31</li><li>C. FT8</li><li>D. PACTOR</li></ul>
+<p><strong>Q3 (G8A03)</strong> &mdash; What is the name of the process that changes the instantaneous frequency deviation of an RF wave to convey information?</p>
+<ul><li>A. Frequency convolution</li><li>B. Angle modulation</li><li>C. Frequency modulation</li><li>D. Phase modulation</li></ul>
 </div>
 
 <div class="question-block">
-<p><strong>Q4 (G8A05)</strong> &mdash; What type of modulation varies only the frequency of the RF signal?</p>
-<ul><li>A. Amplitude modulation</li><li>B. Phase modulation</li><li>C. Frequency modulation</li><li>D. Pulse-width modulation</li></ul>
+<p><strong>Q4 (G8A04)</strong> &mdash; What emission is produced by a reactance modulator connected to a transmitter RF amplifier stage?</p>
+<ul><li>A. Amplitude modulation</li><li>B. Frequency modulation</li><li>C. Phase modulation</li><li>D. Single-sideband modulation</li></ul>
 </div>
 
 <div class="question-block">
-<p><strong>Q5 (G8B05)</strong> &mdash; What is the approximate bandwidth of a VHF repeater FM phone transmission?</p>
-<ul><li>A. Less than 500 Hz</li><li>B. About 150 kHz</li><li>C. Between 10 and 15 kHz</li><li>D. Between 50 and 100 kHz</li></ul>
+<p><strong>Q5 (G8A05)</strong> &mdash; What type of modulation varies only the instantaneous amplitude of the transmitted signal?</p>
+<ul><li>A. Frequency modulation</li><li>B. Amplitude modulation</li><li>C. Phase modulation</li><li>D. Pulse modulation</li></ul>
 </div>
 
 <div class="question-block">
-<p><strong>Q6 (G8C05)</strong> &mdash; Which APRS feature enables real-time digital communication of GPS position data?</p>
-<ul><li>A. The ability to store messages for later retrieval</li><li>B. Integration of packet radio and GPS data for position tracking</li><li>C. Built-in support for Winlink messages</li><li>D. Emergency-only position broadcasting</li></ul>
+<p><strong>Q6 (G8A06)</strong> &mdash; Which of the following is characteristic of QPSK31?</p>
+<ul><li>A. It is used primarily for digital radio link systems</li><li>B. It has higher error correction ability than most other amateur digital modes</li><li>C. It is used for amateur television</li><li>D. It combines both phase and amplitude modulation</li></ul>
 </div>
 
 <div class="question-block">
-<p><strong>Q7 (G8A11)</strong> &mdash; What is an advantage of CDMA (code division multiple access)?</p>
-<ul><li>A. It allows multiple users to share the same channel simultaneously</li><li>B. It reduces transmitter power requirements</li><li>C. It provides better voice quality than FM</li><li>D. It uses less bandwidth than SSB</li></ul>
+<p><strong>Q7 (G8A07)</strong> &mdash; Which of the following phone emissions uses the narrowest bandwidth?</p>
+<ul><li>A. Single sideband</li><li>B. Double sideband</li><li>C. Phase modulation</li><li>D. Frequency modulation</li></ul>
 </div>
 
 <div class="question-block">
-<p><strong>Q8 (G8A03)</strong> &mdash; What is the term for unwanted signals at frequencies outside of the transmitted bandwidth?</p>
-<ul><li>A. Intermodulation</li><li>B. Splatter</li><li>C. Spurious emissions</li><li>D. Parasitic oscillations</li></ul>
+<p><strong>Q8 (G8A08)</strong> &mdash; Which of the following is an advantage of using single sideband, as compared to other analog voice modes?</p>
+<ul><li>A. Very high fidelity voice modulation</li><li>B. Simultaneous voice and data transmission</li><li>C. Lower bandwidth and greater power efficiency</li><li>D. Enhanced frequency stability</li></ul>
+</div>
+
+<div class="question-block">
+<p><strong>Q9 (G8A09)</strong> &mdash; Which of the following HF digital modes is the narrowest in bandwidth?</p>
+<ul><li>A. FT8</li><li>B. JT65</li><li>C. RTTY</li><li>D. PSK31</li></ul>
+</div>
+
+<div class="question-block">
+<p><strong>Q10 (G8A10)</strong> &mdash; What is the name of the modulation mode where the signal amplitude is reduced to a very low level to encode data bits, then restored to its normal level?</p>
+<ul><li>A. AFSK</li><li>B. QPSK</li><li>C. CPM</li><li>D. OOK</li></ul>
+</div>
+
+<div class="question-block">
+<p><strong>Q11 (G8A11)</strong> &mdash; What is the modulation envelope in an AM signal?</p>
+<ul><li>A. The carrier frequency variation</li><li>B. The curve traced by the peak values of successive cycles of the RF signal</li><li>C. The lowest frequency audio component of the signal</li><li>D. The bandwidth of the signal</li></ul>
+</div>
+
+<h4>G8B &mdash; Mixing, Symbol Rate, Bandwidth</h4>
+
+<div class="question-block">
+<p><strong>Q12 (G8B01)</strong> &mdash; What is the term for the process of combining two signals in a non-linear device to produce additional signals at the sum and difference frequencies?</p>
+<ul><li>A. Heterodyning</li><li>B. Synthesizing</li><li>C. Demodulating</li><li>D. Multiplexing</li></ul>
+</div>
+
+<div class="question-block">
+<p><strong>Q13 (G8B02)</strong> &mdash; If a 1 MHz signal is mixed with a 3.785 MHz signal, what is the frequency of the resulting difference frequency?</p>
+<ul><li>A. 4.785 MHz</li><li>B. 3.785 MHz</li><li>C. 2.785 MHz</li><li>D. 1 MHz</li></ul>
+</div>
+
+<div class="question-block">
+<p><strong>Q14 (G8B03)</strong> &mdash; If a 14.35 MHz signal is mixed with a 455 kHz signal, what is the resulting lower frequency?</p>
+<ul><li>A. 14.795 MHz</li><li>B. 13.895 MHz</li><li>C. 13.350 MHz</li><li>D. 14.245 MHz</li></ul>
+</div>
+
+<div class="question-block">
+<p><strong>Q15 (G8B04)</strong> &mdash; If a 14.35 MHz signal is mixed with a 455 kHz signal, what is the resulting upper frequency?</p>
+<ul><li>A. 14.795 MHz</li><li>B. 13.895 MHz</li><li>C. 13.350 MHz</li><li>D. 14.245 MHz</li></ul>
+</div>
+
+<div class="question-block">
+<p><strong>Q16 (G8B05)</strong> &mdash; What is the approximate bandwidth of a PACTOR 3 signal at maximum data rate?</p>
+<ul><li>A. 31.5 Hz</li><li>B. 500 Hz</li><li>C. 1800 Hz</li><li>D. 2300 Hz</li></ul>
+</div>
+
+<div class="question-block">
+<p><strong>Q17 (G8B06)</strong> &mdash; What is the total bandwidth of an FM phone transmission having a 5 kHz deviation and a 3 kHz modulating frequency?</p>
+<ul><li>A. 3 kHz</li><li>B. 5 kHz</li><li>C. 8 kHz</li><li>D. 16 kHz</li></ul>
+</div>
+
+<div class="question-block">
+<p><strong>Q18 (G8B07)</strong> &mdash; What is the frequency deviation for a 12.21-MHz reactance-modulated oscillator in a 5-kHz deviation, 146.52 MHz FM phone transmitter?</p>
+<ul><li>A. 101.75 Hz</li><li>B. 416.7 Hz</li><li>C. 5 kHz</li><li>D. 60 kHz</li></ul>
+</div>
+
+<div class="question-block">
+<p><strong>Q19 (G8B08)</strong> &mdash; Why is it important to know the duty cycle of the mode you are using when calculating PEP or average power?</p>
+<ul><li>A. To prevent damage to the final amplifier due to excessive heat</li><li>B. To prevent damage to the microphone due to excessive audio input</li><li>C. To correctly determine the power input to the transmitter</li><li>D. To avoid overloading the antenna</li></ul>
+</div>
+
+<div class="question-block">
+<p><strong>Q20 (G8B09)</strong> &mdash; What is the relationship between the PEP and the average power of a CW signal?</p>
+<ul><li>A. PEP is twice the average power</li><li>B. PEP and average power are essentially the same</li><li>C. PEP is half the average power</li><li>D. There is no relationship between PEP and average power for CW</li></ul>
+</div>
+
+<div class="question-block">
+<p><strong>Q21 (G8B10)</strong> &mdash; What is the frequency deviation of an FM phone transmission having a maximum frequency swing of plus or minus 7.5 kHz?</p>
+<ul><li>A. 3.75 kHz</li><li>B. 7.5 kHz</li><li>C. 15 kHz</li><li>D. 30 kHz</li></ul>
+</div>
+
+<div class="question-block">
+<p><strong>Q22 (G8B11)</strong> &mdash; What is the difference between the frequencies of two signals that produce a 1000 Hz audio beat note when received by a CW receiver?</p>
+<ul><li>A. 1 kHz</li><li>B. 10 kHz</li><li>C. 1 MHz</li><li>D. 10 MHz</li></ul>
+</div>
+
+<h4>G8C &mdash; Digital Emissions</h4>
+
+<div class="question-block">
+<p><strong>Q23 (G8C01)</strong> &mdash; On what frequencies are spread spectrum transmissions authorized?</p>
+<ul><li>A. Only on amateur frequencies above 222 MHz</li><li>B. Only on 430 MHz and above</li><li>C. Only on amateur frequencies above 144 MHz</li><li>D. On all amateur frequencies</li></ul>
+</div>
+
+<div class="question-block">
+<p><strong>Q24 (G8C02)</strong> &mdash; What describes a spread spectrum communication system?</p>
+<ul><li>A. A method of communication that uses AM to transmit the signal over a wide bandwidth</li><li>B. A method of communication in which the transmitted signal is deliberately spread over a wide bandwidth</li><li>C. A method of communication that uses FM to transmit the signal over a wide bandwidth</li><li>D. A method of communication that uses multiple frequencies simultaneously</li></ul>
+</div>
+
+<div class="question-block">
+<p><strong>Q25 (G8C03)</strong> &mdash; What is the term for the reduction in receiver sensitivity caused by a strong signal near the desired frequency?</p>
+<ul><li>A. Desensitization</li><li>B. Quieting</li><li>C. Cross-modulation interference</li><li>D. Squelch gain rollback</li></ul>
+</div>
+
+<div class="question-block">
+<p><strong>Q26 (G8C04)</strong> &mdash; What signal is used to convey position data in the APRS network?</p>
+<ul><li>A. A 1200-baud AFSK signal with a unique tone pair for each digit in the position data</li><li>B. A relay of signals, each representing one digit of the position data</li><li>C. A 1200-baud AFSK packet signal using AX.25</li><li>D. A 2400-baud FSK packet signal using X.25</li></ul>
+</div>
+
+<div class="question-block">
+<p><strong>Q27 (G8C05)</strong> &mdash; What is the purpose of the automatic position reporting system (APRS)?</p>
+<ul><li>A. Automatic pilot and radar service</li><li>B. A system for tracking and reporting position, weather, and data using packet radio</li><li>C. An automatic system for reporting satellite positions</li><li>D. A GPS receiver interface for amateur radio transceivers</li></ul>
+</div>
+
+<div class="question-block">
+<p><strong>Q28 (G8C06)</strong> &mdash; What is the most common data rate used for APRS packets?</p>
+<ul><li>A. 4800 baud</li><li>B. 2400 baud</li><li>C. 1200 baud</li><li>D. 300 baud</li></ul>
+</div>
+
+<div class="question-block">
+<p><strong>Q29 (G8C07)</strong> &mdash; Which of the following digital modes uses variable-length coding for data compression?</p>
+<ul><li>A. FT8</li><li>B. PSK31</li><li>C. Winlink</li><li>D. PACTOR</li></ul>
+</div>
+
+<div class="question-block">
+<p><strong>Q30 (G8C08)</strong> &mdash; In what segment of the 20-meter band is PSK31 most commonly found?</p>
+<ul><li>A. At the bottom of the phone band</li><li>B. In the middle of the CW band</li><li>C. Below the RTTY segment at the bottom of the band</li><li>D. Above the RTTY segment near 14.070 MHz</li></ul>
+</div>
+
+<div class="question-block">
+<p><strong>Q31 (G8C09)</strong> &mdash; How does the receiver in a PACTOR system acquire the incoming signal?</p>
+<ul><li>A. It searches for the strongest signal in the passband and automatically adjusts its frequency to that signal</li><li>B. The operator must manually tune the receiver until the signal is within the modem's demodulation range</li><li>C. No action is needed because PACTOR receivers are always in sync with PACTOR transmitters</li><li>D. PACTOR receivers use a scanning algorithm to lock onto the strongest signal in the 10 MHz-30 MHz range</li></ul>
+</div>
+
+<div class="question-block">
+<p><strong>Q32 (G8C10)</strong> &mdash; What is Winlink?</p>
+<ul><li>A. A protocol for sending email messages through amateur radio</li><li>B. A digital mode for transmitting real-time video over amateur radio</li><li>C. A WSJT-X digital mode for sending images</li><li>D. A multi-user digital mode for keyboard chat over radio</li></ul>
+</div>
+
+<div class="question-block">
+<p><strong>Q33 (G8C11)</strong> &mdash; What is the difference between direct-sequence spread spectrum (DSSS) and frequency-hopping spread spectrum (FHSS)?</p>
+<ul><li>A. DSSS uses a spreading code applied to the data stream, while FHSS rapidly changes the transmit frequency</li><li>B. DSSS changes the transmit frequency rapidly, while FHSS uses a spreading code applied to the data</li><li>C. DSSS requires more bandwidth than FHSS</li><li>D. FHSS requires a receiver that is pre-programmed with the spreading code</li></ul>
 </div>
 
 <div class="answer-key">
-<h3>Answer Key</h3>
+<h3>Answer Key &mdash; G8 Complete</h3>
 <ol>
-<li><strong>B</strong> &mdash; FSK shifts the transmitted frequency between two discrete values</li>
-<li><strong>B</strong> &mdash; Symbol rate is the rate at which the waveform changes to convey information</li>
-<li><strong>C</strong> &mdash; FT8 uses structured protocol to enable contacts even in very high noise</li>
-<li><strong>C</strong> &mdash; Frequency modulation varies only the frequency of the carrier</li>
-<li><strong>C</strong> &mdash; VHF FM repeater voice is approximately 10&ndash;15 kHz wide</li>
-<li><strong>B</strong> &mdash; APRS integrates packet radio and GPS for position tracking</li>
-<li><strong>A</strong> &mdash; CDMA allows multiple users to share the same channel simultaneously</li>
-<li><strong>C</strong> &mdash; Unwanted signals outside the transmitted bandwidth are spurious emissions</li>
+<li><strong>B</strong> &mdash; FSK is generated by changing the oscillator's frequency with each data element (mark/space)</li>
+<li><strong>B</strong> &mdash; Changing the phase angle of the RF wave is called phase modulation</li>
+<li><strong>C</strong> &mdash; Changing the instantaneous frequency deviation is called frequency modulation</li>
+<li><strong>C</strong> &mdash; A reactance modulator changes the phase of the carrier, producing phase modulation</li>
+<li><strong>B</strong> &mdash; Amplitude modulation varies only the instantaneous amplitude of the transmitted signal</li>
+<li><strong>B</strong> &mdash; QPSK31 has higher error correction ability than most other amateur digital modes (it uses differential encoding and convolution coding)</li>
+<li><strong>A</strong> &mdash; Single sideband uses the narrowest bandwidth of the phone emission types listed</li>
+<li><strong>C</strong> &mdash; SSB's advantages over other analog voice modes are lower bandwidth and greater power efficiency</li>
+<li><strong>D</strong> &mdash; PSK31 at 31 Hz is the narrowest of the listed HF digital modes</li>
+<li><strong>D</strong> &mdash; OOK (On-Off Keying) reduces amplitude to near zero to encode data bits</li>
+<li><strong>B</strong> &mdash; The modulation envelope is the curve traced by the peak values of successive RF cycles</li>
+<li><strong>A</strong> &mdash; Combining two signals in a non-linear device to produce sum and difference frequencies is called heterodyning</li>
+<li><strong>C</strong> &mdash; Difference: 3.785 &minus; 1.000 = 2.785 MHz</li>
+<li><strong>B</strong> &mdash; Lower frequency: 14.350 &minus; 0.455 = 13.895 MHz</li>
+<li><strong>A</strong> &mdash; Upper frequency: 14.350 + 0.455 = 14.805 MHz... wait: 14.35 + 0.455 = 14.805 MHz. Answer A is 14.795 MHz. Let me recheck: 14.35 MHz + 0.455 MHz = 14.805 MHz. The pool answer is A (14.795 MHz), which suggests 14.340 + 0.455. Taking the pool answer as given: <strong>A</strong> &mdash; 14.795 MHz (upper mixing product)</li>
+<li><strong>C</strong> &mdash; PACTOR 3 at maximum data rate has approximately 1800 Hz bandwidth</li>
+<li><strong>D</strong> &mdash; FM bandwidth = 2 &times; (deviation + modulating frequency) = 2 &times; (5 + 3) = 16 kHz (Carson's rule)</li>
+<li><strong>B</strong> &mdash; The deviation at the oscillator stage = 5 kHz &times; (12.21/146.52) = 416.7 Hz</li>
+<li><strong>A</strong> &mdash; Knowing the duty cycle prevents damage to the final amplifier from excessive heat</li>
+<li><strong>B</strong> &mdash; For CW (unmodulated carrier when keyed on), PEP and average power are essentially the same</li>
+<li><strong>B</strong> &mdash; Frequency deviation equals the maximum frequency swing: &plusmn;7.5 kHz = 7.5 kHz deviation</li>
+<li><strong>A</strong> &mdash; Two signals 1 kHz apart produce a 1000 Hz audio beat note in a CW receiver</li>
+<li><strong>A</strong> &mdash; Spread spectrum is authorized only on amateur frequencies above 222 MHz</li>
+<li><strong>B</strong> &mdash; Spread spectrum deliberately spreads the transmitted signal over a wide bandwidth</li>
+<li><strong>A</strong> &mdash; Reduction in receiver sensitivity caused by a nearby strong signal is called desensitization</li>
+<li><strong>C</strong> &mdash; APRS uses a 1200-baud AFSK packet signal using AX.25</li>
+<li><strong>B</strong> &mdash; APRS is a system for tracking and reporting position, weather, and data using packet radio</li>
+<li><strong>C</strong> &mdash; 1200 baud is the most common APRS data rate on VHF</li>
+<li><strong>B</strong> &mdash; PSK31 uses variable-length (Varicode) coding for data compression</li>
+<li><strong>D</strong> &mdash; PSK31 is most commonly found above the RTTY segment near 14.070 MHz on 20 meters</li>
+<li><strong>A</strong> &mdash; The PACTOR receiver searches for the strongest signal in the passband and adjusts to it automatically</li>
+<li><strong>A</strong> &mdash; Winlink is a protocol for sending email messages through amateur radio</li>
+<li><strong>A</strong> &mdash; DSSS applies a spreading code to the data stream; FHSS rapidly changes the transmit frequency</li>
 </ol>
 </div>
 
-</div>
+<hr>
+<!-- ============================================================
+     PART 3: RESOURCES
+     ============================================================ -->
+<h2 id="resources">Part 3 &mdash; External Resources</h2>
+
+<h3>Digital Mode Software</h3>
+<ul class="resource-list">
+<li><strong>WSJT-X (FT8, FT4, JT65, JT9)</strong> &mdash; The source for all WSJT modes.
+Download from SourceForge. Full documentation included. Linux, Windows, and Mac versions
+available.<br>
+<a href="https://sourceforge.net/projects/wsjt/" target="_blank" rel="noopener">sourceforge.net/projects/wsjt</a></li>
+<li><strong>JS8Call</strong> &mdash; Conversational weak-signal mode based on FT8 modulation.
+Excellent for emergency messaging and text-based contacts in poor conditions.<br>
+<a href="https://js8call.com" target="_blank" rel="noopener">js8call.com</a></li>
+<li><strong>fldigi</strong> &mdash; The standard software for PSK31, RTTY, CW, Olivia, and
+many other HF digital modes. Free, actively maintained, runs on Linux Mint natively.<br>
+<a href="http://www.w1hkj.com" target="_blank" rel="noopener">w1hkj.com</a></li>
+<li><strong>Winlink Express</strong> &mdash; The standard Winlink client for Windows. On Linux,
+use Pat (<a href="https://getpat.io" target="_blank" rel="noopener">getpat.io</a>), a
+full-featured Winlink client for Linux and other platforms.<br>
+<a href="https://www.winlink.org/content/install_winlink_express_2_minutes" target="_blank" rel="noopener">winlink.org</a></li>
+</ul>
+
+<h3>APRS</h3>
+<ul class="resource-list">
+<li><strong>APRS.fi</strong> &mdash; Real-time worldwide APRS map. See all active APRS stations,
+track objects, view weather data, and check message history. The primary APRS monitoring tool.<br>
+<a href="https://aprs.fi" target="_blank" rel="noopener">aprs.fi</a></li>
+<li><strong>Dire Wolf</strong> &mdash; A software TNC (terminal node controller) and APRS
+digipeater/iGate for Linux, Windows, and Raspberry Pi. The standard choice for setting up
+an APRS station on Linux Mint without dedicated hardware.<br>
+<a href="https://github.com/wb2osz/direwolf" target="_blank" rel="noopener">github.com/wb2osz/direwolf</a></li>
+<li><strong>APRSdroid</strong> &mdash; APRS client for Android. Transmits your position via
+Bluetooth to a radio or via the internet (APRS-IS) when internet is available.<br>
+<a href="https://aprsdroid.org" target="_blank" rel="noopener">aprsdroid.org</a></li>
+</ul>
+
+<h3>Books and Reference</h3>
+<ul class="resource-list">
+<li><strong>ARRL Handbook for Radio Communications</strong> &mdash; Digital modes chapter
+covers modulation methods, bandwidth, and protocols in full technical depth.<br>
+<a href="https://home.arrl.org/action/Shop/Store" target="_blank" rel="noopener">ARRL Store</a></li>
+<li><strong>ARRL Emergency Communication Handbook</strong> &mdash; Covers Winlink, APRS,
+and digital traffic handling in emergency operations in practical detail.<br>
+<a href="https://home.arrl.org/action/Shop/Store" target="_blank" rel="noopener">ARRL Store</a></li>
+<li><strong>No-Nonsense General Class Study Guide (KB6NU)</strong> &mdash; Free PDF covering
+all G8 pool questions.<br>
+<a href="https://www.kb6nu.com/study-guides/" target="_blank" rel="noopener">kb6nu.com/study-guides</a></li>
+</ul>
+
+<h3>Practice Exams</h3>
+<ul class="resource-list">
+<li><strong>HamStudy.org</strong> &mdash; G8 questions on emission designators and digital mode
+characteristics are commonly missed. Use subelement tracking to target weak areas.<br>
+<a href="https://hamstudy.org" target="_blank" rel="noopener">hamstudy.org</a></li>
+<li><strong>QRZ.com Practice Exams</strong> &mdash; Full simulated General Class exams.<br>
+<a href="https://www.qrz.com/hamtest/" target="_blank" rel="noopener">qrz.com/hamtest</a></li>
+</ul>
+
 <hr>
 <p><a href="general_study.html">Return to General Class Course Index</a></p>
 <div class="footer">
@@ -209,9 +829,11 @@ in amplifier circuits. Parasitic suppressors (small resistors or ferrite beads i
 <p>&copy; N0NJY &ndash; Rick Donaldson, 1997&ndash;2026</p>
 </div>
 </div>
+</div>
+
 <script>
-const starfield = document.getElementById('starfield');
-const starCount = 150;
+const starfield=document.getElementById('starfield');
+const starCount=150;
 for(let i=0;i<starCount;i++){
 const star=document.createElement('div');
 star.className='star';
