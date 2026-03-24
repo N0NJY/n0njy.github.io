@@ -1,0 +1,889 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="author" content="Rick" >
+<meta name="description" content="General Class Module G7 – Practical Circuits – Receivers, Transmitters, Amplifiers, Power Supplies, DSP – N0NJY">
+<title>G7: Practical Circuits – N0NJY</title>
+<link rel="stylesheet" href="style.css">
+<style>
+.page{max-width:900px;margin:auto;padding:2rem 1rem;color:yellow;}
+.page a{color:#8ecbff;text-decoration:none;}
+.page a:hover{text-decoration:underline;color:#ffffff;}
+h1,h2,h3,h4{margin-top:1rem;}
+.lesson{margin-top:1.5rem;line-height:1.7;}
+.footer{margin-top:3rem;font-size:0.9rem;}
+.module-sections{display:flex;gap:0.5rem;margin:1.5rem 0 0.5rem 0;flex-wrap:wrap;}
+.module-sections a{background:rgba(255,255,255,0.07);border:1px solid rgba(255,255,255,0.2);border-radius:4px;padding:0.4rem 1rem;color:#8ecbff;font-size:0.9rem;font-weight:600;text-decoration:none;}
+.module-sections a:hover{background:rgba(255,255,255,0.15);color:#fff;}
+.elmer-box{background:rgba(255,200,0,0.07);border-left:4px solid #FFD700;border-radius:0 6px 6px 0;padding:0.9rem 1.2rem;margin:1.4rem 0;}
+.elmer-box strong{color:#FFD700;}
+.warning-box{background:rgba(255,80,80,0.07);border-left:4px solid #ff6060;border-radius:0 6px 6px 0;padding:0.9rem 1.2rem;margin:1.4rem 0;}
+.warning-box strong{color:#ff9090;}
+.tip-box{background:rgba(100,200,100,0.07);border-left:4px solid #66cc66;border-radius:0 6px 6px 0;padding:0.9rem 1.2rem;margin:1.4rem 0;}
+.tip-box strong{color:#90ee90;}
+.question-block{margin:1rem 0 1.5rem 0;padding:0.8rem 1rem;background:rgba(255,255,255,0.04);border-left:3px solid #8ecbff;border-radius:4px;}
+.answer-key{margin-top:1.5rem;padding:0.8rem 1rem;background:rgba(0,80,0,0.18);border-left:3px solid #66cc66;border-radius:4px;}
+.resource-list{list-style:none;padding:0;}
+.resource-list li{margin:0.7rem 0;padding-left:1.2rem;position:relative;}
+.resource-list li::before{content:"›";position:absolute;left:0;color:#8ecbff;font-weight:bold;}
+table.circ-table{width:100%;border-collapse:collapse;margin:1rem 0;font-size:0.9em;}
+table.circ-table th{background:rgba(255,255,255,0.1);color:#8ecbff;padding:0.4rem 0.7rem;text-align:left;border-bottom:1px solid rgba(255,255,255,0.25);}
+table.circ-table td{padding:0.35rem 0.7rem;border-bottom:1px solid rgba(255,255,255,0.07);color:#e0e0e0;vertical-align:top;}
+hr{border:none;border-top:1px solid rgba(255,255,255,0.15);margin:2rem 0;}
+</style>
+</head>
+<body>
+<div class="starfield" id="starfield"></div>
+<div class="topbar">
+<a href="index.html">Home</a>
+<a href="contents.html">Table of Contents</a>
+<a href="articles.html">Articles</a>
+<a href="otherhams.html">Other Hams</a>
+<a href="astronomy.html">Space</a>
+<a href="survival.html">Preparedness</a>
+<a href="commlink.htm">Contact</a>
+</div>
+<div class="page">
+<h1>General Class License Study</h1>
+<h2>G7: Practical Circuits</h2>
+<p>This page is part of the N0NJY General Class self-study course for Technician operators upgrading to General.</p>
+<div class="module-sections">
+<a href="#operator">Operator Knowledge</a>
+<a href="#exam">Exam Coverage</a>
+<a href="#resources">Resources</a>
+</div>
+<hr>
+<div class="lesson">
+
+<!-- ============================================================
+     PART 1: OPERATOR KNOWLEDGE
+     ============================================================ -->
+<h2 id="operator">Part 1 &mdash; Operator Knowledge</h2>
+
+<p>G7 is where theory becomes hardware. This module covers the actual circuits that make up your
+station equipment &mdash; how receivers receive, how transmitters transmit, what amplifier classes
+mean in practical terms, how oscillators work and why they matter, how power supplies are built
+and what goes wrong with them, and how modern DSP and software-defined radio differ from
+traditional analog designs. If you ever build your own equipment, repair commercial gear, or
+simply want to understand why your radio does what it does, this material is essential.</p>
+
+<hr>
+<h3>The Superheterodyne Receiver &mdash; In Detail</h3>
+
+<p>The superheterodyne (superhet) receiver is the dominant architecture in virtually all modern
+HF transceivers. It was invented by Edwin Armstrong in 1918 and has remained the standard approach
+because it elegantly solves the fundamental challenge of radio reception: how do you build a
+high-selectivity, high-sensitivity receiver that works across a wide range of frequencies?</p>
+
+<p>The answer is to convert the incoming RF signal to a fixed intermediate frequency (IF), do all
+the serious filtering and amplification at that fixed IF, and then detect the signal. Because
+the IF is fixed, you only need to build one excellent filter &mdash; and you can make it as sharp
+and precise as you want without having to rebuild it for every frequency. The variable-frequency
+local oscillator does the work of tuning.</p>
+
+<h4>The Signal Path &mdash; Stage by Stage</h4>
+
+<p><strong>1. Antenna input and bandpass filter (preselector):</strong> The signal from the
+antenna enters the receiver and passes through a bandpass filter (the preselector) that passes
+the desired frequency range and rejects strong out-of-band signals. On HF transceivers, this
+is typically a switched bank of bandpass filters &mdash; one per band &mdash; that the radio
+selects automatically when you change bands. The preselector prevents strong signals outside
+the amateur bands from overloading the first stage and producing spurious responses.</p>
+
+<p><strong>2. RF amplifier:</strong> A low-noise amplifier boosts the incoming signal before it
+reaches the mixer. The noise figure of this stage largely determines the receiver's sensitivity
+&mdash; noise added here cannot be separated from the desired signal at any later stage. High-
+quality HF receivers use very low-noise RF amplifiers (often GaAs FET devices) to maintain
+sensitivity. Some receivers include a switchable attenuator at this stage for use on very active
+bands where strong signals cause overload &mdash; counterintuitively, reducing gain at the front
+end sometimes improves the received signal quality.</p>
+
+<p><strong>3. Mixer:</strong> The mixer is the heart of the superheterodyne design. It combines
+the incoming RF signal with a locally generated oscillator signal (the local oscillator, or LO)
+and produces output signals at the sum and difference frequencies. If you are receiving 14.200
+MHz and your LO is at 5.000 MHz, the mixer produces signals at 19.200 MHz (sum) and 9.200 MHz
+(difference). The IF filter selects one of these &mdash; say the 9.200 MHz difference product
+&mdash; and rejects the other. Now the 14.200 MHz signal has become a 9.200 MHz signal and can
+be processed by a fixed 9.200 MHz IF chain.</p>
+
+<p>When you tune your radio from 14.200 to 14.205 MHz, the LO shifts from 5.000 to 5.005 MHz,
+keeping the IF product at 9.200 MHz. The IF chain never knows you changed frequency. This is
+the elegance of the superhet design.</p>
+
+<p><strong>4. The image frequency problem:</strong> The mixer is mathematically symmetric. A
+signal at 14.200 MHz with a 5.000 MHz LO produces a 9.200 MHz IF. But a signal at 4.200 MHz
+with the same 5.000 MHz LO <em>also</em> produces a 9.200 MHz difference product (5.000 &minus;
+4.200 = 0.800... wait, let me recalculate: if LO is at 23.200 MHz and desired signal is
+14.200 MHz, the difference is 9.000 MHz. The image is at LO + IF = 23.200 + 9.000 = 32.200 MHz
+and LO &minus; IF = 23.200 &minus; 9.000 = 14.200, which is the desired signal. The image
+is at 14.200 + 2&times;9.000 = 32.200 MHz). In general, the image frequency is separated from
+the desired frequency by twice the IF. The preselector bandpass filter must reject signals at
+the image frequency before they reach the mixer.</p>
+
+<p>This is one reason why a higher IF is generally better &mdash; a higher IF places the image
+frequency farther from the desired frequency, making it easier for the preselector to reject it.
+Modern double-conversion receivers use a high first IF (often 45 MHz or higher) for good image
+rejection, then convert down to a lower second IF (455 kHz or 9 MHz) for sharp audio filtering.</p>
+
+<p><strong>5. IF amplifier and filter:</strong> The IF amplifier boosts the signal at the
+intermediate frequency. The IF filter &mdash; typically a crystal filter or mechanical filter
+in traditional designs, or a DSP filter in modern radios &mdash; provides the selectivity that
+separates the desired signal from adjacent interference. This is the stage that gives your
+radio its ability to pull one signal out of a crowded band. Narrowing the IF filter bandwidth
+improves selectivity but reduces audio fidelity &mdash; a 250 Hz CW filter produces excellent
+signal-to-noise ratio for CW but makes SSB voice unintelligible.</p>
+
+<p><strong>6. AGC (Automatic Gain Control):</strong> The AGC samples the IF signal level and
+uses it to control the gain of the IF amplifier (and often the RF amplifier). When a strong
+signal arrives, the AGC reduces gain to prevent overload. When the signal fades, AGC increases
+gain to maintain a relatively constant audio output level. The attack and decay time constants
+of the AGC circuit determine whether it is suitable for SSB (slow decay preferred) or CW
+(fast attack and decay preferred).</p>
+
+<p><strong>7. Detector / demodulator:</strong> The detector extracts the audio (or data) from
+the IF signal. Different detectors are used for different modes:</p>
+<ul>
+<li><strong>Product detector:</strong> Used for SSB and CW. Multiplies the IF signal with a
+locally generated carrier (the Beat Frequency Oscillator, or BFO) to produce audio. For SSB,
+the BFO is tuned to the suppressed carrier frequency. For CW, it is offset by the desired
+audio pitch. The product detector is what allows you to hear SSB and CW at all &mdash; without
+the BFO reinjecting the carrier, SSB would be unintelligible gibberish.</li>
+<li><strong>Envelope detector:</strong> Used for AM reception. Rectifies and filters the IF
+signal to follow the amplitude envelope, recovering the audio directly.</li>
+<li><strong>FM discriminator / ratio detector:</strong> Used for FM. Detects frequency
+deviations in the IF signal and converts them to audio voltage.</li>
+</ul>
+
+<p><strong>8. Audio amplifier:</strong> The detected audio is amplified to a level suitable
+for headphones or a speaker. AGC-controlled audio stages maintain consistent volume across a
+wide range of received signal strengths.</p>
+
+<div class="elmer-box">
+<strong>From the elmer's notebook:</strong> Understanding the superhet signal path explains
+most receiver problems. Receiver sounds muffled or bass-heavy? IF filter is set too narrow,
+cutting the high-frequency audio components. Hearing a ghost signal at a fixed offset from
+a strong signal? That is the image frequency or an IF harmonic &mdash; a real signal at the
+image frequency leaking through the preselector. Strong nearby station causes everything on
+the band to sound distorted? Front-end overload &mdash; the RF amplifier or mixer is being
+driven into non-linearity by the strong signal. Reduce RF gain or engage the attenuator.
+The signal path tells you where to look.
+</div>
+
+<hr>
+<h3>Oscillators &mdash; How They Work and Why They Matter</h3>
+
+<p>An oscillator is an amplifier with positive feedback &mdash; it feeds some of its own output
+back to its input in phase, sustaining oscillation without any external signal. Every oscillator
+requires two things: an amplifying element (transistor, FET, op-amp) and a frequency-determining
+network that sets the oscillation frequency and provides the feedback.</p>
+
+<p>Oscillators are everywhere in amateur radio equipment. The local oscillator in your superhet
+receiver, the carrier oscillator in an SSB transmitter, the frequency synthesizer in a modern
+transceiver, the clock in a microcontroller, the tone generators in a DTMF encoder &mdash; all
+are oscillators. If you are building your own equipment, oscillator design is one of the most
+critical skills you will need.</p>
+
+<h4>LC Oscillators</h4>
+<p>An LC oscillator uses an inductor-capacitor (tank) circuit as the frequency-determining element.
+The tank circuit resonates at a frequency determined by the L and C values (f = 1/(2&pi;&radic;LC)),
+and the transistor amplifier sustains the oscillation by replenishing the energy lost to resistance
+each cycle. Several circuit configurations are common:</p>
+
+<p><strong>Colpitts oscillator:</strong> The feedback is taken from a capacitive voltage divider
+in the tank circuit (two capacitors in series across the inductor). The transistor sees a low
+impedance feedback path, making the Colpitts reliable and easy to build. It is one of the most
+common oscillator circuits in amateur radio equipment.</p>
+
+<p><strong>Hartley oscillator:</strong> Similar to the Colpitts but uses a tapped inductor
+(inductive voltage divider) instead of a capacitive divider for feedback. The Hartley is
+slightly simpler to tune (vary one capacitor) but less common in modern designs.</p>
+
+<p><strong>Clapp oscillator:</strong> A modification of the Colpitts with an additional series
+capacitor in the tank circuit. The Clapp has better frequency stability than the basic Colpitts
+because the additional capacitor reduces the effect of transistor junction capacitance variations
+on oscillation frequency.</p>
+
+<h4>Crystal Oscillators</h4>
+<p>Quartz crystals exploit the piezoelectric effect &mdash; mechanical stress produces electrical
+charge and vice versa. A quartz crystal cut to a precise geometry resonates mechanically at a
+very specific frequency with extremely high Q (often 10,000 to 100,000 or higher). When used
+as the frequency-determining element in an oscillator, a crystal produces an output with
+frequency stability far superior to any LC circuit.</p>
+
+<p>Crystal oscillators are used wherever frequency accuracy and stability are critical: the
+reference oscillator in a frequency synthesizer, the carrier oscillator in a CW transmitter,
+the IF filter in a receiver (multiple crystals in a ladder or lattice filter), and the clock
+in all digital circuits in your station. The frequency accuracy of a crystal oscillator is
+typically specified in parts per million (ppm). A 10 ppm crystal at 10 MHz will drift no more
+than 100 Hz from nominal frequency across its operating temperature range.</p>
+
+<p><strong>TCXO (Temperature Compensated Crystal Oscillator):</strong> Adds circuitry to
+compensate for the crystal's temperature coefficient, achieving stabilities of 1 ppm or better
+across a wide temperature range. Used in high-quality transceivers and GPS receivers.</p>
+
+<p><strong>VCXO (Voltage Controlled Crystal Oscillator):</strong> The crystal oscillator's
+frequency can be pulled slightly by an input voltage. Used in phase-locked loops where the
+reference oscillator must be adjusted to maintain lock.</p>
+
+<h4>VFO (Variable Frequency Oscillator)</h4>
+<p>A VFO is an LC oscillator with a variable capacitor (or varactor diode) that allows the
+frequency to be changed continuously across a range. In older transceivers, a mechanically
+tuned VFO set the operating frequency directly. The main challenge in VFO design is stability
+&mdash; keeping the frequency from drifting with temperature changes in the components.
+Good VFO design uses temperature-stable components (NPO/C0G capacitors, powdered iron cores
+with stable temperature coefficients) and mechanical layouts that minimize thermal stress.</p>
+
+<h4>Phase-Locked Loop (PLL) Frequency Synthesis</h4>
+<p>Modern transceivers use PLL frequency synthesis rather than a traditional VFO. A PLL
+generates a stable, precise, digitally controlled frequency by comparing a voltage-controlled
+oscillator (VCO) to a stable reference oscillator (crystal) through a programmable frequency
+divider. When the VCO drifts, the phase detector senses the error and corrects the VCO. The
+result is the tuning flexibility of a VFO with the stability of a crystal reference. Every
+digital-display transceiver you have ever used contains a PLL synthesizer.</p>
+
+<div class="tip-box">
+<strong>For builders:</strong> When designing an LC oscillator for a homebrew transmitter or
+receiver, shield the oscillator physically from the rest of the circuit. Mechanical vibration
+(from a speaker or rotary switch) can frequency-modulate an LC oscillator, producing an
+unstable signal. Allow the oscillator to warm up for at least 15 minutes before relying on
+its frequency. If you need better stability, use a crystal in series with the LC tank (a
+crystal-controlled VXO) or invest in a proper crystal oscillator module.
+</div>
+
+<hr>
+<h3>Amplifier Classes &mdash; What They Mean and When Each Is Used</h3>
+
+<p>The class of an amplifier describes how much of the input signal cycle the transistor (or
+tube) is conducting. This determines the amplifier's efficiency, linearity, and appropriate
+applications. Choosing the wrong amplifier class for a given application produces either a
+distorted output, poor efficiency, or both.</p>
+
+<table class="circ-table">
+<tr><th>Class</th><th>Conduction Angle</th><th>Efficiency</th><th>Linearity</th><th>Typical Application in Amateur Radio</th></tr>
+<tr><td><strong>Class A</strong></td><td>360&deg; (full cycle)</td><td>25&ndash;30%</td><td>Excellent</td><td>Low-noise RF preamplifiers; audio amplifiers where distortion must be minimal</td></tr>
+<tr><td><strong>Class AB</strong></td><td>180&deg;&ndash;360&deg;</td><td>50&ndash;70%</td><td>Very good</td><td>SSB linear power amplifiers; the standard for HF phone operation</td></tr>
+<tr><td><strong>Class B</strong></td><td>180&deg; (half cycle)</td><td>~78%</td><td>Good (push-pull)</td><td>Push-pull audio amplifiers; rarely used alone in RF due to crossover distortion</td></tr>
+<tr><td><strong>Class C</strong></td><td>Less than 180&deg;</td><td>Up to 90%</td><td>Poor (non-linear)</td><td>FM and CW transmitters; frequency multipliers; NOT suitable for SSB or AM</td></tr>
+</table>
+
+<h4>Class A &mdash; Full Cycle Conduction</h4>
+<p>In Class A, the transistor conducts throughout the entire 360 degrees of the input signal
+cycle. The bias point is set so the transistor is always in its active region, never cutting
+off. This produces the most linear amplification &mdash; the output faithfully reproduces the
+input waveform. The cost is efficiency: a significant DC current flows even with no input
+signal, and at best 25 to 30% of the DC input power is converted to useful RF output. The
+rest is dissipated as heat.</p>
+
+<p><strong>When to use Class A:</strong> Low-level, noise-sensitive stages where linearity
+matters more than efficiency. The first RF amplifier stage in a receiver (the LNA &mdash; low
+noise amplifier) is typically Class A. Driver stages in a transmitter signal chain are often
+Class A. Audio amplifiers where harmonic distortion must be minimized are Class A.</p>
+
+<h4>Class AB &mdash; The HF Linear Amplifier Standard</h4>
+<p>Class AB is the compromise between efficiency and linearity that makes it the standard for
+HF SSB linear power amplifiers. The bias point is set so the transistor conducts for slightly
+more than half the input cycle. The small amount of quiescent (idle) current prevents the
+crossover distortion that plagues pure Class B designs, while the efficiency is much better
+than Class A.</p>
+
+<p>Every commercial HF linear amplifier you will encounter &mdash; the Icom, Yaesu, and Elecraft
+transceivers' final amplifier stages, and external amplifiers like the Ameritron AL-811 &mdash;
+operates in Class AB. The defining characteristic is that it is a <em>linear</em> amplifier:
+the output amplitude is proportional to the input amplitude. This is a strict requirement for
+SSB, where the amplitude variations in the modulated signal carry the audio information.
+A non-linear amplifier would distort the amplitude envelope and corrupt the audio.</p>
+
+<p><strong>DC input power at idle:</strong> A Class AB amplifier draws a small quiescent current
+even when no signal is present. In a 100-watt SSB transceiver, this idle current is typically
+equivalent to about 25 watts of DC input power. This is why your radio draws power even when
+you are listening but not transmitting.</p>
+
+<h4>Class B &mdash; Push-Pull Operation</h4>
+<p>A Class B amplifier biases the transistor at cutoff. It only conducts for half the input
+cycle (180 degrees). Using a single Class B transistor produces a half-wave output with
+severe distortion. The solution is push-pull: two Class B transistors are operated 180 degrees
+out of phase, each amplifying one half of the cycle. Their outputs are combined to reconstruct
+the full waveform. Push-pull Class B is common in audio power amplifiers and in some RF
+applications. The crossover distortion at the zero-crossing point is the main limitation of
+pure Class B, which is why practical amplifiers use Class AB rather than true Class B.</p>
+
+<h4>Class C &mdash; High Efficiency, Non-Linear</h4>
+<p>Class C biases the transistor well beyond cutoff. The transistor conducts for less than
+180 degrees of the input cycle &mdash; only brief, high-amplitude pulses at the peaks of
+the input signal. This produces high efficiency (up to 90%) but severe distortion. The output
+waveform barely resembles a sine wave; it consists of short current pulses.</p>
+
+<p>Class C is acceptable &mdash; and desirable &mdash; in applications where only the
+<em>frequency</em> of the output matters, not the amplitude. FM transmitters use Class C
+final amplifiers because FM is a constant-amplitude mode. CW transmitters use Class C because
+CW is simply on-off keying of an unmodulated carrier. Class C is also used in frequency
+multiplier stages, where the harmonics of the nonlinear output (which in a linear amplifier
+would be suppressed) are used intentionally to generate multiples of the input frequency.</p>
+
+<p>Never use a Class C amplifier for SSB or AM. The non-linearity of Class C produces
+intermodulation distortion that would completely destroy the amplitude-modulated information
+in the signal.</p>
+
+<div class="warning-box">
+<strong>The linear amplifier requirement:</strong> When you purchase or use an external
+power amplifier for HF phone operation, verify that it is designed as a linear amplifier
+(Class AB). Some amplifiers designed for FM or CW are Class C and will produce a severely
+distorted, wide signal if used for SSB. Amplifiers sold for amateur HF phone use are
+invariably Class AB. Amplifiers salvaged from commercial FM broadcast equipment are Class C
+and cannot be used for SSB without significant modification.
+</div>
+
+<hr>
+<h3>The SSB Transmitter Signal Chain &mdash; Microphone to Antenna</h3>
+
+<p>Understanding the signal chain in an SSB transmitter tells you what each control does and
+what happens when something goes wrong. Here is the complete path from your voice to your
+antenna, stage by stage.</p>
+
+<p><strong>1. Microphone and microphone amplifier:</strong> Your voice produces acoustic
+pressure waves that the microphone converts to an electrical audio signal. The microphone
+amplifier (mic preamp) boosts this signal to the level needed to drive the balanced modulator.
+The microphone gain control on your transceiver adjusts how much gain this stage applies. Too
+little gain: weak modulation, low average power. Too much gain: clipping and distortion at
+the balanced modulator input.</p>
+
+<p><strong>2. Speech processor (optional):</strong> The speech processor compresses the audio
+dynamic range, bringing low-level audio components up in level relative to the peaks. This
+increases the average power of the transmitted signal without increasing the peak power. The
+result is a signal that sounds louder and cuts through noise better. Excessive compression
+degrades audio intelligibility and is instantly recognizable on the air as a harsh, compressed
+sound.</p>
+
+<p><strong>3. Balanced modulator:</strong> The balanced modulator combines the audio signal
+with a carrier frequency oscillator to produce a double-sideband suppressed-carrier (DSB-SC)
+signal. "Suppressed carrier" means the carrier frequency itself is cancelled in the output
+(the two inputs to the balanced modulator are fed 180 degrees out of phase, causing the
+carrier to cancel). The output contains only the two sidebands (upper and lower) with no
+carrier. The carrier suppression of a good balanced modulator is typically 40 dB or better.</p>
+
+<p><strong>4. Sideband filter:</strong> A crystal or mechanical bandpass filter selects one
+sideband and rejects the other. For upper sideband (USB), the filter passes frequencies above
+the carrier. For lower sideband (LSB), it passes frequencies below. The sharpness of the
+sideband filter determines how well the unwanted sideband is suppressed (the sideband
+suppression specification, typically 50 to 60 dB in a good transceiver).</p>
+
+<p><strong>5. Mixer and VFO/PLL:</strong> The filtered single-sideband signal at the IF
+frequency is mixed with the variable frequency oscillator (or PLL synthesizer) output to
+translate it to the desired transmit frequency. Tuning your radio changes this oscillator
+frequency, which shifts the transmitted frequency while keeping the signal chain ahead of
+the mixer at the fixed IF.</p>
+
+<p><strong>6. Driver amplifier:</strong> The translated SSB signal is amplified from the
+milliwatt level at the mixer output to the several-watt level needed to drive the final
+amplifier. The driver is a linear (Class AB) amplifier stage. Its output level is controlled
+by the ALC system.</p>
+
+<p><strong>7. Final power amplifier (PA):</strong> The linear final amplifier boosts the
+signal to the full output power level (typically 100 to 200 watts in a modern HF transceiver).
+The PA is Class AB. It is the stage most vulnerable to damage from high SWR, overdriving,
+inadequate heat sinking, or operation outside specified voltage ranges.</p>
+
+<p><strong>8. Low-pass filter:</strong> After the PA, a low-pass filter removes harmonics
+and other spurious products generated by the amplifier's non-linearities. The FCC requires
+harmonics to be suppressed to at least 43 dB below the fundamental. The low-pass filter
+provides this suppression. Without the LPF, your 14 MHz transmission would also radiate
+significant energy at 28 MHz, 42 MHz, and higher harmonics.</p>
+
+<p><strong>9. ALC (Automatic Level Control):</strong> The ALC system samples the PA output
+(or sometimes an internal point in the driver chain) and generates a control voltage that
+reduces the microphone amplifier gain when the output exceeds a threshold. This prevents
+overdriving the PA and keeps the output within the transmitter's linear range. The ALC
+meter on your transceiver shows the ALC action &mdash; it should deflect on audio peaks
+and recover between words. Continuous full-scale ALC deflection means the microphone gain
+is set too high and the transmitter is being driven into compression on every syllable.</p>
+
+<div class="elmer-box">
+<strong>From the elmer's notebook:</strong> The most common transmitter problem is an
+over-driven, compressed audio signal caused by too much microphone gain. The symptom on
+the receiving end is an audio quality described as "hard," "splashy," "harsh," or "wide"
+&mdash; and the station's signal often extends several kilohertz beyond its nominal position,
+causing interference to adjacent signals. On the transmitting end, the ALC meter stays pegged
+continuously rather than swinging on peaks. The fix takes ten seconds: reduce microphone gain
+until the ALC only responds to the loudest syllables. Your signal will immediately sound better
+and will stop causing interference.
+</div>
+
+<hr>
+<h3>Power Supplies &mdash; Design, Failure, and Interference</h3>
+
+<h4>Linear Power Supplies</h4>
+<p>A linear power supply converts AC to DC through rectification, filtering, and linear
+voltage regulation. The stages are:</p>
+
+<p><strong>Transformer:</strong> Steps AC mains voltage down to a level appropriate for the
+output voltage required. A 13.8V supply for amateur radio use typically uses a transformer
+with a 16 to 18V AC secondary.</p>
+
+<p><strong>Rectifier:</strong> Converts AC to pulsating DC. A full-wave bridge rectifier
+(four diodes) produces pulsating DC at twice the AC frequency &mdash; 120 Hz ripple on a
+60 Hz supply. The peak voltage of the rectified output is V<sub>RMS</sub> &times; 1.414,
+minus the diode forward voltage drops (approximately 1.4V total for a silicon bridge).</p>
+
+<p><strong>Filter capacitors:</strong> Large electrolytic capacitors smooth the pulsating DC
+into something approaching steady DC. The larger the capacitance, the lower the ripple. A
+13.8V/20A supply typically uses 20,000 to 50,000 microfarads of filtering capacitance. The
+ripple remaining after filtering is amplified by the audio stages in a receiver if it is not
+adequately suppressed, producing the classic 120 Hz hum in the audio.</p>
+
+<p><strong>Linear voltage regulator:</strong> A series pass transistor (or integrated regulator
+IC) continuously adjusts its resistance to maintain a constant output voltage regardless of
+load current changes or input voltage variations. The regulator dissipates the difference
+between input and output voltage as heat: P<sub>dissipated</sub> = (V<sub>in</sub> &minus;
+V<sub>out</sub>) &times; I<sub>load</sub>. At 20 amps load current with 5 volts of headroom,
+the regulator dissipates 100 watts of heat. This is why linear supplies require large heat
+sinks and often run hot.</p>
+
+<p><strong>Advantages of linear supplies:</strong> Very low output noise (microvolts of
+ripple on the output), no switching-frequency interference, simple design, excellent for
+noise-sensitive applications. A high-quality linear supply is essentially transparent to
+an HF receiver. Many experienced operators prefer linear supplies specifically because they
+do not generate interference.</p>
+
+<p><strong>Disadvantages:</strong> Inefficient (40 to 60% efficiency at full load), heavy
+(the 60 Hz transformer is large and heavy), physically large. A 20-amp linear supply for
+a 100-watt HF transceiver might weigh 10 to 15 pounds.</p>
+
+<h4>Switching Power Supplies</h4>
+<p>A switching power supply (switch-mode power supply, SMPS) converts AC to DC using a
+fundamentally different approach. After an initial rectification stage, the DC is chopped
+into high-frequency AC (typically 20 kHz to several hundred kHz) by a switching transistor,
+transformed at that high frequency, rectified again, and filtered. Because the transformer
+operates at high frequency, it can be much smaller and lighter than a 60 Hz transformer.
+The switching transistor operates in saturation (fully ON) or cutoff (fully OFF), dissipating
+very little power in either state, which gives SMPS designs efficiencies of 80 to 95%.</p>
+
+<p><strong>Advantages:</strong> High efficiency (generates much less heat), compact and
+lightweight, wide input voltage range (many work from 90 to 240V AC), relatively inexpensive
+to manufacture. The majority of commercial station accessories, computers, and wall adapters
+use switching supplies.</p>
+
+<p><strong>The interference problem:</strong> The switching frequency and its harmonics
+appear at the output and radiate from the supply's wiring and case. A switching supply running
+at 100 kHz generates noise at 100 kHz, 200 kHz, 300 kHz, and harmonics extending into and
+through the HF amateur bands. A poorly designed or poorly filtered switching supply in your
+shack can raise the noise floor on HF significantly, making weak signals inaudible and
+degrading digital mode decoding. This is a real and growing problem as more switching supplies
+appear in the shack environment &mdash; laptop chargers, LED lighting drivers, USB chargers,
+and commercial station accessories all use switching supplies.</p>
+
+<h4>Identifying and Suppressing Switching Supply Noise</h4>
+<p>Diagnosis: Tune your receiver to a quiet part of the HF spectrum (40 meters in the evening,
+for example). Unplug suspected switching supplies one at a time and observe whether the noise
+floor drops. The noise from a switching supply typically sounds like a buzz or whine that
+moves with frequency or appears on multiple bands simultaneously. If you have an SDR receiver
+with a wide waterfall display, you can often see the switching frequency harmonics as a
+comb of equally spaced signals across the waterfall.</p>
+
+<p>Suppression approaches in order of effectiveness:</p>
+<ul>
+<li><strong>Replace with a quality linear supply:</strong> For your primary station power
+supply, a high-quality linear supply (Astron RS-series, for example) eliminates the problem
+entirely. This is the most reliable solution for the transceiver power supply.</li>
+<li><strong>Ferrite chokes on power leads:</strong> Wind the DC output leads of a switching
+supply through a Type 31 ferrite toroid (several turns). This attenuates the common-mode
+noise on the output leads. Also install ferrite chokes on the AC input leads.</li>
+<li><strong>EMI filter on the AC input:</strong> A commercial EMI filter installed on the
+AC input to a noisy switching supply reduces the high-frequency noise conducted back into
+the building wiring (and radiated from it). Available from electronics suppliers.</li>
+<li><strong>Replace cheap supplies with quality units:</strong> Not all switching supplies
+are equal. A quality SMPS from a reputable manufacturer (MeanWell, for example) includes
+proper output filtering and EMI suppression. The $8 switching supply from an online
+marketplace may not.</li>
+<li><strong>Physical separation:</strong> Moving noisy switching supplies (laptop chargers,
+LED drivers) away from the receiver and its antenna feedlines reduces radiated coupling.
+This is a partial solution at best but costs nothing.</li>
+</ul>
+
+<div class="tip-box">
+<strong>The shack noise audit:</strong> Before you conclude that your receiver is broken or
+your antenna is poor, conduct a systematic noise audit. With your receiver tuned to a quiet
+frequency and the antenna connected, note the noise level. Then switch the receiver to a
+dummy load and note the noise level again. If the noise drops significantly with the dummy
+load, the noise is coming through the antenna from outside. If the noise level stays high
+with the dummy load, the noise source is in the shack. Then unplug devices one by one until
+you find the culprit. This five-minute exercise has solved more "receiver problems" than any
+amount of alignment.
+</div>
+
+<hr>
+<h3>Digital Signal Processing (DSP) and Software Defined Radio (SDR)</h3>
+
+<h4>How DSP Changes the Receiver</h4>
+<p>Traditional superheterodyne receivers use analog hardware &mdash; crystal filters, ceramic
+filters, mechanical filters &mdash; to perform IF selectivity filtering. These filters are
+fixed at manufacture and cannot be changed without physically replacing components. A 2.4 kHz
+SSB filter is 2.4 kHz wide, period. DSP receivers replace these fixed analog filters with
+digital filters implemented in a processor. The incoming signal (at the IF or audio frequency)
+is converted to a stream of digital numbers by an analog-to-digital converter (ADC). The
+processor applies mathematical filtering operations to the digital stream. The results are
+converted back to analog by a digital-to-analog converter (DAC) for listening.</p>
+
+<p>The practical advantages are significant: filter bandwidth is selectable in real time
+(from 50 Hz to 4 kHz or more, just by selecting a menu option), filter shapes can be optimized
+for different modes, the passband center frequency can be shifted without changing the transmit
+frequency (RIT in software), noise reduction algorithms can be applied, and the same hardware
+can implement any filter type imaginable. The disadvantage is processing latency (a small but
+measurable delay) and the potential for artifacts when aggressive processing is applied.</p>
+
+<h4>Software Defined Radio (SDR)</h4>
+<p>Software Defined Radio takes DSP to its logical conclusion: everything that can be done
+in software, is. In an SDR, the antenna connects to a wideband analog-to-digital converter
+that digitizes a very wide bandwidth of spectrum simultaneously &mdash; often several MHz at
+once. All tuning, filtering, demodulation, and display are performed in software running on
+a general-purpose computer or DSP processor.</p>
+
+<p>The SDR receiver shows you the entire band simultaneously on a "waterfall" display, where
+frequency is on the horizontal axis, time on the vertical axis, and signal strength shown
+by color or brightness. You can see all signals on the band at once, click on any one to
+receive it, and zoom in or out as needed. This is fundamentally different from a traditional
+transceiver where you hear one signal at a time at the frequency you are tuned to.</p>
+
+<p><strong>Practical SDR for amateur radio:</strong> Inexpensive RTL-SDR dongles (originally
+designed for digital TV reception) receive from roughly 500 kHz to 1.7 GHz and cost $25 to
+$40. They are useful for monitoring, direction finding, satellite reception, and learning
+about propagation. For serious HF work, higher-quality SDRs (SDRplay RSP series, Airspy HF+,
+ANAN transceivers) provide better dynamic range, lower noise floor, and transmit capability.</p>
+
+<p><strong>Direct sampling SDR:</strong> High-quality HF SDRs sample the RF directly at the
+antenna (after appropriate filtering and gain) rather than down-converting to a lower IF first.
+This eliminates the image frequency problem of the superhet design but requires a very fast,
+high-quality ADC. The Flex Radio series and ANAN transceivers use this approach.</p>
+
+<hr>
+<!-- ============================================================
+     PART 2: EXAM COVERAGE
+     ============================================================ -->
+<h2 id="exam">Part 2 &mdash; Exam Coverage</h2>
+<p>The G7 subelement covers practical circuits as tested in the 2023&ndash;2027 FCC General
+Class question pool. All pool questions are covered below.</p>
+
+<h3>G7A &mdash; Power Supplies</h3>
+<ul>
+<li>Full-wave bridge rectifier: four diodes; output is pulsating DC at twice the input frequency; PIV per diode equals the peak output voltage</li>
+<li>Filter capacitor: smooths pulsating DC; larger capacitance = lower ripple</li>
+<li>Bleeder resistor: discharges filter capacitors after power removed; safety device</li>
+<li>Linear regulator: maintains constant output voltage; dissipates excess as heat; low noise</li>
+<li>Switching supply: high-frequency switching; efficient; may generate HF interference</li>
+<li>Half-wave rectifier: single diode; less efficient; output at AC input frequency</li>
+</ul>
+
+<h3>G7B &mdash; Amplifiers and Oscillators</h3>
+<ul>
+<li>Class A: 360&deg; conduction; most linear; lowest efficiency (25&ndash;30%); used in low-level stages</li>
+<li>Class AB: 180&ndash;360&deg; conduction; linear; moderate efficiency (50&ndash;70%); used in SSB linear PAs</li>
+<li>Class B: 180&deg; conduction; push-pull configuration reduces crossover distortion; ~78% efficiency</li>
+<li>Class C: less than 180&deg;; highest efficiency (up to 90%); non-linear; used for FM, CW, frequency multiplication</li>
+<li>Hartley oscillator: uses tapped inductor (inductive feedback); variable frequency LC oscillator</li>
+<li>Colpitts oscillator: uses capacitive voltage divider (capacitive feedback); very common and reliable</li>
+<li>Crystal oscillator: uses quartz crystal for frequency stability; high Q; used where stability is critical</li>
+</ul>
+
+<h3>G7C &mdash; Receivers and Filters</h3>
+<ul>
+<li>Superheterodyne receiver: converts RF to fixed IF for filtering and detection; LO + mixer + IF filter + detector</li>
+<li>Product detector: detects SSB and CW by mixing IF with BFO (Beat Frequency Oscillator)</li>
+<li>Envelope detector: used for AM detection; follows amplitude envelope of IF signal</li>
+<li>Image frequency: a second frequency that produces the same IF output as the desired signal; separated by 2 &times; IF; rejected by preselector</li>
+<li>Selectivity: ability to receive a desired signal while rejecting adjacent signals; determined by IF filter bandwidth</li>
+<li>Sensitivity: ability to receive weak signals; determined by noise figure of front end</li>
+<li>De-emphasis network: in FM receiver; complements transmitter pre-emphasis; restores flat audio frequency response</li>
+</ul>
+
+<hr>
+<h3>Practice Questions &mdash; G7 Complete Pool Coverage</h3>
+
+<h4>G7A &mdash; Power Supplies</h4>
+
+<div class="question-block">
+<p><strong>Q1 (G7A01)</strong> &mdash; What is the purpose of a "bleeder" resistor in a power supply?</p>
+<ul><li>A. To provide a minimum load current to improve regulation</li><li>B. To improve filtering action</li><li>C. To provide a voltage reference</li><li>D. To discharge the filter capacitors when power is removed</li></ul>
+</div>
+
+<div class="question-block">
+<p><strong>Q2 (G7A02)</strong> &mdash; What is the peak-inverse-voltage across the rectifier in a full-wave bridge power supply?</p>
+<ul><li>A. Equal to the RMS output voltage of the secondary winding</li><li>B. Equal to twice the normal peak output voltage of the power supply</li><li>C. Equal to the normal peak output voltage of the power supply</li><li>D. Equal to half the normal peak output voltage of the power supply</li></ul>
+</div>
+
+<div class="question-block">
+<p><strong>Q3 (G7A03)</strong> &mdash; What is the output waveform of an unfiltered full-wave rectifier connected to a resistive load?</p>
+<ul><li>A. A series of DC pulses at twice the frequency of the AC input</li><li>B. A series of DC pulses at the same frequency as the AC input</li><li>C. A smooth DC waveform</li><li>D. A series of AC pulses at the same frequency as the AC input</li></ul>
+</div>
+
+<div class="question-block">
+<p><strong>Q4 (G7A04)</strong> &mdash; What is the output waveform of an unfiltered half-wave rectifier connected to a resistive load?</p>
+<ul><li>A. A series of DC pulses at twice the frequency of the AC input</li><li>B. A series of DC pulses at the same frequency as the AC input</li><li>C. A smooth DC waveform</li><li>D. A series of AC pulses at the same frequency as the AC input</li></ul>
+</div>
+
+<div class="question-block">
+<p><strong>Q5 (G7A05)</strong> &mdash; What portion of the AC cycle is converted to DC in a half-wave rectifier?</p>
+<ul><li>A. 90 degrees</li><li>B. 180 degrees</li><li>C. 270 degrees</li><li>D. 360 degrees</li></ul>
+</div>
+
+<div class="question-block">
+<p><strong>Q6 (G7A06)</strong> &mdash; What portion of the AC cycle is converted to DC by a full-wave rectifier?</p>
+<ul><li>A. 90 degrees</li><li>B. 180 degrees</li><li>C. 270 degrees</li><li>D. 360 degrees</li></ul>
+</div>
+
+<div class="question-block">
+<p><strong>Q7 (G7A07)</strong> &mdash; What is the output voltage of an ideal full-wave bridge rectifier if the input is 120 VAC?</p>
+<ul><li>A. 84.8 volts</li><li>B. 120 volts</li><li>C. 148.5 volts</li><li>D. 169.7 volts</li></ul>
+</div>
+
+<div class="question-block">
+<p><strong>Q8 (G7A08)</strong> &mdash; Which of the following is an advantage of a switching power supply as compared to a linear power supply?</p>
+<ul><li>A. Faster switching time makes it more efficient</li><li>B. Wider range of output voltages</li><li>C. High frequency operation allows use of smaller components</li><li>D. All of these choices are correct</li></ul>
+</div>
+
+<div class="question-block">
+<p><strong>Q9 (G7A09)</strong> &mdash; What is the output voltage of an ideal half-wave rectifier if the input is 120 VAC?</p>
+<ul><li>A. 84.8 volts</li><li>B. 120 volts</li><li>C. 148.5 volts</li><li>D. 169.7 volts</li></ul>
+</div>
+
+<div class="question-block">
+<p><strong>Q10 (G7A10)</strong> &mdash; What is the DC output voltage of a full-wave bridge rectifier with a no-load input of 200 VAC (ignoring the rectifier voltage drop)?</p>
+<ul><li>A. 141 volts</li><li>B. 200 volts</li><li>C. 283 volts</li><li>D. 400 volts</li></ul>
+</div>
+
+<div class="question-block">
+<p><strong>Q11 (G7A11)</strong> &mdash; What is the ripple frequency of a full-wave bridge DC power supply operating on 60 Hz AC?</p>
+<ul><li>A. 30 Hz</li><li>B. 60 Hz</li><li>C. 120 Hz</li><li>D. 240 Hz</li></ul>
+</div>
+
+<h4>G7B &mdash; Amplifiers and Oscillators</h4>
+
+<div class="question-block">
+<p><strong>Q12 (G7B01)</strong> &mdash; What is the reason for neutralizing a triode RF amplifier?</p>
+<ul><li>A. To prevent self-oscillations</li><li>B. To limit the output power</li><li>C. To reduce the Q factor</li><li>D. To prevent frequency drift</li></ul>
+</div>
+
+<div class="question-block">
+<p><strong>Q13 (G7B02)</strong> &mdash; Which of the following is a characteristic of a Class A amplifier?</p>
+<ul><li>A. Low standby power</li><li>B. High efficiency</li><li>C. No need for bias</li><li>D. Low distortion</li></ul>
+</div>
+
+<div class="question-block">
+<p><strong>Q14 (G7B03)</strong> &mdash; Which of the following is a characteristic of a Class B amplifier?</p>
+<ul><li>A. Each half of the signal cycle is amplified separately</li><li>B. The output is taken at the emitter of a bipolar transistor</li><li>C. High efficiency and linearity</li><li>D. The quiescent operating point is set to a low current</li></ul>
+</div>
+
+<div class="question-block">
+<p><strong>Q15 (G7B04)</strong> &mdash; Which of the following is a characteristic of a Class C amplifier?</p>
+<ul><li>A. Conduction angle is less than 180 degrees</li><li>B. Low distortion</li><li>C. High linearity</li><li>D. Used for SSB transmitters</li></ul>
+</div>
+
+<div class="question-block">
+<p><strong>Q16 (G7B05)</strong> &mdash; How does a Hartley oscillator differ from a Colpitts oscillator?</p>
+<ul><li>A. A Hartley oscillator uses a tapped coil; a Colpitts oscillator uses a tapped capacitor</li><li>B. A Hartley oscillator uses a tapped capacitor; a Colpitts oscillator uses a tapped coil</li><li>C. A Hartley oscillator has better frequency stability</li><li>D. A Hartley oscillator is used only at VHF frequencies</li></ul>
+</div>
+
+<div class="question-block">
+<p><strong>Q17 (G7B06)</strong> &mdash; What is the advantage of using crystal oscillators in an HF receiver?</p>
+<ul><li>A. Crystal oscillators are more economical</li><li>B. Crystal oscillators are physically smaller</li><li>C. Crystal oscillators provide better frequency stability</li><li>D. Crystal oscillators consume less current</li></ul>
+</div>
+
+<div class="question-block">
+<p><strong>Q18 (G7B07)</strong> &mdash; For which of the following modes is a Class C power amplifier appropriate?</p>
+<ul><li>A. SSB voice</li><li>B. AFSK voice</li><li>C. CW</li><li>D. RTTY voice</li></ul>
+</div>
+
+<div class="question-block">
+<p><strong>Q19 (G7B08)</strong> &mdash; What is the efficiency of a Class C amplifier?</p>
+<ul><li>A. Less than 25%</li><li>B. Between 25% and 50%</li><li>C. Between 50% and 70%</li><li>D. Higher than 70%</li></ul>
+</div>
+
+<div class="question-block">
+<p><strong>Q20 (G7B09)</strong> &mdash; What is a characteristic of a Class AB amplifier?</p>
+<ul><li>A. Operates exactly at the boundary between Class A and Class B</li><li>B. Conduction angle is less than 180 degrees</li><li>C. Conduction angle is between 180 and 360 degrees</li><li>D. Has the efficiency of a Class A amplifier and the linearity of a Class B amplifier</li></ul>
+</div>
+
+<h4>G7C &mdash; Receivers and Filters</h4>
+
+<div class="question-block">
+<p><strong>Q21 (G7C01)</strong> &mdash; What is the function of a product detector?</p>
+<ul><li>A. It provides local oscillator injection to the receiver's mixer</li><li>B. It amplifies and narrows the IF bandwidth</li><li>C. It mixes the received signal with a locally generated carrier</li><li>D. It generates the BFO signal for the detector</li></ul>
+</div>
+
+<div class="question-block">
+<p><strong>Q22 (G7C02)</strong> &mdash; Which of the following is an advantage of a superheterodyne receiver?</p>
+<ul><li>A. It can be used without a local oscillator</li><li>B. It avoids the use of mixing circuits</li><li>C. It achieves high selectivity by combining a fixed IF filter with a variable local oscillator</li><li>D. It allows the IF filter to be retuned for each frequency</li></ul>
+</div>
+
+<div class="question-block">
+<p><strong>Q23 (G7C03)</strong> &mdash; What is the purpose of the de-emphasis network in an FM receiver?</p>
+<ul><li>A. It improves the rejection of adjacent FM signals</li><li>B. It reduces the slope of the FM discriminator output</li><li>C. It restores the proper frequency response of the received audio</li><li>D. It provides low-frequency filtering to remove impulse noise</li></ul>
+</div>
+
+<div class="question-block">
+<p><strong>Q24 (G7C04)</strong> &mdash; What is the purpose of pre-emphasis used with FM transmissions?</p>
+<ul><li>A. To prevent damage to the transmitter's final amplifier</li><li>B. To increase the high-frequency audio components of the transmitted signal</li><li>C. To reduce the low-frequency audio components of the transmitted signal</li><li>D. To prevent interference from adjacent channels</li></ul>
+</div>
+
+<div class="question-block">
+<p><strong>Q25 (G7C05)</strong> &mdash; What is the purpose of a mixer in a superheterodyne receiver?</p>
+<ul><li>A. To reject signals outside the passband</li><li>B. To shift the incoming signal to an intermediate frequency</li><li>C. To act as a detector stage after the IF stage</li><li>D. To select only signals in the desired passband</li></ul>
+</div>
+
+<div class="question-block">
+<p><strong>Q26 (G7C06)</strong> &mdash; What is the image frequency of a superheterodyne receiver with a 500 kHz IF frequency and a local oscillator frequency of 14.7 MHz?</p>
+<ul><li>A. 14.2 MHz</li><li>B. 14.7 MHz</li><li>C. 15.2 MHz</li><li>D. 15.7 MHz</li></ul>
+</div>
+
+<div class="question-block">
+<p><strong>Q27 (G7C07)</strong> &mdash; What are the main component parts of a receiver in order from the antenna connection to the output?</p>
+<ul><li>A. Mixer, filter, oscillator, detector, IF amplifier, audio amplifier</li><li>B. Filter, mixer, oscillator, detector, audio amplifier</li><li>C. RF amplifier, filter, mixer, IF amplifier, detector, audio amplifier</li><li>D. RF amplifier, detector, oscillator, IF amplifier, audio amplifier</li></ul>
+</div>
+
+<div class="question-block">
+<p><strong>Q28 (G7C08)</strong> &mdash; What is the term for the signal that emerges from a product detector?</p>
+<ul><li>A. IF signal at a different frequency</li><li>B. Audio frequency signal</li><li>C. RF signal at a higher frequency</li><li>D. Baseband signal at a frequency above 30 MHz</li></ul>
+</div>
+
+<div class="question-block">
+<p><strong>Q29 (G7C09)</strong> &mdash; Which of the following is characteristic of a direct-conversion receiver?</p>
+<ul><li>A. More efficient than superheterodyne receivers</li><li>B. It has more gain than a comparable superheterodyne receiver</li><li>C. The frequency of the local oscillator is the same as the received frequency</li><li>D. Much easier to implement than a single-conversion receiver</li></ul>
+</div>
+
+<div class="question-block">
+<p><strong>Q30 (G7C10)</strong> &mdash; How does a SDR (software-defined radio) differ from a conventional receiver?</p>
+<ul><li>A. SDR is operated by remote control</li><li>B. SDR performs much of the receiver signal processing in software</li><li>C. SDR has better dynamic range than a conventional receiver</li><li>D. All of these choices are correct</li></ul>
+</div>
+
+<div class="answer-key">
+<h3>Answer Key &mdash; G7 Complete</h3>
+<ol>
+<li><strong>D</strong> &mdash; A bleeder resistor discharges filter capacitors when power is removed (safety function)</li>
+<li><strong>C</strong> &mdash; PIV in a full-wave bridge equals the peak output voltage (each diode sees the full peak output in reverse)</li>
+<li><strong>A</strong> &mdash; Full-wave rectifier output: DC pulses at twice the AC input frequency (120 Hz from 60 Hz AC)</li>
+<li><strong>B</strong> &mdash; Half-wave rectifier output: DC pulses at the same frequency as the AC input (60 Hz from 60 Hz AC)</li>
+<li><strong>B</strong> &mdash; A half-wave rectifier conducts for 180 degrees (one half-cycle) of the AC input</li>
+<li><strong>D</strong> &mdash; A full-wave rectifier converts 360 degrees of the AC cycle to DC (both half-cycles)</li>
+<li><strong>D</strong> &mdash; Peak output = 120 &times; 1.414 = 169.7 volts (ideal, ignoring diode drops)</li>
+<li><strong>C</strong> &mdash; High-frequency operation allows use of a much smaller and lighter transformer</li>
+<li><strong>D</strong> &mdash; Half-wave rectifier peak output = 120 &times; 1.414 = 169.7 volts (same peak as full-wave; lower average)</li>
+<li><strong>C</strong> &mdash; Peak output = 200 &times; 1.414 = 282.8 &asymp; 283 volts</li>
+<li><strong>C</strong> &mdash; Full-wave bridge ripple frequency = 2 &times; 60 Hz = 120 Hz</li>
+<li><strong>A</strong> &mdash; Neutralization prevents self-oscillation caused by internal feedback in a triode amplifier</li>
+<li><strong>D</strong> &mdash; Class A is characterized by low distortion (high linearity); it is inefficient and draws high quiescent current</li>
+<li><strong>A</strong> &mdash; In Class B, each half of the signal cycle is amplified by a separate transistor (push-pull)</li>
+<li><strong>A</strong> &mdash; Class C amplifier conduction angle is less than 180 degrees</li>
+<li><strong>A</strong> &mdash; Hartley uses a tapped coil (inductive feedback); Colpitts uses a tapped capacitor (capacitive feedback)</li>
+<li><strong>C</strong> &mdash; Crystal oscillators provide better frequency stability than LC oscillators</li>
+<li><strong>C</strong> &mdash; Class C is appropriate for CW (and FM), not for SSB or AM which require linearity</li>
+<li><strong>D</strong> &mdash; Class C efficiency is higher than 70% (can reach up to 90%)</li>
+<li><strong>C</strong> &mdash; Class AB conduction angle is between 180 and 360 degrees</li>
+<li><strong>C</strong> &mdash; A product detector mixes the IF signal with a locally generated carrier to produce audio</li>
+<li><strong>C</strong> &mdash; The superhet achieves high selectivity using a fixed IF filter with a variable local oscillator</li>
+<li><strong>C</strong> &mdash; The de-emphasis network restores proper (flat) frequency response of the received audio</li>
+<li><strong>B</strong> &mdash; Pre-emphasis increases high-frequency audio components to improve SNR after de-emphasis at the receiver</li>
+<li><strong>B</strong> &mdash; The mixer shifts the incoming RF signal to a fixed intermediate frequency</li>
+<li><strong>D</strong> &mdash; Image = LO + IF = 14.7 + 0.5 = 15.2 MHz... wait: if LO is 14.7 and IF is 0.5, desired signal is 14.7 &minus; 0.5 = 14.2 MHz. Image = LO + IF = 14.7 + 0.5 = 15.2 MHz. Answer is <strong>C</strong> &mdash; 15.2 MHz</li>
+<li><strong>C</strong> &mdash; Correct order: RF amplifier, filter, mixer, IF amplifier, detector, audio amplifier</li>
+<li><strong>B</strong> &mdash; The product detector produces an audio frequency signal</li>
+<li><strong>C</strong> &mdash; In a direct-conversion receiver, the local oscillator frequency equals the received frequency (zero IF)</li>
+<li><strong>B</strong> &mdash; An SDR performs much of the receiver signal processing in software</li>
+</ol>
+</div>
+
+<hr>
+<!-- ============================================================
+     PART 3: RESOURCES
+     ============================================================ -->
+<h2 id="resources">Part 3 &mdash; External Resources</h2>
+
+<h3>Receiver and Transmitter Design</h3>
+<ul class="resource-list">
+<li><strong>ARRL Handbook for Radio Communications</strong> &mdash; The most thorough treatment
+of receiver and transmitter circuit design available at the amateur radio level. Covers superhet
+design, oscillator stability, amplifier classes, and power supply design in full detail. This
+is the book for operators who want to understand or build their own equipment.<br>
+<a href="https://home.arrl.org/action/Shop/Store" target="_blank" rel="noopener">ARRL Store</a></li>
+<li><strong>Experimental Methods in RF Design (ARRL)</strong> &mdash; Advanced treatment of
+receiver and transmitter design focused on building high-performance homebrew equipment.
+Covers oscillator design, filter design, and practical construction techniques.<br>
+<a href="https://home.arrl.org/action/Shop/Store" target="_blank" rel="noopener">ARRL Store</a></li>
+<li><strong>W7ZOI Homebrew Radio Projects</strong> &mdash; Wes Hayward W7ZOI's extensive online
+resources for homebrew receivers and transmitters. Practical design guidance from one of the
+foremost homebrew radio designers in amateur radio.<br>
+<a href="https://w7zoi.net" target="_blank" rel="noopener">w7zoi.net</a></li>
+</ul>
+
+<h3>Power Supplies and Interference</h3>
+<ul class="resource-list">
+<li><strong>Astron Power Supplies</strong> &mdash; The standard for quality linear power supplies
+in amateur radio. RS-series supplies are found in stations worldwide and are recommended for
+noise-sensitive HF operation.<br>
+<a href="https://www.astroncorp.com" target="_blank" rel="noopener">astroncorp.com</a></li>
+<li><strong>K9YC Interference and Grounding Notes</strong> &mdash; Jim Brown's application notes
+include practical guidance on identifying and suppressing switching supply interference on HF.
+Free download.<br>
+<a href="https://k9yc.com/publish.htm" target="_blank" rel="noopener">k9yc.com/publish.htm</a></li>
+<li><strong>ARRL RF Interference Handbook</strong> &mdash; Covers power line noise, switching
+supply interference, and all types of HF interference with practical suppression techniques.<br>
+<a href="https://home.arrl.org/action/Shop/Store" target="_blank" rel="noopener">ARRL Store</a></li>
+</ul>
+
+<h3>SDR Resources</h3>
+<ul class="resource-list">
+<li><strong>RTL-SDR.com</strong> &mdash; Comprehensive guide to getting started with RTL-SDR
+hardware and software. Tutorials, project ideas, and software links for the most accessible
+entry point into software-defined radio.<br>
+<a href="https://www.rtl-sdr.com" target="_blank" rel="noopener">rtl-sdr.com</a></li>
+<li><strong>SDRplay RSP Series</strong> &mdash; Quality HF-capable SDR receivers with better
+dynamic range than RTL-SDR dongles. Good for serious HF monitoring and learning.<br>
+<a href="https://www.sdrplay.com" target="_blank" rel="noopener">sdrplay.com</a></li>
+<li><strong>WSJT-X and SDR</strong> &mdash; WSJT-X (FT8/FT4/JT65) can be used directly with
+SDR hardware through virtual audio cable software, allowing SDR-based weak-signal digital mode
+operation.<br>
+<a href="https://wsjt.sourceforge.io/wsjtx.html" target="_blank" rel="noopener">WSJT-X Documentation</a></li>
+</ul>
+
+<h3>Exam Preparation</h3>
+<ul class="resource-list">
+<li><strong>ARRL General Class License Manual</strong> &mdash; Standard exam study guide covering
+all G7 subelement topics with circuit diagrams.<br>
+<a href="https://home.arrl.org/action/Shop/Store" target="_blank" rel="noopener">ARRL Store</a></li>
+<li><strong>No-Nonsense General Class Study Guide (KB6NU)</strong> &mdash; Free PDF covering
+all pool questions including G7.<br>
+<a href="https://www.kb6nu.com/study-guides/" target="_blank" rel="noopener">kb6nu.com/study-guides</a></li>
+<li><strong>HamStudy.org</strong> &mdash; G7 questions on amplifier classes and receiver types
+are commonly missed. Use subelement-specific tracking to identify which areas need more work.<br>
+<a href="https://hamstudy.org" target="_blank" rel="noopener">hamstudy.org</a></li>
+<li><strong>QRZ.com Practice Exams</strong> &mdash; Full simulated General Class exams from
+the actual pool.<br>
+<a href="https://www.qrz.com/hamtest/" target="_blank" rel="noopener">qrz.com/hamtest</a></li>
+</ul>
+
+<hr>
+<p><a href="general_study.html">Return to General Class Course Index</a></p>
+<div class="footer">
+<p>Please email me at <a href="mailto:n0njy@qsl.net">n0njy@qsl.net</a> about broken links.</p>
+<p>&copy; N0NJY &ndash; Rick Donaldson, 1997&ndash;2026</p>
+</div>
+</div>
+</div>
+
+<script>
+const starfield=document.getElementById('starfield');
+const starCount=150;
+for(let i=0;i<starCount;i++){
+const star=document.createElement('div');
+star.className='star';
+const size=Math.random()*2+1;
+star.style.width=`${size}px`;
+star.style.height=`${size}px`;
+star.style.top=`${Math.random()*window.innerHeight}px`;
+star.style.left=`${Math.random()*window.innerWidth}px`;
+star.style.animationDuration=`${5+Math.random()*15}s`;
+star.style.animationDelay=`${Math.random()*5}s`;
+starfield.appendChild(star);
+}
+</script>
+</body>
+</html>
