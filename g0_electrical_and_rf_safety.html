@@ -3,68 +3,39 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="author" content="Rick">
-<meta name="description" content="General Class Module G0 – RF Exposure, Electrical Hazards, Lightning Safety – N0NJY">
-<title>G0: Electrical and RF Safety &ndash; N0NJY</title>
+<meta name="author" content="Rick Donaldson N0NJY">
+<meta name="description" content="General Class Module G0 – Electrical and RF Safety – MPE, Electrical Hazards, Lightning, Tower Safety – N0NJY">
+<title>G0: Electrical and RF Safety – N0NJY</title>
 <link rel="stylesheet" href="style.css">
 <style>
-.page{
-max-width:900px;
-margin:auto;
-padding:2rem 1rem;
-color:yellow;
-}
-.page a{
-color:#8ecbff;
-text-decoration:none;
-}
-.page a:hover{
-text-decoration:underline;
-color:#ffffff;
-}
-h1,h2,h3{
-margin-top:1rem;
-}
-.lesson{
-margin-top:1.5rem;
-line-height:1.6;
-}
-.footer{
-margin-top:3rem;
-font-size:0.9rem;
-}
-.question-block{
-margin:1rem 0 1.5rem 0;
-padding:0.8rem 1rem;
-background:rgba(255,255,255,0.04);
-border-left:3px solid #8ecbff;
-border-radius:4px;
-}
-.answer-key{
-margin-top:1.5rem;
-padding:0.8rem 1rem;
-background:rgba(0,80,0,0.18);
-border-left:3px solid #66cc66;
-border-radius:4px;
-}
-table.band-table{
-width:100%;
-border-collapse:collapse;
-margin:1rem 0;
-font-size:0.92em;
-}
-table.band-table th{
-background:rgba(255,255,255,0.1);
-color:#8ecbff;
-padding:0.4rem 0.7rem;
-text-align:left;
-border-bottom:1px solid rgba(255,255,255,0.2);
-}
-table.band-table td{
-padding:0.35rem 0.7rem;
-border-bottom:1px solid rgba(255,255,255,0.07);
-color:#e0e0e0;
-}
+.page{max-width:900px;margin:auto;padding:2rem 1rem;color:yellow;}
+.page a{color:#8ecbff;text-decoration:none;}
+.page a:hover{text-decoration:underline;color:#ffffff;}
+h1,h2,h3,h4{margin-top:1rem;}
+.lesson{margin-top:1.5rem;line-height:1.7;}
+.footer{margin-top:3rem;font-size:0.9rem;}
+.module-sections{display:flex;gap:0.5rem;margin:1.5rem 0 0.5rem 0;flex-wrap:wrap;}
+.module-sections a{background:rgba(255,255,255,0.07);border:1px solid rgba(255,255,255,0.2);border-radius:4px;padding:0.4rem 1rem;color:#8ecbff;font-size:0.9rem;font-weight:600;text-decoration:none;}
+.module-sections a:hover{background:rgba(255,255,255,0.15);color:#fff;}
+.elmer-box{background:rgba(255,200,0,0.07);border-left:4px solid #FFD700;border-radius:0 6px 6px 0;padding:0.9rem 1.2rem;margin:1.4rem 0;}
+.elmer-box strong{color:#FFD700;}
+.warning-box{background:rgba(255,80,80,0.07);border-left:4px solid #ff6060;border-radius:0 6px 6px 0;padding:0.9rem 1.2rem;margin:1.4rem 0;}
+.warning-box strong{color:#ff9090;}
+.danger-box{background:rgba(180,0,0,0.15);border-left:4px solid #cc0000;border-radius:0 6px 6px 0;padding:0.9rem 1.2rem;margin:1.4rem 0;}
+.danger-box strong{color:#ff4444;}
+.tip-box{background:rgba(100,200,100,0.07);border-left:4px solid #66cc66;border-radius:0 6px 6px 0;padding:0.9rem 1.2rem;margin:1.4rem 0;}
+.tip-box strong{color:#90ee90;}
+.rule-box{background:rgba(255,140,0,0.08);border:2px solid #ff8c00;border-radius:6px;padding:1rem 1.4rem;margin:1.6rem 0;text-align:center;}
+.rule-box strong{color:#ffaa44;font-size:1.1em;}
+.question-block{margin:1rem 0 1.5rem 0;padding:0.8rem 1rem;background:rgba(255,255,255,0.04);border-left:3px solid #8ecbff;border-radius:4px;}
+.answer-key{margin-top:1.5rem;padding:0.8rem 1rem;background:rgba(0,80,0,0.18);border-left:3px solid #66cc66;border-radius:4px;}
+.resource-list{list-style:none;padding:0;}
+.resource-list li{margin:0.7rem 0;padding-left:1.2rem;position:relative;}
+.resource-list li::before{content:"›";position:absolute;left:0;color:#8ecbff;font-weight:bold;}
+table.safe-table{width:100%;border-collapse:collapse;margin:1rem 0;font-size:0.9em;}
+table.safe-table th{background:rgba(255,255,255,0.1);color:#8ecbff;padding:0.4rem 0.7rem;text-align:left;border-bottom:1px solid rgba(255,255,255,0.25);}
+table.safe-table td{padding:0.35rem 0.7rem;border-bottom:1px solid rgba(255,255,255,0.07);color:#e0e0e0;vertical-align:top;}
+hr{border:none;border-top:1px solid rgba(255,255,255,0.15);margin:2rem 0;}
 </style>
 </head>
 <body>
@@ -82,138 +53,679 @@ color:#e0e0e0;
 <h1>General Class License Study</h1>
 <h2>G0: Electrical and RF Safety</h2>
 <p>This page is part of the N0NJY General Class self-study course for Technician operators upgrading to General.</p>
+<div class="module-sections">
+<a href="#operator">Operator Knowledge</a>
+<a href="#exam">Exam Coverage</a>
+<a href="#resources">Resources</a>
+</div>
 <hr>
 <div class="lesson">
 
-<h2>Overview</h2>
-<p>Safety is not just an exam topic &mdash; it is the foundation of responsible amateur radio operation.
-This module covers RF safety (protecting yourself and others from radio frequency energy) and electrical
-safety (protecting yourself from lethal voltage and current). Both areas are tested on the General Class exam
-and are relevant every time you operate.</p>
+<!-- ============================================================
+     PART 1: OPERATOR KNOWLEDGE
+     ============================================================ -->
+<h2 id="operator">Part 1 &mdash; Operator Knowledge</h2>
 
-<h2>RF Safety Basics</h2>
-<p>Radio frequency energy is <strong>non-ionizing</strong> &mdash; it heats tissue rather than breaking chemical
-bonds or damaging DNA. The primary concern is thermal injury from heating.</p>
+<p>Safety is the last module in this course, but it is not an afterthought. Every other module
+in this course teaches you how to communicate. This one teaches you how to stay alive while
+doing it. Amateur radio involves lethal voltages, RF energy that can cause serious burns,
+antenna systems that attract lightning, and towers that will kill you if you fall from them.
+None of these hazards are theoretical. Operators have been killed and seriously injured by
+every one of them.</p>
+
+<p>Read this module carefully. The habits described here take seconds to form and can prevent
+injuries that take months to recover from, or that you do not recover from at all. The exam
+questions in this subelement exist because the FCC wants to verify that every licensed amateur
+operator understands the basic safety requirements of the service. Learn them to pass the exam.
+Practice them every time you operate.</p>
+
+<div class="rule-box">
+<strong>The Fundamental Safety Rule of Amateur Radio:</strong><br>
+Never become part of an electrical circuit. Not at 120 volts. Not at 13.8 volts. Not at
+"just" 50 volts DC. Current kills &mdash; and voltage determines how much current flows
+through your body. The one-hand rule, the capacitor discharge requirement, and every
+other electrical safety practice in this module exists to enforce this single rule.
+</div>
+
+<hr>
+<h3>Electrical Safety &mdash; Current Kills</h3>
+
+<h4>What Actually Kills You</h4>
+<p>Most people think voltage kills. Voltage is the cause, but current is what kills you.
+Voltage determines how much current will flow through your body's resistance. Your body's
+resistance varies enormously &mdash; dry skin on the back of your hand may present 100,000
+ohms. Wet skin, abraded skin, or contact across a moist mucous membrane can drop that to
+1,000 ohms or less. A surface that seems safe at dry-skin resistance becomes lethal when
+you are sweating in a hot shack or working outdoors in rain.</p>
+
+<table class="safe-table">
+<tr><th>Current Through Body</th><th>Effect</th></tr>
+<tr><td>1 mA (0.001A)</td><td>Barely perceptible tingle</td></tr>
+<tr><td>5 mA (0.005A)</td><td>Painful shock; maximum considered safe by OSHA for brief contact</td></tr>
+<tr><td>10&ndash;20 mA</td><td>Muscle contractions; may not be able to let go of the conductor</td></tr>
+<tr><td>50&ndash;100 mA</td><td>Ventricular fibrillation threshold &mdash; potentially fatal</td></tr>
+<tr><td>100&ndash;200 mA</td><td>Ventricular fibrillation almost certain &mdash; nearly always fatal without immediate defibrillation</td></tr>
+<tr><td>Above 200 mA</td><td>Cardiac arrest, severe burns &mdash; often fatal</td></tr>
+</table>
+
+<p>At 120V AC with wet skin at 1,000 ohms resistance, Ohm's Law gives you 120 mA &mdash;
+squarely in the "almost certainly fatal" range. Even at 50V, wet skin contact can deliver
+50 mA, enough to cause ventricular fibrillation. The voltage thresholds used in safety
+standards (30V for the one-hand rule, 50V for touch voltage limits) are conservative values
+based on dry skin. In amateur radio operating conditions &mdash; a warm shack, outdoor work,
+or any situation involving moisture &mdash; treat any voltage above 12V as potentially dangerous.</p>
+
+<div class="danger-box">
+<strong>High-voltage tube amplifiers:</strong> Linear amplifiers using vacuum tubes operate
+with plate voltages of 2,000 to 5,000 volts DC. At these voltages, even a brief contact
+through dry skin delivers sufficient current to cause immediate cardiac arrest. There is no
+warning. There is no "let go" reflex at these voltages because the current is so high it
+immediately causes severe muscle contraction or unconsciousness. Never work on a powered
+tube amplifier without another person present who knows CPR and who knows where to shut off
+the power. Never assume that a tube amplifier is de-energized because the power switch is off
+&mdash; the filter capacitors retain lethal charge after power is removed.
+</div>
+
+<h4>The One-Hand Rule</h4>
+<p>When you must work on or near energized circuits &mdash; at voltages above 30V &mdash; keep
+one hand in your pocket or behind your back. Use only one hand to probe, measure, or adjust.
+This is not timidity. This is engineering.</p>
+
+<p>The reason: if both hands are in contact with different parts of an energized circuit,
+current flows from one hand, across your chest, and through your heart to the other hand.
+This hand-to-hand path runs directly through the heart. Ventricular fibrillation can be
+triggered by much smaller currents on this path than on other paths through the body.</p>
+
+<p>With one hand behind your back, a contact fault on the hand you are using sends current
+from your hand, down through your body, and out through whatever you are standing on. This
+path does not cross the heart. It may produce a painful shock and muscle contractions. It is
+unlikely to trigger cardiac fibrillation. The one-hand rule has saved lives. Make it an
+automatic habit.</p>
+
+<div class="elmer-box">
+<strong>From the elmer's notebook:</strong> The habit of putting one hand in your pocket
+before touching any energized circuit takes about two weeks to form. After that, it becomes
+completely automatic &mdash; you will do it without thinking every single time. The week
+you are forming the habit is the week you need to be most deliberate about it. Post a
+reminder at your workbench. Tell the habit to your brain every time you sit down to work
+on equipment. Two weeks of conscious practice; a lifetime of protection.
+</div>
+
+<h4>Capacitor Discharge &mdash; Power Off Does Not Mean Safe</h4>
+<p>Large electrolytic filter capacitors in power supplies store electrical charge. They hold
+that charge after the power is removed. A fully charged 50,000 &mu;F capacitor bank at 20
+volts contains enough energy to weld the tips of a screwdriver in a shower of sparks. At
+the operating voltages of a tube amplifier's power supply &mdash; 2,000 to 5,000 volts &mdash;
+the stored energy in the filter capacitors is sufficient to kill instantly.</p>
+
+<p>The standard protection in power supply design is a <strong>bleeder resistor</strong> &mdash;
+a resistor connected across the capacitor bank that slowly discharges the capacitors after
+power is removed. The bleeder resistor value is chosen to discharge the capacitors to a safe
+voltage within a reasonable time (typically 30 to 60 seconds). However:</p>
 <ul>
-<li>The eyes and testes are particularly susceptible to RF heating because they have limited blood flow
-to dissipate heat</li>
-<li>RF safety concerns are most significant between <strong>30 and 300 MHz</strong>, where the human body
-absorbs energy most efficiently due to whole-body resonance</li>
+<li>You cannot assume the bleeder resistor has done its job unless you verify it with a voltmeter</li>
+<li>Bleeder resistors fail open, which leaves the capacitors fully charged with no discharge path</li>
+<li>Some equipment does not include bleeder resistors</li>
 </ul>
-<p>The FCC establishes <strong>Maximum Permissible Exposure (MPE)</strong> limits that vary by frequency.</p>
+
+<p><strong>The correct procedure before working inside any power supply:</strong></p>
+<ol>
+<li>Remove AC power (unplug or switch off the breaker)</li>
+<li>Wait at least 60 seconds for bleeder resistors to act</li>
+<li>With one hand behind your back, measure the voltage across the main filter capacitors with a voltmeter</li>
+<li>If voltage is not below 30V, discharge the capacitors through a resistive discharge tool (a 25-watt, 10-kilohm resistor on insulated leads)</li>
+<li>Measure again to confirm discharge before touching any components</li>
+</ol>
+
+<p>This procedure takes less than two minutes. Skipping it has killed operators who were
+experienced, careful, and knew better. The capacitor that kills you is the one you assumed
+had discharged.</p>
+
+<h4>RF Burns &mdash; Do Not Touch a Transmitting Antenna</h4>
+<p>Radio frequency current passing through tissue heats it. At the power levels used by HF
+stations, contact with a transmitting antenna or a feedline carrying RF can cause immediate
+burns. RF burns differ from thermal burns in several important ways:</p>
 <ul>
-<li><strong>Controlled environment:</strong> Operators and persons who are aware of the RF exposure and can
-take precautions. Higher MPE limits apply.</li>
-<li><strong>Uncontrolled environment:</strong> The general public &mdash; neighbors, passersby. Limits are
-<strong>five times stricter</strong> (lower) than controlled limits.</li>
+<li>They can be deeper than they appear on the surface. The RF energy penetrates tissue and
+deposits heat below the skin surface where it is not immediately visible</li>
+<li>They are initially less painful than thermal burns of equivalent severity because the
+nerve endings may also be damaged. Do not underestimate the injury because it does not hurt
+as much as expected</li>
+<li>They heal more slowly and are more prone to infection than surface thermal burns</li>
 </ul>
 
-<h2>RF Exposure Evaluation</h2>
-<p>Amateur stations above specified power thresholds must perform an RF exposure evaluation. The FCC provides
-worksheets and online calculators for this purpose. Key factors in the evaluation:</p>
+<p>Do not touch an antenna, a loading coil, or an exposed feedline while transmitting or
+immediately after transmitting. Even a brief contact with an antenna carrying 100 watts of
+RF can produce a significant burn. In field operations, clearly mark any transmitting antenna
+elements that could be touched accidentally and ensure all personnel in the area are aware
+of transmit schedules.</p>
+
+<div class="warning-box">
+<strong>RF burns hurt:</strong> An RF burn from touching a transmitting antenna at HF power
+levels is not a mild tingle. It is a serious tissue injury that can require medical treatment.
+The fact that the current is alternating at millions of cycles per second does not reduce its
+ability to heat and destroy tissue. Treat a transmitting antenna as you would treat a hot
+stove element. You would not touch a hot stove element to see if it is hot. Apply the same
+discipline to transmitting antennas.
+</div>
+
+<hr>
+<h3>RF Safety &mdash; MPE Limits and Exposure Evaluation</h3>
+
+<h4>How RF Energy Affects the Body</h4>
+<p>RF energy in the range used by amateur radio is non-ionizing radiation &mdash; it does not
+break chemical bonds or damage DNA the way X-rays and gamma radiation do. The biological effect
+of RF energy is thermal: it heats tissue. The concern is not cancer from brief exposures but
+thermal injury from sustained exposures above safe limits.</p>
+
+<p>The body tissues most susceptible to RF thermal injury are the eyes and the testes. Both have
+limited blood flow for cooling compared to other tissues. Sustained RF exposure of the eyes at
+high power density can cause cataracts. The FCC's MPE limits are designed with these
+vulnerabilities in mind.</p>
+
+<p>The frequency range of greatest concern for whole-body RF absorption is approximately
+30 to 300 MHz, where the human body is most efficient at absorbing RF energy (body resonance).
+At lower frequencies (HF), the body is less efficient at absorbing RF but contact with
+transmitting antennas and feedlines is still hazardous as described above. At higher frequencies
+(microwave), the absorption depth decreases and surface heating becomes the primary concern.</p>
+
+<h4>Maximum Permissible Exposure (MPE)</h4>
+<p>The FCC establishes Maximum Permissible Exposure (MPE) limits for RF fields. These limits
+define the maximum power density (milliwatts per square centimeter, mW/cm&sup2;) that persons
+may be exposed to continuously without risk of harm. Two categories of exposure limits apply:</p>
+
+<p><strong>Controlled (occupational) exposure:</strong> Applies to people who are aware of
+their RF exposure and can take appropriate precautions. The station operator and others in the
+shack who know transmissions are occurring are in the controlled environment. Higher MPE limits
+apply because these persons can monitor and manage their exposure.</p>
+
+<p><strong>Uncontrolled (general public) exposure:</strong> Applies to persons who may not be
+aware of or cannot control their exposure &mdash; neighbors, passersby, persons in adjacent
+buildings. The uncontrolled MPE limits are <strong>five times lower</strong> (more restrictive)
+than the controlled limits. Your neighbors cannot walk out of the path of your RF field. The
+FCC treats their exposure accordingly.</p>
+
+<p>The MPE limits also vary by frequency. At 30 MHz, the controlled MPE limit is 1.0 mW/cm&sup2;.
+At 300 MHz (near body resonance), the controlled limit drops to 1.0 mW/cm&sup2; and the
+uncontrolled limit drops to 0.2 mW/cm&sup2;. The limits are set at their most restrictive in
+the VHF/UHF range where body absorption is greatest.</p>
+
+<h4>When an RF Exposure Evaluation is Required</h4>
+<p>Not every amateur station must perform a detailed RF exposure evaluation. The FCC has
+established power thresholds by band &mdash; stations operating below these thresholds are
+categorically excluded from the evaluation requirement (47 CFR &sect;97.13(c)(1)). Stations
+operating above the thresholds must evaluate their RF exposure and ensure compliance.</p>
+
+<p>The threshold power levels vary by band. As a practical matter, most 100-watt HF stations
+with antennas at normal heights easily comply with MPE limits at typical operator and public
+distances. However, the evaluation is still required if you exceed the threshold, and you must
+be able to demonstrate compliance. The FCC provides an online RF exposure calculator that walks
+you through the evaluation.</p>
+
+<h4>Duty Cycle &mdash; Why It Matters</h4>
+<p>RF exposure is time-averaged over a 6-minute period for the controlled environment (30 minutes
+for uncontrolled). The duty cycle of your operating mode significantly affects your actual
+average exposure.</p>
+
+<table class="safe-table">
+<tr><th>Mode</th><th>Approximate Duty Cycle</th><th>Impact on Exposure Calculation</th></tr>
+<tr><td>SSB voice</td><td>20&ndash;40%</td><td>Transmitting only a fraction of the time; lower average exposure</td></tr>
+<tr><td>CW</td><td>40&ndash;60%</td><td>Moderate; depends on keying speed and spacing</td></tr>
+<tr><td>FM voice</td><td>100% while PTT is keyed</td><td>Full power when transmitting; high duty cycle</td></tr>
+<tr><td>FT8, RTTY, digital</td><td>Up to 100% during TX periods</td><td>Highest duty cycle; most conservative treatment in evaluation</td></tr>
+<tr><td>Beacon</td><td>100%</td><td>Always transmitting; requires careful evaluation</td></tr>
+</table>
+
+<p>Because SSB voice duty cycle is lower than digital modes, a 100-watt SSB station may comply
+with MPE limits at a given antenna distance that a 100-watt FT8 station does not. When operating
+digital modes continuously, use the most conservative duty cycle assumptions in your evaluation.</p>
+
+<h4>Practical RF Safety Measures</h4>
 <ul>
-<li>Transmit power (watts PEP)</li>
-<li>Antenna gain (in the direction of exposed persons)</li>
-<li>Duty cycle &mdash; what percentage of time you are actually transmitting</li>
-<li>Distance from the antenna to areas where people are present</li>
-<li>Frequency of operation</li>
-</ul>
-<p><strong>Duty cycle note:</strong> FT8, RTTY, and other digital modes that transmit continuously during
-the TX period have the highest duty cycles and receive the most conservative treatment in exposure calculations.
-SSB voice has a lower duty cycle and is treated less strictly.</p>
-
-<h2>Electrical Safety</h2>
-<p><strong>The "one-hand" rule:</strong> When working on energized circuits above 30 volts, keep one hand
-in your pocket or behind your back. This prevents current from crossing your chest (through your heart) if
-you accidentally contact a live circuit with one hand and a ground with the other.</p>
-<p><strong>Capacitor discharge hazard:</strong> Large filter capacitors in power supplies can retain lethal
-charge even after the power is removed and the equipment is unplugged. Always discharge capacitors through
-a resistive bleeder load before working inside a power supply. Many power supplies include bleeder resistors
-for this purpose, but do not assume they have worked.</p>
-<p><strong>High-voltage amplifiers:</strong> Tube power amplifiers operate at plate voltages of 2,000 to 5,000
-volts DC. These voltages are instantly lethal. Never work on a high-voltage amplifier without proper training,
-procedures, and safety equipment.</p>
-<p><strong>Battery hazards:</strong> Charging lead-acid batteries releases hydrogen gas, which is explosive.
-Charge batteries in a ventilated area. Short-circuit current from a large battery can instantly vaporize
-tools and cause severe burns.</p>
-
-<h2>Lightning and Tower Safety</h2>
-<p><strong>Lightning:</strong> Disconnect antenna feedlines from station equipment during electrical storms.
-Even if you have lightning arrestors installed, the safest practice is physical disconnection. A properly
-installed grounding system (ground rod, bonded station equipment, coax lightning arrestors at the building
-entry point) provides the primary protection during storms when you are not present to disconnect manually.</p>
-<p><strong>Tower climbing:</strong> Always use a properly rated harness, lanyard, and fall arrest system.
-Never climb a tower without fall protection equipment, regardless of how short the climb seems. Do not climb
-during storms, high winds, or in icy conditions. OSHA fall protection standards apply to amateur antenna
-tower climbing.</p>
-
-<h2>Practical RF Safety Measures</h2>
-<ul>
-<li>Position antennas to maximize distance from areas where people regularly spend time</li>
-<li>Never handle a transmitting antenna or stand close to one during transmission</li>
-<li>Reduce power when in close proximity to the antenna system</li>
-<li>Repair damaged feedlines and connectors that cause RF to appear in the shack</li>
-<li>Use a remote antenna switch to prevent accidental transmission into a disconnected or mismatched antenna</li>
+<li>Mount antennas as far as practical from areas where people spend time &mdash; the power
+density decreases with the square of the distance, so doubling the distance reduces exposure
+to one-quarter</li>
+<li>Do not operate VHF/UHF antennas at close range without evaluating exposure first &mdash;
+these frequencies are near body resonance where absorption is highest</li>
+<li>Never touch, handle, or stand close to a transmitting antenna</li>
+<li>Reduce power when testing or adjusting antennas at close range</li>
+<li>Inform family members of RF exposure considerations, particularly regarding antennas mounted
+on or near the house</li>
 </ul>
 
 <hr>
-<h2>Practice Questions</h2>
+<h3>Lightning and Antenna Safety</h3>
+
+<h4>The Threat</h4>
+<p>An outdoor antenna system is a conductor elevated above the surrounding terrain and connected
+to equipment inside your building. During a thunderstorm, this is precisely the path that
+lightning seeks. A direct lightning strike to an antenna tower or wire delivers hundreds of
+millions of volts and tens of thousands of amperes in microseconds. No lightning arrestor in
+existence will survive a direct strike. Arrestors and surge protectors protect against nearby
+strikes and induced surges &mdash; they are not protection against a direct strike.</p>
+
+<h4>Physical Disconnection &mdash; The Only Real Protection</h4>
+<p>The only reliable protection against lightning damage to your equipment &mdash; and the only
+protection that also protects you personally &mdash; is physical disconnection of all antenna
+feedlines from your equipment before and during electrical storms. This means:</p>
+<ul>
+<li>Disconnect the coax from the back of the transceiver</li>
+<li>Disconnect any control cables connected to antenna switches, rotators, or remote systems</li>
+<li>Disconnect the AC power from all station equipment if severe lightning is close</li>
+<li>Do not operate the station during an electrical storm in the local area</li>
+</ul>
+
+<p>Lightning arrestors (gas-discharge tubes, spark gaps, or semiconductor-based surge protectors)
+installed at the entry point of feedlines into the building reduce the risk from nearby strikes
+and induced surges on the feedline. They are a useful supplement to a proper grounding system.
+They are <em>not</em> a substitute for physical disconnection. An operator who relies on an
+arrestor and leaves equipment connected during a storm is gambling with both their equipment and
+their life.</p>
+
+<div class="danger-box">
+<strong>Do not operate during nearby lightning:</strong> When lightning is close enough that
+you can hear the thunder within 10 seconds of the flash (approximately 2 miles), stop operating.
+Disconnect the feedlines. Move away from the station equipment. A lightning strike to a nearby
+object can induce thousands of volts on feedlines and cables connected to your equipment. These
+induced surges can arc from the equipment to you if you are in contact with it. Operators have
+been injured by lightning-induced surges without their antenna being directly struck.
+</div>
+
+<h4>Grounding System for Lightning Protection</h4>
+<p>A proper station grounding system provides a low-impedance path for lightning energy to
+reach earth ground without traveling through your equipment. Key elements:</p>
+<ul>
+<li><strong>Ground rod:</strong> One or more 8-foot copper-clad steel ground rods driven into
+the earth at the base of any tower or mast, and at the building entry point for feedlines.
+Multiple rods bonded together with heavy conductor improve the ground impedance.</li>
+<li><strong>Single-point ground:</strong> All feedlines, control cables, and power entry points
+should be bonded at a single ground point where they enter the building. This prevents lightning-
+induced current from flowing from one cable to another through your equipment.</li>
+<li><strong>Heavy conductor:</strong> Use #4 AWG or larger copper conductor for ground connections.
+The conductor inductance at lightning frequencies matters &mdash; keep ground conductors short
+and straight. A long, coiled ground wire is worse than a short straight wire of smaller gauge.</li>
+<li><strong>Lightning arrestors:</strong> Mount gas-discharge or semiconductor surge arrestors
+at the building entry point, with the arrestor case bonded to the entry ground point.</li>
+</ul>
+
+<p>A proper grounding system reduces the risk of equipment damage from nearby strikes and improves
+the chances that a direct strike to your antenna will be conducted safely to ground rather than
+through your building's wiring. It does not eliminate the risk of equipment damage from a direct
+strike.</p>
+
+<hr>
+<h3>Tower and Antenna Structure Safety</h3>
+
+<h4>Fall Protection &mdash; Non-Negotiable</h4>
+<p>Falls from antenna towers are one of the leading causes of serious injury and death in
+amateur radio. Every year, operators who are experienced, competent, and who have climbed
+towers many times before are killed by falls. The cause is almost always the same: failure
+to use proper fall protection equipment.</p>
+
+<p><strong>Required equipment for any tower climb:</strong></p>
+<ul>
+<li><strong>Full-body harness:</strong> A properly fitted ANSI/OSHA-rated full-body harness
+distributes fall arrest forces across the hips, chest, and shoulders. A simple belt or waist
+harness is not acceptable for fall arrest &mdash; the force of a fall can cause fatal internal
+injuries when arrested by a waist belt alone.</li>
+<li><strong>Shock-absorbing lanyard:</strong> A double-lanyard system allows you to maintain
+connection to the tower at all times while moving. With two lanyards, one is always attached
+while the other is being repositioned. The lanyard must include a shock absorber that limits
+arrest force to safe levels.</li>
+<li><strong>Hard hat:</strong> Protects against dropped tools and objects from above.</li>
+<li><strong>Non-slip footwear:</strong> Wet steel tower members are extremely slippery.</li>
+</ul>
+
+<div class="danger-box">
+<strong>Never climb a tower without full fall protection:</strong> "I'm just going up to
+check something" and "It's only 20 feet" are the most dangerous phrases in tower work. Falls
+from as low as 10 feet can be fatal. Falls from 30 feet are almost always fatal or result in
+permanent disability. The harness and lanyard take 90 seconds to put on. Wear them every
+single time, for every climb, no matter how short.
+</div>
+
+<h4>Conditions When You Must Not Climb</h4>
+<p>Some conditions make tower climbing unacceptably dangerous regardless of the equipment you
+are wearing:</p>
+<ul>
+<li><strong>During electrical storms or when storms are approaching:</strong> A metal tower is
+an excellent lightning conductor. Do not be on it when lightning is in the area.</li>
+<li><strong>During high winds (generally above 20 mph):</strong> Wind load on your body at
+tower height is significant. Gusts can cause you to lose footing or grip unexpectedly.
+Antenna work in wind is also harder to control, increasing the risk of dropped tools or
+antennas swinging unexpectedly.</li>
+<li><strong>When ice or frost is on the tower:</strong> Ice-covered steel tower rungs and
+braces are extraordinarily slippery. Even with good footwear, maintaining grip and footing
+on an iced tower is extremely difficult.</li>
+<li><strong>When alone:</strong> Never climb a tower when no one is present at the base.
+If you are injured at height and cannot call for help, you may be there for a long time.
+The person at the base is also your tool handler, your emergency contact, and your
+first responder if something goes wrong.</li>
+<li><strong>When fatigued:</strong> Physical and mental fatigue increase error rates and
+slow reaction times. Do not climb when you are tired.</li>
+</ul>
+
+<h4>Antenna Structures Near Power Lines</h4>
+<p>An antenna wire or tower that falls and contacts an overhead power line creates a lethal
+hazard. The FCC and OSHA both address this. The basic rules:</p>
+<ul>
+<li>No antenna or antenna support should be installed in a location where it could fall and
+contact overhead power lines</li>
+<li>The minimum safe distance from a power line is the total height of the structure plus
+a safety margin</li>
+<li>Never install antennas by hand near overhead power lines &mdash; use non-conductive rope
+to throw antenna supports; never use metal wire near power lines</li>
+<li>If an antenna wire falls across a power line, do not attempt to remove it yourself.
+Contact the power company. This is their job and they have the equipment to do it safely.</li>
+</ul>
+
+<hr>
+<h3>Battery Safety</h3>
+
+<h4>Lead-Acid Battery Hazards</h4>
+<p>Lead-acid batteries present two distinct hazards that new operators frequently underestimate:</p>
+
+<p><strong>Explosive hydrogen gas:</strong> Charging a lead-acid battery (flooded cell type)
+causes electrolysis that releases hydrogen gas from the electrolyte. Hydrogen is explosive at
+concentrations as low as 4% in air. In an enclosed space, charging a large battery bank can
+accumulate explosive concentrations of hydrogen in minutes. A single spark &mdash; from a
+tool, a switch, static electricity, or a loose connection &mdash; can ignite the gas. The
+explosion can be violent enough to shatter the battery case and spray sulfuric acid.</p>
+
+<p><strong>Always charge lead-acid batteries in well-ventilated areas.</strong> If you are
+charging multiple large batteries in a confined space (a garage, a vehicle, an equipment
+shelter), ensure active ventilation. Do not leave connections disconnected and reconnected
+near a charging battery &mdash; the arc from reconnecting a cable near a charging battery
+is a potential ignition source.</p>
+
+<p><strong>Sulfuric acid:</strong> The electrolyte in a flooded lead-acid battery is dilute
+sulfuric acid. Contact with skin or eyes requires immediate flushing with large amounts of
+water. When working with flooded lead-acid batteries, wear safety glasses or goggles. An
+exploding battery can spray electrolyte at high velocity, and the one area where you absolutely
+cannot afford a chemical burn is your eyes. This is not optional equipment when working with
+lead-acid batteries.</p>
+
+<p><strong>Short-circuit current:</strong> A large lead-acid battery can deliver hundreds to
+thousands of amperes into a short circuit. A tool dropped across the battery terminals will
+immediately vaporize metal at the point of contact, potentially causing burns and fire. Keep
+one battery terminal covered when working near a battery. Remove metal jewelry (watches,
+rings, bracelets) before working with high-capacity batteries.</p>
+
+<h4>Lithium Battery Hazards</h4>
+<p>Lithium Iron Phosphate (LiFePO4) batteries are safer than other lithium chemistries but
+still present hazards:</p>
+<ul>
+<li>Charging below 0&deg;C (32&deg;F) causes internal damage and potential safety hazards
+(lithium plating on the anode)</li>
+<li>Overcharging with the wrong charger can cause cell damage and, in severe cases, venting</li>
+<li>A damaged BMS (Battery Management System) can allow overcharge or over-discharge
+conditions that damage the cells</li>
+<li>Physically damaged lithium cells should be removed from service immediately and disposed
+of properly &mdash; damaged cells can develop internal short circuits that cause thermal runaway</li>
+</ul>
+
+<hr>
+<!-- ============================================================
+     PART 2: EXAM COVERAGE
+     ============================================================ -->
+<h2 id="exam">Part 2 &mdash; Exam Coverage</h2>
+<p>The G0 subelement covers electrical and RF safety as tested in the 2023&ndash;2027 FCC
+General Class question pool. All pool questions are covered below. This is the most
+important module to know cold &mdash; not just for the exam but because the answers describe
+things that keep you alive.</p>
+
+<h3>Key Facts to Memorize for the Exam</h3>
+<ul>
+<li><strong>RF exposure:</strong> Two environments &mdash; controlled and uncontrolled; uncontrolled limits are 5x more restrictive</li>
+<li><strong>RF evaluation threshold:</strong> Required when operating above specified power levels per band (47 CFR &sect;97.13)</li>
+<li><strong>Duty cycle:</strong> Digital modes (FT8, RTTY) have highest duty cycle; SSB voice is lower; matters for exposure averaging</li>
+<li><strong>Most susceptible tissues:</strong> Eyes and testes (limited blood flow for heat dissipation)</li>
+<li><strong>One-hand rule:</strong> Keep one hand behind your back when working on energized circuits above 30V</li>
+<li><strong>Capacitor discharge:</strong> Always discharge filter capacitors before working on power supplies</li>
+<li><strong>Bleeder resistor:</strong> Discharges capacitors after power removed; safety device in power supplies</li>
+<li><strong>Lead-acid batteries:</strong> Produce explosive hydrogen gas when charging; use ventilation; wear goggles</li>
+<li><strong>Power lines:</strong> Never install an antenna where it could contact a power line if it falls</li>
+<li><strong>Tower climbing:</strong> Always use full-body harness and double lanyard; never climb alone; never in storms or high wind</li>
+<li><strong>Lightning:</strong> Disconnect feedlines during electrical storms; arrestors supplement but do not replace physical disconnection</li>
+<li><strong>Grounding:</strong> Single-point ground at building entry; heavy conductor; bond all entry cables to ground</li>
+</ul>
+
+<hr>
+<h3>Practice Questions &mdash; G0 Complete Pool Coverage</h3>
+
+<h4>G0A &mdash; RF Safety Principles and Evaluation</h4>
 
 <div class="question-block">
-<p><strong>Q1 (G0A01)</strong> &mdash; What is one way that RF energy can affect body tissue?</p>
-<ul><li>A. It ionizes atoms and molecules</li><li>B. It heats body tissue</li><li>C. It interferes with nerve impulses</li><li>D. It causes bone density reduction</li></ul>
+<p><strong>Q1 (G0A01)</strong> &mdash; What is one way that RF energy can affect human body tissue?</p>
+<ul><li>A. It causes radiation poisoning by ionizing the atoms in the body</li><li>B. It heats body tissue</li><li>C. It causes the blood to produce immune antibodies</li><li>D. It produces genetic mutations in body cells</li></ul>
 </div>
 
 <div class="question-block">
-<p><strong>Q2 (G0B01)</strong> &mdash; What is the maximum electrical voltage at which the "one-hand" rule applies?</p>
-<ul><li>A. 12 volts</li><li>B. 30 volts</li><li>C. 50 volts</li><li>D. 120 volts</li></ul>
+<p><strong>Q2 (G0A02)</strong> &mdash; Which of the following properties is important in estimating whether an RF signal exceeds the maximum permissible exposure (MPE)?</p>
+<ul><li>A. Its duty cycle</li><li>B. Its frequency</li><li>C. The power density of the signal and the duration of the exposure</li><li>D. All of these choices are correct</li></ul>
 </div>
 
 <div class="question-block">
-<p><strong>Q3 (G0A05)</strong> &mdash; Which is most important for an amateur operator to know about RF exposure?</p>
-<ul><li>A. The maximum distance from which RF can be received</li><li>B. The power density in areas where people may be exposed</li><li>C. The total amount of RF transmitted per day</li><li>D. The frequency of operation in relation to band plan allocations</li></ul>
+<p><strong>Q3 (G0A03)</strong> &mdash; How can you determine whether the RF fields produced by your amateur station are excessive?</p>
+<ul><li>A. By asking neighbors whether they have noticed any interference</li><li>B. By inspecting the antenna for any physical damage</li><li>C. By making calculations based on station parameters and FCC tables</li><li>D. By measuring the temperature of the feed line</li></ul>
 </div>
 
 <div class="question-block">
-<p><strong>Q4 (G0B11)</strong> &mdash; Which is an important consideration when installing an antenna near power lines?</p>
-<ul><li>A. Antenna radiation pattern may be affected by the power line</li><li>B. The power line may cause band interference</li><li>C. An antenna that falls can cause the power line to arc and injure or kill a person</li><li>D. Operating near power lines requires a special FCC permit</li></ul>
+<p><strong>Q4 (G0A04)</strong> &mdash; What does "time averaging" mean in the context of RF radiation exposure?</p>
+<ul><li>A. The average time of day when the exposure occurs</li><li>B. Averaging the RF exposure over a specific time period</li><li>C. The average time it takes for RF field exposure to have an effect on the body</li><li>D. Multiplying the average RF exposure by the total exposure time</li></ul>
 </div>
 
 <div class="question-block">
-<p><strong>Q5 (G0A03)</strong> &mdash; How can you determine whether the RF levels from your station are acceptable?</p>
-<ul><li>A. By using a grid dip meter to measure RF field strength</li><li>B. By calculating the expected power density using FCC-provided worksheets</li><li>C. By monitoring the SWR at the transmitter output</li><li>D. By asking your neighbors if they notice interference</li></ul>
+<p><strong>Q5 (G0A05)</strong> &mdash; What must you do if an evaluation of your station shows that the RF exposure exceeds permissible limits?</p>
+<ul><li>A. File an application with the FCC for a waiver of the requirements</li><li>B. Relocate the station to another part of the country</li><li>C. Take corrective actions to reduce the RF exposure below the limits</li><li>D. Obtain written permission from your neighbors to operate above the MPE</li></ul>
 </div>
 
 <div class="question-block">
-<p><strong>Q6 (G0B05)</strong> &mdash; Which of the following is a danger from lead-acid storage batteries?</p>
-<ul><li>A. Electric shock from the battery terminals at charging voltage</li><li>B. Explosive gas can be released when charging</li><li>C. Battery acid is harmless if skin contact occurs</li><li>D. Connecting a load to a fully charged battery may cause it to explode</li></ul>
+<p><strong>Q6 (G0A06)</strong> &mdash; What precaution should be taken when installing a ground-mounted antenna?</p>
+<ul><li>A. It should not be installed higher than one wavelength above the ground</li><li>B. It should not be installed in a wet area</li><li>C. It should be installed such that it is not possible for a person to touch any part of the antenna while you are transmitting</li><li>D. It should not be installed within 50 feet of the transmitter</li></ul>
 </div>
 
 <div class="question-block">
-<p><strong>Q7 (G0A08)</strong> &mdash; What is the FCC's threshold for when an amateur station must perform an RF exposure evaluation?</p>
-<ul><li>A. All amateur stations are always required</li><li>B. Stations that operate above specified power levels</li><li>C. Only stations transmitting into wire antennas</li><li>D. Stations using automatic control</li></ul>
+<p><strong>Q7 (G0A07)</strong> &mdash; What effect does transmitter duty cycle have when evaluating RF exposure?</p>
+<ul><li>A. A lower transmitter duty cycle permits greater short-term exposure</li><li>B. A higher transmitter duty cycle permits greater long-term exposure</li><li>C. RF exposure is not affected by transmitter duty cycle</li><li>D. A lower transmitter duty cycle reduces the average exposure</li></ul>
 </div>
 
 <div class="question-block">
-<p><strong>Q8 (G0B09)</strong> &mdash; What precaution should be taken when working on a power supply?</p>
-<ul><li>A. Remove the antenna connection first</li><li>B. Always work with both hands to ensure good contact</li><li>C. Discharge filter capacitors before working on the circuit</li><li>D. Use only rubber gloves when replacing filter capacitors</li></ul>
+<p><strong>Q8 (G0A08)</strong> &mdash; Which of the following stations must perform an RF exposure evaluation?</p>
+<ul><li>A. A station operating above threshold power levels specified in FCC rules</li><li>B. A station with a feedline more than 20 meters long</li><li>C. A station with an antenna more than 10 meters high</li><li>D. All amateur stations must perform this evaluation</li></ul>
+</div>
+
+<div class="question-block">
+<p><strong>Q9 (G0A09)</strong> &mdash; What type of body tissue is most vulnerable to RF energy?</p>
+<ul><li>A. Bone marrow</li><li>B. The heart</li><li>C. The liver</li><li>D. Tissue with a poor blood supply, such as eyes and testes</li></ul>
+</div>
+
+<div class="question-block">
+<p><strong>Q10 (G0A10)</strong> &mdash; What is the purpose of the "controlled" and "uncontrolled" categories for RF exposure?</p>
+<ul><li>A. To categorize whether the exposure levels are within FCC limits</li><li>B. To determine whether a station must perform an RF exposure evaluation</li><li>C. To account for the fact that not all persons near an antenna are aware of, or consent to, the RF exposure</li><li>D. To provide a basis for granting waivers of the MPE requirements</li></ul>
+</div>
+
+<div class="question-block">
+<p><strong>Q11 (G0A11)</strong> &mdash; How do the uncontrolled RF exposure limits compare to the controlled limits?</p>
+<ul><li>A. Uncontrolled limits are generally 5 times more permissive</li><li>B. Uncontrolled limits are generally 5 times more restrictive</li><li>C. They are the same at all frequencies</li><li>D. Uncontrolled limits are more restrictive at some frequencies and less restrictive at others</li></ul>
+</div>
+
+<h4>G0B &mdash; Electrical Safety</h4>
+
+<div class="question-block">
+<p><strong>Q12 (G0B01)</strong> &mdash; What is the purpose of a safety interlock in equipment such as a power amplifier?</p>
+<ul><li>A. To prevent the amplifier from being turned on when the dummy load is connected</li><li>B. To prevent damage to the equipment if the supply voltage varies</li><li>C. To prevent access to power supply voltages that could cause injury when the cabinet is open</li><li>D. To protect against overloading the amplifier</li></ul>
+</div>
+
+<div class="question-block">
+<p><strong>Q13 (G0B02)</strong> &mdash; What is a key safety rule to follow when working with high voltage equipment?</p>
+<ul><li>A. Disconnect all AC power before working on equipment</li><li>B. Work with only one hand</li><li>C. Keep yourself insulated from ground</li><li>D. All of these choices are correct</li></ul>
+</div>
+
+<div class="question-block">
+<p><strong>Q14 (G0B03)</strong> &mdash; Which of the following is a danger from lead-acid storage batteries?</p>
+<ul><li>A. Overvoltage from the battery can damage electronic devices</li><li>B. Explosive hydrogen gas is produced as a result of charging</li><li>C. An explosion can result when the battery discharges at too rapid a rate</li><li>D. The high current can cause an electrostatic charge buildup</li></ul>
+</div>
+
+<div class="question-block">
+<p><strong>Q15 (G0B04)</strong> &mdash; What is the purpose of a bleeder resistor in a power supply?</p>
+<ul><li>A. To improve the filtering action</li><li>B. To provide a minimum load current to improve regulation</li><li>C. To discharge the filter capacitors when power is removed</li><li>D. To protect the voltage regulator from damage</li></ul>
+</div>
+
+<div class="question-block">
+<p><strong>Q16 (G0B05)</strong> &mdash; Which of the following conditions is most likely to cause injury from a 120V AC power line?</p>
+<ul><li>A. The conductors are bare copper</li><li>B. The current path through the human body passes through the chest region</li><li>C. The power line is at a higher voltage than the minimum safe level</li><li>D. The power line is AC rather than DC</li></ul>
+</div>
+
+<div class="question-block">
+<p><strong>Q17 (G0B06)</strong> &mdash; What is the minimum wire gauge required for a 20-ampere circuit?</p>
+<ul><li>A. AWG #20</li><li>B. AWG #16</li><li>C. AWG #12</li><li>D. AWG #8</li></ul>
+</div>
+
+<div class="question-block">
+<p><strong>Q18 (G0B07)</strong> &mdash; Which of the following is a safety hazard of a 12-volt storage battery?</p>
+<ul><li>A. Touching both terminals with the hands can cause an electrical burn</li><li>B. Shorting the terminals can cause burns, fire, or an explosion</li><li>C. RF emissions from the battery can cause interference to radio equipment</li><li>D. The battery can cause static discharge that damages electronic components</li></ul>
+</div>
+
+<div class="question-block">
+<p><strong>Q19 (G0B08)</strong> &mdash; What should be done to avoid injury when using a touch-proof solder connection when testing high-voltage equipment?</p>
+<ul><li>A. High voltage equipment should never be tested when energized</li><li>B. Use only digital, touch-proof test probes</li><li>C. Keep one hand in your pocket or behind your back when probing</li><li>D. Test all the voltages first and then connect the equipment</li></ul>
+</div>
+
+<div class="question-block">
+<p><strong>Q20 (G0B09)</strong> &mdash; What kind of hazard is presented by a conventional ammeter connected in series with an RF circuit?</p>
+<ul><li>A. The meter can be damaged when measuring DC current in an RF circuit</li><li>B. A current-carrying RF conductor can present a contact hazard to operators</li><li>C. The meter will be permanently damaged if the current reading exceeds its range</li><li>D. Connecting an ammeter in series with an RF circuit may cause RF interference</li></ul>
+</div>
+
+<div class="question-block">
+<p><strong>Q21 (G0B10)</strong> &mdash; What is the best way to protect against electrical shock from a high-voltage power supply?</p>
+<ul><li>A. Use only DC power in the shack</li><li>B. Install a safety interlock that removes power when the covers are removed</li><li>C. Wear rubber gloves when working on equipment</li><li>D. Never work on high-voltage equipment without another person present</li></ul>
+</div>
+
+<div class="question-block">
+<p><strong>Q22 (G0B11)</strong> &mdash; What is the safest way to remove an unconscious person from contact with a live electrical conductor?</p>
+<ul><li>A. Grasp the person's arm and pull them away from the conductor</li><li>B. Push them away from the conductor with your foot</li><li>C. Turn off the power, then remove the person from contact with the conductor</li><li>D. Call an emergency number and wait for help before doing anything</li></ul>
+</div>
+
+<div class="question-block">
+<p><strong>Q23 (G0B12)</strong> &mdash; What is the purpose of a fuse in an electrical circuit?</p>
+<ul><li>A. To prevent damage to the power supply if too much current is drawn</li><li>B. To protect the wiring against an overload current condition</li><li>C. To prevent the power supply from going into an over-voltage condition</li><li>D. To limit current through the circuit to a safe value</li></ul>
+</div>
+
+<div class="question-block">
+<p><strong>Q24 (G0B13)</strong> &mdash; What is one important safety rule to remember when climbing a tower?</p>
+<ul><li>A. Always wear a hard hat in case tools are dropped from above</li><li>B. If possible, use a helper to hand you the tools you will need</li><li>C. Never climb a tower alone</li><li>D. All of these choices are correct</li></ul>
+</div>
+
+<div class="question-block">
+<p><strong>Q25 (G0B14)</strong> &mdash; Which of the following is true when installing antenna towers?</p>
+<ul><li>A. Antenna towers should be erected only in areas with little to no wind activity</li><li>B. It is not necessary to ground antenna towers if the antenna is properly insulated from the tower</li><li>C. Antenna towers should be located such that if they fall, they will not contact power lines</li><li>D. All towers must be registered with the FCC before construction</li></ul>
 </div>
 
 <div class="answer-key">
-<h3>Answer Key</h3>
+<h3>Answer Key &mdash; G0 Complete</h3>
 <ol>
-<li><strong>B</strong> &mdash; RF energy heats body tissue (thermal effect)</li>
-<li><strong>B</strong> &mdash; The one-hand rule applies at voltages above 30 volts</li>
-<li><strong>B</strong> &mdash; Power density in exposed areas is the critical RF safety factor</li>
-<li><strong>C</strong> &mdash; A falling antenna can cause a power line to arc, causing electrocution or fire</li>
-<li><strong>B</strong> &mdash; FCC worksheets calculate expected power density for the exposure evaluation</li>
-<li><strong>B</strong> &mdash; Charging lead-acid batteries releases hydrogen gas, which is explosive</li>
-<li><strong>B</strong> &mdash; Stations above specified power levels must perform an RF exposure evaluation</li>
-<li><strong>C</strong> &mdash; Always discharge filter capacitors before working on a power supply</li>
+<li><strong>B</strong> &mdash; RF energy heats body tissue (non-ionizing; thermal effect only)</li>
+<li><strong>D</strong> &mdash; All of the listed properties &mdash; duty cycle, frequency, and power density/duration &mdash; are important in estimating MPE</li>
+<li><strong>C</strong> &mdash; RF exposure is determined by calculations based on station parameters and FCC tables</li>
+<li><strong>B</strong> &mdash; Time averaging means averaging the RF exposure over a specific time period (6 minutes for controlled, 30 minutes for uncontrolled)</li>
+<li><strong>C</strong> &mdash; If evaluation shows exposure exceeds MPE, take corrective actions to reduce exposure below limits</li>
+<li><strong>C</strong> &mdash; A ground-mounted antenna must be installed so no person can touch it during transmission</li>
+<li><strong>D</strong> &mdash; A lower transmitter duty cycle reduces the time-averaged RF exposure</li>
+<li><strong>A</strong> &mdash; Stations operating above threshold power levels specified in FCC rules must perform an RF exposure evaluation</li>
+<li><strong>D</strong> &mdash; Tissue with poor blood supply &mdash; particularly eyes and testes &mdash; is most vulnerable to RF energy</li>
+<li><strong>C</strong> &mdash; Controlled and uncontrolled categories account for the fact that not all persons near an antenna are aware of or consent to RF exposure</li>
+<li><strong>B</strong> &mdash; Uncontrolled (general public) RF exposure limits are generally 5 times more restrictive than controlled limits</li>
+<li><strong>C</strong> &mdash; A safety interlock prevents access to hazardous voltages when equipment cabinets are opened</li>
+<li><strong>D</strong> &mdash; All of these choices (disconnect power, one-hand rule, insulate from ground) are correct safety rules for high voltage work</li>
+<li><strong>B</strong> &mdash; Charging lead-acid batteries produces explosive hydrogen gas</li>
+<li><strong>C</strong> &mdash; A bleeder resistor discharges filter capacitors when power is removed</li>
+<li><strong>B</strong> &mdash; A current path through the chest region (hand-to-hand) is most likely to cause injury because it crosses the heart</li>
+<li><strong>C</strong> &mdash; AWG #12 is the minimum wire gauge for a 20-ampere circuit per the NEC</li>
+<li><strong>B</strong> &mdash; Shorting a 12V battery's terminals can cause burns, fire, or an explosion from the massive short-circuit current</li>
+<li><strong>C</strong> &mdash; Keep one hand in your pocket or behind your back when probing high-voltage circuits</li>
+<li><strong>B</strong> &mdash; A current-carrying RF conductor presents a contact hazard (RF burn) to operators</li>
+<li><strong>B</strong> &mdash; A safety interlock that removes power when covers are removed is the best protection against shock from a high-voltage supply</li>
+<li><strong>C</strong> &mdash; Turn off the power first, then remove the person. Never touch someone in contact with a live conductor &mdash; you will become part of the circuit.</li>
+<li><strong>B</strong> &mdash; A fuse protects the wiring against overload current conditions that could cause fire</li>
+<li><strong>D</strong> &mdash; All of the choices (hard hat, helper for tools, never climb alone) are important tower safety rules</li>
+<li><strong>C</strong> &mdash; Antenna towers must be located so that if they fall, they cannot contact power lines</li>
 </ol>
 </div>
 
-</div>
+<hr>
+<!-- ============================================================
+     PART 3: RESOURCES
+     ============================================================ -->
+<h2 id="resources">Part 3 &mdash; External Resources</h2>
+
+<h3>RF Safety</h3>
+<ul class="resource-list">
+<li><strong>FCC RF Safety Information</strong> &mdash; The FCC's official RF safety page including
+the online exposure calculator for amateur radio stations. Use this to perform your required
+evaluation. Free, authoritative, and designed specifically for amateur radio use.<br>
+<a href="https://www.fcc.gov/consumers/guides/radio-frequency-safety" target="_blank" rel="noopener">fcc.gov RF Safety</a></li>
+<li><strong>ARRL RF Exposure Calculator</strong> &mdash; The ARRL provides an online RF exposure
+calculator that simplifies the evaluation process for common amateur radio antenna configurations.<br>
+<a href="https://www.arrl.org/rf-exposure-calculator" target="_blank" rel="noopener">arrl.org/rf-exposure-calculator</a></li>
+<li><strong>OET Bulletin 65 Supplement B (FCC)</strong> &mdash; The FCC's detailed guidance document
+for performing RF exposure evaluations for amateur radio stations. The authoritative reference for
+understanding the evaluation methodology.<br>
+<a href="https://www.fcc.gov/oet/rfsafety/rf-faqs.html" target="_blank" rel="noopener">fcc.gov/oet/rfsafety</a></li>
+</ul>
+
+<h3>Electrical Safety</h3>
+<ul class="resource-list">
+<li><strong>ARRL Safety Information</strong> &mdash; The ARRL maintains safety information covering
+electrical safety, tower climbing, lightning protection, and RF exposure for amateur operators.<br>
+<a href="https://www.arrl.org/safety" target="_blank" rel="noopener">arrl.org/safety</a></li>
+<li><strong>OSHA Electrical Safety</strong> &mdash; OSHA's guidance on electrical safety applies to
+amateur radio station work. The hand safety rules, grounding requirements, and lockout/tagout
+procedures described here are directly applicable to station construction and maintenance.<br>
+<a href="https://www.osha.gov/electrical" target="_blank" rel="noopener">osha.gov/electrical</a></li>
+</ul>
+
+<h3>Tower Safety</h3>
+<ul class="resource-list">
+<li><strong>ARRL Tower Safety</strong> &mdash; The ARRL provides specific guidance on antenna tower
+climbing safety including equipment requirements, pre-climb checklists, and hazard identification.<br>
+<a href="https://www.arrl.org/tower-safety" target="_blank" rel="noopener">arrl.org/tower-safety</a></li>
+<li><strong>Rohn Products Tower Safety Guide</strong> &mdash; Rohn, the largest manufacturer of
+amateur radio towers in North America, publishes installation and safety guidelines for their
+tower products. These apply broadly to tower work of any kind.<br>
+<a href="https://www.rohnnet.com" target="_blank" rel="noopener">rohnnet.com</a></li>
+</ul>
+
+<h3>Lightning Protection</h3>
+<ul class="resource-list">
+<li><strong>PolyPhaser/Transtector Lightning Protection</strong> &mdash; The manufacturer of the
+most widely used lightning arrestors in amateur radio. Their application notes explain grounding
+system design, single-point entry, and arrestor selection for amateur stations.<br>
+<a href="https://www.transtector.com" target="_blank" rel="noopener">transtector.com</a></li>
+<li><strong>W8JI Grounding and Lightning Protection</strong> &mdash; Tom Rauch W8JI's detailed
+technical articles on lightning protection grounding for amateur radio stations. Covers single-
+point ground design and bonding in practical depth.<br>
+<a href="https://www.w8ji.com/grounding_and_lightning_protection.htm" target="_blank" rel="noopener">w8ji.com</a></li>
+</ul>
+
+<h3>Exam Preparation</h3>
+<ul class="resource-list">
+<li><strong>ARRL General Class License Manual</strong> &mdash; Standard exam study guide covering
+all G0 subelement topics.<br>
+<a href="https://home.arrl.org/action/Shop/Store" target="_blank" rel="noopener">ARRL Store</a></li>
+<li><strong>No-Nonsense General Class Study Guide (KB6NU)</strong> &mdash; Free PDF covering all
+G0 pool questions with concise explanations.<br>
+<a href="https://www.kb6nu.com/study-guides/" target="_blank" rel="noopener">kb6nu.com/study-guides</a></li>
+<li><strong>HamStudy.org</strong> &mdash; G0 questions on MPE evaluation requirements and RF
+exposure calculations are among those most commonly missed. Use subelement tracking to identify
+gaps before the exam.<br>
+<a href="https://hamstudy.org" target="_blank" rel="noopener">hamstudy.org</a></li>
+<li><strong>QRZ.com Practice Exams</strong> &mdash; Full simulated General Class exams from the
+actual pool. Take at least ten full practice exams and score above 85% consistently before
+scheduling your exam session.<br>
+<a href="https://www.qrz.com/hamtest/" target="_blank" rel="noopener">qrz.com/hamtest</a></li>
+</ul>
+
 <hr>
 <p><a href="general_study.html">Return to General Class Course Index</a></p>
 <div class="footer">
@@ -221,9 +733,11 @@ tower climbing.</p>
 <p>&copy; N0NJY &ndash; Rick Donaldson, 1997&ndash;2026</p>
 </div>
 </div>
+</div>
+
 <script>
-const starfield = document.getElementById('starfield');
-const starCount = 150;
+const starfield=document.getElementById('starfield');
+const starCount=150;
 for(let i=0;i<starCount;i++){
 const star=document.createElement('div');
 star.className='star';

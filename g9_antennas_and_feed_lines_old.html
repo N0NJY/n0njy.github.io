@@ -1,0 +1,239 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="author" content="Rick">
+<meta name="description" content="General Class Module G9 – HF Antennas, Coax, Ladder Line, Baluns, SWR – N0NJY">
+<title>G9: Antennas and Feed Lines &ndash; N0NJY</title>
+<link rel="stylesheet" href="style.css">
+<style>
+.page{
+max-width:900px;
+margin:auto;
+padding:2rem 1rem;
+color:yellow;
+}
+.page a{
+color:#8ecbff;
+text-decoration:none;
+}
+.page a:hover{
+text-decoration:underline;
+color:#ffffff;
+}
+h1,h2,h3{
+margin-top:1rem;
+}
+.lesson{
+margin-top:1.5rem;
+line-height:1.6;
+}
+.footer{
+margin-top:3rem;
+font-size:0.9rem;
+}
+.question-block{
+margin:1rem 0 1.5rem 0;
+padding:0.8rem 1rem;
+background:rgba(255,255,255,0.04);
+border-left:3px solid #8ecbff;
+border-radius:4px;
+}
+.answer-key{
+margin-top:1.5rem;
+padding:0.8rem 1rem;
+background:rgba(0,80,0,0.18);
+border-left:3px solid #66cc66;
+border-radius:4px;
+}
+table.band-table{
+width:100%;
+border-collapse:collapse;
+margin:1rem 0;
+font-size:0.92em;
+}
+table.band-table th{
+background:rgba(255,255,255,0.1);
+color:#8ecbff;
+padding:0.4rem 0.7rem;
+text-align:left;
+border-bottom:1px solid rgba(255,255,255,0.2);
+}
+table.band-table td{
+padding:0.35rem 0.7rem;
+border-bottom:1px solid rgba(255,255,255,0.07);
+color:#e0e0e0;
+}
+</style>
+</head>
+<body>
+<div class="starfield" id="starfield"></div>
+<div class="topbar">
+<a href="index.html">Home</a>
+<a href="contents.html">Table of Contents</a>
+<a href="articles.html">Articles</a>
+<a href="otherhams.html">Other Hams</a>
+<a href="astronomy.html">Space</a>
+<a href="survival.html">Preparedness</a>
+<a href="commlink.htm">Contact</a>
+</div>
+<div class="page">
+<h1>General Class License Study</h1>
+<h2>G9: Antennas and Feed Lines</h2>
+<p>This page is part of the N0NJY General Class self-study course for Technician operators upgrading to General.</p>
+<hr>
+<div class="lesson">
+
+<h2>Overview</h2>
+<p>Antennas and feed lines are arguably the most important topic for any HF operator. The best transceiver in
+the world is defeated by a poor antenna. This module covers HF antenna types, feed line characteristics,
+impedance matching, and standing wave ratio.</p>
+
+<h2>Fundamental Antenna Concepts</h2>
+<p><strong>Half-wave dipole:</strong> The most fundamental HF antenna. Feed-point impedance approximately
+<strong>72 ohms</strong> in free space. Close enough to 50 ohms for direct coax feed, though a balun is
+recommended. Length calculation:</p>
+<p style="text-align:center;"><strong>Length (feet) = 468 / f(MHz)</strong></p>
+<p><strong>Quarter-wave vertical:</strong> Fed against a ground plane. Feed-point impedance approximately
+<strong>36 ohms</strong> over a perfect ground. Requires radials to form the ground plane.
+At least four radials are recommended; more is better.</p>
+<p style="text-align:center;"><strong>Length (feet) = 234 / f(MHz)</strong></p>
+
+<h2>Yagi Antennas</h2>
+<p>A Yagi (Yagi-Uda) uses a driven element plus parasitic elements to concentrate the radiation pattern in
+one direction. The <strong>reflector</strong> is behind the driven element; the <strong>director(s)</strong>
+are in front.</p>
+<ul>
+<li>A 3-element Yagi achieves approximately 7&ndash;8 dBi gain (&asymp;5&ndash;6 dBd)</li>
+<li>Front-to-back ratio of a well-designed 3-element Yagi: 20&ndash;25 dB</li>
+<li>Gain is achieved at the expense of pattern &mdash; the antenna is less sensitive off the sides and back</li>
+</ul>
+
+<h2>Loop Antennas</h2>
+<p><strong>Full-wave loop:</strong> Feed-point impedance approximately 100 ohms. Provides about 1.5 dBd gain
+perpendicular to the plane of the loop. Loops tend to be quieter on receive than verticals because they reject
+vertically polarized noise sources.</p>
+<p><strong>Small transmitting loop (magnetic loop):</strong> A highly resonant loop with a circumference of
+0.1 to 0.25 wavelengths. Very high Q, very narrow bandwidth, requires precise tuning. Advantage: small physical
+size. Useful where full-sized antennas are not possible.</p>
+
+<h2>Feed Lines</h2>
+<p><strong>Coaxial cable:</strong> Standard feed line for most amateur stations. The center conductor carries
+the signal; the outer shield is the return conductor. Most common amateur impedance: <strong>50 ohms</strong>.
+Loss increases with frequency and with the SWR on the line. Common types:</p>
+<ul>
+<li>RG-58: Thin, lossy, inexpensive. Acceptable only for short runs at low power.</li>
+<li>RG-8/RG-213: Standard-diameter 50-ohm coax. Good for HF.</li>
+<li>LMR-400: Low-loss large-diameter coax. Good for VHF/UHF and longer HF runs.</li>
+</ul>
+<p><strong>Ladder line / open-wire line:</strong> Very low loss even at high SWR &mdash; typically less than
+1 dB per 100 feet. Must be kept away from metallic objects. Cannot be routed through walls or around corners.
+Used with an antenna tuner for multi-band non-resonant antenna systems. The combination of a doublet antenna,
+ladder line, and a balanced tuner is one of the most efficient multi-band HF systems available.</p>
+
+<h2>Baluns</h2>
+<p>A <strong>balun</strong> (BALanced-UNbalanced transformer) connects a balanced antenna to unbalanced feedline.
+Without a balun, common-mode current flows on the outside of the coax shield, causing RF in the shack,
+distorted radiation patterns, and TVI/interference.</p>
+<ul>
+<li><strong>1:1 current balun (choke balun):</strong> Best choice for connecting a dipole to 50-ohm coax.
+Blocks common-mode current without affecting the differential signal.</li>
+<li><strong>4:1 balun:</strong> Transforms 200 ohms to 50 ohms. Used with center-fed antennas fed with ladder line.</li>
+</ul>
+
+<h2>Standing Wave Ratio (SWR)</h2>
+<p>SWR is the ratio of maximum to minimum voltage along a transmission line that is not perfectly matched.
+SWR of 1:1 is perfect. As impedance mismatch increases, so does SWR.</p>
+<ul>
+<li>Most transceivers begin reducing output power when SWR exceeds approximately 3:1</li>
+<li>High SWR on a lossy feedline causes significant power loss in the feedline itself</li>
+<li>An antenna tuner can give the transmitter a 1:1 load while the feedline still has high loss &mdash;
+the tuner solves the transmitter's problem, not the feedline's loss problem</li>
+<li>SWR is not the complete picture of antenna system performance &mdash; a 1.5:1 SWR on 500 feet of RG-58
+may represent worse system efficiency than a 3:1 SWR on 50 feet of LMR-400</li>
+</ul>
+
+<hr>
+<h2>Practice Questions</h2>
+
+<div class="question-block">
+<p><strong>Q1 (G9A01)</strong> &mdash; What is the primary purpose of an antenna tuner?</p>
+<ul><li>A. It increases transmitter power output</li><li>B. It matches the antenna system impedance to the transceiver's output impedance</li><li>C. It resonates the antenna at any desired frequency</li><li>D. It eliminates the need for a balun</li></ul>
+</div>
+
+<div class="question-block">
+<p><strong>Q2 (G9B01)</strong> &mdash; What is the feed-point impedance of a half-wave dipole antenna?</p>
+<ul><li>A. Approximately 300 ohms</li><li>B. Approximately 50 ohms</li><li>C. Approximately 72 ohms</li><li>D. Approximately 450 ohms</li></ul>
+</div>
+
+<div class="question-block">
+<p><strong>Q3 (G9C01)</strong> &mdash; Which antenna type will provide the most gain over a simple dipole?</p>
+<ul><li>A. A delta loop</li><li>B. A J-pole</li><li>C. A vertical ground plane</li><li>D. A multi-element Yagi</li></ul>
+</div>
+
+<div class="question-block">
+<p><strong>Q4 (G9D01)</strong> &mdash; What does the term "antenna gain" refer to?</p>
+<ul><li>A. The increase in signal strength in the desired direction compared to a reference antenna</li><li>B. The increase in transmitter power when the antenna is connected</li><li>C. The ability to receive from all directions equally</li><li>D. The maximum power the antenna can handle</li></ul>
+</div>
+
+<div class="question-block">
+<p><strong>Q5 (G9A05)</strong> &mdash; How does the feed-point impedance of a half-wave dipole change as it is lowered from 1/2 wavelength to 1/4 wavelength above ground?</p>
+<ul><li>A. It increases</li><li>B. It decreases</li><li>C. It remains the same</li><li>D. It becomes purely reactive</li></ul>
+</div>
+
+<div class="question-block">
+<p><strong>Q6 (G9B03)</strong> &mdash; What is the characteristic impedance of most coaxial cable used in amateur radio?</p>
+<ul><li>A. 25 ohms</li><li>B. 50 ohms</li><li>C. 75 ohms</li><li>D. 100 ohms</li></ul>
+</div>
+
+<div class="question-block">
+<p><strong>Q7 (G9A09)</strong> &mdash; What is the advantage of low-loss feed line, all other factors being equal?</p>
+<ul><li>A. It provides lower SWR</li><li>B. It results in more power delivered to the antenna</li><li>C. It increases antenna gain</li><li>D. It improves receiver sensitivity at all frequencies</li></ul>
+</div>
+
+<div class="question-block">
+<p><strong>Q8 (G9C04)</strong> &mdash; Which element of a Yagi antenna is closest to the director?</p>
+<ul><li>A. The driven element</li><li>B. The reflector element</li><li>C. The boom</li><li>D. The feed point</li></ul>
+</div>
+
+<div class="answer-key">
+<h3>Answer Key</h3>
+<ol>
+<li><strong>B</strong> &mdash; An antenna tuner matches feedline impedance to the transceiver's 50-ohm output</li>
+<li><strong>C</strong> &mdash; A half-wave dipole has approximately 72 ohms feed-point impedance in free space</li>
+<li><strong>D</strong> &mdash; A multi-element Yagi provides more gain than any single-element antenna</li>
+<li><strong>A</strong> &mdash; Antenna gain is the increase in signal strength in the desired direction vs. a reference</li>
+<li><strong>B</strong> &mdash; Feed-point impedance decreases as the dipole is lowered toward 1/4 wavelength above ground</li>
+<li><strong>B</strong> &mdash; 50 ohms is standard for amateur radio coaxial cable</li>
+<li><strong>B</strong> &mdash; Low-loss feedline delivers more power to the antenna</li>
+<li><strong>A</strong> &mdash; The driven element is the element closest to the director</li>
+</ol>
+</div>
+
+</div>
+<hr>
+<p><a href="general_study.html">Return to General Class Course Index</a></p>
+<div class="footer">
+<p>Please email me at <a href="mailto:n0njy@qsl.net">n0njy@qsl.net</a> about broken links.</p>
+<p>&copy; N0NJY &ndash; Rick Donaldson, 1997&ndash;2026</p>
+</div>
+</div>
+<script>
+const starfield = document.getElementById('starfield');
+const starCount = 150;
+for(let i=0;i<starCount;i++){
+const star=document.createElement('div');
+star.className='star';
+const size=Math.random()*2+1;
+star.style.width=`${size}px`;
+star.style.height=`${size}px`;
+star.style.top=`${Math.random()*window.innerHeight}px`;
+star.style.left=`${Math.random()*window.innerWidth}px`;
+star.style.animationDuration=`${5+Math.random()*15}s`;
+star.style.animationDelay=`${Math.random()*5}s`;
+starfield.appendChild(star);
+}
+</script>
+</body>
+</html>

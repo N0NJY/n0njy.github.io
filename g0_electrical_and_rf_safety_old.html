@@ -1,0 +1,241 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="author" content="Rick">
+<meta name="description" content="General Class Module G0 – RF Exposure, Electrical Hazards, Lightning Safety – N0NJY">
+<title>G0: Electrical and RF Safety &ndash; N0NJY</title>
+<link rel="stylesheet" href="style.css">
+<style>
+.page{
+max-width:900px;
+margin:auto;
+padding:2rem 1rem;
+color:yellow;
+}
+.page a{
+color:#8ecbff;
+text-decoration:none;
+}
+.page a:hover{
+text-decoration:underline;
+color:#ffffff;
+}
+h1,h2,h3{
+margin-top:1rem;
+}
+.lesson{
+margin-top:1.5rem;
+line-height:1.6;
+}
+.footer{
+margin-top:3rem;
+font-size:0.9rem;
+}
+.question-block{
+margin:1rem 0 1.5rem 0;
+padding:0.8rem 1rem;
+background:rgba(255,255,255,0.04);
+border-left:3px solid #8ecbff;
+border-radius:4px;
+}
+.answer-key{
+margin-top:1.5rem;
+padding:0.8rem 1rem;
+background:rgba(0,80,0,0.18);
+border-left:3px solid #66cc66;
+border-radius:4px;
+}
+table.band-table{
+width:100%;
+border-collapse:collapse;
+margin:1rem 0;
+font-size:0.92em;
+}
+table.band-table th{
+background:rgba(255,255,255,0.1);
+color:#8ecbff;
+padding:0.4rem 0.7rem;
+text-align:left;
+border-bottom:1px solid rgba(255,255,255,0.2);
+}
+table.band-table td{
+padding:0.35rem 0.7rem;
+border-bottom:1px solid rgba(255,255,255,0.07);
+color:#e0e0e0;
+}
+</style>
+</head>
+<body>
+<div class="starfield" id="starfield"></div>
+<div class="topbar">
+<a href="index.html">Home</a>
+<a href="contents.html">Table of Contents</a>
+<a href="articles.html">Articles</a>
+<a href="otherhams.html">Other Hams</a>
+<a href="astronomy.html">Space</a>
+<a href="survival.html">Preparedness</a>
+<a href="commlink.htm">Contact</a>
+</div>
+<div class="page">
+<h1>General Class License Study</h1>
+<h2>G0: Electrical and RF Safety</h2>
+<p>This page is part of the N0NJY General Class self-study course for Technician operators upgrading to General.</p>
+<hr>
+<div class="lesson">
+
+<h2>Overview</h2>
+<p>Safety is not just an exam topic &mdash; it is the foundation of responsible amateur radio operation.
+This module covers RF safety (protecting yourself and others from radio frequency energy) and electrical
+safety (protecting yourself from lethal voltage and current). Both areas are tested on the General Class exam
+and are relevant every time you operate.</p>
+
+<h2>RF Safety Basics</h2>
+<p>Radio frequency energy is <strong>non-ionizing</strong> &mdash; it heats tissue rather than breaking chemical
+bonds or damaging DNA. The primary concern is thermal injury from heating.</p>
+<ul>
+<li>The eyes and testes are particularly susceptible to RF heating because they have limited blood flow
+to dissipate heat</li>
+<li>RF safety concerns are most significant between <strong>30 and 300 MHz</strong>, where the human body
+absorbs energy most efficiently due to whole-body resonance</li>
+</ul>
+<p>The FCC establishes <strong>Maximum Permissible Exposure (MPE)</strong> limits that vary by frequency.</p>
+<ul>
+<li><strong>Controlled environment:</strong> Operators and persons who are aware of the RF exposure and can
+take precautions. Higher MPE limits apply.</li>
+<li><strong>Uncontrolled environment:</strong> The general public &mdash; neighbors, passersby. Limits are
+<strong>five times stricter</strong> (lower) than controlled limits.</li>
+</ul>
+
+<h2>RF Exposure Evaluation</h2>
+<p>Amateur stations above specified power thresholds must perform an RF exposure evaluation. The FCC provides
+worksheets and online calculators for this purpose. Key factors in the evaluation:</p>
+<ul>
+<li>Transmit power (watts PEP)</li>
+<li>Antenna gain (in the direction of exposed persons)</li>
+<li>Duty cycle &mdash; what percentage of time you are actually transmitting</li>
+<li>Distance from the antenna to areas where people are present</li>
+<li>Frequency of operation</li>
+</ul>
+<p><strong>Duty cycle note:</strong> FT8, RTTY, and other digital modes that transmit continuously during
+the TX period have the highest duty cycles and receive the most conservative treatment in exposure calculations.
+SSB voice has a lower duty cycle and is treated less strictly.</p>
+
+<h2>Electrical Safety</h2>
+<p><strong>The "one-hand" rule:</strong> When working on energized circuits above 30 volts, keep one hand
+in your pocket or behind your back. This prevents current from crossing your chest (through your heart) if
+you accidentally contact a live circuit with one hand and a ground with the other.</p>
+<p><strong>Capacitor discharge hazard:</strong> Large filter capacitors in power supplies can retain lethal
+charge even after the power is removed and the equipment is unplugged. Always discharge capacitors through
+a resistive bleeder load before working inside a power supply. Many power supplies include bleeder resistors
+for this purpose, but do not assume they have worked.</p>
+<p><strong>High-voltage amplifiers:</strong> Tube power amplifiers operate at plate voltages of 2,000 to 5,000
+volts DC. These voltages are instantly lethal. Never work on a high-voltage amplifier without proper training,
+procedures, and safety equipment.</p>
+<p><strong>Battery hazards:</strong> Charging lead-acid batteries releases hydrogen gas, which is explosive.
+Charge batteries in a ventilated area. Short-circuit current from a large battery can instantly vaporize
+tools and cause severe burns.</p>
+
+<h2>Lightning and Tower Safety</h2>
+<p><strong>Lightning:</strong> Disconnect antenna feedlines from station equipment during electrical storms.
+Even if you have lightning arrestors installed, the safest practice is physical disconnection. A properly
+installed grounding system (ground rod, bonded station equipment, coax lightning arrestors at the building
+entry point) provides the primary protection during storms when you are not present to disconnect manually.</p>
+<p><strong>Tower climbing:</strong> Always use a properly rated harness, lanyard, and fall arrest system.
+Never climb a tower without fall protection equipment, regardless of how short the climb seems. Do not climb
+during storms, high winds, or in icy conditions. OSHA fall protection standards apply to amateur antenna
+tower climbing.</p>
+
+<h2>Practical RF Safety Measures</h2>
+<ul>
+<li>Position antennas to maximize distance from areas where people regularly spend time</li>
+<li>Never handle a transmitting antenna or stand close to one during transmission</li>
+<li>Reduce power when in close proximity to the antenna system</li>
+<li>Repair damaged feedlines and connectors that cause RF to appear in the shack</li>
+<li>Use a remote antenna switch to prevent accidental transmission into a disconnected or mismatched antenna</li>
+</ul>
+
+<hr>
+<h2>Practice Questions</h2>
+
+<div class="question-block">
+<p><strong>Q1 (G0A01)</strong> &mdash; What is one way that RF energy can affect body tissue?</p>
+<ul><li>A. It ionizes atoms and molecules</li><li>B. It heats body tissue</li><li>C. It interferes with nerve impulses</li><li>D. It causes bone density reduction</li></ul>
+</div>
+
+<div class="question-block">
+<p><strong>Q2 (G0B01)</strong> &mdash; What is the maximum electrical voltage at which the "one-hand" rule applies?</p>
+<ul><li>A. 12 volts</li><li>B. 30 volts</li><li>C. 50 volts</li><li>D. 120 volts</li></ul>
+</div>
+
+<div class="question-block">
+<p><strong>Q3 (G0A05)</strong> &mdash; Which is most important for an amateur operator to know about RF exposure?</p>
+<ul><li>A. The maximum distance from which RF can be received</li><li>B. The power density in areas where people may be exposed</li><li>C. The total amount of RF transmitted per day</li><li>D. The frequency of operation in relation to band plan allocations</li></ul>
+</div>
+
+<div class="question-block">
+<p><strong>Q4 (G0B11)</strong> &mdash; Which is an important consideration when installing an antenna near power lines?</p>
+<ul><li>A. Antenna radiation pattern may be affected by the power line</li><li>B. The power line may cause band interference</li><li>C. An antenna that falls can cause the power line to arc and injure or kill a person</li><li>D. Operating near power lines requires a special FCC permit</li></ul>
+</div>
+
+<div class="question-block">
+<p><strong>Q5 (G0A03)</strong> &mdash; How can you determine whether the RF levels from your station are acceptable?</p>
+<ul><li>A. By using a grid dip meter to measure RF field strength</li><li>B. By calculating the expected power density using FCC-provided worksheets</li><li>C. By monitoring the SWR at the transmitter output</li><li>D. By asking your neighbors if they notice interference</li></ul>
+</div>
+
+<div class="question-block">
+<p><strong>Q6 (G0B05)</strong> &mdash; Which of the following is a danger from lead-acid storage batteries?</p>
+<ul><li>A. Electric shock from the battery terminals at charging voltage</li><li>B. Explosive gas can be released when charging</li><li>C. Battery acid is harmless if skin contact occurs</li><li>D. Connecting a load to a fully charged battery may cause it to explode</li></ul>
+</div>
+
+<div class="question-block">
+<p><strong>Q7 (G0A08)</strong> &mdash; What is the FCC's threshold for when an amateur station must perform an RF exposure evaluation?</p>
+<ul><li>A. All amateur stations are always required</li><li>B. Stations that operate above specified power levels</li><li>C. Only stations transmitting into wire antennas</li><li>D. Stations using automatic control</li></ul>
+</div>
+
+<div class="question-block">
+<p><strong>Q8 (G0B09)</strong> &mdash; What precaution should be taken when working on a power supply?</p>
+<ul><li>A. Remove the antenna connection first</li><li>B. Always work with both hands to ensure good contact</li><li>C. Discharge filter capacitors before working on the circuit</li><li>D. Use only rubber gloves when replacing filter capacitors</li></ul>
+</div>
+
+<div class="answer-key">
+<h3>Answer Key</h3>
+<ol>
+<li><strong>B</strong> &mdash; RF energy heats body tissue (thermal effect)</li>
+<li><strong>B</strong> &mdash; The one-hand rule applies at voltages above 30 volts</li>
+<li><strong>B</strong> &mdash; Power density in exposed areas is the critical RF safety factor</li>
+<li><strong>C</strong> &mdash; A falling antenna can cause a power line to arc, causing electrocution or fire</li>
+<li><strong>B</strong> &mdash; FCC worksheets calculate expected power density for the exposure evaluation</li>
+<li><strong>B</strong> &mdash; Charging lead-acid batteries releases hydrogen gas, which is explosive</li>
+<li><strong>B</strong> &mdash; Stations above specified power levels must perform an RF exposure evaluation</li>
+<li><strong>C</strong> &mdash; Always discharge filter capacitors before working on a power supply</li>
+</ol>
+</div>
+
+</div>
+<hr>
+<p><a href="general_study.html">Return to General Class Course Index</a></p>
+<div class="footer">
+<p>Please email me at <a href="mailto:n0njy@qsl.net">n0njy@qsl.net</a> about broken links.</p>
+<p>&copy; N0NJY &ndash; Rick Donaldson, 1997&ndash;2026</p>
+</div>
+</div>
+<script>
+const starfield = document.getElementById('starfield');
+const starCount = 150;
+for(let i=0;i<starCount;i++){
+const star=document.createElement('div');
+star.className='star';
+const size=Math.random()*2+1;
+star.style.width=`${size}px`;
+star.style.height=`${size}px`;
+star.style.top=`${Math.random()*window.innerHeight}px`;
+star.style.left=`${Math.random()*window.innerWidth}px`;
+star.style.animationDuration=`${5+Math.random()*15}s`;
+star.style.animationDelay=`${Math.random()*5}s`;
+starfield.appendChild(star);
+}
+</script>
+</body>
+</html>
